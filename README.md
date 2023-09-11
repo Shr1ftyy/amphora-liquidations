@@ -16,14 +16,3 @@ Create a relay and an Autotask. Assign the Autotask to that Relay and copy the c
 [liquidate.js](./scripts/liquidate.js) into the code section of the Autotask and run it.
 
 See more in the docs [here](https://docs.openzeppelin.com/defender/v1/autotasks).
-
-## TODO:
-- Test liquidation script
-
-<!-- ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-``` -->
