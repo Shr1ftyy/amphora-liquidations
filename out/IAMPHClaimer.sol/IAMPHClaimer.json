@@ -1,0 +1,2851 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_newCrvReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "ChangedCrvRewardFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_newCvxReward",
+          "type": "uint256"
+        }
+      ],
+      "name": "ChangedCvxRewardFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_newVaultController",
+          "type": "address"
+        }
+      ],
+      "name": "ChangedVaultController",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_vaultClaimer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_cvxTotalRewards",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_crvTotalRewards",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amphAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimedAmph",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RecoveredDust",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "AMPH",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_amph",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "BASE_SUPPLY_PER_CLIFF",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_baseSupplyPerCliff",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CRV",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_crv",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CVX",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_cvx",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TOTAL_CLIFFS",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_totalCliffs",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeCrvRewardFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_newFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeCvxRewardFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newVaultController",
+          "type": "address"
+        }
+      ],
+      "name": "changeVaultController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint96",
+          "name": "_vaultId",
+          "type": "uint96"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_cvxTotalRewards",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_crvTotalRewards",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        }
+      ],
+      "name": "claimAmph",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_cvxAmountToSend",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_crvAmountToSend",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_claimedAmph",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint96",
+          "name": "_vaultId",
+          "type": "uint96"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_cvxTotalRewards",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_crvTotalRewards",
+          "type": "uint256"
+        }
+      ],
+      "name": "claimable",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_cvxAmountToSend",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_crvAmountToSend",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_claimableAmph",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "crvRewardFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_crvRewardFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cvxRewardFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_cvxRewardFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "distributedAmph",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_distributedAmph",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "recoverDust",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultController",
+      "outputs": [
+        {
+          "internalType": "contract IVaultController",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "AMPH()": "5cbac31b",
+    "BASE_SUPPLY_PER_CLIFF()": "b08c7946",
+    "CRV()": "945c9142",
+    "CVX()": "759cb53b",
+    "TOTAL_CLIFFS()": "5fc1f308",
+    "changeCrvRewardFee(uint256)": "2ab7ff2f",
+    "changeCvxRewardFee(uint256)": "9c90c9ef",
+    "changeVaultController(address)": "7aadb0f1",
+    "claimAmph(uint96,uint256,uint256,address)": "ceaf55be",
+    "claimable(address,uint96,uint256,uint256)": "70e0a7e4",
+    "crvRewardFee()": "e4424ee8",
+    "cvxRewardFee()": "a351cae7",
+    "distributedAmph()": "237d7c52",
+    "recoverDust(address,uint256)": "78b140fc",
+    "vaultController()": "5f36b048"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_newCrvReward\",\"type\":\"uint256\"}],\"name\":\"ChangedCrvRewardFee\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_newCvxReward\",\"type\":\"uint256\"}],\"name\":\"ChangedCvxRewardFee\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_newVaultController\",\"type\":\"address\"}],\"name\":\"ChangedVaultController\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_vaultClaimer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_cvxTotalRewards\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_crvTotalRewards\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amphAmount\",\"type\":\"uint256\"}],\"name\":\"ClaimedAmph\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"RecoveredDust\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"AMPH\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_amph\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"BASE_SUPPLY_PER_CLIFF\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_baseSupplyPerCliff\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CRV\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_crv\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CVX\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_cvx\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TOTAL_CLIFFS\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_totalCliffs\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newFee\",\"type\":\"uint256\"}],\"name\":\"changeCrvRewardFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_newFee\",\"type\":\"uint256\"}],\"name\":\"changeCvxRewardFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newVaultController\",\"type\":\"address\"}],\"name\":\"changeVaultController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint96\",\"name\":\"_vaultId\",\"type\":\"uint96\"},{\"internalType\":\"uint256\",\"name\":\"_cvxTotalRewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_crvTotalRewards\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"}],\"name\":\"claimAmph\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_cvxAmountToSend\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_crvAmountToSend\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_claimedAmph\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"uint96\",\"name\":\"_vaultId\",\"type\":\"uint96\"},{\"internalType\":\"uint256\",\"name\":\"_cvxTotalRewards\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_crvTotalRewards\",\"type\":\"uint256\"}],\"name\":\"claimable\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_cvxAmountToSend\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_crvAmountToSend\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_claimableAmph\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"crvRewardFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_crvRewardFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cvxRewardFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_cvxRewardFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"distributedAmph\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_distributedAmph\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"recoverDust\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultController\",\"outputs\":[{\"internalType\":\"contract IVaultController\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"ChangedCrvRewardFee(uint256)\":{\"params\":{\"_newCrvReward\":\"the new fee\"}},\"ChangedCvxRewardFee(uint256)\":{\"params\":{\"_newCvxReward\":\"the new fee\"}},\"ChangedVaultController(address)\":{\"params\":{\"_newVaultController\":\"The address of the new vault controller\"}},\"ClaimedAmph(address,uint256,uint256,uint256)\":{\"params\":{\"_amphAmount\":\"The amount of AMPH received\",\"_crvTotalRewards\":\"The amount of CRV sent in exchange of AMPH\",\"_cvxTotalRewards\":\"The amount of CVX sent in exchange of AMPH\",\"_vaultClaimer\":\"The address of the vault that claimed\"}},\"RecoveredDust(address,address,uint256)\":{\"params\":{\"_amount\":\"the amount recovered\",\"_receiver\":\"the receiver of the tokens\",\"_token\":\"the token recovered\"}}},\"kind\":\"dev\",\"methods\":{\"changeCrvRewardFee(uint256)\":{\"params\":{\"_newFee\":\"The new reward fee\"}},\"changeCvxRewardFee(uint256)\":{\"params\":{\"_newFee\":\"The new reward fee\"}},\"changeVaultController(address)\":{\"params\":{\"_newVaultController\":\"The new vault controller\"}},\"claimAmph(uint96,uint256,uint256,address)\":{\"params\":{\"_beneficiary\":\"The receiver of the AMPH rewards\",\"_crvTotalRewards\":\"The max CVR amount to exchange from the sender\",\"_cvxTotalRewards\":\"The max CVX amount to exchange from the sender\",\"_vaultId\":\"The vault id that is claiming\"},\"returns\":{\"_claimedAmph\":\"The amount of AMPH received by the beneficiary\",\"_crvAmountToSend\":\"The amount of CRV that the treasury got\",\"_cvxAmountToSend\":\"The amount of CVX that the treasury got\"}},\"claimable(address,uint96,uint256,uint256)\":{\"params\":{\"_crvTotalRewards\":\"The max CVR amount to exchange from the sender\",\"_cvxTotalRewards\":\"The max CVX amount to exchange from the sender\",\"_sender\":\"The address of the account claiming\",\"_vaultId\":\"The vault id that is claiming\"},\"returns\":{\"_claimableAmph\":\"The amount of AMPH that would be received by the beneficiary\",\"_crvAmountToSend\":\"The amount of CRV the user will have to send\",\"_cvxAmountToSend\":\"The amount of CVX the user will have to send\"}},\"recoverDust(address,uint256)\":{\"params\":{\"_amount\":\"The amount to recover\",\"_token\":\"The token to recover\"}}},\"title\":\"AMPHClaimer Interface\",\"version\":1},\"userdoc\":{\"events\":{\"ChangedCrvRewardFee(uint256)\":{\"notice\":\"Emited when governance changes the CRV reward fee\"},\"ChangedCvxRewardFee(uint256)\":{\"notice\":\"Emited when governance changes the CVX reward fee\"},\"ChangedVaultController(address)\":{\"notice\":\"Emited when governance changes the vault controller\"},\"ClaimedAmph(address,uint256,uint256,uint256)\":{\"notice\":\"Emited when a vault claims AMPH\"},\"RecoveredDust(address,address,uint256)\":{\"notice\":\"Emited when governance recovers a token from the contract\"}},\"kind\":\"user\",\"methods\":{\"AMPH()\":{\"notice\":\"The address of the AMPH token\"},\"BASE_SUPPLY_PER_CLIFF()\":{\"notice\":\"The base supply of AMPH per cliff, denominated in 1e6\"},\"CRV()\":{\"notice\":\"The address of the CRV token\"},\"CVX()\":{\"notice\":\"The address of the CVX token\"},\"TOTAL_CLIFFS()\":{\"notice\":\"The total number of cliffs (for both tokens)\"},\"changeCrvRewardFee(uint256)\":{\"notice\":\"Used by governance to change the fee taken from the CRV reward\"},\"changeCvxRewardFee(uint256)\":{\"notice\":\"Used by governance to change the fee taken from the CVX reward\"},\"changeVaultController(address)\":{\"notice\":\"Used by governance to change the vault controller\"},\"claimAmph(uint96,uint256,uint256,address)\":{\"notice\":\"Claims an amount of AMPH given a CVX and CRV quantity\"},\"claimable(address,uint96,uint256,uint256)\":{\"notice\":\"Returns the claimable amount of AMPH given a CVX and CRV quantity\"},\"crvRewardFee()\":{\"notice\":\"Percentage of rewards taken in CRV (1e18 == 100%)\"},\"cvxRewardFee()\":{\"notice\":\"Percentage of rewards taken in CVX (1e18 == 100%)\"},\"distributedAmph()\":{\"notice\":\"The total amount of AMPH minted for rewards in CRV, denominated in 1e6\"},\"recoverDust(address,uint256)\":{\"notice\":\"Used by governance to recover tokens from the contract\"},\"vaultController()\":{\"notice\":\"The vault controller\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/core/IAMPHClaimer.sol\":\"IAMPHClaimer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"solidity/contracts/periphery/CurveMaster.sol\":{\"keccak256\":\"0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db\",\"dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A\"]},\"solidity/interfaces/core/IAMPHClaimer.sol\":{\"keccak256\":\"0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993\",\"dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ\"]},\"solidity/interfaces/core/IUSDA.sol\":{\"keccak256\":\"0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527\",\"dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19\"]},\"solidity/interfaces/core/IVault.sol\":{\"keccak256\":\"0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812\",\"dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW\"]},\"solidity/interfaces/core/IVaultController.sol\":{\"keccak256\":\"0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b\",\"dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L\"]},\"solidity/interfaces/core/IVaultDeployer.sol\":{\"keccak256\":\"0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616\",\"dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ\"]},\"solidity/interfaces/periphery/ICurveMaster.sol\":{\"keccak256\":\"0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833\",\"dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]},\"solidity/interfaces/utils/IBaseRewardPool.sol\":{\"keccak256\":\"0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40\",\"dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ\"]},\"solidity/interfaces/utils/IBooster.sol\":{\"keccak256\":\"0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5\",\"dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn\"]},\"solidity/interfaces/utils/ICVX.sol\":{\"keccak256\":\"0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486\",\"dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy\"]},\"solidity/interfaces/utils/ICurveSlave.sol\":{\"keccak256\":\"0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51\",\"dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ\"]},\"solidity/interfaces/utils/IRoles.sol\":{\"keccak256\":\"0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073\",\"dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6\"]},\"solidity/interfaces/utils/IVirtualBalanceRewardPool.sol\":{\"keccak256\":\"0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048\",\"dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_newCrvReward",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ChangedCrvRewardFee",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_newCvxReward",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ChangedCvxRewardFee",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_newVaultController",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "ChangedVaultController",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultClaimer",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_cvxTotalRewards",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_crvTotalRewards",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amphAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ClaimedAmph",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "_receiver",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RecoveredDust",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AMPH",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_amph",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "BASE_SUPPLY_PER_CLIFF",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_baseSupplyPerCliff",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CRV",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_crv",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CVX",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_cvx",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TOTAL_CLIFFS",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_totalCliffs",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_newFee",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "changeCrvRewardFee"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_newFee",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "changeCvxRewardFee"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_newVaultController",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "changeVaultController"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint96",
+              "name": "_vaultId",
+              "type": "uint96"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_cvxTotalRewards",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_crvTotalRewards",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "_beneficiary",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "claimAmph",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_cvxAmountToSend",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_crvAmountToSend",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_claimedAmph",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_sender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint96",
+              "name": "_vaultId",
+              "type": "uint96"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_cvxTotalRewards",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_crvTotalRewards",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "claimable",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_cvxAmountToSend",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_crvAmountToSend",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_claimableAmph",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "crvRewardFee",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_crvRewardFee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "cvxRewardFee",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_cvxRewardFee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "distributedAmph",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_distributedAmph",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "recoverDust"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultController",
+          "outputs": [
+            {
+              "internalType": "contract IVaultController",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "changeCrvRewardFee(uint256)": {
+            "params": {
+              "_newFee": "The new reward fee"
+            }
+          },
+          "changeCvxRewardFee(uint256)": {
+            "params": {
+              "_newFee": "The new reward fee"
+            }
+          },
+          "changeVaultController(address)": {
+            "params": {
+              "_newVaultController": "The new vault controller"
+            }
+          },
+          "claimAmph(uint96,uint256,uint256,address)": {
+            "params": {
+              "_beneficiary": "The receiver of the AMPH rewards",
+              "_crvTotalRewards": "The max CVR amount to exchange from the sender",
+              "_cvxTotalRewards": "The max CVX amount to exchange from the sender",
+              "_vaultId": "The vault id that is claiming"
+            },
+            "returns": {
+              "_claimedAmph": "The amount of AMPH received by the beneficiary",
+              "_crvAmountToSend": "The amount of CRV that the treasury got",
+              "_cvxAmountToSend": "The amount of CVX that the treasury got"
+            }
+          },
+          "claimable(address,uint96,uint256,uint256)": {
+            "params": {
+              "_crvTotalRewards": "The max CVR amount to exchange from the sender",
+              "_cvxTotalRewards": "The max CVX amount to exchange from the sender",
+              "_sender": "The address of the account claiming",
+              "_vaultId": "The vault id that is claiming"
+            },
+            "returns": {
+              "_claimableAmph": "The amount of AMPH that would be received by the beneficiary",
+              "_crvAmountToSend": "The amount of CRV the user will have to send",
+              "_cvxAmountToSend": "The amount of CVX the user will have to send"
+            }
+          },
+          "recoverDust(address,uint256)": {
+            "params": {
+              "_amount": "The amount to recover",
+              "_token": "The token to recover"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "AMPH()": {
+            "notice": "The address of the AMPH token"
+          },
+          "BASE_SUPPLY_PER_CLIFF()": {
+            "notice": "The base supply of AMPH per cliff, denominated in 1e6"
+          },
+          "CRV()": {
+            "notice": "The address of the CRV token"
+          },
+          "CVX()": {
+            "notice": "The address of the CVX token"
+          },
+          "TOTAL_CLIFFS()": {
+            "notice": "The total number of cliffs (for both tokens)"
+          },
+          "changeCrvRewardFee(uint256)": {
+            "notice": "Used by governance to change the fee taken from the CRV reward"
+          },
+          "changeCvxRewardFee(uint256)": {
+            "notice": "Used by governance to change the fee taken from the CVX reward"
+          },
+          "changeVaultController(address)": {
+            "notice": "Used by governance to change the vault controller"
+          },
+          "claimAmph(uint96,uint256,uint256,address)": {
+            "notice": "Claims an amount of AMPH given a CVX and CRV quantity"
+          },
+          "claimable(address,uint96,uint256,uint256)": {
+            "notice": "Returns the claimable amount of AMPH given a CVX and CRV quantity"
+          },
+          "crvRewardFee()": {
+            "notice": "Percentage of rewards taken in CRV (1e18 == 100%)"
+          },
+          "cvxRewardFee()": {
+            "notice": "Percentage of rewards taken in CVX (1e18 == 100%)"
+          },
+          "distributedAmph()": {
+            "notice": "The total amount of AMPH minted for rewards in CRV, denominated in 1e6"
+          },
+          "recoverDust(address,uint256)": {
+            "notice": "Used by governance to recover tokens from the contract"
+          },
+          "vaultController()": {
+            "notice": "The vault controller"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/core/IAMPHClaimer.sol": "IAMPHClaimer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+        "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+        "urls": [
+          "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+          "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/CurveMaster.sol": {
+        "keccak256": "0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a",
+        "urls": [
+          "bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db",
+          "dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IAMPHClaimer.sol": {
+        "keccak256": "0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7",
+        "urls": [
+          "bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993",
+          "dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IUSDA.sol": {
+        "keccak256": "0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0",
+        "urls": [
+          "bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527",
+          "dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVault.sol": {
+        "keccak256": "0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25",
+        "urls": [
+          "bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812",
+          "dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultController.sol": {
+        "keccak256": "0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7",
+        "urls": [
+          "bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b",
+          "dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultDeployer.sol": {
+        "keccak256": "0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1",
+        "urls": [
+          "bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616",
+          "dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "solidity/interfaces/periphery/ICurveMaster.sol": {
+        "keccak256": "0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463",
+        "urls": [
+          "bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833",
+          "dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBaseRewardPool.sol": {
+        "keccak256": "0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0",
+        "urls": [
+          "bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40",
+          "dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBooster.sol": {
+        "keccak256": "0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac",
+        "urls": [
+          "bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5",
+          "dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICVX.sol": {
+        "keccak256": "0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a",
+        "urls": [
+          "bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486",
+          "dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICurveSlave.sol": {
+        "keccak256": "0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e",
+        "urls": [
+          "bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51",
+          "dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IRoles.sol": {
+        "keccak256": "0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123",
+        "urls": [
+          "bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073",
+          "dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IVirtualBalanceRewardPool.sol": {
+        "keccak256": "0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba",
+        "urls": [
+          "bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048",
+          "dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/core/IAMPHClaimer.sol",
+    "id": 51605,
+    "exportedSymbols": {
+      "IAMPHClaimer": [
+        51604
+      ],
+      "IERC20": [
+        2726
+      ],
+      "IVaultController": [
+        52822
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:5551:89",
+    "nodes": [
+      {
+        "id": 51443,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:89",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 51445,
+        "nodeType": "ImportDirective",
+        "src": "57:70:89",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 51605,
+        "sourceUnit": 2727,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51444,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2726,
+              "src": "65:6:89",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51447,
+        "nodeType": "ImportDirective",
+        "src": "128:71:89",
+        "absolutePath": "solidity/interfaces/core/IVaultController.sol",
+        "file": "@interfaces/core/IVaultController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 51605,
+        "sourceUnit": 52823,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51446,
+              "name": "IVaultController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52822,
+              "src": "136:16:89",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51604,
+        "nodeType": "ContractDefinition",
+        "src": "234:5348:89",
+        "nodes": [
+          {
+            "id": 51459,
+            "nodeType": "EventDefinition",
+            "src": "751:130:89",
+            "anonymous": false,
+            "documentation": {
+              "id": 51449,
+              "nodeType": "StructuredDocumentation",
+              "src": "434:314:89",
+              "text": " @notice Emited when a vault claims AMPH\n @param _vaultClaimer The address of the vault that claimed\n @param _cvxTotalRewards The amount of CVX sent in exchange of AMPH\n @param _crvTotalRewards The amount of CRV sent in exchange of AMPH\n @param _amphAmount The amount of AMPH received"
+            },
+            "eventSelector": "a5981c2d17090248cb3c3abdbb31abc3bb57dce4f6f54cb787b664cfed2324dc",
+            "name": "ClaimedAmph",
+            "nameLocation": "757:11:89",
+            "parameters": {
+              "id": 51458,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51451,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_vaultClaimer",
+                  "nameLocation": "790:13:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51459,
+                  "src": "774:29:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51450,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "774:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51453,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_cvxTotalRewards",
+                  "nameLocation": "813:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51459,
+                  "src": "805:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51452,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "805:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51455,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_crvTotalRewards",
+                  "nameLocation": "839:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51459,
+                  "src": "831:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51454,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "831:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51457,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amphAmount",
+                  "nameLocation": "865:11:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51459,
+                  "src": "857:19:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51456,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "857:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "768:112:89"
+            }
+          },
+          {
+            "id": 51464,
+            "nodeType": "EventDefinition",
+            "src": "1034:66:89",
+            "anonymous": false,
+            "documentation": {
+              "id": 51460,
+              "nodeType": "StructuredDocumentation",
+              "src": "885:146:89",
+              "text": " @notice Emited when governance changes the vault controller\n @param _newVaultController The address of the new vault controller"
+            },
+            "eventSelector": "0a14b3f9755774ac06a00db0764d3eb10c87407e87dd206bfedf501cb81fc890",
+            "name": "ChangedVaultController",
+            "nameLocation": "1040:22:89",
+            "parameters": {
+              "id": 51463,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51462,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_newVaultController",
+                  "nameLocation": "1079:19:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51464,
+                  "src": "1063:35:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51461,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1063:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1062:37:89"
+            }
+          },
+          {
+            "id": 51473,
+            "nodeType": "EventDefinition",
+            "src": "1316:80:89",
+            "anonymous": false,
+            "documentation": {
+              "id": 51465,
+              "nodeType": "StructuredDocumentation",
+              "src": "1104:209:89",
+              "text": " @notice Emited when governance recovers a token from the contract\n @param _token the token recovered\n @param _receiver the receiver of the tokens\n @param _amount the amount recovered"
+            },
+            "eventSelector": "bba61e0f348639431379e23492f9d8c5ddb2131f83acc50b4e4fb1484d756d69",
+            "name": "RecoveredDust",
+            "nameLocation": "1322:13:89",
+            "parameters": {
+              "id": 51472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51467,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "1352:6:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51473,
+                  "src": "1336:22:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51466,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1336:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51469,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_receiver",
+                  "nameLocation": "1368:9:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51473,
+                  "src": "1360:17:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51468,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1360:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51471,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1387:7:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51473,
+                  "src": "1379:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51470,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1379:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1335:60:89"
+            }
+          },
+          {
+            "id": 51478,
+            "nodeType": "EventDefinition",
+            "src": "1513:49:89",
+            "anonymous": false,
+            "documentation": {
+              "id": 51474,
+              "nodeType": "StructuredDocumentation",
+              "src": "1400:110:89",
+              "text": " @notice Emited when governance changes the CVX reward fee\n @param _newCvxReward the new fee"
+            },
+            "eventSelector": "c22c6eb0acae8d786e7f0f2b09849b982f3362141b58a0ade2d3e9fae9ba3e8d",
+            "name": "ChangedCvxRewardFee",
+            "nameLocation": "1519:19:89",
+            "parameters": {
+              "id": 51477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51476,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newCvxReward",
+                  "nameLocation": "1547:13:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51478,
+                  "src": "1539:21:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51475,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1539:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1538:23:89"
+            }
+          },
+          {
+            "id": 51483,
+            "nodeType": "EventDefinition",
+            "src": "1679:49:89",
+            "anonymous": false,
+            "documentation": {
+              "id": 51479,
+              "nodeType": "StructuredDocumentation",
+              "src": "1566:110:89",
+              "text": " @notice Emited when governance changes the CRV reward fee\n @param _newCrvReward the new fee"
+            },
+            "eventSelector": "073b74fcc534f65ba737f94c0f973a618c6325e4fa19d74239ff8326799f02a3",
+            "name": "ChangedCrvRewardFee",
+            "nameLocation": "1685:19:89",
+            "parameters": {
+              "id": 51482,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51481,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newCrvReward",
+                  "nameLocation": "1713:13:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51483,
+                  "src": "1705:21:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51480,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1705:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1704:23:89"
+            }
+          },
+          {
+            "id": 51490,
+            "nodeType": "FunctionDefinition",
+            "src": "1951:51:89",
+            "documentation": {
+              "id": 51484,
+              "nodeType": "StructuredDocumentation",
+              "src": "1908:40:89",
+              "text": "@notice The address of the CVX token"
+            },
+            "functionSelector": "759cb53b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CVX",
+            "nameLocation": "1960:3:89",
+            "parameters": {
+              "id": 51485,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1963:2:89"
+            },
+            "returnParameters": {
+              "id": 51489,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51488,
+                  "mutability": "mutable",
+                  "name": "_cvx",
+                  "nameLocation": "1996:4:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51490,
+                  "src": "1989:11:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 51487,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51486,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "1989:6:89"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "1989:6:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1988:13:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51497,
+            "nodeType": "FunctionDefinition",
+            "src": "2049:51:89",
+            "documentation": {
+              "id": 51491,
+              "nodeType": "StructuredDocumentation",
+              "src": "2006:40:89",
+              "text": "@notice The address of the CRV token"
+            },
+            "functionSelector": "945c9142",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CRV",
+            "nameLocation": "2058:3:89",
+            "parameters": {
+              "id": 51492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2061:2:89"
+            },
+            "returnParameters": {
+              "id": 51496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51495,
+                  "mutability": "mutable",
+                  "name": "_crv",
+                  "nameLocation": "2094:4:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51497,
+                  "src": "2087:11:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 51494,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51493,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "2087:6:89"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "2087:6:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2086:13:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51504,
+            "nodeType": "FunctionDefinition",
+            "src": "2148:53:89",
+            "documentation": {
+              "id": 51498,
+              "nodeType": "StructuredDocumentation",
+              "src": "2104:41:89",
+              "text": "@notice The address of the AMPH token"
+            },
+            "functionSelector": "5cbac31b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "AMPH",
+            "nameLocation": "2157:4:89",
+            "parameters": {
+              "id": 51499,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2161:2:89"
+            },
+            "returnParameters": {
+              "id": 51503,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51502,
+                  "mutability": "mutable",
+                  "name": "_amph",
+                  "nameLocation": "2194:5:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51504,
+                  "src": "2187:12:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 51501,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51500,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "2187:6:89"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "2187:6:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2186:14:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51510,
+            "nodeType": "FunctionDefinition",
+            "src": "2273:85:89",
+            "documentation": {
+              "id": 51505,
+              "nodeType": "StructuredDocumentation",
+              "src": "2205:65:89",
+              "text": "@notice The base supply of AMPH per cliff, denominated in 1e6"
+            },
+            "functionSelector": "b08c7946",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "BASE_SUPPLY_PER_CLIFF",
+            "nameLocation": "2282:21:89",
+            "parameters": {
+              "id": 51506,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2303:2:89"
+            },
+            "returnParameters": {
+              "id": 51509,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51508,
+                  "mutability": "mutable",
+                  "name": "_baseSupplyPerCliff",
+                  "nameLocation": "2337:19:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51510,
+                  "src": "2329:27:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51507,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2329:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2328:29:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51516,
+            "nodeType": "FunctionDefinition",
+            "src": "2447:76:89",
+            "documentation": {
+              "id": 51511,
+              "nodeType": "StructuredDocumentation",
+              "src": "2362:82:89",
+              "text": "@notice The total amount of AMPH minted for rewards in CRV, denominated in 1e6"
+            },
+            "functionSelector": "237d7c52",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distributedAmph",
+            "nameLocation": "2456:15:89",
+            "parameters": {
+              "id": 51512,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2471:2:89"
+            },
+            "returnParameters": {
+              "id": 51515,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51514,
+                  "mutability": "mutable",
+                  "name": "_distributedAmph",
+                  "nameLocation": "2505:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51516,
+                  "src": "2497:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51513,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2497:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2496:26:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51522,
+            "nodeType": "FunctionDefinition",
+            "src": "2586:69:89",
+            "documentation": {
+              "id": 51517,
+              "nodeType": "StructuredDocumentation",
+              "src": "2527:56:89",
+              "text": "@notice The total number of cliffs (for both tokens)"
+            },
+            "functionSelector": "5fc1f308",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "TOTAL_CLIFFS",
+            "nameLocation": "2595:12:89",
+            "parameters": {
+              "id": 51518,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2607:2:89"
+            },
+            "returnParameters": {
+              "id": 51521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51520,
+                  "mutability": "mutable",
+                  "name": "_totalCliffs",
+                  "nameLocation": "2641:12:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51522,
+                  "src": "2633:20:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51519,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2633:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2632:22:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51528,
+            "nodeType": "FunctionDefinition",
+            "src": "2723:70:89",
+            "documentation": {
+              "id": 51523,
+              "nodeType": "StructuredDocumentation",
+              "src": "2659:61:89",
+              "text": "@notice Percentage of rewards taken in CVX (1e18 == 100%)"
+            },
+            "functionSelector": "a351cae7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cvxRewardFee",
+            "nameLocation": "2732:12:89",
+            "parameters": {
+              "id": 51524,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2744:2:89"
+            },
+            "returnParameters": {
+              "id": 51527,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51526,
+                  "mutability": "mutable",
+                  "name": "_cvxRewardFee",
+                  "nameLocation": "2778:13:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51528,
+                  "src": "2770:21:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51525,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2770:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2769:23:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51534,
+            "nodeType": "FunctionDefinition",
+            "src": "2861:70:89",
+            "documentation": {
+              "id": 51529,
+              "nodeType": "StructuredDocumentation",
+              "src": "2797:61:89",
+              "text": "@notice Percentage of rewards taken in CRV (1e18 == 100%)"
+            },
+            "functionSelector": "e4424ee8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "crvRewardFee",
+            "nameLocation": "2870:12:89",
+            "parameters": {
+              "id": 51530,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2882:2:89"
+            },
+            "returnParameters": {
+              "id": 51533,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51532,
+                  "mutability": "mutable",
+                  "name": "_crvRewardFee",
+                  "nameLocation": "2916:13:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51534,
+                  "src": "2908:21:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2908:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2907:23:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51541,
+            "nodeType": "FunctionDefinition",
+            "src": "2970:85:89",
+            "documentation": {
+              "id": 51535,
+              "nodeType": "StructuredDocumentation",
+              "src": "2935:32:89",
+              "text": "@notice The vault controller"
+            },
+            "functionSelector": "5f36b048",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultController",
+            "nameLocation": "2979:15:89",
+            "parameters": {
+              "id": 51536,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2994:2:89"
+            },
+            "returnParameters": {
+              "id": 51540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51539,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "3037:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51541,
+                  "src": "3020:33:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IVaultController_$52822",
+                    "typeString": "contract IVaultController"
+                  },
+                  "typeName": {
+                    "id": 51538,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51537,
+                      "name": "IVaultController",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 52822,
+                      "src": "3020:16:89"
+                    },
+                    "referencedDeclaration": 52822,
+                    "src": "3020:16:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IVaultController_$52822",
+                      "typeString": "contract IVaultController"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3019:35:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51559,
+            "nodeType": "FunctionDefinition",
+            "src": "3780:222:89",
+            "documentation": {
+              "id": 51542,
+              "nodeType": "StructuredDocumentation",
+              "src": "3231:546:89",
+              "text": "@notice Claims an amount of AMPH given a CVX and CRV quantity\n @param _vaultId The vault id that is claiming\n @param _cvxTotalRewards The max CVX amount to exchange from the sender\n @param _crvTotalRewards The max CVR amount to exchange from the sender\n @param _beneficiary The receiver of the AMPH rewards\n @return _cvxAmountToSend The amount of CVX that the treasury got\n @return _crvAmountToSend The amount of CRV that the treasury got\n @return _claimedAmph The amount of AMPH received by the beneficiary"
+            },
+            "functionSelector": "ceaf55be",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimAmph",
+            "nameLocation": "3789:9:89",
+            "parameters": {
+              "id": 51551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51544,
+                  "mutability": "mutable",
+                  "name": "_vaultId",
+                  "nameLocation": "3811:8:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3804:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 51543,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3804:6:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51546,
+                  "mutability": "mutable",
+                  "name": "_cvxTotalRewards",
+                  "nameLocation": "3833:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3825:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51545,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3825:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51548,
+                  "mutability": "mutable",
+                  "name": "_crvTotalRewards",
+                  "nameLocation": "3863:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3855:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51547,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3855:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51550,
+                  "mutability": "mutable",
+                  "name": "_beneficiary",
+                  "nameLocation": "3893:12:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3885:20:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51549,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3885:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3798:111:89"
+            },
+            "returnParameters": {
+              "id": 51558,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51553,
+                  "mutability": "mutable",
+                  "name": "_cvxAmountToSend",
+                  "nameLocation": "3936:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3928:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51552,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3928:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51555,
+                  "mutability": "mutable",
+                  "name": "_crvAmountToSend",
+                  "nameLocation": "3962:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3954:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51554,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3954:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51557,
+                  "mutability": "mutable",
+                  "name": "_claimedAmph",
+                  "nameLocation": "3988:12:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51559,
+                  "src": "3980:20:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51556,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3980:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3927:74:89"
+            },
+            "scope": 51604,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51577,
+            "nodeType": "FunctionDefinition",
+            "src": "4591:224:89",
+            "documentation": {
+              "id": 51560,
+              "nodeType": "StructuredDocumentation",
+              "src": "4006:582:89",
+              "text": "@notice Returns the claimable amount of AMPH given a CVX and CRV quantity\n @param _sender The address of the account claiming\n @param _vaultId The vault id that is claiming\n @param _cvxTotalRewards The max CVX amount to exchange from the sender\n @param _crvTotalRewards The max CVR amount to exchange from the sender\n @return _cvxAmountToSend The amount of CVX the user will have to send\n @return _crvAmountToSend The amount of CRV the user will have to send\n @return _claimableAmph The amount of AMPH that would be received by the beneficiary"
+            },
+            "functionSelector": "70e0a7e4",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimable",
+            "nameLocation": "4600:9:89",
+            "parameters": {
+              "id": 51569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51562,
+                  "mutability": "mutable",
+                  "name": "_sender",
+                  "nameLocation": "4623:7:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4615:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51561,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4615:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51564,
+                  "mutability": "mutable",
+                  "name": "_vaultId",
+                  "nameLocation": "4643:8:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4636:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 51563,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4636:6:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51566,
+                  "mutability": "mutable",
+                  "name": "_cvxTotalRewards",
+                  "nameLocation": "4665:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4657:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51565,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4657:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51568,
+                  "mutability": "mutable",
+                  "name": "_crvTotalRewards",
+                  "nameLocation": "4695:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4687:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51567,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4687:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4609:106:89"
+            },
+            "returnParameters": {
+              "id": 51576,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51571,
+                  "mutability": "mutable",
+                  "name": "_cvxAmountToSend",
+                  "nameLocation": "4747:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4739:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51570,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4739:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51573,
+                  "mutability": "mutable",
+                  "name": "_crvAmountToSend",
+                  "nameLocation": "4773:16:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4765:24:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51572,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4765:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51575,
+                  "mutability": "mutable",
+                  "name": "_claimableAmph",
+                  "nameLocation": "4799:14:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51577,
+                  "src": "4791:22:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51574,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4791:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4738:76:89"
+            },
+            "scope": 51604,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51583,
+            "nodeType": "FunctionDefinition",
+            "src": "4941:69:89",
+            "documentation": {
+              "id": 51578,
+              "nodeType": "StructuredDocumentation",
+              "src": "4819:119:89",
+              "text": "@notice Used by governance to change the vault controller\n @param _newVaultController The new vault controller"
+            },
+            "functionSelector": "7aadb0f1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeVaultController",
+            "nameLocation": "4950:21:89",
+            "parameters": {
+              "id": 51581,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51580,
+                  "mutability": "mutable",
+                  "name": "_newVaultController",
+                  "nameLocation": "4980:19:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51583,
+                  "src": "4972:27:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51579,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4972:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4971:29:89"
+            },
+            "returnParameters": {
+              "id": 51582,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5009:0:89"
+            },
+            "scope": 51604,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51591,
+            "nodeType": "FunctionDefinition",
+            "src": "5167:63:89",
+            "documentation": {
+              "id": 51584,
+              "nodeType": "StructuredDocumentation",
+              "src": "5014:150:89",
+              "text": "@notice Used by governance to recover tokens from the contract\n @param _token The token to recover\n @param _amount The amount to recover"
+            },
+            "functionSelector": "78b140fc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recoverDust",
+            "nameLocation": "5176:11:89",
+            "parameters": {
+              "id": 51589,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51586,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "5196:6:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51591,
+                  "src": "5188:14:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51585,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5188:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51588,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "5212:7:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51591,
+                  "src": "5204:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51587,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5204:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5187:33:89"
+            },
+            "returnParameters": {
+              "id": 51590,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5229:0:89"
+            },
+            "scope": 51604,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51597,
+            "nodeType": "FunctionDefinition",
+            "src": "5351:54:89",
+            "documentation": {
+              "id": 51592,
+              "nodeType": "StructuredDocumentation",
+              "src": "5234:114:89",
+              "text": "@notice Used by governance to change the fee taken from the CVX reward\n @param _newFee The new reward fee"
+            },
+            "functionSelector": "9c90c9ef",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeCvxRewardFee",
+            "nameLocation": "5360:18:89",
+            "parameters": {
+              "id": 51595,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51594,
+                  "mutability": "mutable",
+                  "name": "_newFee",
+                  "nameLocation": "5387:7:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51597,
+                  "src": "5379:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51593,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5379:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5378:17:89"
+            },
+            "returnParameters": {
+              "id": 51596,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5404:0:89"
+            },
+            "scope": 51604,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51603,
+            "nodeType": "FunctionDefinition",
+            "src": "5526:54:89",
+            "documentation": {
+              "id": 51598,
+              "nodeType": "StructuredDocumentation",
+              "src": "5409:114:89",
+              "text": "@notice Used by governance to change the fee taken from the CRV reward\n @param _newFee The new reward fee"
+            },
+            "functionSelector": "2ab7ff2f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeCrvRewardFee",
+            "nameLocation": "5535:18:89",
+            "parameters": {
+              "id": 51601,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51600,
+                  "mutability": "mutable",
+                  "name": "_newFee",
+                  "nameLocation": "5562:7:89",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51603,
+                  "src": "5554:15:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51599,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5554:7:89",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5553:17:89"
+            },
+            "returnParameters": {
+              "id": 51602,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5579:0:89"
+            },
+            "scope": 51604,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAMPHClaimer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 51448,
+          "nodeType": "StructuredDocumentation",
+          "src": "201:33:89",
+          "text": "@title AMPHClaimer Interface"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          51604
+        ],
+        "name": "IAMPHClaimer",
+        "nameLocation": "244:12:89",
+        "scope": 51605,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 89
+}

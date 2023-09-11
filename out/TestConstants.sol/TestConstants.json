@@ -1,0 +1,3765 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AAVE_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "AAVE_CAP",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "AAVE_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "AAVE_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "BOOSTER",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CBETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CBETH_ETH_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CBETH_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_AAVE_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_BTC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_CBETH_ETH_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_DAI_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_DYDX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_ETH_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_FRAX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_SNX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_STETH_USD_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_SUSD_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_UNI_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_USDC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_USDT_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_WBTC_BTC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CRV_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CVX_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DAI_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DAI_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DYDX_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DYDX_CAP",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DYDX_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DYDX_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_3CRV_META_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_USDC_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "GEAR_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "GEAR_LP_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "GEAR_LP_REWARDS_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "GEAR_LP_VIRTUAL_REWARDS_CONTRACT",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "GEAR_VIRTUAL_REWARDS_OPERATOR_CONTRACT",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "LIQUIDATION_INCENTIVE",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "OTHER_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SNX_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SNX_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "STE_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_FRAX_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_FRAX_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_TOKEN_STATE",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "THREE_CRV_LP_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "THREE_CRV_LP_REWARDS_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "THREE_CRV_LP_STAKED_CONTRACT",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "THREE_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TRI_CRYPTO_2_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TRI_CRYPTO_LP_TOKEN",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_V2_ROUTER",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_V3_FACTORY",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_V3_NFP_MANAGER",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "UNI_V3_SWAP_ROUTER",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_UNI_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_USDT_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_WBTC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_LP_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_LP_REWARDS_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_LP_STAKED_CONTRACT",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "VAULT_CONTROLLER_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WBTC_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WBTC_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WBTC_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WETH_LTV",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WSETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WSTETH_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cDAI_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cUSDC_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cUSDT_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b50610e1a806100206000396000f3fe608060405234801561001057600080fd5b50600436106105ac5760003560e01c806393cb0e8b116102ed578063c16da82b11610191578063d3accc4a116100ee578063e7c10c82116100a2578063ed1c1e001161007c578063ed1c1e0014610d93578063ed9a9d0914610dae578063f2ed998214610dc957600080fd5b8063e7c10c8214610b61578063e96f6b2514610d5d578063eaf9a7b514610d7857600080fd5b8063dabad4b4116100d3578063dabad4b414610b69578063dcaa8cd714610d27578063e5516b0f14610d4257600080fd5b8063d3accc4a14610cf1578063d5bb022614610d0c57600080fd5b8063c43d14cf11610145578063c906de881161012a578063c906de8814610ca0578063ca48d04714610cbb578063ca68970f14610cd657600080fd5b8063c43d14cf14610c77578063c66c144a14610c9257600080fd5b8063c1c6d84111610176578063c1c6d84114610c26578063c26f6ccd14610c41578063c3200dbd14610c5c57600080fd5b8063c16da82b14610bf0578063c189205814610c0b57600080fd5b8063b1e786461161024a578063ba4a1b50116101fe578063bdd5915f116101d8578063bdd5915f14610bba578063bff35ba514610bd5578063c0e5d64d146108fc57600080fd5b8063ba4a1b5014610b69578063bb09d9b714610b84578063bb9059ce14610b9f57600080fd5b8063b8090e8a1161022f578063b8090e8a14610b52578063ba0dc28a14610b61578063ba43b39f146108fc57600080fd5b8063b1e7864614610b1c578063b2118a1314610b3757600080fd5b8063a956f471116102a1578063ac573f9411610286578063ac573f9414610ae6578063ae2ac61314610b01578063b1afae7b146108fc57600080fd5b8063a956f47114610ab0578063aa05414314610acb57600080fd5b80639a2ce7d5116102d25780639a2ce7d514610a5f5780639c8380d814610a7a578063a89d948b14610a9557600080fd5b806393cb0e8b14610a3457806396b58a4214610a4457600080fd5b806350387516116104545780636e3a8af2116103b15780637b0358ee1161036557806381d2d3191161033f57806381d2d319146109e35780638c962fc6146109fe5780638ec12c0c14610a1957600080fd5b80637b0358ee146109925780637f8f602d146109ad5780638175ae1c146109c857600080fd5b806375b0ffd11161039657806375b0ffd114610941578063775a7d5f1461095c57806379d0c09c1461097757600080fd5b80636e3a8af21461090b578063700f8f1a1461092657600080fd5b806362b854b3116104085780636a0b3bc5116103ed5780636a0b3bc5146108c65780636a851253146108e15780636e31f687146108fc57600080fd5b806362b854b31461089057806364e6efb4146108ab57600080fd5b80635a84d57b116104395780635a84d57b1461083f5780635b8d959b1461085a5780635c3a6b441461087557600080fd5b80635038751614610809578063545c12911461082457600080fd5b80632a4c0a1a1161050d5780632f2eec37116104c15780633aaa452f1161049b5780633aaa452f146107b85780634423aa3b146107d35780634cc99d4a146107ee57600080fd5b80632f2eec371461076757806331ae6ec514610782578063391d2c6b1461079d57600080fd5b80632b4e2b63116104f25780632b4e2b63146107165780632d76d63c146107315780632daabc621461074c57600080fd5b80632a4c0a1a146106e05780632b0f7467146106fb57600080fd5b8063125aec3e1161056457806316c190a81161054957806316c190a81461068f57806320302ab7146106aa57806321b3fa24146106c557600080fd5b8063125aec3e14610659578063160f1ae91461067457600080fd5b80630712bc3e116105955780630712bc3e146106115780630e2569bc1461062c5780630e74dc701461064a57600080fd5b8063012d9806146105b1578063040141e5146105f6575b600080fd5b6105cc73c4ad29ba4b3c580e6d59105fff484999997675ff81565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b6105cc73c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b6105cc73853d955acef822db058eb8505911ed77f175b99e81565b61063c6802b5e3af16b188000081565b6040519081526020016105ed565b61063c670bcbce7f1b15000081565b6105cc735f4ec3df9cbd43714fe2740f5e3616155c5b841981565b6105cc73a5407eae9ba41422680e2e00537571bcc53efbfd81565b6105cc73553303d460ee0afb37edff9be42922d8ff63220e81565b6105cc735d3a536e4d6dbd6114cc1ead35777bab948e364381565b6105cc735777d92f208679db4b9778590fa3cab3ac9e216881565b6105cc736b175474e89094c44da98b954eedeac495271d0f81565b6105cc73e592427a0aece92de3edee1f18e0157c0586156481565b6105cc73c63b0708e2f7e69cb8a1df0e1389a98c35a76d5281565b6105cc73ede8dd046586d22625ae7ff2708f879ef7bdb8cf81565b6105cc73bc89cd85491d81c6ad2954e6d0362ee29fca8f5381565b6105cc731f98431c8ad98523631ae4a59f267346ea31f98481565b6105cc73d0fc8ba7e267f2bc56044a7715a489d851dc6d7881565b6105cc73689440f2ff927e1f24c72f1087e1faf471ece1c881565b6105cc73cfe54b5cd566ab89272946f602d76ea879cab4a881565b6105cc738ad599c3a0ff1de082011efddc58f1908eb6e6d881565b6105cc733e7d1eab13ad0104d2750b8863b489d65364e32d81565b6105cc738b55351ea358e5eda371575b031ee24f462d503e81565b6105cc73e0cfa17aa9b8f930fd936633c0252d5cb745c2c381565b6105cc73d632f22692fac7611d2aa1c0d552930d43caed3b81565b6105cc73f4030086522a5beea4988f8ca5b36dbc97bee88c81565b6105cc73502cc0d946e79cea4daafcf21f374c6bce76306781565b6105cc73aed0c38402a5d19df6e4c03f4e2dced6e29c1ee981565b6105cc73cbcdf9626bc03e24f779434178a73a0b4bad62ed81565b6105cc7334ff465ee92516e9855eb60f520df0384f410b4581565b6105cc73478909d4d798f3a1f11ffb25e4920c959b4ade0b81565b61063c670a688906bd8b000081565b6105cc73bebc44782c7db0a1a60cb6fe97d0b483032ff1c781565b6105cc73bfcf63294ad7105dea65aa58f8ae5be2d9d0952a81565b6105cc73f403c135812408bfbe8713b5a23a04b3d48aae3181565b6105cc73ba3335588d9403515223f109edc4eb7269a9ab5d81565b6105cc73547a514d5e3769680ce22b2361c10ea13619e8a981565b6105cc73d51a44d3fae010294c616388b506acda1bfaae4681565b6105cc739fc689ccada600b6df723d9e47d84d76664a1f2381565b6105cc737fc66500c84a76ad7e9c93437bfc5ac33e2ddae981565b6105cc735fae7e604fc3e24fd43a72867cebac94c65b404a81565b6105cc73f650c3d88d12db855b8bf7d11be6c55a4e07dcc981565b6105cc73dc3ea94cd0ac27d9a86c180091e7f78c683d369981565b61063c681b1ae4d6e2ef50000081565b6105cc73fdfd9c85ad200c506cf9e21f1fd8dd01932fbb2381565b6105cc7357ab1ec28d129707052df4df418d58a2d46d5f5181565b6105cc73f017fcb346a1885194689ba23eff2fe6fa5c483b81565b6105cc73840deeef2f115cf50da625f7368c24af6fe7441081565b6105cc73b9e1e3a9feff48998e45fa90847ed4d467e8bcfd81565b6105cc7339aa39c021dfbae8fac545936693ac917d5e756381565b6105cc73dc24316b9ae028f1497c275eb9192a3ea0f6702281565b6105cc738fffffd4afb6115b954bd326cbe7b4ba576818f681565b6105cc733605af97dfd67a6c73cfc517b9481a2fe4bf050b81565b6105cc73d340b57aacdd10f96fc1cf10e15921936f41e29c81565b61063c670b1a2bc2ec50000081565b6105cc600081565b6105cc733416cf6c708da44db2624d63ea0aaef7113527c681565b6105cc73a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4881565b6105cc73c011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f81565b6105cc732260fac5e5542a773aa44fbcfedf7c193bc2c59981565b6105cc7392d6c1e31e14520e676a687f0a93788b716beff581565b6105cc734d3cc2d219bdb74973fb9fa2f7157e29bcccba0581565b6105cc73dac17f958d2ee523a2206206994597c13d831ec781565b6105cc735ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb81565b6105cc73dcef968d416a41cdac0ed8702fac8128a64241a281565b6105cc73c36442b4a4522e871399cd717abdd847ab11fe8881565b6105cc734e3fbd56cd56c3e72c1403e103b45db9da5b9d2b81565b61063c66b1a2bc2ec5000081565b6105cc7305a9cbe762b36632b3594da4f082340e0e5343e881565b6105cc73e3c190c57b5959ae62efe3b6797058b76ba2f5ef81565b6105cc731f9840a85d5af5bf1d1762f925bdaddc4201f98481565b6105cc735be6c45e2d074faa20700c49ada3e88a1cc0025d81565b6105cc737a250d5630b4cf539739df2c5dacb4c659f2488d81565b6105cc73ad35bd71b9afe6e4bdc266b345c198eadef9ad9481565b6105cc736c3f90f043a72fa612cbac8115ee7e52bde6e49081565b6105cc73be9895146f7af43049ca1c1ae358b0541ea4970481565b6105cc7399ac8ca7087fa4a2a1fb6357269965a2014abc3581565b6105cc73d533a949740bb3306d119cc777fa900ba034cd5281565b6105cc737f39c581f595b53c5cb19bd0b3f8da6c935e2ca081565b6105cc734ddc2d193948926d02f9b1fe9e1daa0718270ed58156fea2646970667358221220f646518ad38e24a8a13be6f0e2b364a41b87a1efb32679f8953ce6dc7b83266e64736f6c634300080e0033",
+    "sourceMap": "261:2059:126:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106105ac5760003560e01c806393cb0e8b116102ed578063c16da82b11610191578063d3accc4a116100ee578063e7c10c82116100a2578063ed1c1e001161007c578063ed1c1e0014610d93578063ed9a9d0914610dae578063f2ed998214610dc957600080fd5b8063e7c10c8214610b61578063e96f6b2514610d5d578063eaf9a7b514610d7857600080fd5b8063dabad4b4116100d3578063dabad4b414610b69578063dcaa8cd714610d27578063e5516b0f14610d4257600080fd5b8063d3accc4a14610cf1578063d5bb022614610d0c57600080fd5b8063c43d14cf11610145578063c906de881161012a578063c906de8814610ca0578063ca48d04714610cbb578063ca68970f14610cd657600080fd5b8063c43d14cf14610c77578063c66c144a14610c9257600080fd5b8063c1c6d84111610176578063c1c6d84114610c26578063c26f6ccd14610c41578063c3200dbd14610c5c57600080fd5b8063c16da82b14610bf0578063c189205814610c0b57600080fd5b8063b1e786461161024a578063ba4a1b50116101fe578063bdd5915f116101d8578063bdd5915f14610bba578063bff35ba514610bd5578063c0e5d64d146108fc57600080fd5b8063ba4a1b5014610b69578063bb09d9b714610b84578063bb9059ce14610b9f57600080fd5b8063b8090e8a1161022f578063b8090e8a14610b52578063ba0dc28a14610b61578063ba43b39f146108fc57600080fd5b8063b1e7864614610b1c578063b2118a1314610b3757600080fd5b8063a956f471116102a1578063ac573f9411610286578063ac573f9414610ae6578063ae2ac61314610b01578063b1afae7b146108fc57600080fd5b8063a956f47114610ab0578063aa05414314610acb57600080fd5b80639a2ce7d5116102d25780639a2ce7d514610a5f5780639c8380d814610a7a578063a89d948b14610a9557600080fd5b806393cb0e8b14610a3457806396b58a4214610a4457600080fd5b806350387516116104545780636e3a8af2116103b15780637b0358ee1161036557806381d2d3191161033f57806381d2d319146109e35780638c962fc6146109fe5780638ec12c0c14610a1957600080fd5b80637b0358ee146109925780637f8f602d146109ad5780638175ae1c146109c857600080fd5b806375b0ffd11161039657806375b0ffd114610941578063775a7d5f1461095c57806379d0c09c1461097757600080fd5b80636e3a8af21461090b578063700f8f1a1461092657600080fd5b806362b854b3116104085780636a0b3bc5116103ed5780636a0b3bc5146108c65780636a851253146108e15780636e31f687146108fc57600080fd5b806362b854b31461089057806364e6efb4146108ab57600080fd5b80635a84d57b116104395780635a84d57b1461083f5780635b8d959b1461085a5780635c3a6b441461087557600080fd5b80635038751614610809578063545c12911461082457600080fd5b80632a4c0a1a1161050d5780632f2eec37116104c15780633aaa452f1161049b5780633aaa452f146107b85780634423aa3b146107d35780634cc99d4a146107ee57600080fd5b80632f2eec371461076757806331ae6ec514610782578063391d2c6b1461079d57600080fd5b80632b4e2b63116104f25780632b4e2b63146107165780632d76d63c146107315780632daabc621461074c57600080fd5b80632a4c0a1a146106e05780632b0f7467146106fb57600080fd5b8063125aec3e1161056457806316c190a81161054957806316c190a81461068f57806320302ab7146106aa57806321b3fa24146106c557600080fd5b8063125aec3e14610659578063160f1ae91461067457600080fd5b80630712bc3e116105955780630712bc3e146106115780630e2569bc1461062c5780630e74dc701461064a57600080fd5b8063012d9806146105b1578063040141e5146105f6575b600080fd5b6105cc73c4ad29ba4b3c580e6d59105fff484999997675ff81565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b6105cc73c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b6105cc73853d955acef822db058eb8505911ed77f175b99e81565b61063c6802b5e3af16b188000081565b6040519081526020016105ed565b61063c670bcbce7f1b15000081565b6105cc735f4ec3df9cbd43714fe2740f5e3616155c5b841981565b6105cc73a5407eae9ba41422680e2e00537571bcc53efbfd81565b6105cc73553303d460ee0afb37edff9be42922d8ff63220e81565b6105cc735d3a536e4d6dbd6114cc1ead35777bab948e364381565b6105cc735777d92f208679db4b9778590fa3cab3ac9e216881565b6105cc736b175474e89094c44da98b954eedeac495271d0f81565b6105cc73e592427a0aece92de3edee1f18e0157c0586156481565b6105cc73c63b0708e2f7e69cb8a1df0e1389a98c35a76d5281565b6105cc73ede8dd046586d22625ae7ff2708f879ef7bdb8cf81565b6105cc73bc89cd85491d81c6ad2954e6d0362ee29fca8f5381565b6105cc731f98431c8ad98523631ae4a59f267346ea31f98481565b6105cc73d0fc8ba7e267f2bc56044a7715a489d851dc6d7881565b6105cc73689440f2ff927e1f24c72f1087e1faf471ece1c881565b6105cc73cfe54b5cd566ab89272946f602d76ea879cab4a881565b6105cc738ad599c3a0ff1de082011efddc58f1908eb6e6d881565b6105cc733e7d1eab13ad0104d2750b8863b489d65364e32d81565b6105cc738b55351ea358e5eda371575b031ee24f462d503e81565b6105cc73e0cfa17aa9b8f930fd936633c0252d5cb745c2c381565b6105cc73d632f22692fac7611d2aa1c0d552930d43caed3b81565b6105cc73f4030086522a5beea4988f8ca5b36dbc97bee88c81565b6105cc73502cc0d946e79cea4daafcf21f374c6bce76306781565b6105cc73aed0c38402a5d19df6e4c03f4e2dced6e29c1ee981565b6105cc73cbcdf9626bc03e24f779434178a73a0b4bad62ed81565b6105cc7334ff465ee92516e9855eb60f520df0384f410b4581565b6105cc73478909d4d798f3a1f11ffb25e4920c959b4ade0b81565b61063c670a688906bd8b000081565b6105cc73bebc44782c7db0a1a60cb6fe97d0b483032ff1c781565b6105cc73bfcf63294ad7105dea65aa58f8ae5be2d9d0952a81565b6105cc73f403c135812408bfbe8713b5a23a04b3d48aae3181565b6105cc73ba3335588d9403515223f109edc4eb7269a9ab5d81565b6105cc73547a514d5e3769680ce22b2361c10ea13619e8a981565b6105cc73d51a44d3fae010294c616388b506acda1bfaae4681565b6105cc739fc689ccada600b6df723d9e47d84d76664a1f2381565b6105cc737fc66500c84a76ad7e9c93437bfc5ac33e2ddae981565b6105cc735fae7e604fc3e24fd43a72867cebac94c65b404a81565b6105cc73f650c3d88d12db855b8bf7d11be6c55a4e07dcc981565b6105cc73dc3ea94cd0ac27d9a86c180091e7f78c683d369981565b61063c681b1ae4d6e2ef50000081565b6105cc73fdfd9c85ad200c506cf9e21f1fd8dd01932fbb2381565b6105cc7357ab1ec28d129707052df4df418d58a2d46d5f5181565b6105cc73f017fcb346a1885194689ba23eff2fe6fa5c483b81565b6105cc73840deeef2f115cf50da625f7368c24af6fe7441081565b6105cc73b9e1e3a9feff48998e45fa90847ed4d467e8bcfd81565b6105cc7339aa39c021dfbae8fac545936693ac917d5e756381565b6105cc73dc24316b9ae028f1497c275eb9192a3ea0f6702281565b6105cc738fffffd4afb6115b954bd326cbe7b4ba576818f681565b6105cc733605af97dfd67a6c73cfc517b9481a2fe4bf050b81565b6105cc73d340b57aacdd10f96fc1cf10e15921936f41e29c81565b61063c670b1a2bc2ec50000081565b6105cc600081565b6105cc733416cf6c708da44db2624d63ea0aaef7113527c681565b6105cc73a0b86991c6218b36c1d19d4a2e9eb0ce3606eb4881565b6105cc73c011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f81565b6105cc732260fac5e5542a773aa44fbcfedf7c193bc2c59981565b6105cc7392d6c1e31e14520e676a687f0a93788b716beff581565b6105cc734d3cc2d219bdb74973fb9fa2f7157e29bcccba0581565b6105cc73dac17f958d2ee523a2206206994597c13d831ec781565b6105cc735ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb81565b6105cc73dcef968d416a41cdac0ed8702fac8128a64241a281565b6105cc73c36442b4a4522e871399cd717abdd847ab11fe8881565b6105cc734e3fbd56cd56c3e72c1403e103b45db9da5b9d2b81565b61063c66b1a2bc2ec5000081565b6105cc7305a9cbe762b36632b3594da4f082340e0e5343e881565b6105cc73e3c190c57b5959ae62efe3b6797058b76ba2f5ef81565b6105cc731f9840a85d5af5bf1d1762f925bdaddc4201f98481565b6105cc735be6c45e2d074faa20700c49ada3e88a1cc0025d81565b6105cc737a250d5630b4cf539739df2c5dacb4c659f2488d81565b6105cc73ad35bd71b9afe6e4bdc266b345c198eadef9ad9481565b6105cc736c3f90f043a72fa612cbac8115ee7e52bde6e49081565b6105cc73be9895146f7af43049ca1c1ae358b0541ea4970481565b6105cc7399ac8ca7087fa4a2a1fb6357269965a2014abc3581565b6105cc73d533a949740bb3306d119cc777fa900ba034cd5281565b6105cc737f39c581f595b53c5cb19bd0b3f8da6c935e2ca081565b6105cc734ddc2d193948926d02f9b1fe9e1daa0718270ed58156fea2646970667358221220f646518ad38e24a8a13be6f0e2b364a41b87a1efb32679f8953ce6dc7b83266e64736f6c634300080e0033",
+    "sourceMap": "261:2059:126:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1223:88:127;;1269:42;1223:88;;;;;190:42:128;178:55;;;160:74;;148:2;133:18;1223:88:127;;;;;;;;107:81;;146:42;107:81;;1826;;1865:42;1826:81;;1687:43:126;;1722:8;1687:43;;;;;391:25:128;;;379:2;364:18;1687:43:126;245:177:128;1260:45:126;;1295:10;1260:45;;111:95:123;;164:42;111:95;;666:104:124;;728:42;666:104;;210:95:123;;263:42;210:95;;1400:81:127;;1439:42;1400:81;;769:90:125;;817:42;769:90;;1742:80:127;;1780:42;1742:80;;2098:87:126;;2143:42;2098:87;;960:91:125;;1009:42;960:91;;1149:89;;1196:42;1149:89;;1053:92:126;;1103:42;1053:92;;1920:83;;1961:42;1920:83;;200:90:125;;248:42;200:90;;579:97:126;;634:42;579:97;;1011:101:123;;1070:42;1011:101;;105:91:125;;154:42;105:91;;712:96:123;;766:42;712:96;;387:92:126;;437:42;387:92;;389:91:125;;438:42;389:91;;274:96:124;;328:42;274:96;;409:95:123;;462:42;409:95;;483:92:126;;533:42;483:92;;912:95:123;;965:42;912:95;;1055:90:125;;1103:42;1055:90;;1242:91;;1291:42;1242:91;;612:96:123;;666:42;612:96;;1455:46:126;;1491:10;1455:46;;374:91:124;;423:42;374:91;;1149:97:126;;1204:42;1149:97;;701:76;;735:42;701:76;;882:81:127;;921:42;882:81;;309:96:123;;363:42;309:96;;469:94:124;;521:42;469:94;;701:84:127;;743:42;701:84;;446:81;;485:42;446:81;;567:95:124;;620:42;567:95;;1571:82:127;;1611:42;1571:82;;1216:95:123;;1269:42;1216:95;;1639:44:126;;1674:9;1639:44;;508:100:123;;566:42;508:100;;192:81:127;;231:42;192:81;;1415:101:123;;1474:42;1415:101;;1337:91:125;;1386:42;1337:91;;1116:96:123;;1170:42;1116:96;;1485:82:127;;1525:42;1485:82;;82:89:124;;129:42;82:89;;812:96:123;;866:42;812:96;;815:101:126;;874:42;815:101;;863:93:125;;914:42;863:93;;1505:44:126;;1540:9;1505:44;;2268:49;;2315:1;2268:49;;579:91:125;;628:42;579:91;;1657:81:127;;1696:42;1657:81;;2083:80;;2121:42;2083:80;;616:81;;655:42;616:81;;531;;570:42;531:81;;920:107:126;;985:42;920:107;;277:81:127;;316:42;277:81;;294:91:125;;343:42;294:91;;175:95:124;;228:42;175:95;;2007:87:126;;2052:42;2007:87;;1055:80:127;;1093:42;1055:80;;1567:58:126;;1615:10;1567:58;;1745:85;;1788:42;1745:85;;774:95:124;;827:42;774:95;;362:80:127;;400:42;362:80;;967:84;;1009:42;967:84;;1834:82:126;;1874:42;1834:82;;1315:96:123;;1369:42;1315:96;;789:89:127;;836:42;789:89;;1997:82;;2037:42;1997:82;;484:91:125;;533:42;484:91;;1139:80:127;;1177:42;1139:80;;1911:82;;1951:42;1911:82;;1315:81;;1354:42;1315:81;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "AAVE_ADDRESS()": "8175ae1c",
+    "AAVE_CAP()": "93cb0e8b",
+    "AAVE_LTV()": "c0e5d64d",
+    "AAVE_WETH_POOL_ADDRESS()": "c1c6d841",
+    "BOOSTER()": "75b0ffd1",
+    "CBETH_ADDRESS()": "e96f6b25",
+    "CBETH_ETH_CRV_POOL_ADDRESS()": "81d2d319",
+    "CBETH_ETH_POOL_ADDRESS()": "a89d948b",
+    "CHAINLINK_AAVE_FEED_ADDRESS()": "79d0c09c",
+    "CHAINLINK_BTC_FEED_ADDRESS()": "5b8d959b",
+    "CHAINLINK_CBETH_ETH_FEED_ADDRESS()": "9c8380d8",
+    "CHAINLINK_DAI_FEED_ADDRESS()": "62b854b3",
+    "CHAINLINK_DYDX_FEED_ADDRESS()": "6a851253",
+    "CHAINLINK_ETH_FEED_ADDRESS()": "125aec3e",
+    "CHAINLINK_FRAX_FEED_ADDRESS()": "a956f471",
+    "CHAINLINK_SNX_FEED_ADDRESS()": "8ec12c0c",
+    "CHAINLINK_STETH_USD_FEED_ADDRESS()": "3aaa452f",
+    "CHAINLINK_SUSD_FEED_ADDRESS()": "dcaa8cd7",
+    "CHAINLINK_UNI_FEED_ADDRESS()": "16c190a8",
+    "CHAINLINK_USDC_FEED_ADDRESS()": "ae2ac613",
+    "CHAINLINK_USDT_FEED_ADDRESS()": "4cc99d4a",
+    "CHAINLINK_WBTC_BTC_FEED_ADDRESS()": "96b58a42",
+    "CRV_ADDRESS()": "ed1c1e00",
+    "CVX_ADDRESS()": "c43d14cf",
+    "DAI_ADDRESS()": "2a4c0a1a",
+    "DAI_USDC_POOL_ADDRESS()": "21b3fa24",
+    "DYDX_ADDRESS()": "bff35ba5",
+    "DYDX_CAP()": "0e2569bc",
+    "DYDX_LTV()": "ba43b39f",
+    "DYDX_WETH_POOL_ADDRESS()": "545c1291",
+    "FRAX_3CRV_META_POOL_ADDRESS()": "5a84d57b",
+    "FRAX_ADDRESS()": "0712bc3e",
+    "FRAX_USDC_CRV_POOL_ADDRESS()": "c26f6ccd",
+    "FRAX_USDC_POOL_ADDRESS()": "2b4e2b63",
+    "GEAR_ADDRESS()": "775a7d5f",
+    "GEAR_LP_ADDRESS()": "d3accc4a",
+    "GEAR_LP_REWARDS_ADDRESS()": "5c3a6b44",
+    "GEAR_LP_VIRTUAL_REWARDS_CONTRACT()": "b1e78646",
+    "GEAR_VIRTUAL_REWARDS_OPERATOR_CONTRACT()": "c16da82b",
+    "LIQUIDATION_INCENTIVE()": "c66c144a",
+    "OTHER_LTV()": "6e31f687",
+    "SNX_ADDRESS()": "bb9059ce",
+    "SNX_ETH_POOL_ADDRESS()": "2d76d63c",
+    "STE_CRV_POOL_ADDRESS()": "ac573f94",
+    "SUSD_ADDRESS()": "9a2ce7d5",
+    "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS()": "160f1ae9",
+    "SUSD_FRAX_CRV_POOL_ADDRESS()": "ca48d047",
+    "SUSD_FRAX_POOL_ADDRESS()": "6a0b3bc5",
+    "SUSD_TOKEN_STATE()": "c906de88",
+    "THREE_CRV_LP_ADDRESS()": "e5516b0f",
+    "THREE_CRV_LP_REWARDS_ADDRESS()": "391d2c6b",
+    "THREE_CRV_LP_STAKED_CONTRACT()": "700f8f1a",
+    "THREE_CRV_POOL_ADDRESS()": "6e3a8af2",
+    "TRI_CRYPTO_2_POOL_ADDRESS()": "7b0358ee",
+    "TRI_CRYPTO_LP_TOKEN()": "012d9806",
+    "UNI_ADDRESS()": "ca68970f",
+    "UNI_LTV()": "b1afae7b",
+    "UNI_V2_ROUTER()": "d5bb0226",
+    "UNI_V3_FACTORY()": "2f2eec37",
+    "UNI_V3_NFP_MANAGER()": "c3200dbd",
+    "UNI_V3_SWAP_ROUTER()": "2b0f7467",
+    "USDA_ADDRESS()": "ba0dc28a",
+    "USDC_ADDRESS()": "bb09d9b7",
+    "USDC_UNI_POOL_ADDRESS()": "31ae6ec5",
+    "USDC_USDT_POOL_ADDRESS()": "dabad4b4",
+    "USDC_WBTC_POOL_ADDRESS()": "eaf9a7b5",
+    "USDC_WETH_POOL_ADDRESS()": "4423aa3b",
+    "USDT_ADDRESS()": "c1892058",
+    "USDT_LP_ADDRESS()": "7f8f602d",
+    "USDT_LP_REWARDS_ADDRESS()": "50387516",
+    "USDT_LP_STAKED_CONTRACT()": "2daabc62",
+    "USDT_USDC_POOL_ADDRESS()": "ba4a1b50",
+    "VAULT_CONTROLLER_ADDRESS()": "e7c10c82",
+    "WBTC_ADDRESS()": "bdd5915f",
+    "WBTC_ETH_POOL_ADDRESS()": "64e6efb4",
+    "WBTC_LTV()": "b8090e8a",
+    "WETH_ADDRESS()": "040141e5",
+    "WETH_LTV()": "0e74dc70",
+    "WSETH_ADDRESS()": "ed9a9d09",
+    "WSTETH_WETH_POOL_ADDRESS()": "b2118a13",
+    "cDAI_ADDRESS()": "20302ab7",
+    "cETH_ADDRESS()": "f2ed9982",
+    "cUSDC_ADDRESS()": "aa054143",
+    "cUSDT_ADDRESS()": "8c962fc6"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"AAVE_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"AAVE_CAP\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"AAVE_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"AAVE_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"BOOSTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CBETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CBETH_ETH_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CBETH_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_AAVE_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_BTC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_CBETH_ETH_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_DAI_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_DYDX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_ETH_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_FRAX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_SNX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_STETH_USD_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_SUSD_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_UNI_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_USDC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_USDT_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_WBTC_BTC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CRV_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CVX_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DAI_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DAI_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DYDX_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DYDX_CAP\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DYDX_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DYDX_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_3CRV_META_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_USDC_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GEAR_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GEAR_LP_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GEAR_LP_REWARDS_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GEAR_LP_VIRTUAL_REWARDS_CONTRACT\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"GEAR_VIRTUAL_REWARDS_OPERATOR_CONTRACT\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"LIQUIDATION_INCENTIVE\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"OTHER_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SNX_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SNX_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"STE_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_FRAX_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_FRAX_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_TOKEN_STATE\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"THREE_CRV_LP_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"THREE_CRV_LP_REWARDS_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"THREE_CRV_LP_STAKED_CONTRACT\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"THREE_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TRI_CRYPTO_2_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TRI_CRYPTO_LP_TOKEN\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_V2_ROUTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_V3_FACTORY\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_V3_NFP_MANAGER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"UNI_V3_SWAP_ROUTER\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDA_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_UNI_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_USDT_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_WBTC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_LP_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_LP_REWARDS_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_LP_STAKED_CONTRACT\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"VAULT_CONTROLLER_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WBTC_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WBTC_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WBTC_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WETH_LTV\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WSETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WSTETH_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cDAI_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cUSDC_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cUSDT_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/test/utils/TestConstants.sol\":\"TestConstants\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/test/utils/ChainlinkFeeds.sol\":{\"keccak256\":\"0x235faba3feacd9184705f84cdf1e5060f22b00f9d93cd62bdce7dac8ea4476e4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09ff2fe2bc7e11ac1ac1d8d2ddb309ae1977b0e13ed5a82d0efa8a624fb8dbad\",\"dweb:/ipfs/QmW7SEsGSHXY4iPeMor1yjnpixV1vU2JojSXMwdAH6Cgfw\"]},\"solidity/test/utils/CurvePools.sol\":{\"keccak256\":\"0xe14c72c76e053ebee42affae9803ab6e66d2dc72928b291b8dd8ea1eb8786177\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a1d075229cc80c00e27022d5aecf0f3b1756808303a60ce64c1898c7faad9fdb\",\"dweb:/ipfs/QmPzxHHEvY7XGme6kSJbTBSEQE5tzTeQKDhhYNEhWw43uv\"]},\"solidity/test/utils/PoolAddresses.sol\":{\"keccak256\":\"0x4736559e2b1772e2f926ce79874d7f7e56269d7fb79f754c5beaa2f1955022a6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://188923fbbc6050830be474f3ca85b74f00c9d04d3d8d528e48adf3440daf926a\",\"dweb:/ipfs/QmP6uPCZ6ReoRpJspKzU6QGgTonb6xdeeK8YK1p9AbtPZC\"]},\"solidity/test/utils/TestConstants.sol\":{\"keccak256\":\"0xb45886aee271e26df2bfb31650f1c99bc9bb09bdaa19f5b0b8af3f428646f9f3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1e20157aa8fe8978a9a6e1ad93bd15224293c9019472cb4e44705ab389ba6b70\",\"dweb:/ipfs/QmaiFgSQKV382vtnrnRgrGP5RTCdVSqPAytzhNoJsFuXww\"]},\"solidity/test/utils/TokenAddresses.sol\":{\"keccak256\":\"0x10c1360b56a971a9082fecceb8100379020b26097aea5abbf4dd1274f1ff59dc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6b7441df1bf07b368c65cbcc0b79c334a6919e0ef790e973fd2cc6c53e1989f6\",\"dweb:/ipfs/QmTUB7fP9mUwmnkfemdof5nxV7CDuU53BYjhg7uzHNHJJy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AAVE_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AAVE_CAP",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AAVE_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AAVE_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "BOOSTER",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CBETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CBETH_ETH_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CBETH_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_AAVE_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_BTC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_CBETH_ETH_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_DAI_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_DYDX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_ETH_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_FRAX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_SNX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_STETH_USD_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_SUSD_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_UNI_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_USDC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_USDT_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_WBTC_BTC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CRV_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CVX_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DAI_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DAI_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DYDX_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DYDX_CAP",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DYDX_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DYDX_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_3CRV_META_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_USDC_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "GEAR_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "GEAR_LP_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "GEAR_LP_REWARDS_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "GEAR_LP_VIRTUAL_REWARDS_CONTRACT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "GEAR_VIRTUAL_REWARDS_OPERATOR_CONTRACT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "LIQUIDATION_INCENTIVE",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "OTHER_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SNX_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SNX_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "STE_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_FRAX_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_FRAX_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_TOKEN_STATE",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "THREE_CRV_LP_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "THREE_CRV_LP_REWARDS_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "THREE_CRV_LP_STAKED_CONTRACT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "THREE_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TRI_CRYPTO_2_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TRI_CRYPTO_LP_TOKEN",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_V2_ROUTER",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_V3_FACTORY",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_V3_NFP_MANAGER",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "UNI_V3_SWAP_ROUTER",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDA_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_UNI_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_USDT_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_WBTC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_LP_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_LP_REWARDS_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_LP_STAKED_CONTRACT",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "VAULT_CONTROLLER_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WBTC_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WBTC_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WBTC_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WETH_LTV",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WSETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WSTETH_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "cDAI_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "cETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "cUSDC_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "cUSDT_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/test/utils/TestConstants.sol": "TestConstants"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/test/utils/ChainlinkFeeds.sol": {
+        "keccak256": "0x235faba3feacd9184705f84cdf1e5060f22b00f9d93cd62bdce7dac8ea4476e4",
+        "urls": [
+          "bzz-raw://09ff2fe2bc7e11ac1ac1d8d2ddb309ae1977b0e13ed5a82d0efa8a624fb8dbad",
+          "dweb:/ipfs/QmW7SEsGSHXY4iPeMor1yjnpixV1vU2JojSXMwdAH6Cgfw"
+        ],
+        "license": "MIT"
+      },
+      "solidity/test/utils/CurvePools.sol": {
+        "keccak256": "0xe14c72c76e053ebee42affae9803ab6e66d2dc72928b291b8dd8ea1eb8786177",
+        "urls": [
+          "bzz-raw://a1d075229cc80c00e27022d5aecf0f3b1756808303a60ce64c1898c7faad9fdb",
+          "dweb:/ipfs/QmPzxHHEvY7XGme6kSJbTBSEQE5tzTeQKDhhYNEhWw43uv"
+        ],
+        "license": "MIT"
+      },
+      "solidity/test/utils/PoolAddresses.sol": {
+        "keccak256": "0x4736559e2b1772e2f926ce79874d7f7e56269d7fb79f754c5beaa2f1955022a6",
+        "urls": [
+          "bzz-raw://188923fbbc6050830be474f3ca85b74f00c9d04d3d8d528e48adf3440daf926a",
+          "dweb:/ipfs/QmP6uPCZ6ReoRpJspKzU6QGgTonb6xdeeK8YK1p9AbtPZC"
+        ],
+        "license": "MIT"
+      },
+      "solidity/test/utils/TestConstants.sol": {
+        "keccak256": "0xb45886aee271e26df2bfb31650f1c99bc9bb09bdaa19f5b0b8af3f428646f9f3",
+        "urls": [
+          "bzz-raw://1e20157aa8fe8978a9a6e1ad93bd15224293c9019472cb4e44705ab389ba6b70",
+          "dweb:/ipfs/QmaiFgSQKV382vtnrnRgrGP5RTCdVSqPAytzhNoJsFuXww"
+        ],
+        "license": "MIT"
+      },
+      "solidity/test/utils/TokenAddresses.sol": {
+        "keccak256": "0x10c1360b56a971a9082fecceb8100379020b26097aea5abbf4dd1274f1ff59dc",
+        "urls": [
+          "bzz-raw://6b7441df1bf07b368c65cbcc0b79c334a6919e0ef790e973fd2cc6c53e1989f6",
+          "dweb:/ipfs/QmTUB7fP9mUwmnkfemdof5nxV7CDuU53BYjhg7uzHNHJJy"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/test/utils/TestConstants.sol",
+    "id": 58975,
+    "exportedSymbols": {
+      "ChainlinkFeeds": [
+        58805
+      ],
+      "CurvePools": [
+        58832
+      ],
+      "PoolAddresses": [
+        58877
+      ],
+      "TestConstants": [
+        58974
+      ],
+      "TokenAddresses": [
+        59049
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2289:126",
+    "nodes": [
+      {
+        "id": 58879,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:126",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 58881,
+        "nodeType": "ImportDirective",
+        "src": "58:52:126",
+        "absolutePath": "solidity/test/utils/ChainlinkFeeds.sol",
+        "file": "./ChainlinkFeeds.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 58975,
+        "sourceUnit": 58806,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 58880,
+              "name": "ChainlinkFeeds",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 58805,
+              "src": "66:14:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 58883,
+        "nodeType": "ImportDirective",
+        "src": "111:50:126",
+        "absolutePath": "solidity/test/utils/PoolAddresses.sol",
+        "file": "./PoolAddresses.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 58975,
+        "sourceUnit": 58878,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 58882,
+              "name": "PoolAddresses",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 58877,
+              "src": "119:13:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 58885,
+        "nodeType": "ImportDirective",
+        "src": "162:52:126",
+        "absolutePath": "solidity/test/utils/TokenAddresses.sol",
+        "file": "./TokenAddresses.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 58975,
+        "sourceUnit": 59050,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 58884,
+              "name": "TokenAddresses",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 59049,
+              "src": "170:14:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 58887,
+        "nodeType": "ImportDirective",
+        "src": "215:44:126",
+        "absolutePath": "solidity/test/utils/CurvePools.sol",
+        "file": "./CurvePools.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 58975,
+        "sourceUnit": 58833,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 58886,
+              "name": "CurvePools",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 58832,
+              "src": "223:10:126",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 58974,
+        "nodeType": "ContractDefinition",
+        "src": "261:2059:126",
+        "nodes": [
+          {
+            "id": 58898,
+            "nodeType": "VariableDeclaration",
+            "src": "387:92:126",
+            "constant": true,
+            "functionSelector": "50387516",
+            "mutability": "constant",
+            "name": "USDT_LP_REWARDS_ADDRESS",
+            "nameLocation": "411:23:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58896,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "387:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307838423535333531656133353865354564613337313537354230333165653234463436326435303365",
+              "id": 58897,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "437:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x8B55351ea358e5Eda371575B031ee24F462d503e"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58901,
+            "nodeType": "VariableDeclaration",
+            "src": "483:92:126",
+            "constant": true,
+            "functionSelector": "5c3a6b44",
+            "mutability": "constant",
+            "name": "GEAR_LP_REWARDS_ADDRESS",
+            "nameLocation": "507:23:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58899,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "483:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835303243633064393436653739436541344461616643663231463337344336626365373633303637",
+              "id": 58900,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "533:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x502Cc0d946e79CeA4DaafCf21F374C6bce763067"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58904,
+            "nodeType": "VariableDeclaration",
+            "src": "579:97:126",
+            "constant": true,
+            "functionSelector": "391d2c6b",
+            "mutability": "constant",
+            "name": "THREE_CRV_LP_REWARDS_ADDRESS",
+            "nameLocation": "603:28:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58902,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "579:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307836383934343066324666393237453166323463373246313038374531464146343731654365316338",
+              "id": 58903,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "634:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x689440f2Ff927E1f24c72F1087E1FAF471eCe1c8"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58907,
+            "nodeType": "VariableDeclaration",
+            "src": "701:76:126",
+            "constant": true,
+            "functionSelector": "75b0ffd1",
+            "mutability": "constant",
+            "name": "BOOSTER",
+            "nameLocation": "725:7:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58905,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "701:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307846343033433133353831323430384246624538373133623541323361303462334434384141453331",
+              "id": 58906,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "735:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xF403C135812408BFbE8713b5A23a04b3D48AAE31"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58910,
+            "nodeType": "VariableDeclaration",
+            "src": "815:101:126",
+            "constant": true,
+            "functionSelector": "b1e78646",
+            "mutability": "constant",
+            "name": "GEAR_LP_VIRTUAL_REWARDS_CONTRACT",
+            "nameLocation": "839:32:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58908,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "815:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307833363035414639374446443637413643373343664335313742393438316132666534426630353062",
+              "id": 58909,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "874:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x3605AF97DFD67A6C73CfC517B9481a2fe4Bf050b"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58913,
+            "nodeType": "VariableDeclaration",
+            "src": "920:107:126",
+            "constant": true,
+            "functionSelector": "c16da82b",
+            "mutability": "constant",
+            "name": "GEAR_VIRTUAL_REWARDS_OPERATOR_CONTRACT",
+            "nameLocation": "944:38:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58911,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "920:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834443363433244323139624442373439373366423946613246373135374532396263636342613035",
+              "id": 58912,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "985:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x4D3cC2D219bDB74973fB9Fa2F7157E29bcccBa05"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58916,
+            "nodeType": "VariableDeclaration",
+            "src": "1053:92:126",
+            "constant": true,
+            "functionSelector": "2daabc62",
+            "mutability": "constant",
+            "name": "USDT_LP_STAKED_CONTRACT",
+            "nameLocation": "1077:23:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58914,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1053:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307842433839636438353439316438314336414432393534453664303336324565323966436138463533",
+              "id": 58915,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1103:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xBC89cd85491d81C6AD2954E6d0362Ee29fCa8F53"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58919,
+            "nodeType": "VariableDeclaration",
+            "src": "1149:97:126",
+            "constant": true,
+            "functionSelector": "700f8f1a",
+            "mutability": "constant",
+            "name": "THREE_CRV_LP_STAKED_CONTRACT",
+            "nameLocation": "1173:28:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58917,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1149:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307862466346363332393461443731303564456136356141353846384145354245324439643039353241",
+              "id": 58918,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1204:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xbFcF63294aD7105dEa65aA58F8AE5BE2D9d0952A"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58922,
+            "nodeType": "VariableDeclaration",
+            "src": "1260:45:126",
+            "constant": true,
+            "functionSelector": "0e74dc70",
+            "mutability": "constant",
+            "name": "WETH_LTV",
+            "nameLocation": "1284:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58920,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1260:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3835",
+              "id": 58921,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1295:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_850000000000000000_by_1",
+                "typeString": "int_const 850000000000000000"
+              },
+              "value": "0.85"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58925,
+            "nodeType": "VariableDeclaration",
+            "src": "1309:44:126",
+            "constant": true,
+            "functionSelector": "b1afae7b",
+            "mutability": "constant",
+            "name": "UNI_LTV",
+            "nameLocation": "1333:7:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58923,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1309:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3735",
+              "id": 58924,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1343:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_750000000000000000_by_1",
+                "typeString": "int_const 750000000000000000"
+              },
+              "value": "0.75"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58928,
+            "nodeType": "VariableDeclaration",
+            "src": "1357:45:126",
+            "constant": true,
+            "functionSelector": "c0e5d64d",
+            "mutability": "constant",
+            "name": "AAVE_LTV",
+            "nameLocation": "1381:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58926,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1357:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3735",
+              "id": 58927,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1392:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_750000000000000000_by_1",
+                "typeString": "int_const 750000000000000000"
+              },
+              "value": "0.75"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58931,
+            "nodeType": "VariableDeclaration",
+            "src": "1406:45:126",
+            "constant": true,
+            "functionSelector": "ba43b39f",
+            "mutability": "constant",
+            "name": "DYDX_LTV",
+            "nameLocation": "1430:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58929,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1406:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3735",
+              "id": 58930,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1441:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_750000000000000000_by_1",
+                "typeString": "int_const 750000000000000000"
+              },
+              "value": "0.75"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58934,
+            "nodeType": "VariableDeclaration",
+            "src": "1455:46:126",
+            "constant": true,
+            "functionSelector": "6e31f687",
+            "mutability": "constant",
+            "name": "OTHER_LTV",
+            "nameLocation": "1479:9:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58932,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1455:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3735",
+              "id": 58933,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1491:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_750000000000000000_by_1",
+                "typeString": "int_const 750000000000000000"
+              },
+              "value": "0.75"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58937,
+            "nodeType": "VariableDeclaration",
+            "src": "1505:44:126",
+            "constant": true,
+            "functionSelector": "b8090e8a",
+            "mutability": "constant",
+            "name": "WBTC_LTV",
+            "nameLocation": "1529:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58935,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1505:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e38",
+              "id": 58936,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1540:9:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_800000000000000000_by_1",
+                "typeString": "int_const 800000000000000000"
+              },
+              "value": "0.8"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58940,
+            "nodeType": "VariableDeclaration",
+            "src": "1567:58:126",
+            "constant": true,
+            "functionSelector": "c66c144a",
+            "mutability": "constant",
+            "name": "LIQUIDATION_INCENTIVE",
+            "nameLocation": "1591:21:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58938,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1567:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "302e3035",
+              "id": 58939,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1615:10:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_50000000000000000_by_1",
+                "typeString": "int_const 50000000000000000"
+              },
+              "value": "0.05"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58943,
+            "nodeType": "VariableDeclaration",
+            "src": "1639:44:126",
+            "constant": true,
+            "functionSelector": "93cb0e8b",
+            "mutability": "constant",
+            "name": "AAVE_CAP",
+            "nameLocation": "1663:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58941,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1639:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "353030",
+              "id": 58942,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1674:9:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_500000000000000000000_by_1",
+                "typeString": "int_const 500000000000000000000"
+              },
+              "value": "500"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58946,
+            "nodeType": "VariableDeclaration",
+            "src": "1687:43:126",
+            "constant": true,
+            "functionSelector": "0e2569bc",
+            "mutability": "constant",
+            "name": "DYDX_CAP",
+            "nameLocation": "1711:8:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 58944,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "1687:7:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "3530",
+              "id": 58945,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1722:8:126",
+              "subdenomination": "ether",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_50000000000000000000_by_1",
+                "typeString": "int_const 50000000000000000000"
+              },
+              "value": "50"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58949,
+            "nodeType": "VariableDeclaration",
+            "src": "1745:85:126",
+            "constant": true,
+            "functionSelector": "c906de88",
+            "mutability": "constant",
+            "name": "SUSD_TOKEN_STATE",
+            "nameLocation": "1769:16:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58947,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1745:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307830356139434265373632423336363332623335393444413446303832333430453065353334336538",
+              "id": 58948,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1788:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x05a9CBe762B36632b3594DA4F082340E0e5343e8"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58952,
+            "nodeType": "VariableDeclaration",
+            "src": "1834:82:126",
+            "constant": true,
+            "functionSelector": "d5bb0226",
+            "mutability": "constant",
+            "name": "UNI_V2_ROUTER",
+            "nameLocation": "1858:13:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58950,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1834:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307837613235306435363330423463463533393733396446324335644163623463363539463234383844",
+              "id": 58951,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1874:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58955,
+            "nodeType": "VariableDeclaration",
+            "src": "1920:83:126",
+            "constant": true,
+            "functionSelector": "2f2eec37",
+            "mutability": "constant",
+            "name": "UNI_V3_FACTORY",
+            "nameLocation": "1944:14:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58953,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1920:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307831463938343331633861443938353233363331414534613539663236373334366561333146393834",
+              "id": 58954,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1961:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58958,
+            "nodeType": "VariableDeclaration",
+            "src": "2007:87:126",
+            "constant": true,
+            "functionSelector": "c3200dbd",
+            "mutability": "constant",
+            "name": "UNI_V3_NFP_MANAGER",
+            "nameLocation": "2031:18:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58956,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2007:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307843333634343262346134353232453837313339394344373137614244443834374162313146453838",
+              "id": 58957,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2052:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58961,
+            "nodeType": "VariableDeclaration",
+            "src": "2098:87:126",
+            "constant": true,
+            "functionSelector": "2b0f7467",
+            "mutability": "constant",
+            "name": "UNI_V3_SWAP_ROUTER",
+            "nameLocation": "2122:18:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58959,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2098:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307845353932343237413041456365393244653345646565314631384530313537433035383631353634",
+              "id": 58960,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "2143:42:126",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58967,
+            "nodeType": "VariableDeclaration",
+            "src": "2203:61:126",
+            "constant": true,
+            "functionSelector": "e7c10c82",
+            "mutability": "constant",
+            "name": "VAULT_CONTROLLER_ADDRESS",
+            "nameLocation": "2227:24:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58962,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2203:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "30",
+                  "id": 58965,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "2262:1:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 58964,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "2254:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": {
+                  "id": 58963,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2254:7:126",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 58966,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "2254:10:126",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58973,
+            "nodeType": "VariableDeclaration",
+            "src": "2268:49:126",
+            "constant": true,
+            "functionSelector": "ba0dc28a",
+            "mutability": "constant",
+            "name": "USDA_ADDRESS",
+            "nameLocation": "2292:12:126",
+            "scope": 58974,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58968,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "2268:7:126",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "30",
+                  "id": 58971,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "2315:1:126",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 58970,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "2307:7:126",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": {
+                  "id": 58969,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2307:7:126",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 58972,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "2307:10:126",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 58888,
+              "name": "ChainlinkFeeds",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 58805,
+              "src": "287:14:126"
+            },
+            "id": 58889,
+            "nodeType": "InheritanceSpecifier",
+            "src": "287:14:126"
+          },
+          {
+            "baseName": {
+              "id": 58890,
+              "name": "PoolAddresses",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 58877,
+              "src": "303:13:126"
+            },
+            "id": 58891,
+            "nodeType": "InheritanceSpecifier",
+            "src": "303:13:126"
+          },
+          {
+            "baseName": {
+              "id": 58892,
+              "name": "TokenAddresses",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 59049,
+              "src": "318:14:126"
+            },
+            "id": 58893,
+            "nodeType": "InheritanceSpecifier",
+            "src": "318:14:126"
+          },
+          {
+            "baseName": {
+              "id": 58894,
+              "name": "CurvePools",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 58832,
+              "src": "334:10:126"
+            },
+            "id": 58895,
+            "nodeType": "InheritanceSpecifier",
+            "src": "334:10:126"
+          }
+        ],
+        "canonicalName": "TestConstants",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          58974,
+          58832,
+          59049,
+          58877,
+          58805
+        ],
+        "name": "TestConstants",
+        "nameLocation": "270:13:126",
+        "scope": 58975,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 126
+}

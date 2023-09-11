@@ -1,0 +1,260 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_xValue",
+          "type": "int256"
+        }
+      ],
+      "name": "valueAt",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "_value",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "valueAt(int256)": "414be42b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_xValue\",\"type\":\"int256\"}],\"name\":\"valueAt\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"_value\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"CurveSlave Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Interface for interacting with CurveSlaves\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/utils/ICurveSlave.sol\":\"ICurveSlave\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/utils/ICurveSlave.sol\":{\"keccak256\":\"0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51\",\"dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "int256",
+              "name": "_xValue",
+              "type": "int256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "valueAt",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "_value",
+              "type": "int256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/utils/ICurveSlave.sol": "ICurveSlave"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/utils/ICurveSlave.sol": {
+        "keccak256": "0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e",
+        "urls": [
+          "bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51",
+          "dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/utils/ICurveSlave.sol",
+    "id": 54220,
+    "exportedSymbols": {
+      "ICurveSlave": [
+        54219
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:212:109",
+    "nodes": [
+      {
+        "id": 54210,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:109",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 54219,
+        "nodeType": "ContractDefinition",
+        "src": "144:99:109",
+        "nodes": [
+          {
+            "id": 54218,
+            "nodeType": "FunctionDefinition",
+            "src": "170:71:109",
+            "functionSelector": "414be42b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "valueAt",
+            "nameLocation": "179:7:109",
+            "parameters": {
+              "id": 54214,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54213,
+                  "mutability": "mutable",
+                  "name": "_xValue",
+                  "nameLocation": "194:7:109",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54218,
+                  "src": "187:14:109",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 54212,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:6:109",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:16:109"
+            },
+            "returnParameters": {
+              "id": 54217,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 54216,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "233:6:109",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 54218,
+                  "src": "226:13:109",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 54215,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "226:6:109",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "225:15:109"
+            },
+            "scope": 54219,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICurveSlave",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 54211,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:87:109",
+          "text": "@title CurveSlave Interface\n @notice Interface for interacting with CurveSlaves"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          54219
+        ],
+        "name": "ICurveSlave",
+        "nameLocation": "154:11:109",
+        "scope": 54220,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 109
+}

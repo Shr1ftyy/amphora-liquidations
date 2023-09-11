@@ -1,0 +1,617 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CURVE_ADDRESSES_PROVIDER",
+      "outputs": [
+        {
+          "internalType": "contract ICurveAddressesProvider",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "CURVE_ADDRESSES_PROVIDER()": "f523bbc7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CURVE_ADDRESSES_PROVIDER\",\"outputs\":[{\"internalType\":\"contract ICurveAddressesProvider\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"CURVE_ADDRESSES_PROVIDER()\":{\"notice\":\"The inmutable curve registry\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/contracts/periphery/oracles/CurveRegistryUtils.sol\":\"CurveRegistryUtils\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/contracts/periphery/oracles/CurveRegistryUtils.sol\":{\"keccak256\":\"0xce550f1b2cb5306cceb27d9aa58c2c2c8389e80e26c0b7401889971277003b79\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4e3c7932d115bd21a07cdbcda1921d07c172313754fc3dc255362e7780c843ef\",\"dweb:/ipfs/QmRLph7sik5xJehroP9Wg2BAWgWaLAxV3ZEEuf7EJ1LeSu\"]},\"solidity/interfaces/periphery/ICurveAddressesProvider.sol\":{\"keccak256\":\"0x749f4b8bd41525eff41170919ad56a23ea51e157865a070d3a46e47d757115b7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e370668f30a08bd68916571eee4ceed498633378d9c4afc34e9c0296dbb0eb66\",\"dweb:/ipfs/QmWK1ELWDVHZfa4WC8j27KDdafqJJYonB7kp6say1A1kZG\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CURVE_ADDRESSES_PROVIDER",
+          "outputs": [
+            {
+              "internalType": "contract ICurveAddressesProvider",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "CURVE_ADDRESSES_PROVIDER()": {
+            "notice": "The inmutable curve registry"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/contracts/periphery/oracles/CurveRegistryUtils.sol": "CurveRegistryUtils"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/contracts/periphery/oracles/CurveRegistryUtils.sol": {
+        "keccak256": "0xce550f1b2cb5306cceb27d9aa58c2c2c8389e80e26c0b7401889971277003b79",
+        "urls": [
+          "bzz-raw://4e3c7932d115bd21a07cdbcda1921d07c172313754fc3dc255362e7780c843ef",
+          "dweb:/ipfs/QmRLph7sik5xJehroP9Wg2BAWgWaLAxV3ZEEuf7EJ1LeSu"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/ICurveAddressesProvider.sol": {
+        "keccak256": "0x749f4b8bd41525eff41170919ad56a23ea51e157865a070d3a46e47d757115b7",
+        "urls": [
+          "bzz-raw://e370668f30a08bd68916571eee4ceed498633378d9c4afc34e9c0296dbb0eb66",
+          "dweb:/ipfs/QmWK1ELWDVHZfa4WC8j27KDdafqJJYonB7kp6say1A1kZG"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/contracts/periphery/oracles/CurveRegistryUtils.sol",
+    "id": 48653,
+    "exportedSymbols": {
+      "CurveRegistryUtils": [
+        48652
+      ],
+      "ICurveAddressesProvider": [
+        53801
+      ],
+      "ICurveRegistry": [
+        53811
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:639:76",
+    "nodes": [
+      {
+        "id": 48617,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:76",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 48620,
+        "nodeType": "ImportDirective",
+        "src": "57:106:76",
+        "absolutePath": "solidity/interfaces/periphery/ICurveAddressesProvider.sol",
+        "file": "@interfaces/periphery/ICurveAddressesProvider.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48653,
+        "sourceUnit": 53812,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48618,
+              "name": "ICurveRegistry",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53811,
+              "src": "65:14:76",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 48619,
+              "name": "ICurveAddressesProvider",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53801,
+              "src": "81:23:76",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48652,
+        "nodeType": "ContractDefinition",
+        "src": "165:505:76",
+        "nodes": [
+          {
+            "id": 48627,
+            "nodeType": "VariableDeclaration",
+            "src": "249:138:76",
+            "constant": true,
+            "documentation": {
+              "id": 48621,
+              "nodeType": "StructuredDocumentation",
+              "src": "206:40:76",
+              "text": "@notice The inmutable curve registry"
+            },
+            "functionSelector": "f523bbc7",
+            "mutability": "constant",
+            "name": "CURVE_ADDRESSES_PROVIDER",
+            "nameLocation": "289:24:76",
+            "scope": 48652,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ICurveAddressesProvider_$53801",
+              "typeString": "contract ICurveAddressesProvider"
+            },
+            "typeName": {
+              "id": 48623,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 48622,
+                "name": "ICurveAddressesProvider",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 53801,
+                "src": "249:23:76"
+              },
+              "referencedDeclaration": 53801,
+              "src": "249:23:76",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ICurveAddressesProvider_$53801",
+                "typeString": "contract ICurveAddressesProvider"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "307830303030303030303232443533333636343537463964354536384563313035303436464334333833",
+                  "id": 48625,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "344:42:76",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "value": "0x0000000022D53366457F9d5E68Ec105046FC4383"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                ],
+                "id": 48624,
+                "name": "ICurveAddressesProvider",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 53801,
+                "src": "320:23:76",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_contract$_ICurveAddressesProvider_$53801_$",
+                  "typeString": "type(contract ICurveAddressesProvider)"
+                }
+              },
+              "id": 48626,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "320:67:76",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ICurveAddressesProvider_$53801",
+                "typeString": "contract ICurveAddressesProvider"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48651,
+            "nodeType": "FunctionDefinition",
+            "src": "447:221:76",
+            "body": {
+              "id": 48650,
+              "nodeType": "Block",
+              "src": "531:137:76",
+              "statements": [
+                {
+                  "assignments": [
+                    48636
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 48636,
+                      "mutability": "mutable",
+                      "name": "_registry",
+                      "nameLocation": "545:9:76",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 48650,
+                      "src": "537:17:76",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 48635,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "537:7:76",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 48640,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 48637,
+                        "name": "CURVE_ADDRESSES_PROVIDER",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48627,
+                        "src": "557:24:76",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ICurveAddressesProvider_$53801",
+                          "typeString": "contract ICurveAddressesProvider"
+                        }
+                      },
+                      "id": 48638,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "get_registry",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 53800,
+                      "src": "557:37:76",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                        "typeString": "function () view external returns (address)"
+                      }
+                    },
+                    "id": 48639,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "557:39:76",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "537:59:76"
+                },
+                {
+                  "expression": {
+                    "id": 48648,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48641,
+                      "name": "_lpAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48633,
+                      "src": "602:10:76",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 48646,
+                          "name": "_crvPool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 48630,
+                          "src": "654:8:76",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 48643,
+                              "name": "_registry",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 48636,
+                              "src": "630:9:76",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 48642,
+                            "name": "ICurveRegistry",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 53811,
+                            "src": "615:14:76",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_ICurveRegistry_$53811_$",
+                              "typeString": "type(contract ICurveRegistry)"
+                            }
+                          },
+                          "id": 48644,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "615:25:76",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ICurveRegistry_$53811",
+                            "typeString": "contract ICurveRegistry"
+                          }
+                        },
+                        "id": 48645,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "get_lp_token",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 53810,
+                        "src": "615:38:76",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_address_$",
+                          "typeString": "function (address) view external returns (address)"
+                        }
+                      },
+                      "id": 48647,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "615:48:76",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "602:61:76",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 48649,
+                  "nodeType": "ExpressionStatement",
+                  "src": "602:61:76"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48628,
+              "nodeType": "StructuredDocumentation",
+              "src": "392:52:76",
+              "text": "@notice Returns the lp address of the curve pool"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_getLpAddress",
+            "nameLocation": "456:13:76",
+            "parameters": {
+              "id": 48631,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48630,
+                  "mutability": "mutable",
+                  "name": "_crvPool",
+                  "nameLocation": "478:8:76",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48651,
+                  "src": "470:16:76",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48629,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:7:76",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:18:76"
+            },
+            "returnParameters": {
+              "id": 48634,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48633,
+                  "mutability": "mutable",
+                  "name": "_lpAddress",
+                  "nameLocation": "519:10:76",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48651,
+                  "src": "511:18:76",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48632,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "511:7:76",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "510:20:76"
+            },
+            "scope": 48652,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "CurveRegistryUtils",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          48652
+        ],
+        "name": "CurveRegistryUtils",
+        "nameLocation": "183:18:76",
+        "scope": 48653,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 76
+}

@@ -1,0 +1,794 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "VaultDeployer_OnlyVaultController",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CRV",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_crv",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CVX",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_cvx",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint96",
+          "name": "_id",
+          "type": "uint96"
+        },
+        {
+          "internalType": "address",
+          "name": "_minter",
+          "type": "address"
+        }
+      ],
+      "name": "deployVault",
+      "outputs": [
+        {
+          "internalType": "contract IVault",
+          "name": "_vault",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "CRV()": "945c9142",
+    "CVX()": "759cb53b",
+    "deployVault(uint96,address)": "ddf244b2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"VaultDeployer_OnlyVaultController\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CRV\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_crv\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CVX\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_cvx\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint96\",\"name\":\"_id\",\"type\":\"uint96\"},{\"internalType\":\"address\",\"name\":\"_minter\",\"type\":\"address\"}],\"name\":\"deployVault\",\"outputs\":[{\"internalType\":\"contract IVault\",\"name\":\"_vault\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This contract is needed to reduce the size of the VaultController contract\",\"kind\":\"dev\",\"methods\":{\"CRV()\":{\"returns\":{\"_crv\":\"The address of the CRV token\"}},\"CVX()\":{\"returns\":{\"_cvx\":\"The address of the CVX token\"}},\"deployVault(uint96,address)\":{\"params\":{\"_id\":\"The id of the vault\",\"_minter\":\"The address of the minter of the vault\"},\"returns\":{\"_vault\":\"The vault that was created\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"VaultDeployer_OnlyVaultController()\":[{\"notice\":\"Thrown when someone other than the vault controller tries to call the method\"}]},\"kind\":\"user\",\"methods\":{\"CRV()\":{\"notice\":\"The address of the CRV token\"},\"CVX()\":{\"notice\":\"The address of the CVX token\"},\"deployVault(uint96,address)\":{\"notice\":\"Deploys a new Vault\"}},\"notice\":\"Deployer of Vaults\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/core/IVaultDeployer.sol\":\"IVaultDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"solidity/contracts/periphery/CurveMaster.sol\":{\"keccak256\":\"0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db\",\"dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A\"]},\"solidity/interfaces/core/IAMPHClaimer.sol\":{\"keccak256\":\"0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993\",\"dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ\"]},\"solidity/interfaces/core/IUSDA.sol\":{\"keccak256\":\"0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527\",\"dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19\"]},\"solidity/interfaces/core/IVault.sol\":{\"keccak256\":\"0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812\",\"dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW\"]},\"solidity/interfaces/core/IVaultController.sol\":{\"keccak256\":\"0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b\",\"dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L\"]},\"solidity/interfaces/core/IVaultDeployer.sol\":{\"keccak256\":\"0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616\",\"dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ\"]},\"solidity/interfaces/periphery/ICurveMaster.sol\":{\"keccak256\":\"0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833\",\"dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]},\"solidity/interfaces/utils/IBaseRewardPool.sol\":{\"keccak256\":\"0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40\",\"dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ\"]},\"solidity/interfaces/utils/IBooster.sol\":{\"keccak256\":\"0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5\",\"dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn\"]},\"solidity/interfaces/utils/ICVX.sol\":{\"keccak256\":\"0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486\",\"dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy\"]},\"solidity/interfaces/utils/ICurveSlave.sol\":{\"keccak256\":\"0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51\",\"dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ\"]},\"solidity/interfaces/utils/IRoles.sol\":{\"keccak256\":\"0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073\",\"dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6\"]},\"solidity/interfaces/utils/IVirtualBalanceRewardPool.sol\":{\"keccak256\":\"0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048\",\"dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "VaultDeployer_OnlyVaultController"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CRV",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_crv",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CVX",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_cvx",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint96",
+              "name": "_id",
+              "type": "uint96"
+            },
+            {
+              "internalType": "address",
+              "name": "_minter",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deployVault",
+          "outputs": [
+            {
+              "internalType": "contract IVault",
+              "name": "_vault",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "CRV()": {
+            "returns": {
+              "_crv": "The address of the CRV token"
+            }
+          },
+          "CVX()": {
+            "returns": {
+              "_cvx": "The address of the CVX token"
+            }
+          },
+          "deployVault(uint96,address)": {
+            "params": {
+              "_id": "The id of the vault",
+              "_minter": "The address of the minter of the vault"
+            },
+            "returns": {
+              "_vault": "The vault that was created"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "CRV()": {
+            "notice": "The address of the CRV token"
+          },
+          "CVX()": {
+            "notice": "The address of the CVX token"
+          },
+          "deployVault(uint96,address)": {
+            "notice": "Deploys a new Vault"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/core/IVaultDeployer.sol": "IVaultDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+        "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+        "urls": [
+          "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+          "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/CurveMaster.sol": {
+        "keccak256": "0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a",
+        "urls": [
+          "bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db",
+          "dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IAMPHClaimer.sol": {
+        "keccak256": "0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7",
+        "urls": [
+          "bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993",
+          "dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IUSDA.sol": {
+        "keccak256": "0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0",
+        "urls": [
+          "bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527",
+          "dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVault.sol": {
+        "keccak256": "0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25",
+        "urls": [
+          "bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812",
+          "dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultController.sol": {
+        "keccak256": "0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7",
+        "urls": [
+          "bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b",
+          "dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultDeployer.sol": {
+        "keccak256": "0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1",
+        "urls": [
+          "bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616",
+          "dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "solidity/interfaces/periphery/ICurveMaster.sol": {
+        "keccak256": "0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463",
+        "urls": [
+          "bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833",
+          "dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBaseRewardPool.sol": {
+        "keccak256": "0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0",
+        "urls": [
+          "bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40",
+          "dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBooster.sol": {
+        "keccak256": "0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac",
+        "urls": [
+          "bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5",
+          "dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICVX.sol": {
+        "keccak256": "0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a",
+        "urls": [
+          "bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486",
+          "dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICurveSlave.sol": {
+        "keccak256": "0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e",
+        "urls": [
+          "bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51",
+          "dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IRoles.sol": {
+        "keccak256": "0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123",
+        "urls": [
+          "bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073",
+          "dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IVirtualBalanceRewardPool.sol": {
+        "keccak256": "0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba",
+        "urls": [
+          "bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048",
+          "dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/core/IVaultDeployer.sol",
+    "id": 52861,
+    "exportedSymbols": {
+      "IERC20": [
+        2726
+      ],
+      "IVault": [
+        52083
+      ],
+      "IVaultController": [
+        52822
+      ],
+      "IVaultDeployer": [
+        52860
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "42:1608:93",
+    "nodes": [
+      {
+        "id": 52824,
+        "nodeType": "PragmaDirective",
+        "src": "42:31:93",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".4",
+          "<",
+          "0.9",
+          ".0"
+        ]
+      },
+      {
+        "id": 52826,
+        "nodeType": "ImportDirective",
+        "src": "75:51:93",
+        "absolutePath": "solidity/interfaces/core/IVault.sol",
+        "file": "@interfaces/core/IVault.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52861,
+        "sourceUnit": 52084,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 52825,
+              "name": "IVault",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52083,
+              "src": "83:6:93",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 52828,
+        "nodeType": "ImportDirective",
+        "src": "127:71:93",
+        "absolutePath": "solidity/interfaces/core/IVaultController.sol",
+        "file": "@interfaces/core/IVaultController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52861,
+        "sourceUnit": 52823,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 52827,
+              "name": "IVaultController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52822,
+              "src": "135:16:93",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 52830,
+        "nodeType": "ImportDirective",
+        "src": "199:70:93",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52861,
+        "sourceUnit": 2727,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 52829,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2726,
+              "src": "207:6:93",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 52860,
+        "nodeType": "ContractDefinition",
+        "src": "395:1254:93",
+        "nodes": [
+          {
+            "id": 52834,
+            "nodeType": "ErrorDefinition",
+            "src": "699:42:93",
+            "documentation": {
+              "id": 52832,
+              "nodeType": "StructuredDocumentation",
+              "src": "597:99:93",
+              "text": " @notice Thrown when someone other than the vault controller tries to call the method"
+            },
+            "errorSelector": "9e1a1f7d",
+            "name": "VaultDeployer_OnlyVaultController",
+            "nameLocation": "705:33:93",
+            "parameters": {
+              "id": 52833,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "738:2:93"
+            }
+          },
+          {
+            "id": 52841,
+            "nodeType": "FunctionDefinition",
+            "src": "1012:51:93",
+            "documentation": {
+              "id": 52835,
+              "nodeType": "StructuredDocumentation",
+              "src": "921:88:93",
+              "text": "@notice The address of the CVX token\n @return _cvx The address of the CVX token"
+            },
+            "functionSelector": "759cb53b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CVX",
+            "nameLocation": "1021:3:93",
+            "parameters": {
+              "id": 52836,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1024:2:93"
+            },
+            "returnParameters": {
+              "id": 52840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52839,
+                  "mutability": "mutable",
+                  "name": "_cvx",
+                  "nameLocation": "1057:4:93",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52841,
+                  "src": "1050:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 52838,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52837,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "1050:6:93"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "1050:6:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1049:13:93"
+            },
+            "scope": 52860,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52848,
+            "nodeType": "FunctionDefinition",
+            "src": "1158:51:93",
+            "documentation": {
+              "id": 52842,
+              "nodeType": "StructuredDocumentation",
+              "src": "1067:88:93",
+              "text": "@notice The address of the CRV token\n @return _crv The address of the CRV token"
+            },
+            "functionSelector": "945c9142",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CRV",
+            "nameLocation": "1167:3:93",
+            "parameters": {
+              "id": 52843,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1170:2:93"
+            },
+            "returnParameters": {
+              "id": 52847,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52846,
+                  "mutability": "mutable",
+                  "name": "_crv",
+                  "nameLocation": "1203:4:93",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52848,
+                  "src": "1196:11:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 52845,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52844,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "1196:6:93"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "1196:6:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1195:13:93"
+            },
+            "scope": 52860,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52859,
+            "nodeType": "FunctionDefinition",
+            "src": "1564:83:93",
+            "documentation": {
+              "id": 52849,
+              "nodeType": "StructuredDocumentation",
+              "src": "1385:176:93",
+              "text": "@notice Deploys a new Vault\n @param _id The id of the vault\n @param _minter The address of the minter of the vault\n @return _vault The vault that was created"
+            },
+            "functionSelector": "ddf244b2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deployVault",
+            "nameLocation": "1573:11:93",
+            "parameters": {
+              "id": 52854,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52851,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "1592:3:93",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52859,
+                  "src": "1585:10:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 52850,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1585:6:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52853,
+                  "mutability": "mutable",
+                  "name": "_minter",
+                  "nameLocation": "1605:7:93",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52859,
+                  "src": "1597:15:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52852,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1597:7:93",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1584:29:93"
+            },
+            "returnParameters": {
+              "id": 52858,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52857,
+                  "mutability": "mutable",
+                  "name": "_vault",
+                  "nameLocation": "1639:6:93",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52859,
+                  "src": "1632:13:93",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IVault_$52083",
+                    "typeString": "contract IVault"
+                  },
+                  "typeName": {
+                    "id": 52856,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52855,
+                      "name": "IVault",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 52083,
+                      "src": "1632:6:93"
+                    },
+                    "referencedDeclaration": 52083,
+                    "src": "1632:6:93",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IVault_$52083",
+                      "typeString": "contract IVault"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1631:15:93"
+            },
+            "scope": 52860,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVaultDeployer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 52831,
+          "nodeType": "StructuredDocumentation",
+          "src": "271:123:93",
+          "text": " @notice Deployer of Vaults\n @dev    This contract is needed to reduce the size of the VaultController contract"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          52860
+        ],
+        "name": "IVaultDeployer",
+        "nameLocation": "405:14:93",
+        "scope": 52861,
+        "usedErrors": [
+          52834
+        ]
+      }
+    ],
+    "license": "AGPL-3.0-only"
+  },
+  "id": 93
+}

@@ -1,0 +1,236 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "currentValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_currentValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "currentValue()": "698996f8"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"currentValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_currentValue\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"currentValue()\":{\"returns\":{\"_currentValue\":\"the current price\"}}},\"title\":\"AnchoredViewRelay Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"currentValue()\":{\"notice\":\"returns the price with 18 decimals\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/periphery/IAnchoredViewRelay.sol\":\"IAnchoredViewRelay\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/periphery/IAnchoredViewRelay.sol\":{\"keccak256\":\"0x2de6435c3e1963c7f03cda67036653956dabcfb789d06bb6255bd5300dd558d8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4a2bded1000cb399c5dbdb7280037e035654585bfed099e6a43d9e93c626d2b1\",\"dweb:/ipfs/QmRLW6Rzfwtd6npLARu4tGuLLLci7BrLAxexYFJyPeiuTZ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "currentValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_currentValue",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "currentValue()": {
+            "returns": {
+              "_currentValue": "the current price"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "currentValue()": {
+            "notice": "returns the price with 18 decimals"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/periphery/IAnchoredViewRelay.sol": "IAnchoredViewRelay"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/periphery/IAnchoredViewRelay.sol": {
+        "keccak256": "0x2de6435c3e1963c7f03cda67036653956dabcfb789d06bb6255bd5300dd558d8",
+        "urls": [
+          "bzz-raw://4a2bded1000cb399c5dbdb7280037e035654585bfed099e6a43d9e93c626d2b1",
+          "dweb:/ipfs/QmRLW6Rzfwtd6npLARu4tGuLLLci7BrLAxexYFJyPeiuTZ"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/periphery/IAnchoredViewRelay.sol",
+    "id": 53762,
+    "exportedSymbols": {
+      "IAnchoredViewRelay": [
+        53761
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:265:99",
+    "nodes": [
+      {
+        "id": 53753,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:99",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53761,
+        "nodeType": "ContractDefinition",
+        "src": "96:200:99",
+        "nodes": [
+          {
+            "id": 53760,
+            "nodeType": "FunctionDefinition",
+            "src": "224:70:99",
+            "documentation": {
+              "id": 53755,
+              "nodeType": "StructuredDocumentation",
+              "src": "129:92:99",
+              "text": "@notice returns the price with 18 decimals\n @return _currentValue the current price"
+            },
+            "functionSelector": "698996f8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentValue",
+            "nameLocation": "233:12:99",
+            "parameters": {
+              "id": 53756,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "245:2:99"
+            },
+            "returnParameters": {
+              "id": 53759,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53758,
+                  "mutability": "mutable",
+                  "name": "_currentValue",
+                  "nameLocation": "279:13:99",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53760,
+                  "src": "271:21:99",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53757,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "271:7:99",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "270:23:99"
+            },
+            "scope": 53761,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAnchoredViewRelay",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 53754,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:39:99",
+          "text": "@title AnchoredViewRelay Interface"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53761
+        ],
+        "name": "IAnchoredViewRelay",
+        "nameLocation": "106:18:99",
+        "scope": 53762,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 99
+}

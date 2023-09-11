@@ -1,0 +1,2377 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_triCryptoPool",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "_ethOracleRelay",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "_usdtOracleRelay",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "_wbtcOracleRelay",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "OracleRelay_DifferentUnderlyings",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "TriCryptoOracle_ZeroAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CURVE_ADDRESSES_PROVIDER",
+      "outputs": [
+        {
+          "internalType": "contract ICurveAddressesProvider",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ETH_ORACLE_RELAY",
+      "outputs": [
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TRI_CRYPTO",
+      "outputs": [
+        {
+          "internalType": "contract IV2Pool",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_ORACLE_RELAY",
+      "outputs": [
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WBTC_ORACLE_RELAY",
+      "outputs": [
+        {
+          "internalType": "contract IOracleRelay",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_currentValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleType",
+      "outputs": [
+        {
+          "internalType": "enum IOracleRelay.OracleType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "peekValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x61010060405234801561001157600080fd5b5060405161093a38038061093a83398101604081905261003091610198565b6000805460ff191690556001600160a01b0384811660805281811660a05283811660c052821660e05261008d61006585610096565b600080546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b50505050610214565b6000806f22d53366457f9d5e68ec105046fc43836001600160a01b031663a262904b6040518163ffffffff1660e01b8152600401602060405180830381865afa1580156100e7573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061010b91906101f7565b604051633795104960e01b81526001600160a01b03858116600483015291925090821690633795104990602401602060405180830381865afa158015610155573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061017991906101f7565b9392505050565b6001600160a01b038116811461019557600080fd5b50565b600080600080608085870312156101ae57600080fd5b84516101b981610180565b60208601519094506101ca81610180565b60408601519093506101db81610180565b60608601519092506101ec81610180565b939692955090935050565b60006020828403121561020957600080fd5b815161017981610180565b60805160a05160c05160e0516106d1610269600039600081816101e301526103ee01526000818161018d015261035b0152600081816101b401526102c801526000818161012b015261023501526106d16000f3fe608060405234801561001057600080fd5b50600436106100be5760003560e01c80637107b8341161007657806397eacf091161005b57806397eacf09146101d6578063c4176d6f146101de578063f523bbc71461020557600080fd5b80637107b8341461018857806387f24472146101af57600080fd5b80636812fa99116100a75780636812fa9914610126578063698996f81461014d5780636f307dc31461016357600080fd5b80630d623e10146100c357806315e303e4146100e6575b600080fd5b6000546100d09060ff1681565b6040516100dd91906105a2565b60405180910390f35b61010173c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100dd565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b61015561021c565b6040519081526020016100dd565b60005461010190610100900473ffffffffffffffffffffffffffffffffffffffff1681565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b61015561022b565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b6101016f22d53366457f9d5e68ec105046fc438381565b600061022661022b565b905090565b60006102266000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663bb7b8b806040518163ffffffff1660e01b8152600401602060405180830381865afa15801561029e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102c291906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa158015610331573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061035591906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa1580156103c4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103e891906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa158015610457573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061047b91906105e3565b905060008161048a84866105fc565b61049491906105fc565b9050670de0b6b3a764000060037f7f624b00000000000000000000000000000000000000000000000000000000006fffffffffffffffffffffffffffffffff841160071b84811c67ffffffffffffffff1060061b1784811c63ffffffff1060051b1784811c61ffff1060041b1784811c60ff908110841b9091178381069290921a85831c600f1092849004929092011b048080028404810101819004808002840481010181900480800284048101018190048080028404810101819004808002840481010181900480800284048101018190048080028404810101048080028304811190036105848760036105fc565b61058e91906105fc565b6105989190610660565b9550505050505090565b60208101600383106105dd577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b91905290565b6000602082840312156105f557600080fd5b5051919050565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff048311821515161561065b577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b500290565b600082610696577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b50049056fea264697066735822122018cf190b36bc7bfbf9e841c2cb58b3b403945b1432c48f2bba83d0aa83913a4064736f6c634300080e0033",
+    "sourceMap": "427:2918:80:-:0;;;962:406;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1122:20;465:24:78;;-1:-1:-1;;465:24:78;;;-1:-1:-1;;;;;1150:36:80;;::::1;;::::0;1193;;::::1;;::::0;1235:34;;::::1;;::::0;1275:36;::::1;;::::0;1318:45:::1;1333:29;1150:36:::0;1333:13:::1;:29::i;:::-;599:10:78::0;:24;;-1:-1:-1;;;;;599:24:78;;;;;-1:-1:-1;;;;;;599:24:78;;;;;;;;;539:89;1318:45:80::1;962:406:::0;;;;427:2918;;447:221:76;511:18;537:17;344:42;-1:-1:-1;;;;;557:37:76;;:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;615:48;;-1:-1:-1;;;615:48:76;;-1:-1:-1;;;;;1427:32:128;;;615:48:76;;;1409:51:128;537:59:76;;-1:-1:-1;615:38:76;;;;;;1382:18:128;;615:48:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;602:61;447:221;-1:-1:-1;;;447:221:76:o;14:131:128:-;-1:-1:-1;;;;;89:31:128;;79:42;;69:70;;135:1;132;125:12;69:70;14:131;:::o;150:720::-;313:6;321;329;337;390:3;378:9;369:7;365:23;361:33;358:53;;;407:1;404;397:12;358:53;439:9;433:16;458:31;483:5;458:31;:::i;:::-;558:2;543:18;;537:25;508:5;;-1:-1:-1;571:33:128;537:25;571:33;:::i;:::-;675:2;660:18;;654:25;623:7;;-1:-1:-1;688:33:128;654:25;688:33;:::i;:::-;792:2;777:18;;771:25;740:7;;-1:-1:-1;805:33:128;771:25;805:33;:::i;:::-;150:720;;;;-1:-1:-1;150:720:128;;-1:-1:-1;;150:720:128:o;1007:251::-;1077:6;1130:2;1118:9;1109:7;1105:23;1101:32;1098:52;;;1146:1;1143;1136:12;1098:52;1178:9;1172:16;1197:31;1222:5;1197:31;:::i;1263:203::-;427:2918:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100be5760003560e01c80637107b8341161007657806397eacf091161005b57806397eacf09146101d6578063c4176d6f146101de578063f523bbc71461020557600080fd5b80637107b8341461018857806387f24472146101af57600080fd5b80636812fa99116100a75780636812fa9914610126578063698996f81461014d5780636f307dc31461016357600080fd5b80630d623e10146100c357806315e303e4146100e6575b600080fd5b6000546100d09060ff1681565b6040516100dd91906105a2565b60405180910390f35b61010173c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100dd565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b61015561021c565b6040519081526020016100dd565b60005461010190610100900473ffffffffffffffffffffffffffffffffffffffff1681565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b61015561022b565b6101017f000000000000000000000000000000000000000000000000000000000000000081565b6101016f22d53366457f9d5e68ec105046fc438381565b600061022661022b565b905090565b60006102266000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663bb7b8b806040518163ffffffff1660e01b8152600401602060405180830381865afa15801561029e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102c291906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa158015610331573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061035591906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa1580156103c4573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103e891906105e3565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa158015610457573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061047b91906105e3565b905060008161048a84866105fc565b61049491906105fc565b9050670de0b6b3a764000060037f7f624b00000000000000000000000000000000000000000000000000000000006fffffffffffffffffffffffffffffffff841160071b84811c67ffffffffffffffff1060061b1784811c63ffffffff1060051b1784811c61ffff1060041b1784811c60ff908110841b9091178381069290921a85831c600f1092849004929092011b048080028404810101819004808002840481010181900480800284048101018190048080028404810101819004808002840481010181900480800284048101018190048080028404810101048080028304811190036105848760036105fc565b61058e91906105fc565b6105989190610660565b9550505050505090565b60208101600383106105dd577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b91905290565b6000602082840312156105f557600080fd5b5051919050565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff048311821515161561065b577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b500290565b600082610696577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b50049056fea264697066735822122018cf190b36bc7bfbf9e841c2cb58b3b403945b1432c48f2bba83d0aa83913a4064736f6c634300080e0033",
+    "sourceMap": "427:2918:80:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;326:28:78;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;208:81;;247:42;208:81;;;;;596:42:128;584:55;;;566:74;;554:2;539:18;208:81:78;420:226:128;606:35:80;;;;;739:111:78;;;:::i;:::-;;;1045:25:128;;;1033:2;1018:18;739:111:78;899:177:128;393:25:78;;;;;;;;;;;;805:46:80;;;;;700:47;;;;;1500:93;;;:::i;910:47::-;;;;;249:138:76;;344:42;249:138;;739:111:78;789:21;834:11;:9;:11::i;:::-;818:27;;739:111;:::o;1500:93:80:-;1551:14;1582:6;1813:17;1838:11;1852:10;:28;;;:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1838:44;;1946:18;1968:17;:27;;;:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1946:52;;2004:17;2025:16;:26;;;:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;2004:50;;2060:18;2082:17;:27;;;:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;2060:52;-1:-1:-1;2119:19:80;2060:52;2142:22;2155:9;2142:10;:22;:::i;:::-;:35;;;;:::i;:::-;2119:59;-1:-1:-1;2247:7:80;24487:1:60;24616:18;24242:34;-1:-1:-1;;24236:1:60;24232:49;24335:9;;;24315:18;24312:33;24309:1;24305:41;24299:48;24393:9;;;24381:10;24378:25;24375:1;24371:33;24365:40;24447:9;;;24439:6;24436:21;24433:1;24429:29;24423:36;24499:9;;;24493:4;24490:19;;;24483:27;;24477:34;;;24605:9;;;24600:35;;;;24557:9;;;24552:3;24549:18;24538:9;;;;24534:34;;;;24530:45;24593:43;24674:9;;;24667:17;;24663:25;;24659:33;24655:41;;;24733:9;;;24726:17;;24722:25;;24718:33;24714:41;;;24792:9;;;24785:17;;24781:25;;24777:33;24773:41;;;24851:9;;;24844:17;;24840:25;;24836:33;24832:41;;;24910:9;;;24903:17;;24899:25;;24895:33;24891:41;;;24969:9;;;24962:17;;24958:25;;24954:33;24950:41;;;25028:9;;;25021:17;;25017:25;;25013:33;25009:41;25086:9;;;25079:17;;-1:-1:-1;;25069:32:60;;2198:7:80;2202:3;2198:1;:7;:::i;:::-;:45;;;;:::i;:::-;2197:57;;;;:::i;:::-;2185:69;;1832:509;;;;;1774:567;:::o;14:401:128:-;162:2;147:18;;195:1;184:13;;174:201;;231:77;228:1;221:88;332:4;329:1;322:15;360:4;357:1;350:15;174:201;384:25;;;14:401;:::o;1598:184::-;1668:6;1721:2;1709:9;1700:7;1696:23;1692:32;1689:52;;;1737:1;1734;1727:12;1689:52;-1:-1:-1;1760:16:128;;1598:184;-1:-1:-1;1598:184:128:o;1787:382::-;1827:7;1953:1;1885:66;1881:74;1878:1;1875:81;1870:1;1863:9;1856:17;1852:105;1849:285;;;1990:77;1987:1;1980:88;2091:4;2088:1;2081:15;2119:4;2116:1;2109:15;1849:285;-1:-1:-1;2154:9:128;;1787:382::o;2174:274::-;2214:1;2240;2230:189;;2275:77;2272:1;2265:88;2376:4;2373:1;2366:15;2404:4;2401:1;2394:15;2230:189;-1:-1:-1;2433:9:128;;2174:274::o",
+    "linkReferences": {},
+    "immutableReferences": {
+      "49002": [
+        {
+          "start": 299,
+          "length": 32
+        },
+        {
+          "start": 565,
+          "length": 32
+        }
+      ],
+      "49006": [
+        {
+          "start": 436,
+          "length": 32
+        },
+        {
+          "start": 712,
+          "length": 32
+        }
+      ],
+      "49010": [
+        {
+          "start": 397,
+          "length": 32
+        },
+        {
+          "start": 859,
+          "length": 32
+        }
+      ],
+      "49014": [
+        {
+          "start": 483,
+          "length": 32
+        },
+        {
+          "start": 1006,
+          "length": 32
+        }
+      ]
+    }
+  },
+  "methodIdentifiers": {
+    "CURVE_ADDRESSES_PROVIDER()": "f523bbc7",
+    "ETH_ORACLE_RELAY()": "7107b834",
+    "TRI_CRYPTO()": "6812fa99",
+    "USDT_ORACLE_RELAY()": "c4176d6f",
+    "WBTC_ORACLE_RELAY()": "87f24472",
+    "currentValue()": "698996f8",
+    "oracleType()": "0d623e10",
+    "peekValue()": "97eacf09",
+    "underlying()": "6f307dc3",
+    "wETH_ADDRESS()": "15e303e4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_triCryptoPool\",\"type\":\"address\"},{\"internalType\":\"contract IOracleRelay\",\"name\":\"_ethOracleRelay\",\"type\":\"address\"},{\"internalType\":\"contract IOracleRelay\",\"name\":\"_usdtOracleRelay\",\"type\":\"address\"},{\"internalType\":\"contract IOracleRelay\",\"name\":\"_wbtcOracleRelay\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"OracleRelay_DifferentUnderlyings\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TriCryptoOracle_ZeroAmount\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CURVE_ADDRESSES_PROVIDER\",\"outputs\":[{\"internalType\":\"contract ICurveAddressesProvider\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"ETH_ORACLE_RELAY\",\"outputs\":[{\"internalType\":\"contract IOracleRelay\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TRI_CRYPTO\",\"outputs\":[{\"internalType\":\"contract IV2Pool\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_ORACLE_RELAY\",\"outputs\":[{\"internalType\":\"contract IOracleRelay\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WBTC_ORACLE_RELAY\",\"outputs\":[{\"internalType\":\"contract IOracleRelay\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_currentValue\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleType\",\"outputs\":[{\"internalType\":\"enum IOracleRelay.OracleType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"peekValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"currentValue()\":{\"details\":\"Most oracles don't require a state change for pricing, for those who do, override this function\"},\"peekValue()\":{\"details\":\"Implementation in _get\",\"returns\":{\"_value\":\"The current value\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"OracleRelay_DifferentUnderlyings()\":[{\"notice\":\"Emited when the underlyings are different in the anchored view\"}],\"TriCryptoOracle_ZeroAmount()\":[{\"notice\":\"Emitted when the amount is zero\"}]},\"kind\":\"user\",\"methods\":{\"CURVE_ADDRESSES_PROVIDER()\":{\"notice\":\"The inmutable curve registry\"},\"ETH_ORACLE_RELAY()\":{\"notice\":\"The oracle relay for the ETH/USD price\"},\"TRI_CRYPTO()\":{\"notice\":\"The Curve pool\"},\"USDT_ORACLE_RELAY()\":{\"notice\":\"The oracle relay for the USDT/USD price\"},\"WBTC_ORACLE_RELAY()\":{\"notice\":\"The oracle relay for the WBTC/USD price\"},\"oracleType()\":{\"notice\":\"The type of oracle\"},\"peekValue()\":{\"notice\":\"The current reported value of the oracle\"},\"underlying()\":{\"notice\":\"The underlying asset\"},\"wETH_ADDRESS()\":{\"notice\":\"The WETH address\"}},\"notice\":\"Oracle Relay for the TriCrypto pool (USDT/WBTC/WETH)\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol\":\"TriCrypto2Oracle\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/solady/src/utils/FixedPointMathLib.sol\":{\"keccak256\":\"0xb5c2338e479675c4b052d45cde09f63b82ed1dfd85b0e5dbb40c8b448c8b26a8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e1c830eba435a588ce0f3394e88368f5fe968574ea28e1d9bb388c4c85a9e415\",\"dweb:/ipfs/Qmf28DniwAK3X5VRjEkbUP9dRnrFUSMh8RECuLEMgWNkxM\"]},\"solidity/contracts/periphery/oracles/CurveRegistryUtils.sol\":{\"keccak256\":\"0xce550f1b2cb5306cceb27d9aa58c2c2c8389e80e26c0b7401889971277003b79\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4e3c7932d115bd21a07cdbcda1921d07c172313754fc3dc255362e7780c843ef\",\"dweb:/ipfs/QmRLph7sik5xJehroP9Wg2BAWgWaLAxV3ZEEuf7EJ1LeSu\"]},\"solidity/contracts/periphery/oracles/OracleRelay.sol\":{\"keccak256\":\"0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5\",\"dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t\"]},\"solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol\":{\"keccak256\":\"0xd7be915ffc7b1d0903f9db72127c361fbeefe0edf18f4f2fe412957360207ee2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://85168b3f3d554695bf001a2f783e139f1b57beaf10c599e0deb69de374d8cfe3\",\"dweb:/ipfs/QmXVEQKyjUFDLezEAk4xk95tFw63xjTVtid3S63GC196U3\"]},\"solidity/interfaces/periphery/ICurveAddressesProvider.sol\":{\"keccak256\":\"0x749f4b8bd41525eff41170919ad56a23ea51e157865a070d3a46e47d757115b7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e370668f30a08bd68916571eee4ceed498633378d9c4afc34e9c0296dbb0eb66\",\"dweb:/ipfs/QmWK1ELWDVHZfa4WC8j27KDdafqJJYonB7kp6say1A1kZG\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]},\"solidity/interfaces/utils/ICurvePool.sol\":{\"keccak256\":\"0x98facbbebf65314792a846352addc8a80bc8d5128121a4469c360d55e2e229d2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://385c901b7b816be6cb9b1aeb9f68bf9c3cf6a5ee23c727455c9d380980722dd9\",\"dweb:/ipfs/QmZecBvHpH1NoAirU7eJ6E1RjvS1FtCYssDgi54PyKTEYw\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_triCryptoPool",
+              "type": "address"
+            },
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "_ethOracleRelay",
+              "type": "address"
+            },
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "_usdtOracleRelay",
+              "type": "address"
+            },
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "_wbtcOracleRelay",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "OracleRelay_DifferentUnderlyings"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "TriCryptoOracle_ZeroAmount"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CURVE_ADDRESSES_PROVIDER",
+          "outputs": [
+            {
+              "internalType": "contract ICurveAddressesProvider",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "ETH_ORACLE_RELAY",
+          "outputs": [
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TRI_CRYPTO",
+          "outputs": [
+            {
+              "internalType": "contract IV2Pool",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_ORACLE_RELAY",
+          "outputs": [
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WBTC_ORACLE_RELAY",
+          "outputs": [
+            {
+              "internalType": "contract IOracleRelay",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "currentValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_currentValue",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "oracleType",
+          "outputs": [
+            {
+              "internalType": "enum IOracleRelay.OracleType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "peekValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "wETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "currentValue()": {
+            "details": "Most oracles don't require a state change for pricing, for those who do, override this function"
+          },
+          "peekValue()": {
+            "details": "Implementation in _get",
+            "returns": {
+              "_value": "The current value"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "CURVE_ADDRESSES_PROVIDER()": {
+            "notice": "The inmutable curve registry"
+          },
+          "ETH_ORACLE_RELAY()": {
+            "notice": "The oracle relay for the ETH/USD price"
+          },
+          "TRI_CRYPTO()": {
+            "notice": "The Curve pool"
+          },
+          "USDT_ORACLE_RELAY()": {
+            "notice": "The oracle relay for the USDT/USD price"
+          },
+          "WBTC_ORACLE_RELAY()": {
+            "notice": "The oracle relay for the WBTC/USD price"
+          },
+          "oracleType()": {
+            "notice": "The type of oracle"
+          },
+          "peekValue()": {
+            "notice": "The current reported value of the oracle"
+          },
+          "underlying()": {
+            "notice": "The underlying asset"
+          },
+          "wETH_ADDRESS()": {
+            "notice": "The WETH address"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol": "TriCrypto2Oracle"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/solady/src/utils/FixedPointMathLib.sol": {
+        "keccak256": "0xb5c2338e479675c4b052d45cde09f63b82ed1dfd85b0e5dbb40c8b448c8b26a8",
+        "urls": [
+          "bzz-raw://e1c830eba435a588ce0f3394e88368f5fe968574ea28e1d9bb388c4c85a9e415",
+          "dweb:/ipfs/Qmf28DniwAK3X5VRjEkbUP9dRnrFUSMh8RECuLEMgWNkxM"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/CurveRegistryUtils.sol": {
+        "keccak256": "0xce550f1b2cb5306cceb27d9aa58c2c2c8389e80e26c0b7401889971277003b79",
+        "urls": [
+          "bzz-raw://4e3c7932d115bd21a07cdbcda1921d07c172313754fc3dc255362e7780c843ef",
+          "dweb:/ipfs/QmRLph7sik5xJehroP9Wg2BAWgWaLAxV3ZEEuf7EJ1LeSu"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/OracleRelay.sol": {
+        "keccak256": "0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845",
+        "urls": [
+          "bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5",
+          "dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol": {
+        "keccak256": "0xd7be915ffc7b1d0903f9db72127c361fbeefe0edf18f4f2fe412957360207ee2",
+        "urls": [
+          "bzz-raw://85168b3f3d554695bf001a2f783e139f1b57beaf10c599e0deb69de374d8cfe3",
+          "dweb:/ipfs/QmXVEQKyjUFDLezEAk4xk95tFw63xjTVtid3S63GC196U3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/ICurveAddressesProvider.sol": {
+        "keccak256": "0x749f4b8bd41525eff41170919ad56a23ea51e157865a070d3a46e47d757115b7",
+        "urls": [
+          "bzz-raw://e370668f30a08bd68916571eee4ceed498633378d9c4afc34e9c0296dbb0eb66",
+          "dweb:/ipfs/QmWK1ELWDVHZfa4WC8j27KDdafqJJYonB7kp6say1A1kZG"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICurvePool.sol": {
+        "keccak256": "0x98facbbebf65314792a846352addc8a80bc8d5128121a4469c360d55e2e229d2",
+        "urls": [
+          "bzz-raw://385c901b7b816be6cb9b1aeb9f68bf9c3cf6a5ee23c727455c9d380980722dd9",
+          "dweb:/ipfs/QmZecBvHpH1NoAirU7eJ6E1RjvS1FtCYssDgi54PyKTEYw"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/contracts/periphery/oracles/TriCrypto2Oracle.sol",
+    "id": 49129,
+    "exportedSymbols": {
+      "CurveRegistryUtils": [
+        48652
+      ],
+      "FixedPointMathLib": [
+        39386
+      ],
+      "IOracleRelay": [
+        53928
+      ],
+      "IV2Pool": [
+        54208
+      ],
+      "OracleRelay": [
+        48815
+      ],
+      "TriCrypto2Oracle": [
+        49128
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3314:80",
+    "nodes": [
+      {
+        "id": 48981,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:80",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 48984,
+        "nodeType": "ImportDirective",
+        "src": "57:87:80",
+        "absolutePath": "solidity/contracts/periphery/oracles/OracleRelay.sol",
+        "file": "@contracts/periphery/oracles/OracleRelay.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 49129,
+        "sourceUnit": 48816,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48982,
+              "name": "IOracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53928,
+              "src": "65:12:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 48983,
+              "name": "OracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48815,
+              "src": "79:11:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48986,
+        "nodeType": "ImportDirective",
+        "src": "145:57:80",
+        "absolutePath": "solidity/interfaces/utils/ICurvePool.sol",
+        "file": "@interfaces/utils/ICurvePool.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 49129,
+        "sourceUnit": 54209,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48985,
+              "name": "IV2Pool",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54208,
+              "src": "153:7:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48988,
+        "nodeType": "ImportDirective",
+        "src": "203:69:80",
+        "absolutePath": "node_modules/solady/src/utils/FixedPointMathLib.sol",
+        "file": "solady/utils/FixedPointMathLib.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 49129,
+        "sourceUnit": 39387,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48987,
+              "name": "FixedPointMathLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 39386,
+              "src": "211:17:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48990,
+        "nodeType": "ImportDirective",
+        "src": "273:87:80",
+        "absolutePath": "solidity/contracts/periphery/oracles/CurveRegistryUtils.sol",
+        "file": "@contracts/periphery/oracles/CurveRegistryUtils.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 49129,
+        "sourceUnit": 48653,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48989,
+              "name": "CurveRegistryUtils",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48652,
+              "src": "281:18:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 49128,
+        "nodeType": "ContractDefinition",
+        "src": "427:2918:80",
+        "nodes": [
+          {
+            "id": 48998,
+            "nodeType": "ErrorDefinition",
+            "src": "538:35:80",
+            "documentation": {
+              "id": 48996,
+              "nodeType": "StructuredDocumentation",
+              "src": "492:43:80",
+              "text": "@notice Emitted when the amount is zero"
+            },
+            "errorSelector": "9d6579dc",
+            "name": "TriCryptoOracle_ZeroAmount",
+            "nameLocation": "544:26:80",
+            "parameters": {
+              "id": 48997,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "570:2:80"
+            }
+          },
+          {
+            "id": 49002,
+            "nodeType": "VariableDeclaration",
+            "src": "606:35:80",
+            "constant": false,
+            "documentation": {
+              "id": 48999,
+              "nodeType": "StructuredDocumentation",
+              "src": "577:26:80",
+              "text": "@notice The Curve pool"
+            },
+            "functionSelector": "6812fa99",
+            "mutability": "immutable",
+            "name": "TRI_CRYPTO",
+            "nameLocation": "631:10:80",
+            "scope": 49128,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IV2Pool_$54208",
+              "typeString": "contract IV2Pool"
+            },
+            "typeName": {
+              "id": 49001,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49000,
+                "name": "IV2Pool",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 54208,
+                "src": "606:7:80"
+              },
+              "referencedDeclaration": 54208,
+              "src": "606:7:80",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IV2Pool_$54208",
+                "typeString": "contract IV2Pool"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 49006,
+            "nodeType": "VariableDeclaration",
+            "src": "700:47:80",
+            "constant": false,
+            "documentation": {
+              "id": 49003,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:51:80",
+              "text": "@notice The oracle relay for the WBTC/USD price"
+            },
+            "functionSelector": "87f24472",
+            "mutability": "immutable",
+            "name": "WBTC_ORACLE_RELAY",
+            "nameLocation": "730:17:80",
+            "scope": 49128,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+              "typeString": "contract IOracleRelay"
+            },
+            "typeName": {
+              "id": 49005,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49004,
+                "name": "IOracleRelay",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 53928,
+                "src": "700:12:80"
+              },
+              "referencedDeclaration": 53928,
+              "src": "700:12:80",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                "typeString": "contract IOracleRelay"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 49010,
+            "nodeType": "VariableDeclaration",
+            "src": "805:46:80",
+            "constant": false,
+            "documentation": {
+              "id": 49007,
+              "nodeType": "StructuredDocumentation",
+              "src": "752:50:80",
+              "text": "@notice The oracle relay for the ETH/USD price"
+            },
+            "functionSelector": "7107b834",
+            "mutability": "immutable",
+            "name": "ETH_ORACLE_RELAY",
+            "nameLocation": "835:16:80",
+            "scope": 49128,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+              "typeString": "contract IOracleRelay"
+            },
+            "typeName": {
+              "id": 49009,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49008,
+                "name": "IOracleRelay",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 53928,
+                "src": "805:12:80"
+              },
+              "referencedDeclaration": 53928,
+              "src": "805:12:80",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                "typeString": "contract IOracleRelay"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 49014,
+            "nodeType": "VariableDeclaration",
+            "src": "910:47:80",
+            "constant": false,
+            "documentation": {
+              "id": 49011,
+              "nodeType": "StructuredDocumentation",
+              "src": "856:51:80",
+              "text": "@notice The oracle relay for the USDT/USD price"
+            },
+            "functionSelector": "c4176d6f",
+            "mutability": "immutable",
+            "name": "USDT_ORACLE_RELAY",
+            "nameLocation": "940:17:80",
+            "scope": 49128,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+              "typeString": "contract IOracleRelay"
+            },
+            "typeName": {
+              "id": 49013,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 49012,
+                "name": "IOracleRelay",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 53928,
+                "src": "910:12:80"
+              },
+              "referencedDeclaration": 53928,
+              "src": "910:12:80",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                "typeString": "contract IOracleRelay"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 49057,
+            "nodeType": "FunctionDefinition",
+            "src": "962:406:80",
+            "body": {
+              "id": 49056,
+              "nodeType": "Block",
+              "src": "1144:224:80",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 49036,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49032,
+                      "name": "TRI_CRYPTO",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49002,
+                      "src": "1150:10:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IV2Pool_$54208",
+                        "typeString": "contract IV2Pool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 49034,
+                          "name": "_triCryptoPool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 49016,
+                          "src": "1171:14:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 49033,
+                        "name": "IV2Pool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 54208,
+                        "src": "1163:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IV2Pool_$54208_$",
+                          "typeString": "type(contract IV2Pool)"
+                        }
+                      },
+                      "id": 49035,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1163:23:80",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IV2Pool_$54208",
+                        "typeString": "contract IV2Pool"
+                      }
+                    },
+                    "src": "1150:36:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IV2Pool_$54208",
+                      "typeString": "contract IV2Pool"
+                    }
+                  },
+                  "id": 49037,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1150:36:80"
+                },
+                {
+                  "expression": {
+                    "id": 49040,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49038,
+                      "name": "WBTC_ORACLE_RELAY",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49006,
+                      "src": "1193:17:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 49039,
+                      "name": "_wbtcOracleRelay",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49025,
+                      "src": "1213:16:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "src": "1193:36:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "id": 49041,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1193:36:80"
+                },
+                {
+                  "expression": {
+                    "id": 49044,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49042,
+                      "name": "ETH_ORACLE_RELAY",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49010,
+                      "src": "1235:16:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 49043,
+                      "name": "_ethOracleRelay",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49019,
+                      "src": "1254:15:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "src": "1235:34:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "id": 49045,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1235:34:80"
+                },
+                {
+                  "expression": {
+                    "id": 49048,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49046,
+                      "name": "USDT_ORACLE_RELAY",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49014,
+                      "src": "1275:17:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 49047,
+                      "name": "_usdtOracleRelay",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49022,
+                      "src": "1295:16:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                        "typeString": "contract IOracleRelay"
+                      }
+                    },
+                    "src": "1275:36:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "id": 49049,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1275:36:80"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 49052,
+                            "name": "_triCryptoPool",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49016,
+                            "src": "1347:14:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 49051,
+                          "name": "_getLpAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 48651,
+                          "src": "1333:13:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_address_$",
+                            "typeString": "function (address) view returns (address)"
+                          }
+                        },
+                        "id": 49053,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1333:29:80",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 49050,
+                      "name": "_setUnderlying",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48795,
+                      "src": "1318:14:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 49054,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1318:45:80",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 49055,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1318:45:80"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "expression": {
+                      "id": 49028,
+                      "name": "OracleType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53902,
+                      "src": "1122:10:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_OracleType_$53902_$",
+                        "typeString": "type(enum IOracleRelay.OracleType)"
+                      }
+                    },
+                    "id": 49029,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Chainlink",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 53899,
+                    "src": "1122:20:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_OracleType_$53902",
+                      "typeString": "enum IOracleRelay.OracleType"
+                    }
+                  }
+                ],
+                "id": 49030,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 49027,
+                  "name": "OracleRelay",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 48815,
+                  "src": "1110:11:80"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1110:33:80"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 49026,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49016,
+                  "mutability": "mutable",
+                  "name": "_triCryptoPool",
+                  "nameLocation": "987:14:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49057,
+                  "src": "979:22:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 49015,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49019,
+                  "mutability": "mutable",
+                  "name": "_ethOracleRelay",
+                  "nameLocation": "1020:15:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49057,
+                  "src": "1007:28:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                    "typeString": "contract IOracleRelay"
+                  },
+                  "typeName": {
+                    "id": 49018,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 49017,
+                      "name": "IOracleRelay",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 53928,
+                      "src": "1007:12:80"
+                    },
+                    "referencedDeclaration": 53928,
+                    "src": "1007:12:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49022,
+                  "mutability": "mutable",
+                  "name": "_usdtOracleRelay",
+                  "nameLocation": "1054:16:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49057,
+                  "src": "1041:29:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                    "typeString": "contract IOracleRelay"
+                  },
+                  "typeName": {
+                    "id": 49021,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 49020,
+                      "name": "IOracleRelay",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 53928,
+                      "src": "1041:12:80"
+                    },
+                    "referencedDeclaration": 53928,
+                    "src": "1041:12:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 49025,
+                  "mutability": "mutable",
+                  "name": "_wbtcOracleRelay",
+                  "nameLocation": "1089:16:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49057,
+                  "src": "1076:29:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                    "typeString": "contract IOracleRelay"
+                  },
+                  "typeName": {
+                    "id": 49024,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 49023,
+                      "name": "IOracleRelay",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 53928,
+                      "src": "1076:12:80"
+                    },
+                    "referencedDeclaration": 53928,
+                    "src": "1076:12:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                      "typeString": "contract IOracleRelay"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "973:136:80"
+            },
+            "returnParameters": {
+              "id": 49031,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1144:0:80"
+            },
+            "scope": 49128,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 49070,
+            "nodeType": "FunctionDefinition",
+            "src": "1500:93:80",
+            "body": {
+              "id": 49069,
+              "nodeType": "Block",
+              "src": "1567:26:80",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 49067,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49064,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49062,
+                      "src": "1573:6:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 49065,
+                        "name": "_get",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 49127,
+                        "src": "1582:4:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 49066,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1582:6:80",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1573:15:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 49068,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1573:15:80"
+                }
+              ]
+            },
+            "baseFunctions": [
+              48814
+            ],
+            "documentation": {
+              "id": 49058,
+              "nodeType": "StructuredDocumentation",
+              "src": "1372:125:80",
+              "text": "@notice The current reported value of the oracle\n @dev Implementation in _get\n @return _value The current value"
+            },
+            "functionSelector": "97eacf09",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peekValue",
+            "nameLocation": "1509:9:80",
+            "overrides": {
+              "id": 49060,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1533:8:80"
+            },
+            "parameters": {
+              "id": 49059,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1518:2:80"
+            },
+            "returnParameters": {
+              "id": 49063,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49062,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1559:6:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49070,
+                  "src": "1551:14:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 49061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1551:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1550:16:80"
+            },
+            "scope": 49128,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 49127,
+            "nodeType": "FunctionDefinition",
+            "src": "1774:567:80",
+            "body": {
+              "id": 49126,
+              "nodeType": "Block",
+              "src": "1832:509:80",
+              "statements": [
+                {
+                  "assignments": [
+                    49077
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 49077,
+                      "mutability": "mutable",
+                      "name": "_vp",
+                      "nameLocation": "1846:3:80",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 49126,
+                      "src": "1838:11:80",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 49076,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1838:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49081,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 49078,
+                        "name": "TRI_CRYPTO",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 49002,
+                        "src": "1852:10:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IV2Pool_$54208",
+                          "typeString": "contract IV2Pool"
+                        }
+                      },
+                      "id": 49079,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "get_virtual_price",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 54118,
+                      "src": "1852:28:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 49080,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1852:30:80",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1838:44:80"
+                },
+                {
+                  "assignments": [
+                    49083
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 49083,
+                      "mutability": "mutable",
+                      "name": "_wbtcPrice",
+                      "nameLocation": "1954:10:80",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 49126,
+                      "src": "1946:18:80",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 49082,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1946:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49088,
+                  "initialValue": {
+                    "components": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 49084,
+                            "name": "WBTC_ORACLE_RELAY",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49006,
+                            "src": "1968:17:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                              "typeString": "contract IOracleRelay"
+                            }
+                          },
+                          "id": 49085,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "peekValue",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 53914,
+                          "src": "1968:27:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view external returns (uint256)"
+                          }
+                        },
+                        "id": 49086,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1968:29:80",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 49087,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1967:31:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1946:52:80"
+                },
+                {
+                  "assignments": [
+                    49090
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 49090,
+                      "mutability": "mutable",
+                      "name": "_ethPrice",
+                      "nameLocation": "2012:9:80",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 49126,
+                      "src": "2004:17:80",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 49089,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2004:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49095,
+                  "initialValue": {
+                    "components": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 49091,
+                            "name": "ETH_ORACLE_RELAY",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49010,
+                            "src": "2025:16:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                              "typeString": "contract IOracleRelay"
+                            }
+                          },
+                          "id": 49092,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "peekValue",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 53914,
+                          "src": "2025:26:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view external returns (uint256)"
+                          }
+                        },
+                        "id": 49093,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2025:28:80",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 49094,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2024:30:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2004:50:80"
+                },
+                {
+                  "assignments": [
+                    49097
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 49097,
+                      "mutability": "mutable",
+                      "name": "_usdtPrice",
+                      "nameLocation": "2068:10:80",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 49126,
+                      "src": "2060:18:80",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 49096,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2060:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49102,
+                  "initialValue": {
+                    "components": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 49098,
+                            "name": "USDT_ORACLE_RELAY",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49014,
+                            "src": "2082:17:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IOracleRelay_$53928",
+                              "typeString": "contract IOracleRelay"
+                            }
+                          },
+                          "id": 49099,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "peekValue",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 53914,
+                          "src": "2082:27:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view external returns (uint256)"
+                          }
+                        },
+                        "id": 49100,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2082:29:80",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 49101,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2081:31:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2060:52:80"
+                },
+                {
+                  "assignments": [
+                    49104
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 49104,
+                      "mutability": "mutable",
+                      "name": "_basePrices",
+                      "nameLocation": "2127:11:80",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 49126,
+                      "src": "2119:19:80",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 49103,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2119:7:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 49111,
+                  "initialValue": {
+                    "components": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 49109,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 49107,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 49105,
+                            "name": "_wbtcPrice",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49083,
+                            "src": "2142:10:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "*",
+                          "rightExpression": {
+                            "id": 49106,
+                            "name": "_ethPrice",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 49090,
+                            "src": "2155:9:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "2142:22:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "*",
+                        "rightExpression": {
+                          "id": 49108,
+                          "name": "_usdtPrice",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 49097,
+                          "src": "2167:10:80",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "2142:35:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 49110,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "2141:37:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2119:59:80"
+                },
+                {
+                  "expression": {
+                    "id": 49124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 49112,
+                      "name": "_maxPrice",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49074,
+                      "src": "2185:9:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 49123,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "components": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 49120,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 49115,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "hexValue": "33",
+                                "id": 49113,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "2198:1:80",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_3_by_1",
+                                  "typeString": "int_const 3"
+                                },
+                                "value": "3"
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "*",
+                              "rightExpression": {
+                                "id": 49114,
+                                "name": "_vp",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 49077,
+                                "src": "2202:3:80",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "2198:7:80",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "arguments": [
+                                {
+                                  "id": 49118,
+                                  "name": "_basePrices",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 49104,
+                                  "src": "2231:11:80",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 49116,
+                                  "name": "FixedPointMathLib",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 39386,
+                                  "src": "2208:17:80",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_type$_t_contract$_FixedPointMathLib_$39386_$",
+                                    "typeString": "type(library FixedPointMathLib)"
+                                  }
+                                },
+                                "id": 49117,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "cbrt",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 38968,
+                                "src": "2208:22:80",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$",
+                                  "typeString": "function (uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 49119,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2208:35:80",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "2198:45:80",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 49121,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "2197:47:80",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "/",
+                      "rightExpression": {
+                        "hexValue": "31",
+                        "id": 49122,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2247:7:80",
+                        "subdenomination": "ether",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        },
+                        "value": "1"
+                      },
+                      "src": "2197:57:80",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2185:69:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 49125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2185:69:80"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 49071,
+              "nodeType": "StructuredDocumentation",
+              "src": "1597:174:80",
+              "text": "@notice Calculated the price of 1 LP token\n @dev This function comes from the implementation in vyper that is on the bottom\n @return _maxPrice The current value"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_get",
+            "nameLocation": "1783:4:80",
+            "parameters": {
+              "id": 49072,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1787:2:80"
+            },
+            "returnParameters": {
+              "id": 49075,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 49074,
+                  "mutability": "mutable",
+                  "name": "_maxPrice",
+                  "nameLocation": "1821:9:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 49127,
+                  "src": "1813:17:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 49073,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1813:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1812:19:80"
+            },
+            "scope": 49128,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 48992,
+              "name": "OracleRelay",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 48815,
+              "src": "456:11:80"
+            },
+            "id": 48993,
+            "nodeType": "InheritanceSpecifier",
+            "src": "456:11:80"
+          },
+          {
+            "baseName": {
+              "id": 48994,
+              "name": "CurveRegistryUtils",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 48652,
+              "src": "469:18:80"
+            },
+            "id": 48995,
+            "nodeType": "InheritanceSpecifier",
+            "src": "469:18:80"
+          }
+        ],
+        "canonicalName": "TriCrypto2Oracle",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 48991,
+          "nodeType": "StructuredDocumentation",
+          "src": "362:65:80",
+          "text": "@notice Oracle Relay for the TriCrypto pool (USDT/WBTC/WETH)"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          49128,
+          48652,
+          48815,
+          53928
+        ],
+        "name": "TriCrypto2Oracle",
+        "nameLocation": "436:16:80",
+        "scope": 49129,
+        "usedErrors": [
+          48998,
+          53898
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 80
+}

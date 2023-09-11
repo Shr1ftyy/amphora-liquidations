@@ -1,0 +1,1808 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ChainlinkOracleRelay",
+          "name": "_feedAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "contract ChainlinkOracleRelay",
+          "name": "_baseFeedAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "OracleRelay_DifferentUnderlyings",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "AGGREGATOR",
+      "outputs": [
+        {
+          "internalType": "contract ChainlinkOracleRelay",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "BASE_AGGREGATOR",
+      "outputs": [
+        {
+          "internalType": "contract ChainlinkOracleRelay",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "currentValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_currentValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isStale",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "_stale",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleType",
+      "outputs": [
+        {
+          "internalType": "enum IOracleRelay.OracleType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "peekValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60c060405234801561001057600080fd5b5060405161070a38038061070a83398101604081905261002f916100f9565b6000805460ff191690556001600160a01b03828116608081905290821660a05260408051636f307dc360e01b815290516100da9291636f307dc39160048083019260209291908290030181865afa15801561008e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906100b29190610133565b600080546001600160a01b0390921661010002610100600160a81b0319909216919091179055565b5050610157565b6001600160a01b03811681146100f657600080fd5b50565b6000806040838503121561010c57600080fd5b8251610117816100e1565b6020840151909250610128816100e1565b809150509250929050565b60006020828403121561014557600080fd5b8151610150816100e1565b9392505050565b60805160a051610572610198600039600081816101480152818161023201526103670152600081816101770152818161019d01526102d401526105726000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80636f307dc31161005b5780636f307dc31461011e578063892e46d41461014357806397eacf091461016a578063eb365adc1461017257600080fd5b80630d623e101461008d57806315e303e4146100b05780631a26f447146100f0578063698996f814610108575b600080fd5b60005461009a9060ff1681565b6040516100a7919061041a565b60405180910390f35b6100cb73c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100a7565b6100f8610199565b60405190151581526020016100a7565b6101106102c4565b6040519081526020016100a7565b6000546100cb90610100900473ffffffffffffffffffffffffffffffffffffffff1681565b6100cb7f000000000000000000000000000000000000000000000000000000000000000081565b6101106102ca565b6100cb7f000000000000000000000000000000000000000000000000000000000000000081565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16631a26f4476040518163ffffffff1660e01b8152600401602060405180830381865afa158015610206573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061022a919061045b565b806102bf57507f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16631a26f4476040518163ffffffff1660e01b8152600401602060405180830381865afa15801561029b573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102bf919061045b565b905090565b60006102bf5b60006102bf6000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa15801561033d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103619190610484565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa1580156103d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f49190610484565b9050670de0b6b3a7640000610409828461049d565b6104139190610501565b9250505090565b6020810160038310610455577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b91905290565b60006020828403121561046d57600080fd5b8151801515811461047d57600080fd5b9392505050565b60006020828403121561049657600080fd5b5051919050565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156104fc577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b500290565b600082610537577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b50049056fea26469706673582212205f6597a605e2333ea4c37d35330b6bbbfd6db5e30978253a2ab08216ce6aca7d64736f6c634300080e0033",
+    "sourceMap": "434:1742:75:-:0;;;883:300;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;993:20;465:24:78;;-1:-1:-1;;465:24:78;;;-1:-1:-1;;;;;1021:47:75;;::::1;;::::0;;;1074:56;;::::1;;::::0;1152:25:::1;::::0;;-1:-1:-1;;;1152:25:75;;;;1137:41:::1;::::0;1021:47;1152:23:::1;::::0;:25:::1;::::0;;::::1;::::0;::::1;::::0;;;;;;;;1021:47;1152:25:::1;;;;;;;;;::::0;::::1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;599:10:78::0;:24;;-1:-1:-1;;;;;599:24:78;;;;;-1:-1:-1;;;;;;599:24:78;;;;;;;;;539:89;1137:41:75::1;883:300:::0;;434:1742;;14:153:128;-1:-1:-1;;;;;111:31:128;;101:42;;91:70;;157:1;154;147:12;91:70;14:153;:::o;172:489::-;311:6;319;372:2;360:9;351:7;347:23;343:32;340:52;;;388:1;385;378:12;340:52;420:9;414:16;439:53;486:5;439:53;:::i;:::-;561:2;546:18;;540:25;511:5;;-1:-1:-1;574:55:128;540:25;574:55;:::i;:::-;648:7;638:17;;;172:489;;;;;:::o;798:273::-;868:6;921:2;909:9;900:7;896:23;892:32;889:52;;;937:1;934;927:12;889:52;969:9;963:16;988:53;1035:5;988:53;:::i;:::-;1060:5;798:273;-1:-1:-1;;;798:273:128:o;:::-;434:1742:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80636f307dc31161005b5780636f307dc31461011e578063892e46d41461014357806397eacf091461016a578063eb365adc1461017257600080fd5b80630d623e101461008d57806315e303e4146100b05780631a26f447146100f0578063698996f814610108575b600080fd5b60005461009a9060ff1681565b6040516100a7919061041a565b60405180910390f35b6100cb73c02aaa39b223fe8d0a0e5c4f27ead9083c756cc281565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100a7565b6100f8610199565b60405190151581526020016100a7565b6101106102c4565b6040519081526020016100a7565b6000546100cb90610100900473ffffffffffffffffffffffffffffffffffffffff1681565b6100cb7f000000000000000000000000000000000000000000000000000000000000000081565b6101106102ca565b6100cb7f000000000000000000000000000000000000000000000000000000000000000081565b60007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16631a26f4476040518163ffffffff1660e01b8152600401602060405180830381865afa158015610206573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061022a919061045b565b806102bf57507f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff16631a26f4476040518163ffffffff1660e01b8152600401602060405180830381865afa15801561029b573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906102bf919061045b565b905090565b60006102bf5b60006102bf6000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa15801561033d573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103619190610484565b905060007f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff166397eacf096040518163ffffffff1660e01b8152600401602060405180830381865afa1580156103d0573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103f49190610484565b9050670de0b6b3a7640000610409828461049d565b6104139190610501565b9250505090565b6020810160038310610455577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b91905290565b60006020828403121561046d57600080fd5b8151801515811461047d57600080fd5b9392505050565b60006020828403121561049657600080fd5b5051919050565b6000817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156104fc577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b500290565b600082610537577f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b50049056fea26469706673582212205f6597a605e2333ea4c37d35330b6bbbfd6db5e30978253a2ab08216ce6aca7d64736f6c634300080e0033",
+    "sourceMap": "434:1742:75:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;326:28:78;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;208:81;;247:42;208:81;;;;;596:42:128;584:55;;;566:74;;554:2;539:18;208:81:78;420:226:128;1666:124:75;;;:::i;:::-;;;816:14:128;;809:22;791:41;;779:2;764:18;1666:124:75;651:187:128;739:111:78;;;:::i;:::-;;;989:25:128;;;977:2;962:18;739:111:78;843:177:128;393:25:78;;;;;;;;;;;;638:53:75;;;;;1472:93;;;:::i;527:48::-;;;;;1666:124;1708:11;1736:10;:18;;;:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:49;;;;1760:15;:23;;;:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1727:58;;1666:124;:::o;739:111:78:-;789:21;834:11;1472:93:75;1523:14;1554:6;1970:14;1992:24;2019:10;:20;;;:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1992:49;;2047:28;2078:15;:25;;;:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;2047:58;-1:-1:-1;2165:4:75;2122:39;2047:58;2122:16;:39;:::i;:::-;2121:48;;;;:::i;:::-;2112:57;;1986:188;;1931:243;:::o;14:401:128:-;162:2;147:18;;195:1;184:13;;174:201;;231:77;228:1;221:88;332:4;329:1;322:15;360:4;357:1;350:15;174:201;384:25;;;14:401;:::o;1286:277::-;1353:6;1406:2;1394:9;1385:7;1381:23;1377:32;1374:52;;;1422:1;1419;1412:12;1374:52;1454:9;1448:16;1507:5;1500:13;1493:21;1486:5;1483:32;1473:60;;1529:1;1526;1519:12;1473:60;1552:5;1286:277;-1:-1:-1;;;1286:277:128:o;1568:184::-;1638:6;1691:2;1679:9;1670:7;1666:23;1662:32;1659:52;;;1707:1;1704;1697:12;1659:52;-1:-1:-1;1730:16:128;;1568:184;-1:-1:-1;1568:184:128:o;1757:382::-;1797:7;1923:1;1855:66;1851:74;1848:1;1845:81;1840:1;1833:9;1826:17;1822:105;1819:285;;;1960:77;1957:1;1950:88;2061:4;2058:1;2051:15;2089:4;2086:1;2079:15;1819:285;-1:-1:-1;2124:9:128;;1757:382::o;2144:274::-;2184:1;2210;2200:189;;2245:77;2242:1;2235:88;2346:4;2343:1;2336:15;2374:4;2371:1;2364:15;2200:189;-1:-1:-1;2403:9:128;;2144:274::o",
+    "linkReferences": {},
+    "immutableReferences": {
+      "48519": [
+        {
+          "start": 375,
+          "length": 32
+        },
+        {
+          "start": 413,
+          "length": 32
+        },
+        {
+          "start": 724,
+          "length": 32
+        }
+      ],
+      "48523": [
+        {
+          "start": 328,
+          "length": 32
+        },
+        {
+          "start": 562,
+          "length": 32
+        },
+        {
+          "start": 871,
+          "length": 32
+        }
+      ]
+    }
+  },
+  "methodIdentifiers": {
+    "AGGREGATOR()": "eb365adc",
+    "BASE_AGGREGATOR()": "892e46d4",
+    "currentValue()": "698996f8",
+    "isStale()": "1a26f447",
+    "oracleType()": "0d623e10",
+    "peekValue()": "97eacf09",
+    "underlying()": "6f307dc3",
+    "wETH_ADDRESS()": "15e303e4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ChainlinkOracleRelay\",\"name\":\"_feedAddress\",\"type\":\"address\"},{\"internalType\":\"contract ChainlinkOracleRelay\",\"name\":\"_baseFeedAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"OracleRelay_DifferentUnderlyings\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"AGGREGATOR\",\"outputs\":[{\"internalType\":\"contract ChainlinkOracleRelay\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"BASE_AGGREGATOR\",\"outputs\":[{\"internalType\":\"contract ChainlinkOracleRelay\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_currentValue\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isStale\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_stale\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleType\",\"outputs\":[{\"internalType\":\"enum IOracleRelay.OracleType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"peekValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Oracle that wraps a chainlink oracle      The oracle returns (chainlinkPrice) * mul / div\",\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_baseFeedAddress\":\"The address of chainlink feed for the base token\",\"_feedAddress\":\"The address of chainlink feed\"}},\"currentValue()\":{\"details\":\"Most oracles don't require a state change for pricing, for those who do, override this function\"},\"isStale()\":{\"returns\":{\"_stale\":\"True if the price is stale\"}},\"peekValue()\":{\"details\":\"some oracles require a state change to get the exact current price.      This is updated when calling other state changing functions that query the price\",\"returns\":{\"_price\":\"the current price\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"OracleRelay_DifferentUnderlyings()\":[{\"notice\":\"Emited when the underlyings are different in the anchored view\"}]},\"kind\":\"user\",\"methods\":{\"AGGREGATOR()\":{\"notice\":\"The chainlink aggregator\"},\"BASE_AGGREGATOR()\":{\"notice\":\"The chainlink aggregator for the base token\"},\"constructor\":{\"notice\":\"All values set at construction time\"},\"isStale()\":{\"notice\":\"Returns true if the price is stale\"},\"oracleType()\":{\"notice\":\"The type of oracle\"},\"peekValue()\":{\"notice\":\"returns the price with 18 decimals without any state changes\"},\"underlying()\":{\"notice\":\"The underlying asset\"},\"wETH_ADDRESS()\":{\"notice\":\"The WETH address\"}},\"notice\":\"This oracle is for tokens that don't have a USD pair but do have a wETH/ETH pair\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol\":\"ChainlinkTokenOracleRelay\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorInterface.sol\":{\"keccak256\":\"0xb496651006b9a2a07920ffe116928b11e2a6458e21361cecca51409522488ca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f39ad60071af2c115e064ebeb1686097efa83b26da0e2c814c635538538b7465\",\"dweb:/ipfs/QmYRARVDA1XZUqZNKNnArYHWbffNeeSVZQjt67ZXKGm85a\"]},\"node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV2V3Interface.sol\":{\"keccak256\":\"0x4a7757ff7bbafe044cd49c2a45c7c18ec50eff7c7af6869face5e1e9cda976f2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7c3f481f69f3ee07d6bb91b38d1cd61f9fa72de29c63d778c98956db70ecd57b\",\"dweb:/ipfs/QmPeJrNHTZF8CrXk3BgLJCamwf1dUEzHyQsMYrdd4v1NEG\"]},\"node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol\":{\"keccak256\":\"0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7\",\"dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c\"]},\"node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"solidity/contracts/periphery/oracles/ChainlinkOracleRelay.sol\":{\"keccak256\":\"0xe68a9acaf2760100eb91386fa0573054e30bf00e2acdd699b31e051b35adb750\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://646fd3f3cf69b07d3adeb04626c2c0472891bbf5f557641ae8e493790682d5be\",\"dweb:/ipfs/QmS72kLGyTJgAbZD1XENvhvY9xH8mhknQFKfn9ou77YqhS\"]},\"solidity/contracts/periphery/oracles/ChainlinkStalePriceLib.sol\":{\"keccak256\":\"0x14ffa98aa65d6bbbb3d8fc512b067f113ac100783289f65c2387d655c94c8082\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://6b9e7a4839ac4eb5d382e40932a291d5c9efd416ba09b5eb5fd276ceed5da0cc\",\"dweb:/ipfs/QmaSutfMgdmuoYmv93WZhaErgc7FASS3CvUbBRESwwNeHf\"]},\"solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol\":{\"keccak256\":\"0x4b8551a7ca397f46926593a31e2913030664311f18cd05ff42d626ddf5df0463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4f4dc060c96f91674ecc04ce11a61851dda8b6a44ca69fbd0caa00b067347758\",\"dweb:/ipfs/QmXrCYKzpTz6dWapQDJs8s5kHS9nszshxsquXq3KSWtBS8\"]},\"solidity/contracts/periphery/oracles/OracleRelay.sol\":{\"keccak256\":\"0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5\",\"dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ChainlinkOracleRelay",
+              "name": "_feedAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "contract ChainlinkOracleRelay",
+              "name": "_baseFeedAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "OracleRelay_DifferentUnderlyings"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AGGREGATOR",
+          "outputs": [
+            {
+              "internalType": "contract ChainlinkOracleRelay",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "BASE_AGGREGATOR",
+          "outputs": [
+            {
+              "internalType": "contract ChainlinkOracleRelay",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "currentValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_currentValue",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isStale",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "_stale",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "oracleType",
+          "outputs": [
+            {
+              "internalType": "enum IOracleRelay.OracleType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "peekValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "wETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "constructor": {
+            "params": {
+              "_baseFeedAddress": "The address of chainlink feed for the base token",
+              "_feedAddress": "The address of chainlink feed"
+            }
+          },
+          "currentValue()": {
+            "details": "Most oracles don't require a state change for pricing, for those who do, override this function"
+          },
+          "isStale()": {
+            "returns": {
+              "_stale": "True if the price is stale"
+            }
+          },
+          "peekValue()": {
+            "details": "some oracles require a state change to get the exact current price.      This is updated when calling other state changing functions that query the price",
+            "returns": {
+              "_price": "the current price"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "AGGREGATOR()": {
+            "notice": "The chainlink aggregator"
+          },
+          "BASE_AGGREGATOR()": {
+            "notice": "The chainlink aggregator for the base token"
+          },
+          "constructor": {
+            "notice": "All values set at construction time"
+          },
+          "isStale()": {
+            "notice": "Returns true if the price is stale"
+          },
+          "oracleType()": {
+            "notice": "The type of oracle"
+          },
+          "peekValue()": {
+            "notice": "returns the price with 18 decimals without any state changes"
+          },
+          "underlying()": {
+            "notice": "The underlying asset"
+          },
+          "wETH_ADDRESS()": {
+            "notice": "The WETH address"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol": "ChainlinkTokenOracleRelay"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorInterface.sol": {
+        "keccak256": "0xb496651006b9a2a07920ffe116928b11e2a6458e21361cecca51409522488ca7",
+        "urls": [
+          "bzz-raw://f39ad60071af2c115e064ebeb1686097efa83b26da0e2c814c635538538b7465",
+          "dweb:/ipfs/QmYRARVDA1XZUqZNKNnArYHWbffNeeSVZQjt67ZXKGm85a"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV2V3Interface.sol": {
+        "keccak256": "0x4a7757ff7bbafe044cd49c2a45c7c18ec50eff7c7af6869face5e1e9cda976f2",
+        "urls": [
+          "bzz-raw://7c3f481f69f3ee07d6bb91b38d1cd61f9fa72de29c63d778c98956db70ecd57b",
+          "dweb:/ipfs/QmPeJrNHTZF8CrXk3BgLJCamwf1dUEzHyQsMYrdd4v1NEG"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+        "keccak256": "0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846",
+        "urls": [
+          "bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7",
+          "dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/ChainlinkOracleRelay.sol": {
+        "keccak256": "0xe68a9acaf2760100eb91386fa0573054e30bf00e2acdd699b31e051b35adb750",
+        "urls": [
+          "bzz-raw://646fd3f3cf69b07d3adeb04626c2c0472891bbf5f557641ae8e493790682d5be",
+          "dweb:/ipfs/QmS72kLGyTJgAbZD1XENvhvY9xH8mhknQFKfn9ou77YqhS"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/ChainlinkStalePriceLib.sol": {
+        "keccak256": "0x14ffa98aa65d6bbbb3d8fc512b067f113ac100783289f65c2387d655c94c8082",
+        "urls": [
+          "bzz-raw://6b9e7a4839ac4eb5d382e40932a291d5c9efd416ba09b5eb5fd276ceed5da0cc",
+          "dweb:/ipfs/QmaSutfMgdmuoYmv93WZhaErgc7FASS3CvUbBRESwwNeHf"
+        ],
+        "license": "GPL-3.0-or-later"
+      },
+      "solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol": {
+        "keccak256": "0x4b8551a7ca397f46926593a31e2913030664311f18cd05ff42d626ddf5df0463",
+        "urls": [
+          "bzz-raw://4f4dc060c96f91674ecc04ce11a61851dda8b6a44ca69fbd0caa00b067347758",
+          "dweb:/ipfs/QmXrCYKzpTz6dWapQDJs8s5kHS9nszshxsquXq3KSWtBS8"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/oracles/OracleRelay.sol": {
+        "keccak256": "0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845",
+        "urls": [
+          "bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5",
+          "dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/contracts/periphery/oracles/ChainlinkTokenOracleRelay.sol",
+    "id": 48616,
+    "exportedSymbols": {
+      "ChainlinkOracleRelay": [
+        48468
+      ],
+      "ChainlinkTokenOracleRelay": [
+        48615
+      ],
+      "IOracleRelay": [
+        53928
+      ],
+      "OracleRelay": [
+        48815
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2145:75",
+    "nodes": [
+      {
+        "id": 48507,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:75",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 48510,
+        "nodeType": "ImportDirective",
+        "src": "57:87:75",
+        "absolutePath": "solidity/contracts/periphery/oracles/OracleRelay.sol",
+        "file": "@contracts/periphery/oracles/OracleRelay.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48616,
+        "sourceUnit": 48816,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48508,
+              "name": "IOracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53928,
+              "src": "65:12:75",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 48509,
+              "name": "OracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48815,
+              "src": "79:11:75",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48512,
+        "nodeType": "ImportDirective",
+        "src": "145:91:75",
+        "absolutePath": "solidity/contracts/periphery/oracles/ChainlinkOracleRelay.sol",
+        "file": "@contracts/periphery/oracles/ChainlinkOracleRelay.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48616,
+        "sourceUnit": 48469,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48511,
+              "name": "ChainlinkOracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48468,
+              "src": "153:20:75",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48615,
+        "nodeType": "ContractDefinition",
+        "src": "434:1742:75",
+        "nodes": [
+          {
+            "id": 48519,
+            "nodeType": "VariableDeclaration",
+            "src": "527:48:75",
+            "constant": false,
+            "documentation": {
+              "id": 48516,
+              "nodeType": "StructuredDocumentation",
+              "src": "488:36:75",
+              "text": "@notice The chainlink aggregator"
+            },
+            "functionSelector": "eb365adc",
+            "mutability": "immutable",
+            "name": "AGGREGATOR",
+            "nameLocation": "565:10:75",
+            "scope": 48615,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+              "typeString": "contract ChainlinkOracleRelay"
+            },
+            "typeName": {
+              "id": 48518,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 48517,
+                "name": "ChainlinkOracleRelay",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 48468,
+                "src": "527:20:75"
+              },
+              "referencedDeclaration": 48468,
+              "src": "527:20:75",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                "typeString": "contract ChainlinkOracleRelay"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48523,
+            "nodeType": "VariableDeclaration",
+            "src": "638:53:75",
+            "constant": false,
+            "documentation": {
+              "id": 48520,
+              "nodeType": "StructuredDocumentation",
+              "src": "580:55:75",
+              "text": "@notice The chainlink aggregator for the base token"
+            },
+            "functionSelector": "892e46d4",
+            "mutability": "immutable",
+            "name": "BASE_AGGREGATOR",
+            "nameLocation": "676:15:75",
+            "scope": 48615,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+              "typeString": "contract ChainlinkOracleRelay"
+            },
+            "typeName": {
+              "id": 48522,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 48521,
+                "name": "ChainlinkOracleRelay",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 48468,
+                "src": "638:20:75"
+              },
+              "referencedDeclaration": 48468,
+              "src": "638:20:75",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                "typeString": "contract ChainlinkOracleRelay"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48556,
+            "nodeType": "FunctionDefinition",
+            "src": "883:300:75",
+            "body": {
+              "id": 48555,
+              "nodeType": "Block",
+              "src": "1015:168:75",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48541,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48537,
+                      "name": "AGGREGATOR",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48519,
+                      "src": "1021:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                        "typeString": "contract ChainlinkOracleRelay"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 48539,
+                          "name": "_feedAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 48527,
+                          "src": "1055:12:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                            "typeString": "contract ChainlinkOracleRelay"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                            "typeString": "contract ChainlinkOracleRelay"
+                          }
+                        ],
+                        "id": 48538,
+                        "name": "ChainlinkOracleRelay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48468,
+                        "src": "1034:20:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ChainlinkOracleRelay_$48468_$",
+                          "typeString": "type(contract ChainlinkOracleRelay)"
+                        }
+                      },
+                      "id": 48540,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1034:34:75",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                        "typeString": "contract ChainlinkOracleRelay"
+                      }
+                    },
+                    "src": "1021:47:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                      "typeString": "contract ChainlinkOracleRelay"
+                    }
+                  },
+                  "id": 48542,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1021:47:75"
+                },
+                {
+                  "expression": {
+                    "id": 48547,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48543,
+                      "name": "BASE_AGGREGATOR",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48523,
+                      "src": "1074:15:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                        "typeString": "contract ChainlinkOracleRelay"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 48545,
+                          "name": "_baseFeedAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 48530,
+                          "src": "1113:16:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                            "typeString": "contract ChainlinkOracleRelay"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                            "typeString": "contract ChainlinkOracleRelay"
+                          }
+                        ],
+                        "id": 48544,
+                        "name": "ChainlinkOracleRelay",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48468,
+                        "src": "1092:20:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ChainlinkOracleRelay_$48468_$",
+                          "typeString": "type(contract ChainlinkOracleRelay)"
+                        }
+                      },
+                      "id": 48546,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1092:38:75",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                        "typeString": "contract ChainlinkOracleRelay"
+                      }
+                    },
+                    "src": "1074:56:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                      "typeString": "contract ChainlinkOracleRelay"
+                    }
+                  },
+                  "id": 48548,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1074:56:75"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 48550,
+                            "name": "_feedAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 48527,
+                            "src": "1152:12:75",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                              "typeString": "contract ChainlinkOracleRelay"
+                            }
+                          },
+                          "id": 48551,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "underlying",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 48773,
+                          "src": "1152:23:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_address_$",
+                            "typeString": "function () view external returns (address)"
+                          }
+                        },
+                        "id": 48552,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1152:25:75",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 48549,
+                      "name": "_setUnderlying",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48795,
+                      "src": "1137:14:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 48553,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1137:41:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48554,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1137:41:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48524,
+              "nodeType": "StructuredDocumentation",
+              "src": "696:184:75",
+              "text": "@notice All values set at construction time\n @param  _feedAddress The address of chainlink feed\n @param  _baseFeedAddress The address of chainlink feed for the base token"
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "expression": {
+                      "id": 48533,
+                      "name": "OracleType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53902,
+                      "src": "993:10:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_OracleType_$53902_$",
+                        "typeString": "type(enum IOracleRelay.OracleType)"
+                      }
+                    },
+                    "id": 48534,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "Chainlink",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 53899,
+                    "src": "993:20:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_OracleType_$53902",
+                      "typeString": "enum IOracleRelay.OracleType"
+                    }
+                  }
+                ],
+                "id": 48535,
+                "kind": "baseConstructorSpecifier",
+                "modifierName": {
+                  "id": 48532,
+                  "name": "OracleRelay",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 48815,
+                  "src": "981:11:75"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "981:33:75"
+              }
+            ],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 48531,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48527,
+                  "mutability": "mutable",
+                  "name": "_feedAddress",
+                  "nameLocation": "921:12:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48556,
+                  "src": "900:33:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                    "typeString": "contract ChainlinkOracleRelay"
+                  },
+                  "typeName": {
+                    "id": 48526,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48525,
+                      "name": "ChainlinkOracleRelay",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48468,
+                      "src": "900:20:75"
+                    },
+                    "referencedDeclaration": 48468,
+                    "src": "900:20:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                      "typeString": "contract ChainlinkOracleRelay"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48530,
+                  "mutability": "mutable",
+                  "name": "_baseFeedAddress",
+                  "nameLocation": "960:16:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48556,
+                  "src": "939:37:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                    "typeString": "contract ChainlinkOracleRelay"
+                  },
+                  "typeName": {
+                    "id": 48529,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48528,
+                      "name": "ChainlinkOracleRelay",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48468,
+                      "src": "939:20:75"
+                    },
+                    "referencedDeclaration": 48468,
+                    "src": "939:20:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                      "typeString": "contract ChainlinkOracleRelay"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "894:86:75"
+            },
+            "returnParameters": {
+              "id": 48536,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1015:0:75"
+            },
+            "scope": 48615,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 48569,
+            "nodeType": "FunctionDefinition",
+            "src": "1472:93:75",
+            "body": {
+              "id": 48568,
+              "nodeType": "Block",
+              "src": "1539:26:75",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48566,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48563,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48561,
+                      "src": "1545:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 48564,
+                        "name": "_get",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48614,
+                        "src": "1554:4:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 48565,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1554:6:75",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1545:15:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 48567,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1545:15:75"
+                }
+              ]
+            },
+            "baseFunctions": [
+              48814
+            ],
+            "documentation": {
+              "id": 48557,
+              "nodeType": "StructuredDocumentation",
+              "src": "1187:282:75",
+              "text": "@notice returns the price with 18 decimals without any state changes\n @dev some oracles require a state change to get the exact current price.\n      This is updated when calling other state changing functions that query the price\n @return _price the current price"
+            },
+            "functionSelector": "97eacf09",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peekValue",
+            "nameLocation": "1481:9:75",
+            "overrides": {
+              "id": 48559,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1505:8:75"
+            },
+            "parameters": {
+              "id": 48558,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1490:2:75"
+            },
+            "returnParameters": {
+              "id": 48562,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48561,
+                  "mutability": "mutable",
+                  "name": "_price",
+                  "nameLocation": "1531:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48569,
+                  "src": "1523:14:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48560,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1523:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1522:16:75"
+            },
+            "scope": 48615,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 48586,
+            "nodeType": "FunctionDefinition",
+            "src": "1666:124:75",
+            "body": {
+              "id": 48585,
+              "nodeType": "Block",
+              "src": "1721:69:75",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48583,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48575,
+                      "name": "_stale",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48573,
+                      "src": "1727:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "id": 48582,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 48576,
+                            "name": "AGGREGATOR",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 48519,
+                            "src": "1736:10:75",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                              "typeString": "contract ChainlinkOracleRelay"
+                            }
+                          },
+                          "id": 48577,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isStale",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 48421,
+                          "src": "1736:18:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
+                            "typeString": "function () view external returns (bool)"
+                          }
+                        },
+                        "id": 48578,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1736:20:75",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "||",
+                      "rightExpression": {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "expression": {
+                            "id": 48579,
+                            "name": "BASE_AGGREGATOR",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 48523,
+                            "src": "1760:15:75",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                              "typeString": "contract ChainlinkOracleRelay"
+                            }
+                          },
+                          "id": 48580,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isStale",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 48421,
+                          "src": "1760:23:75",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$__$returns$_t_bool_$",
+                            "typeString": "function () view external returns (bool)"
+                          }
+                        },
+                        "id": 48581,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1760:25:75",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "src": "1736:49:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1727:58:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 48584,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1727:58:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48570,
+              "nodeType": "StructuredDocumentation",
+              "src": "1569:94:75",
+              "text": "@notice Returns true if the price is stale\n @return _stale True if the price is stale"
+            },
+            "functionSelector": "1a26f447",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStale",
+            "nameLocation": "1675:7:75",
+            "parameters": {
+              "id": 48571,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1682:2:75"
+            },
+            "returnParameters": {
+              "id": 48574,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48573,
+                  "mutability": "mutable",
+                  "name": "_stale",
+                  "nameLocation": "1713:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48586,
+                  "src": "1708:11:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 48572,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1708:4:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1707:13:75"
+            },
+            "scope": 48615,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 48614,
+            "nodeType": "FunctionDefinition",
+            "src": "1931:243:75",
+            "body": {
+              "id": 48613,
+              "nodeType": "Block",
+              "src": "1986:188:75",
+              "statements": [
+                {
+                  "assignments": [
+                    48593
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 48593,
+                      "mutability": "mutable",
+                      "name": "_aggregatorPrice",
+                      "nameLocation": "2000:16:75",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 48613,
+                      "src": "1992:24:75",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 48592,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1992:7:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 48597,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 48594,
+                        "name": "AGGREGATOR",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48519,
+                        "src": "2019:10:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                          "typeString": "contract ChainlinkOracleRelay"
+                        }
+                      },
+                      "id": 48595,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "peekValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 48397,
+                      "src": "2019:20:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 48596,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2019:22:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1992:49:75"
+                },
+                {
+                  "assignments": [
+                    48599
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 48599,
+                      "mutability": "mutable",
+                      "name": "_baseAggregatorPrice",
+                      "nameLocation": "2055:20:75",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 48613,
+                      "src": "2047:28:75",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 48598,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2047:7:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 48603,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 48600,
+                        "name": "BASE_AGGREGATOR",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48523,
+                        "src": "2078:15:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ChainlinkOracleRelay_$48468",
+                          "typeString": "contract ChainlinkOracleRelay"
+                        }
+                      },
+                      "id": 48601,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "peekValue",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 48397,
+                      "src": "2078:25:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 48602,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2078:27:75",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2047:58:75"
+                },
+                {
+                  "expression": {
+                    "id": 48611,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48604,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48590,
+                      "src": "2112:6:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 48610,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "components": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 48607,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "id": 48605,
+                              "name": "_aggregatorPrice",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 48593,
+                              "src": "2122:16:75",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "id": 48606,
+                              "name": "_baseAggregatorPrice",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 48599,
+                              "src": "2141:20:75",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "2122:39:75",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 48608,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "2121:41:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "/",
+                      "rightExpression": {
+                        "hexValue": "31653138",
+                        "id": 48609,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2165:4:75",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                          "typeString": "int_const 1000000000000000000"
+                        },
+                        "value": "1e18"
+                      },
+                      "src": "2121:48:75",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2112:57:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 48612,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2112:57:75"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48587,
+              "nodeType": "StructuredDocumentation",
+              "src": "1794:134:75",
+              "text": "@notice The current reported value of the oracle\n @dev Implementation in getLastSecond\n @return _value The current value"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_get",
+            "nameLocation": "1940:4:75",
+            "parameters": {
+              "id": 48588,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1944:2:75"
+            },
+            "returnParameters": {
+              "id": 48591,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48590,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1978:6:75",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48614,
+                  "src": "1970:14:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48589,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1970:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1969:16:75"
+            },
+            "scope": 48615,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 48514,
+              "name": "OracleRelay",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 48815,
+              "src": "472:11:75"
+            },
+            "id": 48515,
+            "nodeType": "InheritanceSpecifier",
+            "src": "472:11:75"
+          }
+        ],
+        "canonicalName": "ChainlinkTokenOracleRelay",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 48513,
+          "nodeType": "StructuredDocumentation",
+          "src": "238:196:75",
+          "text": "@notice This oracle is for tokens that don't have a USD pair but do have a wETH/ETH pair\n @dev Oracle that wraps a chainlink oracle\n      The oracle returns (chainlinkPrice) * mul / div"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          48615,
+          48815,
+          53928
+        ],
+        "name": "ChainlinkTokenOracleRelay",
+        "nameLocation": "443:25:75",
+        "scope": 48616,
+        "usedErrors": [
+          53898
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 75
+}

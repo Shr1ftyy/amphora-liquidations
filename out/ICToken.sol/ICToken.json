@@ -1,0 +1,407 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "_decimals",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "exchangeRateStored",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_exchangeRate",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_underlying",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "decimals()": "313ce567",
+    "exchangeRateStored()": "182df0f5",
+    "underlying()": "6f307dc3"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"_decimals\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"exchangeRateStored\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_exchangeRate\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_underlying\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"decimals()\":{\"notice\":\"The amount of decimals of the cToken\"},\"exchangeRateStored()\":{\"notice\":\"The exchange rate stored in the contract\"},\"underlying()\":{\"notice\":\"The underlying asset for the cToken\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/periphery/ICToken.sol\":\"ICToken\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/periphery/ICToken.sol\":{\"keccak256\":\"0xbb69dcbcd52eabbf02e337b928f0f2c25bcea7bed630d4cc53792ba124ece369\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://029277bfce1033afdb7e869889c4f78649abd668b0d9e498176d90877a0c9fac\",\"dweb:/ipfs/QmdztDtyhuCqBcGcY499KMz64YPYLRrcoJeHuWkX3gtMGZ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "_decimals",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "exchangeRateStored",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_exchangeRate",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_underlying",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "decimals()": {
+            "notice": "The amount of decimals of the cToken"
+          },
+          "exchangeRateStored()": {
+            "notice": "The exchange rate stored in the contract"
+          },
+          "underlying()": {
+            "notice": "The underlying asset for the cToken"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/periphery/ICToken.sol": "ICToken"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/periphery/ICToken.sol": {
+        "keccak256": "0xbb69dcbcd52eabbf02e337b928f0f2c25bcea7bed630d4cc53792ba124ece369",
+        "urls": [
+          "bzz-raw://029277bfce1033afdb7e869889c4f78649abd668b0d9e498176d90877a0c9fac",
+          "dweb:/ipfs/QmdztDtyhuCqBcGcY499KMz64YPYLRrcoJeHuWkX3gtMGZ"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/periphery/ICToken.sol",
+    "id": 53783,
+    "exportedSymbols": {
+      "ICToken": [
+        53782
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:416:100",
+    "nodes": [
+      {
+        "id": 53763,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:100",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53782,
+        "nodeType": "ContractDefinition",
+        "src": "57:390:100",
+        "nodes": [
+          {
+            "id": 53769,
+            "nodeType": "FunctionDefinition",
+            "src": "134:76:100",
+            "documentation": {
+              "id": 53764,
+              "nodeType": "StructuredDocumentation",
+              "src": "79:52:100",
+              "text": "@notice The exchange rate stored in the contract"
+            },
+            "functionSelector": "182df0f5",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exchangeRateStored",
+            "nameLocation": "143:18:100",
+            "parameters": {
+              "id": 53765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "161:2:100"
+            },
+            "returnParameters": {
+              "id": 53768,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53767,
+                  "mutability": "mutable",
+                  "name": "_exchangeRate",
+                  "nameLocation": "195:13:100",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53769,
+                  "src": "187:21:100",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53766,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "187:7:100",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "186:23:100"
+            },
+            "scope": 53782,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53775,
+            "nodeType": "FunctionDefinition",
+            "src": "265:60:100",
+            "documentation": {
+              "id": 53770,
+              "nodeType": "StructuredDocumentation",
+              "src": "214:48:100",
+              "text": "@notice The amount of decimals of the cToken"
+            },
+            "functionSelector": "313ce567",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nameLocation": "274:8:100",
+            "parameters": {
+              "id": 53771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "282:2:100"
+            },
+            "returnParameters": {
+              "id": 53774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53773,
+                  "mutability": "mutable",
+                  "name": "_decimals",
+                  "nameLocation": "314:9:100",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53775,
+                  "src": "308:15:100",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 53772,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:5:100",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "307:17:100"
+            },
+            "scope": 53782,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53781,
+            "nodeType": "FunctionDefinition",
+            "src": "379:66:100",
+            "documentation": {
+              "id": 53776,
+              "nodeType": "StructuredDocumentation",
+              "src": "329:47:100",
+              "text": "@notice The underlying asset for the cToken"
+            },
+            "functionSelector": "6f307dc3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlying",
+            "nameLocation": "388:10:100",
+            "parameters": {
+              "id": 53777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "398:2:100"
+            },
+            "returnParameters": {
+              "id": 53780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53779,
+                  "mutability": "mutable",
+                  "name": "_underlying",
+                  "nameLocation": "432:11:100",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53781,
+                  "src": "424:19:100",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53778,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "424:7:100",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "423:21:100"
+            },
+            "scope": 53782,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICToken",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53782
+        ],
+        "name": "ICToken",
+        "nameLocation": "67:7:100",
+        "scope": 53783,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 100
+}

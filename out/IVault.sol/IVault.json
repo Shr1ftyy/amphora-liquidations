@@ -1,0 +1,3672 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "Vault_AmountZero",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_DepositAndStakeOnConvexFailed",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_NotMinter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_NotVaultController",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_OverWithdrawal",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_RepayTooMuch",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_TokenAlreadyStaked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_TokenCanNotBeStaked",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_TokenNotCurveLP",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_TokenNotRegistered",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_TokenZeroBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "Vault_WithdrawAndUnstakeOnConvexFailed",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimedReward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Staked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "CONTROLLER",
+      "outputs": [
+        {
+          "internalType": "contract IVaultController",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CRV",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_crv",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CVX",
+      "outputs": [
+        {
+          "internalType": "contract ICVX",
+          "name": "_cvx",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseLiability",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_liability",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "canStake",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "_canStake",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_tokenAddresses",
+          "type": "address[]"
+        }
+      ],
+      "name": "claimRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "claimableRewards",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IVault.Reward[]",
+          "name": "_rewards",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "controllerTransfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IBaseRewardPool",
+          "name": "_rewardPool",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "controllerWithdrawAndUnwrap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositERC20",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "id",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "_id",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "isTokenStaked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "_isStaked",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "minter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_minter",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_increase",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_baseAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "modifyLiability",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_liability",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "stakeCrvLPCollateral",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultInfo",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "_id",
+          "type": "uint96"
+        },
+        {
+          "internalType": "address",
+          "name": "_minter",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawERC20",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "CONTROLLER()": "ee0fc121",
+    "CRV()": "945c9142",
+    "CVX()": "759cb53b",
+    "balances(address)": "27e235e3",
+    "baseLiability()": "adef15bc",
+    "canStake(address)": "36d8bf93",
+    "claimRewards(address[])": "f9f031df",
+    "claimableRewards(address)": "dc01f60d",
+    "controllerTransfer(address,address,uint256)": "9b504387",
+    "controllerWithdrawAndUnwrap(address,uint256)": "2eb60d6f",
+    "depositERC20(address,uint256)": "97feb926",
+    "id()": "af640d0f",
+    "isTokenStaked(address)": "b798319f",
+    "minter()": "07546172",
+    "modifyLiability(bool,uint256)": "dfabefe7",
+    "stakeCrvLPCollateral(address)": "de6b50d6",
+    "vaultInfo()": "501ec738",
+    "withdrawERC20(address,uint256)": "a1db9782"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"Vault_AmountZero\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_DepositAndStakeOnConvexFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_NotMinter\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_NotVaultController\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_OverWithdrawal\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_RepayTooMuch\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_TokenAlreadyStaked\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_TokenCanNotBeStaked\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_TokenNotCurveLP\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_TokenNotRegistered\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_TokenZeroBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Vault_WithdrawAndUnstakeOnConvexFailed\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"ClaimedReward\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Staked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"CONTROLLER\",\"outputs\":[{\"internalType\":\"contract IVaultController\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CRV\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_crv\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CVX\",\"outputs\":[{\"internalType\":\"contract ICVX\",\"name\":\"_cvx\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseLiability\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_liability\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"canStake\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_canStake\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_tokenAddresses\",\"type\":\"address[]\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"}],\"name\":\"claimableRewards\",\"outputs\":[{\"components\":[{\"internalType\":\"contract IERC20\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct IVault.Reward[]\",\"name\":\"_rewards\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"controllerTransfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract IBaseRewardPool\",\"name\":\"_rewardPool\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"controllerWithdrawAndUnwrap\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"depositERC20\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"id\",\"outputs\":[{\"internalType\":\"uint96\",\"name\":\"_id\",\"type\":\"uint96\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"isTokenStaked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_isStaked\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"minter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_minter\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_increase\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_baseAmount\",\"type\":\"uint256\"}],\"name\":\"modifyLiability\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_liability\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"}],\"name\":\"stakeCrvLPCollateral\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultInfo\",\"outputs\":[{\"internalType\":\"uint96\",\"name\":\"_id\",\"type\":\"uint96\"},{\"internalType\":\"address\",\"name\":\"_minter\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdrawERC20\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"ClaimedReward(address,uint256)\":{\"params\":{\"_amount\":\"The amount that was claimed\",\"_token\":\"The address of the token that was claimed\"}},\"Deposit(address,uint256)\":{\"params\":{\"_amount\":\"The amount to deposit\",\"_token\":\"The address of the token to deposit\"}},\"Staked(address,uint256)\":{\"params\":{\"_amount\":\"The amount to stake\",\"_token\":\"The address of the token to stake\"}},\"Withdraw(address,uint256)\":{\"params\":{\"_amount\":\"The amount to withdraw\",\"_token\":\"The address of the token to withdraw\"}}},\"kind\":\"dev\",\"methods\":{\"CONTROLLER()\":{\"returns\":{\"_vaultController\":\"The vault controller\"}},\"CRV()\":{\"returns\":{\"_crv\":\"The CRV token address\"}},\"CVX()\":{\"returns\":{\"_cvx\":\"The CVX token address\"}},\"balances(address)\":{\"params\":{\"_token\":\"The address of the token\"},\"returns\":{\"_balance\":\"The token's balance of the vault\"}},\"baseLiability()\":{\"returns\":{\"_liability\":\"The current vault base liability of the vault\"}},\"canStake(address)\":{\"params\":{\"_token\":\"The address of the token to check\"},\"returns\":{\"_canStake\":\"Returns true if the token can be staked manually\"}},\"claimRewards(address[])\":{\"details\":\"Transfers a percentage of the crv and cvx rewards to claim AMPH tokens\",\"params\":{\"_tokenAddresses\":\"The addresses of the erc20 tokens\"}},\"claimableRewards(address)\":{\"params\":{\"_tokenAddress\":\"The address of erc20 token\"},\"returns\":{\"_rewards\":\"The array of tokens and amount available for claim\"}},\"controllerTransfer(address,address,uint256)\":{\"params\":{\"_amount\":\"The amount of coins to move\",\"_to\":\"The address of the person to send the coins to\",\"_token\":\"The address of the token to transfer\"}},\"controllerWithdrawAndUnwrap(address,uint256)\":{\"params\":{\"_amount\":\"amount of coins to withdraw\",\"_rewardPool\":\"pool to withdraw\"}},\"depositERC20(address,uint256)\":{\"params\":{\"_amount\":\"The amount of the token to deposit\",\"_token\":\"The address of the token to deposit\"}},\"id()\":{\"returns\":{\"_id\":\"The id of the vault\"}},\"isTokenStaked(address)\":{\"params\":{\"_token\":\"The address of the token\"},\"returns\":{\"_isStaked\":\"True if the token is staked\"}},\"minter()\":{\"returns\":{\"_minter\":\"The minter's address\"}},\"modifyLiability(bool,uint256)\":{\"params\":{\"_baseAmount\":\"The change amount in base liability\",\"_increase\":\"True to increase liability, false to decrease\"},\"returns\":{\"_liability\":\"The new base liability\"}},\"stakeCrvLPCollateral(address)\":{\"details\":\"This can be called if the convex pool didn't exist when the token was registered         and was later updated\",\"params\":{\"_tokenAddress\":\"The address of erc20 crvLP token\"}},\"vaultInfo()\":{\"returns\":{\"_id\":\"Id of the vault\",\"_minter\":\"Minter of the vault\"}},\"withdrawERC20(address,uint256)\":{\"details\":\"The withdraw will be denied if ones vault would become insolvent\",\"params\":{\"_amount\":\"The amount of the token to withdraw\",\"_token\":\"The address of the token\"}}},\"title\":\"Vault Interface\",\"version\":1},\"userdoc\":{\"errors\":{\"Vault_AmountZero()\":[{\"notice\":\"Thrown when trying to deposit 0 amount\"}],\"Vault_DepositAndStakeOnConvexFailed()\":[{\"notice\":\"Thrown when depositing and staking on convex fails\"}],\"Vault_NotMinter()\":[{\"notice\":\"Thrown when _msgSender is not the minter of the vault\"}],\"Vault_NotVaultController()\":[{\"notice\":\"Thrown when _msgSender is not the controller of the vault\"}],\"Vault_OverWithdrawal()\":[{\"notice\":\"Thrown when trying to withdraw more than it's possible\"}],\"Vault_RepayTooMuch()\":[{\"notice\":\"Thrown when trying to repay more than is needed\"}],\"Vault_TokenAlreadyStaked()\":[{\"notice\":\"Thrown when a token is already staked and trying to stake again\"}],\"Vault_TokenCanNotBeStaked()\":[{\"notice\":\"Thrown when a crvLP token can not be staked\"}],\"Vault_TokenNotCurveLP()\":[{\"notice\":\"Thrown when trying to claim rewards with a non CurveLPStakedOnConvex token\"}],\"Vault_TokenNotRegistered()\":[{\"notice\":\"Thrown when trying to deposit a token that is not registered\"}],\"Vault_TokenZeroBalance()\":[{\"notice\":\"Thrown when trying to stake with 0 balance\"}],\"Vault_WithdrawAndUnstakeOnConvexFailed()\":[{\"notice\":\"Thrown when trying to withdraw and unstake from convex\"}]},\"events\":{\"ClaimedReward(address,uint256)\":{\"notice\":\"Emited when claiming a reward\"},\"Deposit(address,uint256)\":{\"notice\":\"Emited after depositing a token\"},\"Staked(address,uint256)\":{\"notice\":\"Emited when staking a crvLP token on convex manually\"},\"Withdraw(address,uint256)\":{\"notice\":\"Emited after withdrawing a token\"}},\"kind\":\"user\",\"methods\":{\"CONTROLLER()\":{\"notice\":\"Returns the vault controller\"},\"CRV()\":{\"notice\":\"Returns the CRV token address\"},\"CVX()\":{\"notice\":\"Returns the CVX token address\"},\"balances(address)\":{\"notice\":\"Returns the vault's balance of a token\"},\"baseLiability()\":{\"notice\":\"Returns the current vault base liability\"},\"canStake(address)\":{\"notice\":\"Returns true when user can manually stake their token balance\"},\"claimRewards(address[])\":{\"notice\":\"Claims available rewards from multiple tokens\"},\"claimableRewards(address)\":{\"notice\":\"Returns an array of tokens and amounts available for claim\"},\"controllerTransfer(address,address,uint256)\":{\"notice\":\"Function used by the VaultController to transfer tokens\"},\"controllerWithdrawAndUnwrap(address,uint256)\":{\"notice\":\"function used by the VaultController to withdraw from convex callable by the VaultController only\"},\"depositERC20(address,uint256)\":{\"notice\":\"Used to deposit a token to the vault\"},\"id()\":{\"notice\":\"Returns the id of the vault\"},\"isTokenStaked(address)\":{\"notice\":\"Returns if the token in staked\"},\"minter()\":{\"notice\":\"Returns the minter's address of the vault\"},\"modifyLiability(bool,uint256)\":{\"notice\":\"Modifies a vault's liability. Can only be called by VaultController\"},\"stakeCrvLPCollateral(address)\":{\"notice\":\"Let's the user manually stake their crvLP\"},\"vaultInfo()\":{\"notice\":\"Returns the struct containing the vault information\"},\"withdrawERC20(address,uint256)\":{\"notice\":\"Used to withdraw a token from the vault. This can only be called by the minter\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/core/IVault.sol\":\"IVault\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"solidity/contracts/periphery/CurveMaster.sol\":{\"keccak256\":\"0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db\",\"dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A\"]},\"solidity/interfaces/core/IAMPHClaimer.sol\":{\"keccak256\":\"0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993\",\"dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ\"]},\"solidity/interfaces/core/IUSDA.sol\":{\"keccak256\":\"0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527\",\"dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19\"]},\"solidity/interfaces/core/IVault.sol\":{\"keccak256\":\"0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812\",\"dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW\"]},\"solidity/interfaces/core/IVaultController.sol\":{\"keccak256\":\"0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b\",\"dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L\"]},\"solidity/interfaces/core/IVaultDeployer.sol\":{\"keccak256\":\"0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616\",\"dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ\"]},\"solidity/interfaces/periphery/ICurveMaster.sol\":{\"keccak256\":\"0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833\",\"dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]},\"solidity/interfaces/utils/IBaseRewardPool.sol\":{\"keccak256\":\"0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40\",\"dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ\"]},\"solidity/interfaces/utils/IBooster.sol\":{\"keccak256\":\"0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5\",\"dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn\"]},\"solidity/interfaces/utils/ICVX.sol\":{\"keccak256\":\"0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486\",\"dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy\"]},\"solidity/interfaces/utils/ICurveSlave.sol\":{\"keccak256\":\"0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51\",\"dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ\"]},\"solidity/interfaces/utils/IRoles.sol\":{\"keccak256\":\"0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073\",\"dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6\"]},\"solidity/interfaces/utils/IVirtualBalanceRewardPool.sol\":{\"keccak256\":\"0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048\",\"dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_AmountZero"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_DepositAndStakeOnConvexFailed"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_NotMinter"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_NotVaultController"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_OverWithdrawal"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_RepayTooMuch"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_TokenAlreadyStaked"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_TokenCanNotBeStaked"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_TokenNotCurveLP"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_TokenNotRegistered"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_TokenZeroBalance"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "Vault_WithdrawAndUnstakeOnConvexFailed"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ClaimedReward",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Deposit",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Staked",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Withdraw",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CONTROLLER",
+          "outputs": [
+            {
+              "internalType": "contract IVaultController",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CRV",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_crv",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CVX",
+          "outputs": [
+            {
+              "internalType": "contract ICVX",
+              "name": "_cvx",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balances",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_balance",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "baseLiability",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_liability",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "canStake",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "_canStake",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address[]",
+              "name": "_tokenAddresses",
+              "type": "address[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "claimRewards"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "claimableRewards",
+          "outputs": [
+            {
+              "internalType": "struct IVault.Reward[]",
+              "name": "_rewards",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "contract IERC20",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "controllerTransfer"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract IBaseRewardPool",
+              "name": "_rewardPool",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "controllerWithdrawAndUnwrap"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "depositERC20"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "id",
+          "outputs": [
+            {
+              "internalType": "uint96",
+              "name": "_id",
+              "type": "uint96"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isTokenStaked",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "_isStaked",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "minter",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_minter",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bool",
+              "name": "_increase",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_baseAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "modifyLiability",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_liability",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "stakeCrvLPCollateral"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultInfo",
+          "outputs": [
+            {
+              "internalType": "uint96",
+              "name": "_id",
+              "type": "uint96"
+            },
+            {
+              "internalType": "address",
+              "name": "_minter",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawERC20"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "CONTROLLER()": {
+            "returns": {
+              "_vaultController": "The vault controller"
+            }
+          },
+          "CRV()": {
+            "returns": {
+              "_crv": "The CRV token address"
+            }
+          },
+          "CVX()": {
+            "returns": {
+              "_cvx": "The CVX token address"
+            }
+          },
+          "balances(address)": {
+            "params": {
+              "_token": "The address of the token"
+            },
+            "returns": {
+              "_balance": "The token's balance of the vault"
+            }
+          },
+          "baseLiability()": {
+            "returns": {
+              "_liability": "The current vault base liability of the vault"
+            }
+          },
+          "canStake(address)": {
+            "params": {
+              "_token": "The address of the token to check"
+            },
+            "returns": {
+              "_canStake": "Returns true if the token can be staked manually"
+            }
+          },
+          "claimRewards(address[])": {
+            "details": "Transfers a percentage of the crv and cvx rewards to claim AMPH tokens",
+            "params": {
+              "_tokenAddresses": "The addresses of the erc20 tokens"
+            }
+          },
+          "claimableRewards(address)": {
+            "params": {
+              "_tokenAddress": "The address of erc20 token"
+            },
+            "returns": {
+              "_rewards": "The array of tokens and amount available for claim"
+            }
+          },
+          "controllerTransfer(address,address,uint256)": {
+            "params": {
+              "_amount": "The amount of coins to move",
+              "_to": "The address of the person to send the coins to",
+              "_token": "The address of the token to transfer"
+            }
+          },
+          "controllerWithdrawAndUnwrap(address,uint256)": {
+            "params": {
+              "_amount": "amount of coins to withdraw",
+              "_rewardPool": "pool to withdraw"
+            }
+          },
+          "depositERC20(address,uint256)": {
+            "params": {
+              "_amount": "The amount of the token to deposit",
+              "_token": "The address of the token to deposit"
+            }
+          },
+          "id()": {
+            "returns": {
+              "_id": "The id of the vault"
+            }
+          },
+          "isTokenStaked(address)": {
+            "params": {
+              "_token": "The address of the token"
+            },
+            "returns": {
+              "_isStaked": "True if the token is staked"
+            }
+          },
+          "minter()": {
+            "returns": {
+              "_minter": "The minter's address"
+            }
+          },
+          "modifyLiability(bool,uint256)": {
+            "params": {
+              "_baseAmount": "The change amount in base liability",
+              "_increase": "True to increase liability, false to decrease"
+            },
+            "returns": {
+              "_liability": "The new base liability"
+            }
+          },
+          "stakeCrvLPCollateral(address)": {
+            "details": "This can be called if the convex pool didn't exist when the token was registered         and was later updated",
+            "params": {
+              "_tokenAddress": "The address of erc20 crvLP token"
+            }
+          },
+          "vaultInfo()": {
+            "returns": {
+              "_id": "Id of the vault",
+              "_minter": "Minter of the vault"
+            }
+          },
+          "withdrawERC20(address,uint256)": {
+            "details": "The withdraw will be denied if ones vault would become insolvent",
+            "params": {
+              "_amount": "The amount of the token to withdraw",
+              "_token": "The address of the token"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "CONTROLLER()": {
+            "notice": "Returns the vault controller"
+          },
+          "CRV()": {
+            "notice": "Returns the CRV token address"
+          },
+          "CVX()": {
+            "notice": "Returns the CVX token address"
+          },
+          "balances(address)": {
+            "notice": "Returns the vault's balance of a token"
+          },
+          "baseLiability()": {
+            "notice": "Returns the current vault base liability"
+          },
+          "canStake(address)": {
+            "notice": "Returns true when user can manually stake their token balance"
+          },
+          "claimRewards(address[])": {
+            "notice": "Claims available rewards from multiple tokens"
+          },
+          "claimableRewards(address)": {
+            "notice": "Returns an array of tokens and amounts available for claim"
+          },
+          "controllerTransfer(address,address,uint256)": {
+            "notice": "Function used by the VaultController to transfer tokens"
+          },
+          "controllerWithdrawAndUnwrap(address,uint256)": {
+            "notice": "function used by the VaultController to withdraw from convex callable by the VaultController only"
+          },
+          "depositERC20(address,uint256)": {
+            "notice": "Used to deposit a token to the vault"
+          },
+          "id()": {
+            "notice": "Returns the id of the vault"
+          },
+          "isTokenStaked(address)": {
+            "notice": "Returns if the token in staked"
+          },
+          "minter()": {
+            "notice": "Returns the minter's address of the vault"
+          },
+          "modifyLiability(bool,uint256)": {
+            "notice": "Modifies a vault's liability. Can only be called by VaultController"
+          },
+          "stakeCrvLPCollateral(address)": {
+            "notice": "Let's the user manually stake their crvLP"
+          },
+          "vaultInfo()": {
+            "notice": "Returns the struct containing the vault information"
+          },
+          "withdrawERC20(address,uint256)": {
+            "notice": "Used to withdraw a token from the vault. This can only be called by the minter"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/core/IVault.sol": "IVault"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+        "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+        "urls": [
+          "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+          "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/CurveMaster.sol": {
+        "keccak256": "0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a",
+        "urls": [
+          "bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db",
+          "dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IAMPHClaimer.sol": {
+        "keccak256": "0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7",
+        "urls": [
+          "bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993",
+          "dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IUSDA.sol": {
+        "keccak256": "0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0",
+        "urls": [
+          "bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527",
+          "dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVault.sol": {
+        "keccak256": "0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25",
+        "urls": [
+          "bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812",
+          "dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultController.sol": {
+        "keccak256": "0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7",
+        "urls": [
+          "bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b",
+          "dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultDeployer.sol": {
+        "keccak256": "0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1",
+        "urls": [
+          "bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616",
+          "dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "solidity/interfaces/periphery/ICurveMaster.sol": {
+        "keccak256": "0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463",
+        "urls": [
+          "bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833",
+          "dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBaseRewardPool.sol": {
+        "keccak256": "0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0",
+        "urls": [
+          "bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40",
+          "dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBooster.sol": {
+        "keccak256": "0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac",
+        "urls": [
+          "bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5",
+          "dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICVX.sol": {
+        "keccak256": "0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a",
+        "urls": [
+          "bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486",
+          "dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICurveSlave.sol": {
+        "keccak256": "0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e",
+        "urls": [
+          "bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51",
+          "dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IRoles.sol": {
+        "keccak256": "0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123",
+        "urls": [
+          "bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073",
+          "dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IVirtualBalanceRewardPool.sol": {
+        "keccak256": "0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba",
+        "urls": [
+          "bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048",
+          "dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/core/IVault.sol",
+    "id": 52084,
+    "exportedSymbols": {
+      "IBaseRewardPool": [
+        54011
+      ],
+      "ICVX": [
+        54109
+      ],
+      "IERC20": [
+        2726
+      ],
+      "IVault": [
+        52083
+      ],
+      "IVaultController": [
+        52822
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:8119:91",
+    "nodes": [
+      {
+        "id": 51859,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:91",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 51861,
+        "nodeType": "ImportDirective",
+        "src": "57:71:91",
+        "absolutePath": "solidity/interfaces/core/IVaultController.sol",
+        "file": "@interfaces/core/IVaultController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52084,
+        "sourceUnit": 52823,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51860,
+              "name": "IVaultController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52822,
+              "src": "65:16:91",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51863,
+        "nodeType": "ImportDirective",
+        "src": "129:70:91",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52084,
+        "sourceUnit": 2727,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51862,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2726,
+              "src": "137:6:91",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51865,
+        "nodeType": "ImportDirective",
+        "src": "200:70:91",
+        "absolutePath": "solidity/interfaces/utils/IBaseRewardPool.sol",
+        "file": "@interfaces/utils/IBaseRewardPool.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52084,
+        "sourceUnit": 54012,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51864,
+              "name": "IBaseRewardPool",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54011,
+              "src": "208:15:91",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51867,
+        "nodeType": "ImportDirective",
+        "src": "271:48:91",
+        "absolutePath": "solidity/interfaces/utils/ICVX.sol",
+        "file": "@interfaces/utils/ICVX.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 52084,
+        "sourceUnit": 54110,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51866,
+              "name": "ICVX",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54109,
+              "src": "279:4:91",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 52083,
+        "nodeType": "ContractDefinition",
+        "src": "348:7802:91",
+        "nodes": [
+          {
+            "id": 51875,
+            "nodeType": "EventDefinition",
+            "src": "698:47:91",
+            "anonymous": false,
+            "documentation": {
+              "id": 51869,
+              "nodeType": "StructuredDocumentation",
+              "src": "543:151:91",
+              "text": " @notice Emited after depositing a token\n @param _token The address of the token to deposit\n @param _amount The amount to deposit"
+            },
+            "eventSelector": "e1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+            "name": "Deposit",
+            "nameLocation": "704:7:91",
+            "parameters": {
+              "id": 51874,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51871,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "720:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51875,
+                  "src": "712:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51870,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "712:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51873,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "736:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51875,
+                  "src": "728:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "728:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "711:33:91"
+            }
+          },
+          {
+            "id": 51882,
+            "nodeType": "EventDefinition",
+            "src": "906:48:91",
+            "anonymous": false,
+            "documentation": {
+              "id": 51876,
+              "nodeType": "StructuredDocumentation",
+              "src": "749:154:91",
+              "text": " @notice Emited after withdrawing a token\n @param _token The address of the token to withdraw\n @param _amount The amount to withdraw"
+            },
+            "eventSelector": "884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a9424364",
+            "name": "Withdraw",
+            "nameLocation": "912:8:91",
+            "parameters": {
+              "id": 51881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51878,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "929:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51882,
+                  "src": "921:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51877,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "921:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51880,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "945:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51882,
+                  "src": "937:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51879,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "937:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "920:33:91"
+            }
+          },
+          {
+            "id": 51889,
+            "nodeType": "EventDefinition",
+            "src": "1122:53:91",
+            "anonymous": false,
+            "documentation": {
+              "id": 51883,
+              "nodeType": "StructuredDocumentation",
+              "src": "958:161:91",
+              "text": " @notice Emited when claiming a reward\n @param _token The address of the token that was claimed\n @param _amount The amount that was claimed"
+            },
+            "eventSelector": "d0813ff03c470dcc7baa9ce36914dc2febdfd276d639deffaac383fd3db42ba3",
+            "name": "ClaimedReward",
+            "nameLocation": "1128:13:91",
+            "parameters": {
+              "id": 51888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51885,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "1150:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51889,
+                  "src": "1142:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51884,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1142:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51887,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1166:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51889,
+                  "src": "1158:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51886,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1158:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1141:33:91"
+            }
+          },
+          {
+            "id": 51896,
+            "nodeType": "EventDefinition",
+            "src": "1342:46:91",
+            "anonymous": false,
+            "documentation": {
+              "id": 51890,
+              "nodeType": "StructuredDocumentation",
+              "src": "1179:160:91",
+              "text": " Emited when staking a crvLP token on convex manually\n @param _token The address of the token to stake\n @param _amount The amount to stake"
+            },
+            "eventSelector": "9e71bc8eea02a63969f509818f2dafb9254532904319f9dbda79b67bd34a5f3d",
+            "name": "Staked",
+            "nameLocation": "1348:6:91",
+            "parameters": {
+              "id": 51895,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51892,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "1363:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51896,
+                  "src": "1355:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1355:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51894,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1379:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51896,
+                  "src": "1371:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51893,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1371:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1354:33:91"
+            }
+          },
+          {
+            "id": 51899,
+            "nodeType": "ErrorDefinition",
+            "src": "1652:33:91",
+            "documentation": {
+              "id": 51897,
+              "nodeType": "StructuredDocumentation",
+              "src": "1566:83:91",
+              "text": " @notice Thrown when trying to deposit a token that is not registered"
+            },
+            "errorSelector": "915c4118",
+            "name": "Vault_TokenNotRegistered",
+            "nameLocation": "1658:24:91",
+            "parameters": {
+              "id": 51898,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1682:2:91"
+            }
+          },
+          {
+            "id": 51902,
+            "nodeType": "ErrorDefinition",
+            "src": "1753:25:91",
+            "documentation": {
+              "id": 51900,
+              "nodeType": "StructuredDocumentation",
+              "src": "1689:61:91",
+              "text": " @notice Thrown when trying to deposit 0 amount"
+            },
+            "errorSelector": "6a374428",
+            "name": "Vault_AmountZero",
+            "nameLocation": "1759:16:91",
+            "parameters": {
+              "id": 51901,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1775:2:91"
+            }
+          },
+          {
+            "id": 51905,
+            "nodeType": "ErrorDefinition",
+            "src": "1851:29:91",
+            "documentation": {
+              "id": 51903,
+              "nodeType": "StructuredDocumentation",
+              "src": "1782:66:91",
+              "text": "@notice Thrown when trying to withdraw more than it's possible"
+            },
+            "errorSelector": "ecda46d2",
+            "name": "Vault_OverWithdrawal",
+            "nameLocation": "1857:20:91",
+            "parameters": {
+              "id": 51904,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1877:2:91"
+            }
+          },
+          {
+            "id": 51908,
+            "nodeType": "ErrorDefinition",
+            "src": "1946:27:91",
+            "documentation": {
+              "id": 51906,
+              "nodeType": "StructuredDocumentation",
+              "src": "1884:59:91",
+              "text": "@notice Thrown when trying to repay more than is needed"
+            },
+            "errorSelector": "2ee9f069",
+            "name": "Vault_RepayTooMuch",
+            "nameLocation": "1952:18:91",
+            "parameters": {
+              "id": 51907,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1970:2:91"
+            }
+          },
+          {
+            "id": 51911,
+            "nodeType": "ErrorDefinition",
+            "src": "2045:24:91",
+            "documentation": {
+              "id": 51909,
+              "nodeType": "StructuredDocumentation",
+              "src": "1977:65:91",
+              "text": "@notice Thrown when _msgSender is not the minter of the vault"
+            },
+            "errorSelector": "1e6a3ba3",
+            "name": "Vault_NotMinter",
+            "nameLocation": "2051:15:91",
+            "parameters": {
+              "id": 51910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2066:2:91"
+            }
+          },
+          {
+            "id": 51914,
+            "nodeType": "ErrorDefinition",
+            "src": "2145:33:91",
+            "documentation": {
+              "id": 51912,
+              "nodeType": "StructuredDocumentation",
+              "src": "2073:69:91",
+              "text": "@notice Thrown when _msgSender is not the controller of the vault"
+            },
+            "errorSelector": "031bb1d9",
+            "name": "Vault_NotVaultController",
+            "nameLocation": "2151:24:91",
+            "parameters": {
+              "id": 51913,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2175:2:91"
+            }
+          },
+          {
+            "id": 51917,
+            "nodeType": "ErrorDefinition",
+            "src": "2247:44:91",
+            "documentation": {
+              "id": 51915,
+              "nodeType": "StructuredDocumentation",
+              "src": "2182:62:91",
+              "text": "@notice Thrown when depositing and staking on convex fails"
+            },
+            "errorSelector": "e41e0e6d",
+            "name": "Vault_DepositAndStakeOnConvexFailed",
+            "nameLocation": "2253:35:91",
+            "parameters": {
+              "id": 51916,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2288:2:91"
+            }
+          },
+          {
+            "id": 51920,
+            "nodeType": "ErrorDefinition",
+            "src": "2364:47:91",
+            "documentation": {
+              "id": 51918,
+              "nodeType": "StructuredDocumentation",
+              "src": "2295:66:91",
+              "text": "@notice Thrown when trying to withdraw and unstake from convex"
+            },
+            "errorSelector": "3c0f0a3d",
+            "name": "Vault_WithdrawAndUnstakeOnConvexFailed",
+            "nameLocation": "2370:38:91",
+            "parameters": {
+              "id": 51919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2408:2:91"
+            }
+          },
+          {
+            "id": 51923,
+            "nodeType": "ErrorDefinition",
+            "src": "2504:30:91",
+            "documentation": {
+              "id": 51921,
+              "nodeType": "StructuredDocumentation",
+              "src": "2415:86:91",
+              "text": "@notice Thrown when trying to claim rewards with a non CurveLPStakedOnConvex token"
+            },
+            "errorSelector": "48737102",
+            "name": "Vault_TokenNotCurveLP",
+            "nameLocation": "2510:21:91",
+            "parameters": {
+              "id": 51922,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2531:2:91"
+            }
+          },
+          {
+            "id": 51926,
+            "nodeType": "ErrorDefinition",
+            "src": "2595:31:91",
+            "documentation": {
+              "id": 51924,
+              "nodeType": "StructuredDocumentation",
+              "src": "2538:54:91",
+              "text": "@notice Thrown when trying to stake with 0 balance"
+            },
+            "errorSelector": "21312866",
+            "name": "Vault_TokenZeroBalance",
+            "nameLocation": "2601:22:91",
+            "parameters": {
+              "id": 51925,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2623:2:91"
+            }
+          },
+          {
+            "id": 51929,
+            "nodeType": "ErrorDefinition",
+            "src": "2688:34:91",
+            "documentation": {
+              "id": 51927,
+              "nodeType": "StructuredDocumentation",
+              "src": "2630:55:91",
+              "text": "@notice Thrown when a crvLP token can not be staked"
+            },
+            "errorSelector": "ff857faf",
+            "name": "Vault_TokenCanNotBeStaked",
+            "nameLocation": "2694:25:91",
+            "parameters": {
+              "id": 51928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2719:2:91"
+            }
+          },
+          {
+            "id": 51932,
+            "nodeType": "ErrorDefinition",
+            "src": "2804:33:91",
+            "documentation": {
+              "id": 51930,
+              "nodeType": "StructuredDocumentation",
+              "src": "2726:75:91",
+              "text": "@notice Thrown when a token is already staked and trying to stake again"
+            },
+            "errorSelector": "72785f82",
+            "name": "Vault_TokenAlreadyStaked",
+            "nameLocation": "2810:24:91",
+            "parameters": {
+              "id": 51931,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2834:2:91"
+            }
+          },
+          {
+            "id": 51937,
+            "nodeType": "StructDefinition",
+            "src": "3207:57:91",
+            "canonicalName": "IVault.VaultInfo",
+            "members": [
+              {
+                "constant": false,
+                "id": 51934,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "3237:2:91",
+                "nodeType": "VariableDeclaration",
+                "scope": 51937,
+                "src": "3230:9:91",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint96",
+                  "typeString": "uint96"
+                },
+                "typeName": {
+                  "id": 51933,
+                  "name": "uint96",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3230:6:91",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51936,
+                "mutability": "mutable",
+                "name": "minter",
+                "nameLocation": "3253:6:91",
+                "nodeType": "VariableDeclaration",
+                "scope": 51937,
+                "src": "3245:14:91",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 51935,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3245:7:91",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "VaultInfo",
+            "nameLocation": "3214:9:91",
+            "scope": 52083,
+            "visibility": "public"
+          },
+          {
+            "id": 51943,
+            "nodeType": "StructDefinition",
+            "src": "3268:57:91",
+            "canonicalName": "IVault.Reward",
+            "members": [
+              {
+                "constant": false,
+                "id": 51940,
+                "mutability": "mutable",
+                "name": "token",
+                "nameLocation": "3295:5:91",
+                "nodeType": "VariableDeclaration",
+                "scope": 51943,
+                "src": "3288:12:91",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_contract$_IERC20_$2726",
+                  "typeString": "contract IERC20"
+                },
+                "typeName": {
+                  "id": 51939,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 51938,
+                    "name": "IERC20",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 2726,
+                    "src": "3288:6:91"
+                  },
+                  "referencedDeclaration": 2726,
+                  "src": "3288:6:91",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51942,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "3314:6:91",
+                "nodeType": "VariableDeclaration",
+                "scope": 51943,
+                "src": "3306:14:91",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 51941,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "3306:7:91",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Reward",
+            "nameLocation": "3275:6:91",
+            "scope": 52083,
+            "visibility": "public"
+          },
+          {
+            "id": 51951,
+            "nodeType": "FunctionDefinition",
+            "src": "3656:73:91",
+            "documentation": {
+              "id": 51944,
+              "nodeType": "StructuredDocumentation",
+              "src": "3505:148:91",
+              "text": " @notice Returns the struct containing the vault information\n @return _id Id of the vault\n @return _minter Minter of the vault"
+            },
+            "functionSelector": "501ec738",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultInfo",
+            "nameLocation": "3665:9:91",
+            "parameters": {
+              "id": 51945,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3674:2:91"
+            },
+            "returnParameters": {
+              "id": 51950,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51947,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "3707:3:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51951,
+                  "src": "3700:10:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 51946,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3700:6:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51949,
+                  "mutability": "mutable",
+                  "name": "_minter",
+                  "nameLocation": "3720:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51951,
+                  "src": "3712:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51948,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3712:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3699:29:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51959,
+            "nodeType": "FunctionDefinition",
+            "src": "3896:75:91",
+            "documentation": {
+              "id": 51952,
+              "nodeType": "StructuredDocumentation",
+              "src": "3733:160:91",
+              "text": " @notice Returns the vault's balance of a token\n @param _token The address of the token\n @return _balance The token's balance of the vault"
+            },
+            "functionSelector": "27e235e3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balances",
+            "nameLocation": "3905:8:91",
+            "parameters": {
+              "id": 51955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51954,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "3922:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51959,
+                  "src": "3914:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51953,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3914:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3913:16:91"
+            },
+            "returnParameters": {
+              "id": 51958,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51957,
+                  "mutability": "mutable",
+                  "name": "_balance",
+                  "nameLocation": "3961:8:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51959,
+                  "src": "3953:16:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51956,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3953:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3952:18:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51967,
+            "nodeType": "FunctionDefinition",
+            "src": "4126:78:91",
+            "documentation": {
+              "id": 51960,
+              "nodeType": "StructuredDocumentation",
+              "src": "3975:148:91",
+              "text": " @notice Returns if the token in staked\n @param _token The address of the token\n @return _isStaked True if the token is staked"
+            },
+            "functionSelector": "b798319f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTokenStaked",
+            "nameLocation": "4135:13:91",
+            "parameters": {
+              "id": 51963,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51962,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "4157:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51967,
+                  "src": "4149:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51961,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4149:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4148:16:91"
+            },
+            "returnParameters": {
+              "id": 51966,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51965,
+                  "mutability": "mutable",
+                  "name": "_isStaked",
+                  "nameLocation": "4193:9:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51967,
+                  "src": "4188:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 51964,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4188:4:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4187:16:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51973,
+            "nodeType": "FunctionDefinition",
+            "src": "4344:68:91",
+            "documentation": {
+              "id": 51968,
+              "nodeType": "StructuredDocumentation",
+              "src": "4208:133:91",
+              "text": " @notice Returns the current vault base liability\n @return _liability The current vault base liability of the vault"
+            },
+            "functionSelector": "adef15bc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "baseLiability",
+            "nameLocation": "4353:13:91",
+            "parameters": {
+              "id": 51969,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4366:2:91"
+            },
+            "returnParameters": {
+              "id": 51972,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51971,
+                  "mutability": "mutable",
+                  "name": "_liability",
+                  "nameLocation": "4400:10:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51973,
+                  "src": "4392:18:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51970,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4392:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4391:20:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51979,
+            "nodeType": "FunctionDefinition",
+            "src": "4525:58:91",
+            "documentation": {
+              "id": 51974,
+              "nodeType": "StructuredDocumentation",
+              "src": "4416:106:91",
+              "text": " @notice Returns the minter's address of the vault\n @return _minter The minter's address"
+            },
+            "functionSelector": "07546172",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "minter",
+            "nameLocation": "4534:6:91",
+            "parameters": {
+              "id": 51975,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4540:2:91"
+            },
+            "returnParameters": {
+              "id": 51978,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51977,
+                  "mutability": "mutable",
+                  "name": "_minter",
+                  "nameLocation": "4574:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51979,
+                  "src": "4566:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51976,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4566:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4565:17:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51985,
+            "nodeType": "FunctionDefinition",
+            "src": "4677:49:91",
+            "documentation": {
+              "id": 51980,
+              "nodeType": "StructuredDocumentation",
+              "src": "4587:87:91",
+              "text": " @notice Returns the id of the vault\n @return _id The id of the vault"
+            },
+            "functionSelector": "af640d0f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "id",
+            "nameLocation": "4686:2:91",
+            "parameters": {
+              "id": 51981,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4688:2:91"
+            },
+            "returnParameters": {
+              "id": 51984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51983,
+                  "mutability": "mutable",
+                  "name": "_id",
+                  "nameLocation": "4721:3:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51985,
+                  "src": "4714:10:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 51982,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4714:6:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4713:12:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51992,
+            "nodeType": "FunctionDefinition",
+            "src": "4835:80:91",
+            "documentation": {
+              "id": 51986,
+              "nodeType": "StructuredDocumentation",
+              "src": "4730:102:91",
+              "text": " @notice Returns the vault controller\n @return _vaultController The vault controller"
+            },
+            "functionSelector": "ee0fc121",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CONTROLLER",
+            "nameLocation": "4844:10:91",
+            "parameters": {
+              "id": 51987,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4854:2:91"
+            },
+            "returnParameters": {
+              "id": 51991,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51990,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "4897:16:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51992,
+                  "src": "4880:33:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IVaultController_$52822",
+                    "typeString": "contract IVaultController"
+                  },
+                  "typeName": {
+                    "id": 51989,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51988,
+                      "name": "IVaultController",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 52822,
+                      "src": "4880:16:91"
+                    },
+                    "referencedDeclaration": 52822,
+                    "src": "4880:16:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IVaultController_$52822",
+                      "typeString": "contract IVaultController"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4879:35:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51999,
+            "nodeType": "FunctionDefinition",
+            "src": "5004:51:91",
+            "documentation": {
+              "id": 51993,
+              "nodeType": "StructuredDocumentation",
+              "src": "4919:82:91",
+              "text": "@notice Returns the CRV token address\n @return _crv The CRV token address"
+            },
+            "functionSelector": "945c9142",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CRV",
+            "nameLocation": "5013:3:91",
+            "parameters": {
+              "id": 51994,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5016:2:91"
+            },
+            "returnParameters": {
+              "id": 51998,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51997,
+                  "mutability": "mutable",
+                  "name": "_crv",
+                  "nameLocation": "5049:4:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51999,
+                  "src": "5042:11:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 51996,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51995,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "5042:6:91"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "5042:6:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5041:13:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52006,
+            "nodeType": "FunctionDefinition",
+            "src": "5144:49:91",
+            "documentation": {
+              "id": 52000,
+              "nodeType": "StructuredDocumentation",
+              "src": "5059:82:91",
+              "text": "@notice Returns the CVX token address\n @return _cvx The CVX token address"
+            },
+            "functionSelector": "759cb53b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "CVX",
+            "nameLocation": "5153:3:91",
+            "parameters": {
+              "id": 52001,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5156:2:91"
+            },
+            "returnParameters": {
+              "id": 52005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52004,
+                  "mutability": "mutable",
+                  "name": "_cvx",
+                  "nameLocation": "5187:4:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52006,
+                  "src": "5182:9:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ICVX_$54109",
+                    "typeString": "contract ICVX"
+                  },
+                  "typeName": {
+                    "id": 52003,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52002,
+                      "name": "ICVX",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 54109,
+                      "src": "5182:4:91"
+                    },
+                    "referencedDeclaration": 54109,
+                    "src": "5182:4:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ICVX_$54109",
+                      "typeString": "contract ICVX"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5181:11:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52014,
+            "nodeType": "FunctionDefinition",
+            "src": "5543:64:91",
+            "documentation": {
+              "id": 52007,
+              "nodeType": "StructuredDocumentation",
+              "src": "5371:169:91",
+              "text": " @notice Used to deposit a token to the vault\n @param _token The address of the token to deposit\n @param _amount The amount of the token to deposit"
+            },
+            "functionSelector": "97feb926",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositERC20",
+            "nameLocation": "5552:12:91",
+            "parameters": {
+              "id": 52012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52009,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "5573:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52014,
+                  "src": "5565:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52008,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5565:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52011,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "5589:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52014,
+                  "src": "5581:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5581:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5564:33:91"
+            },
+            "returnParameters": {
+              "id": 52013,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5606:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52022,
+            "nodeType": "FunctionDefinition",
+            "src": "5890:65:91",
+            "documentation": {
+              "id": 52015,
+              "nodeType": "StructuredDocumentation",
+              "src": "5611:276:91",
+              "text": " @notice Used to withdraw a token from the vault. This can only be called by the minter\n @dev The withdraw will be denied if ones vault would become insolvent\n @param _token The address of the token\n @param _amount The amount of the token to withdraw"
+            },
+            "functionSelector": "a1db9782",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawERC20",
+            "nameLocation": "5899:13:91",
+            "parameters": {
+              "id": 52020,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52017,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "5921:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52022,
+                  "src": "5913:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52016,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5913:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52019,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "5937:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52022,
+                  "src": "5929:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52018,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5929:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5912:33:91"
+            },
+            "returnParameters": {
+              "id": 52021,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5954:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52028,
+            "nodeType": "FunctionDefinition",
+            "src": "6206:62:91",
+            "documentation": {
+              "id": 52023,
+              "nodeType": "StructuredDocumentation",
+              "src": "5959:244:91",
+              "text": "@notice Let's the user manually stake their crvLP\n @dev    This can be called if the convex pool didn't exist when the token was registered\n         and was later updated\n @param _tokenAddress The address of erc20 crvLP token"
+            },
+            "functionSelector": "de6b50d6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stakeCrvLPCollateral",
+            "nameLocation": "6215:20:91",
+            "parameters": {
+              "id": 52026,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52025,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "6244:13:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52028,
+                  "src": "6236:21:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52024,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6236:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6235:23:91"
+            },
+            "returnParameters": {
+              "id": 52027,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6267:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52036,
+            "nodeType": "FunctionDefinition",
+            "src": "6475:73:91",
+            "documentation": {
+              "id": 52029,
+              "nodeType": "StructuredDocumentation",
+              "src": "6272:200:91",
+              "text": "@notice Returns true when user can manually stake their token balance\n @param _token The address of the token to check\n @return _canStake Returns true if the token can be staked manually"
+            },
+            "functionSelector": "36d8bf93",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canStake",
+            "nameLocation": "6484:8:91",
+            "parameters": {
+              "id": 52032,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52031,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "6501:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52036,
+                  "src": "6493:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52030,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6493:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6492:16:91"
+            },
+            "returnParameters": {
+              "id": 52035,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52034,
+                  "mutability": "mutable",
+                  "name": "_canStake",
+                  "nameLocation": "6537:9:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52036,
+                  "src": "6532:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 52033,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6532:4:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6531:16:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52043,
+            "nodeType": "FunctionDefinition",
+            "src": "6760:65:91",
+            "documentation": {
+              "id": 52037,
+              "nodeType": "StructuredDocumentation",
+              "src": "6552:205:91",
+              "text": "@notice Claims available rewards from multiple tokens\n @dev    Transfers a percentage of the crv and cvx rewards to claim AMPH tokens\n @param _tokenAddresses The addresses of the erc20 tokens"
+            },
+            "functionSelector": "f9f031df",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewards",
+            "nameLocation": "6769:12:91",
+            "parameters": {
+              "id": 52041,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52040,
+                  "mutability": "mutable",
+                  "name": "_tokenAddresses",
+                  "nameLocation": "6799:15:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52043,
+                  "src": "6782:32:91",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 52038,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "6782:7:91",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 52039,
+                    "nodeType": "ArrayTypeName",
+                    "src": "6782:9:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6781:34:91"
+            },
+            "returnParameters": {
+              "id": 52042,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6824:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52053,
+            "nodeType": "FunctionDefinition",
+            "src": "7030:98:91",
+            "documentation": {
+              "id": 52044,
+              "nodeType": "StructuredDocumentation",
+              "src": "6829:198:91",
+              "text": "@notice Returns an array of tokens and amounts available for claim\n @param _tokenAddress The address of erc20 token\n @return _rewards The array of tokens and amount available for claim"
+            },
+            "functionSelector": "dc01f60d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimableRewards",
+            "nameLocation": "7039:16:91",
+            "parameters": {
+              "id": 52047,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52046,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "7064:13:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52053,
+                  "src": "7056:21:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52045,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7056:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7055:23:91"
+            },
+            "returnParameters": {
+              "id": 52052,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52051,
+                  "mutability": "mutable",
+                  "name": "_rewards",
+                  "nameLocation": "7118:8:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52053,
+                  "src": "7102:24:91",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Reward_$51943_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IVault.Reward[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 52049,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 52048,
+                        "name": "Reward",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 51943,
+                        "src": "7102:6:91"
+                      },
+                      "referencedDeclaration": 51943,
+                      "src": "7102:6:91",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Reward_$51943_storage_ptr",
+                        "typeString": "struct IVault.Reward"
+                      }
+                    },
+                    "id": 52050,
+                    "nodeType": "ArrayTypeName",
+                    "src": "7102:8:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Reward_$51943_storage_$dyn_storage_ptr",
+                      "typeString": "struct IVault.Reward[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7101:26:91"
+            },
+            "scope": 52083,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52063,
+            "nodeType": "FunctionDefinition",
+            "src": "7380:83:91",
+            "documentation": {
+              "id": 52054,
+              "nodeType": "StructuredDocumentation",
+              "src": "7132:245:91",
+              "text": " @notice Function used by the VaultController to transfer tokens\n @param _token The address of the token to transfer\n @param _to The address of the person to send the coins to\n @param _amount The amount of coins to move"
+            },
+            "functionSelector": "9b504387",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "controllerTransfer",
+            "nameLocation": "7389:18:91",
+            "parameters": {
+              "id": 52061,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52056,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "7416:6:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52063,
+                  "src": "7408:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52055,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7408:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52058,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "7432:3:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52063,
+                  "src": "7424:11:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52057,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7424:7:91",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52060,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "7445:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52063,
+                  "src": "7437:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7437:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7407:46:91"
+            },
+            "returnParameters": {
+              "id": 52062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7462:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52072,
+            "nodeType": "FunctionDefinition",
+            "src": "7684:92:91",
+            "documentation": {
+              "id": 52064,
+              "nodeType": "StructuredDocumentation",
+              "src": "7467:214:91",
+              "text": " @notice function used by the VaultController to withdraw from convex\n callable by the VaultController only\n @param _rewardPool pool to withdraw\n @param _amount amount of coins to withdraw"
+            },
+            "functionSelector": "2eb60d6f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "controllerWithdrawAndUnwrap",
+            "nameLocation": "7693:27:91",
+            "parameters": {
+              "id": 52070,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52067,
+                  "mutability": "mutable",
+                  "name": "_rewardPool",
+                  "nameLocation": "7737:11:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52072,
+                  "src": "7721:27:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBaseRewardPool_$54011",
+                    "typeString": "contract IBaseRewardPool"
+                  },
+                  "typeName": {
+                    "id": 52066,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 52065,
+                      "name": "IBaseRewardPool",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 54011,
+                      "src": "7721:15:91"
+                    },
+                    "referencedDeclaration": 54011,
+                    "src": "7721:15:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBaseRewardPool_$54011",
+                      "typeString": "contract IBaseRewardPool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52069,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "7758:7:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52072,
+                  "src": "7750:15:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52068,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7750:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7720:46:91"
+            },
+            "returnParameters": {
+              "id": 52071,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7775:0:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52082,
+            "nodeType": "FunctionDefinition",
+            "src": "8048:100:91",
+            "documentation": {
+              "id": 52073,
+              "nodeType": "StructuredDocumentation",
+              "src": "7780:265:91",
+              "text": " @notice Modifies a vault's liability. Can only be called by VaultController\n @param _increase True to increase liability, false to decrease\n @param _baseAmount The change amount in base liability\n @return _liability The new base liability"
+            },
+            "functionSelector": "dfabefe7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "modifyLiability",
+            "nameLocation": "8057:15:91",
+            "parameters": {
+              "id": 52078,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52075,
+                  "mutability": "mutable",
+                  "name": "_increase",
+                  "nameLocation": "8078:9:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52082,
+                  "src": "8073:14:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 52074,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8073:4:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52077,
+                  "mutability": "mutable",
+                  "name": "_baseAmount",
+                  "nameLocation": "8097:11:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52082,
+                  "src": "8089:19:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52076,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8089:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8072:37:91"
+            },
+            "returnParameters": {
+              "id": 52081,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52080,
+                  "mutability": "mutable",
+                  "name": "_liability",
+                  "nameLocation": "8136:10:91",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52082,
+                  "src": "8128:18:91",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52079,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8128:7:91",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8127:20:91"
+            },
+            "scope": 52083,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVault",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 51868,
+          "nodeType": "StructuredDocumentation",
+          "src": "321:27:91",
+          "text": "@title Vault Interface"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          52083
+        ],
+        "name": "IVault",
+        "nameLocation": "358:6:91",
+        "scope": 52084,
+        "usedErrors": [
+          51899,
+          51902,
+          51905,
+          51908,
+          51911,
+          51914,
+          51917,
+          51920,
+          51923,
+          51926,
+          51929,
+          51932
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 91
+}

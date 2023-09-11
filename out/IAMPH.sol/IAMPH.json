@@ -1,0 +1,440 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPriorVotes",
+      "outputs": [
+        {
+          "internalType": "uint96",
+          "name": "_votes",
+          "type": "uint96"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dst",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_rawAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPriorVotes(address,uint256)": "782d6fe1",
+    "mint(address,uint256)": "40c10f19"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_blockNumber\",\"type\":\"uint256\"}],\"name\":\"getPriorVotes\",\"outputs\":[{\"internalType\":\"uint96\",\"name\":\"_votes\",\"type\":\"uint96\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dst\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_rawAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getPriorVotes(address,uint256)\":{\"params\":{\"_account\":\"address of the account\",\"_blockNumber\":\"block number to get the votes from\"},\"returns\":{\"_votes\":\"amount of votes\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getPriorVotes(address,uint256)\":{\"notice\":\"Returns the prior votes from an account\"},\"mint(address,uint256)\":{\"notice\":\"Mint a specified amount of tokens to a specified address\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/governance/IAMPH.sol\":\"IAMPH\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/governance/IAMPH.sol\":{\"keccak256\":\"0x308f5e8325bdc43f20d4b7eb363c952c9dcd550e775fa59a0197e165d61cc02c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1601c2889b04ea9458d3e60b2ceafb86d9bfb57722697a170b7a77b4307c1db1\",\"dweb:/ipfs/QmTgp1t9USQ2g8tnjHLF4y5zw2YufZEj5nvTjWEW5dB2pE\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_account",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_blockNumber",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPriorVotes",
+          "outputs": [
+            {
+              "internalType": "uint96",
+              "name": "_votes",
+              "type": "uint96"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dst",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_rawAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getPriorVotes(address,uint256)": {
+            "params": {
+              "_account": "address of the account",
+              "_blockNumber": "block number to get the votes from"
+            },
+            "returns": {
+              "_votes": "amount of votes"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "getPriorVotes(address,uint256)": {
+            "notice": "Returns the prior votes from an account"
+          },
+          "mint(address,uint256)": {
+            "notice": "Mint a specified amount of tokens to a specified address"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/governance/IAMPH.sol": "IAMPH"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/governance/IAMPH.sol": {
+        "keccak256": "0x308f5e8325bdc43f20d4b7eb363c952c9dcd550e775fa59a0197e165d61cc02c",
+        "urls": [
+          "bzz-raw://1601c2889b04ea9458d3e60b2ceafb86d9bfb57722697a170b7a77b4307c1db1",
+          "dweb:/ipfs/QmTgp1t9USQ2g8tnjHLF4y5zw2YufZEj5nvTjWEW5dB2pE"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/governance/IAMPH.sol",
+    "id": 53053,
+    "exportedSymbols": {
+      "IAMPH": [
+        53052
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:478:95",
+    "nodes": [
+      {
+        "id": 53033,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:95",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53052,
+        "nodeType": "ContractDefinition",
+        "src": "57:452:95",
+        "nodes": [
+          {
+            "id": 53043,
+            "nodeType": "FunctionDefinition",
+            "src": "274:101:95",
+            "documentation": {
+              "id": 53034,
+              "nodeType": "StructuredDocumentation",
+              "src": "77:194:95",
+              "text": "@notice Returns the prior votes from an account\n @param _account address of the account\n @param _blockNumber block number to get the votes from\n @return _votes amount of votes"
+            },
+            "functionSelector": "782d6fe1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPriorVotes",
+            "nameLocation": "283:13:95",
+            "parameters": {
+              "id": 53039,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53036,
+                  "mutability": "mutable",
+                  "name": "_account",
+                  "nameLocation": "305:8:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53043,
+                  "src": "297:16:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53035,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "297:7:95",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53038,
+                  "mutability": "mutable",
+                  "name": "_blockNumber",
+                  "nameLocation": "323:12:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53043,
+                  "src": "315:20:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53037,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "296:40:95"
+            },
+            "returnParameters": {
+              "id": 53042,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53041,
+                  "mutability": "mutable",
+                  "name": "_votes",
+                  "nameLocation": "367:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53043,
+                  "src": "360:13:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 53040,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "360:6:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "359:15:95"
+            },
+            "scope": 53052,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53051,
+            "nodeType": "FunctionDefinition",
+            "src": "450:57:95",
+            "documentation": {
+              "id": 53044,
+              "nodeType": "StructuredDocumentation",
+              "src": "379:68:95",
+              "text": "@notice Mint a specified amount of tokens to a specified address"
+            },
+            "functionSelector": "40c10f19",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "459:4:95",
+            "parameters": {
+              "id": 53049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53046,
+                  "mutability": "mutable",
+                  "name": "_dst",
+                  "nameLocation": "472:4:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53051,
+                  "src": "464:12:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53045,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "464:7:95",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53048,
+                  "mutability": "mutable",
+                  "name": "_rawAmount",
+                  "nameLocation": "486:10:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53051,
+                  "src": "478:18:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53047,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "478:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "463:34:95"
+            },
+            "returnParameters": {
+              "id": 53050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "506:0:95"
+            },
+            "scope": 53052,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IAMPH",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53052
+        ],
+        "name": "IAMPH",
+        "nameLocation": "67:5:95",
+        "scope": 53053,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 95
+}
