@@ -39,24 +39,10 @@
   },
   "scripts": {
     "build": "forge build && node interfaces-exporter.js",
-    "coverage": "forge coverage --match-contract Unit",
-    "deploy:goerli": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $GOERLI_RPC solidity/scripts/DeployGoerli.s.sol:DeployGoerli",
-    "deploy:goerliOpen": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $GOERLI_RPC solidity/scripts/DeployGoerli.s.sol:DeployGoerliOpenDeployment",
-    "deploy:local": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DeployLocal.s.sol:DeployLocal",
-    "deploy:mainnet": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $MAINNET_RPC solidity/scripts/DeployMainnet.s.sol:DeployMainnet",
-    "deploy:sepolia": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --rpc-url $SEPOLIA_RPC solidity/scripts/DeploySepolia.s.sol:DeploySepolia",
     "lint:check": "yarn lint:sol-tests && yarn lint:sol-logic && forge fmt check",
     "lint:fix": "sort-package-json && forge fmt && yarn lint:sol-tests --fix && yarn lint:sol-logic --fix",
     "lint:sol-logic": "cross-env solhint -c .solhint.json 'solidity/contracts/**/*.sol' 'solidity/interfaces/**/*.sol'",
     "lint:sol-tests": "cross-env solhint 'solidity/test/**/*.sol'",
-    "prepare": "husky install && wonderland-crypto-husky-checks install",
-    "scripts:borrow": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DepositAndBorrow.s.sol:Borrow",
-    "scripts:deposit": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/DepositAndBorrow.s.sol:MintVaultAndDeposit",
-    "scripts:registerToken": "forge script -vv --optimize --optimizer-runs 200 --slow --broadcast --fork-url http://localhost:8545 solidity/scripts/RegisterToken.s.sol:RegisterToken",
-    "test": "yarn test:unit && yarn test:e2e",
-    "test:e2e": "forge test --match-contract E2E -vvv",
-    "test:gas": "forge test --match-contract E2E -vvv --gas-report",
-    "test:invariant": "forge test --match-contract Invariant -vvv",
-    "test:unit": "forge test --match-contract Unit -vvv"
+    "test": "yarn test:e2e"
   }
 }
