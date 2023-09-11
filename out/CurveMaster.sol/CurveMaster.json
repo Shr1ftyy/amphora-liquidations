@@ -1,0 +1,2761 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CurveMaster_TokenNotEnabled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CurveMaster_ZeroResult",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldCurveAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newCurveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "CurveForceSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldCurveAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newCurveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "CurveSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldVaultControllerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newVaultControllerAddress",
+          "type": "address"
+        }
+      ],
+      "name": "VaultControllerSet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "curves",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_curveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "forceSetCurve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "int256",
+          "name": "_xValue",
+          "type": "int256"
+        }
+      ],
+      "name": "getValueAt",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "_value",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_curveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setCurve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultMasterAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setVaultController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultControllerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061001a3361001f565b61006f565b600080546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6108498061007e6000396000f3fe608060405234801561001057600080fd5b50600436106100a35760003560e01c806399747f1511610076578063d15e1ba91161005b578063d15e1ba914610169578063d661d8ad1461018a578063f2fde38b146101aa57600080fd5b806399747f1514610143578063ca594e6c1461015657600080fd5b80632cc3dc6e146100a8578063715018a6146101085780638da5cb5b14610112578063911b167814610130575b600080fd5b6100de6100b636600461077b565b60016020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b6101106101bd565b005b60005473ffffffffffffffffffffffffffffffffffffffff166100de565b61011061013e36600461079d565b6101d1565b61011061015136600461077b565b610279565b61011061016436600461079d565b610307565b61017c6101773660046107d0565b610459565b6040519081526020016100ff565b6002546100de9073ffffffffffffffffffffffffffffffffffffffff1681565b6101106101b836600461077b565b6105a0565b6101c561065c565b6101cf60006106dd565b565b6101d961065c565b73ffffffffffffffffffffffffffffffffffffffff82811660008181526001602090815260409182902080548686167fffffffffffffffffffffffff000000000000000000000000000000000000000082168117909255835195168086529185019390935290830191909152907f2dc90dda2fb60ca25e4da58537454469e0345aa97cfe95a5a28f178d6f984bb6906060015b60405180910390a1505050565b61028161065c565b6002805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff000000000000000000000000000000000000000083168117909355604080519190921680825260208201939093527fd806ee5159f2f64e826e1f7e2a22d4cb643ab4ebde9e69dcd35769fefeaeb193910160405180910390a15050565b61030f61065c565b60025473ffffffffffffffffffffffffffffffffffffffff16156103c257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663eb0c49556040518163ffffffff1660e01b81526004016020604051808303816000875af115801561039c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103c091906107fa565b505b73ffffffffffffffffffffffffffffffffffffffff82811660008181526001602090815260409182902080548686167fffffffffffffffffffffffff000000000000000000000000000000000000000082168117909255835195168086529185019390935290830191909152907f6ebcce2fe03cf0c487db907a5b2b08137360e9e2591703e425764b9b97ff37f09060600161026c565b73ffffffffffffffffffffffffffffffffffffffff8281166000908152600160205260408120549091166104b9576040517fa374be0800000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff838116600090815260016020526040908190205490517f414be42b00000000000000000000000000000000000000000000000000000000815260048101859052911690819063414be42b90602401602060405180830381865afa158015610539573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061055d91906107fa565b915081600003610599576040517f5032c75700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b5092915050565b6105a861065c565b73ffffffffffffffffffffffffffffffffffffffff8116610650576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084015b60405180910390fd5b610659816106dd565b50565b60005473ffffffffffffffffffffffffffffffffffffffff1633146101cf576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152606401610647565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461077657600080fd5b919050565b60006020828403121561078d57600080fd5b61079682610752565b9392505050565b600080604083850312156107b057600080fd5b6107b983610752565b91506107c760208401610752565b90509250929050565b600080604083850312156107e357600080fd5b6107ec83610752565b946020939093013593505050565b60006020828403121561080c57600080fd5b505191905056fea26469706673582212202900b41461d3318582dfc2fa0310e9138d77a2eee29e38cbe7352c5c1e36fa8064736f6c634300080e0033",
+    "sourceMap": "511:2231:69:-:0;;;;;;;;;;;;-1:-1:-1;936:32:10;719:10:22;936:18:10;:32::i;:::-;511:2231:69;;2433:187:10;2506:16;2525:6;;-1:-1:-1;;;;;2541:17:10;;;-1:-1:-1;;;;;;2541:17:10;;;;;;2573:40;;2525:6;;;;;;;2573:40;;2506:16;2573:40;2496:124;2433:187;:::o;511:2231:69:-;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100a35760003560e01c806399747f1511610076578063d15e1ba91161005b578063d15e1ba914610169578063d661d8ad1461018a578063f2fde38b146101aa57600080fd5b806399747f1514610143578063ca594e6c1461015657600080fd5b80632cc3dc6e146100a8578063715018a6146101085780638da5cb5b14610112578063911b167814610130575b600080fd5b6100de6100b636600461077b565b60016020526000908152604090205473ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020015b60405180910390f35b6101106101bd565b005b60005473ffffffffffffffffffffffffffffffffffffffff166100de565b61011061013e36600461079d565b6101d1565b61011061015136600461077b565b610279565b61011061016436600461079d565b610307565b61017c6101773660046107d0565b610459565b6040519081526020016100ff565b6002546100de9073ffffffffffffffffffffffffffffffffffffffff1681565b6101106101b836600461077b565b6105a0565b6101c561065c565b6101cf60006106dd565b565b6101d961065c565b73ffffffffffffffffffffffffffffffffffffffff82811660008181526001602090815260409182902080548686167fffffffffffffffffffffffff000000000000000000000000000000000000000082168117909255835195168086529185019390935290830191909152907f2dc90dda2fb60ca25e4da58537454469e0345aa97cfe95a5a28f178d6f984bb6906060015b60405180910390a1505050565b61028161065c565b6002805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff000000000000000000000000000000000000000083168117909355604080519190921680825260208201939093527fd806ee5159f2f64e826e1f7e2a22d4cb643ab4ebde9e69dcd35769fefeaeb193910160405180910390a15050565b61030f61065c565b60025473ffffffffffffffffffffffffffffffffffffffff16156103c257600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663eb0c49556040518163ffffffff1660e01b81526004016020604051808303816000875af115801561039c573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103c091906107fa565b505b73ffffffffffffffffffffffffffffffffffffffff82811660008181526001602090815260409182902080548686167fffffffffffffffffffffffff000000000000000000000000000000000000000082168117909255835195168086529185019390935290830191909152907f6ebcce2fe03cf0c487db907a5b2b08137360e9e2591703e425764b9b97ff37f09060600161026c565b73ffffffffffffffffffffffffffffffffffffffff8281166000908152600160205260408120549091166104b9576040517fa374be0800000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff838116600090815260016020526040908190205490517f414be42b00000000000000000000000000000000000000000000000000000000815260048101859052911690819063414be42b90602401602060405180830381865afa158015610539573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061055d91906107fa565b915081600003610599576040517f5032c75700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b5092915050565b6105a861065c565b73ffffffffffffffffffffffffffffffffffffffff8116610650576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152602660248201527f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160448201527f646472657373000000000000000000000000000000000000000000000000000060648201526084015b60405180910390fd5b610659816106dd565b50565b60005473ffffffffffffffffffffffffffffffffffffffff1633146101cf576040517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e65726044820152606401610647565b6000805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b803573ffffffffffffffffffffffffffffffffffffffff8116811461077657600080fd5b919050565b60006020828403121561078d57600080fd5b61079682610752565b9392505050565b600080604083850312156107b057600080fd5b6107b983610752565b91506107c760208401610752565b90509250929050565b600080604083850312156107e357600080fd5b6107ec83610752565b946020939093013593505050565b60006020828403121561080c57600080fd5b505191905056fea26469706673582212202900b41461d3318582dfc2fa0310e9138d77a2eee29e38cbe7352c5c1e36fa8064736f6c634300080e0033",
+    "sourceMap": "511:2231:69:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;600:41;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;582:42:128;570:55;;;552:74;;540:2;525:18;600:41:69;;;;;;;;1831:101:10;;;:::i;:::-;;1201:85;1247:7;1273:6;;;1201:85;;2482:258:69;;;;;;:::i;:::-;;:::i;1473:264::-;;;;;;:::i;:::-;;:::i;1916:356::-;;;;;;:::i;:::-;;:::i;976:347::-;;;;;;:::i;:::-;;:::i;:::-;;;1304:25:128;;;1292:2;1277:18;976:347:69;1160:175:128;686:37:69;;;;;;;;;2081:198:10;;;;;;:::i;:::-;;:::i;1831:101::-;1094:13;:11;:13::i;:::-;1895:30:::1;1922:1;1895:18;:30::i;:::-;1831:101::o:0;2482:258:69:-;1094:13:10;:11;:13::i;:::-;2605:21:69::1;::::0;;::::1;2585:17;2605:21:::0;;;:6:::1;:21;::::0;;;;;;;;;;2632:37;;::::1;::::0;;::::1;::::0;::::1;::::0;;;2681:54;;2605:21;::::1;1603:34:128::0;;;1653:18;;;1646:43;;;;1705:18;;;1698:43;;;;2605:21:69;2681:54:::1;::::0;1530:2:128;1515:18;2681:54:69::1;;;;;;;;2579:161;2482:258:::0;;:::o;1473:264::-;1094:13:10;:11;:13::i;:::-;1591:22:69::1;::::0;;::::1;1619:44:::0;;::::1;::::0;;::::1;::::0;::::1;::::0;;;1675:57:::1;::::0;;1591:22;;;::::1;1987:34:128::0;;;2052:2;2037:18;;2030:43;;;;1675:57:69::1;::::0;1899:18:128;1675:57:69::1;;;;;;;1558:179;1473:264:::0;:::o;1916:356::-;1094:13:10;:11;:13::i;:::-;2018:22:69::1;::::0;:36:::1;:22;:36:::0;2014:102:::1;;2073:22;;;;;;;;;;;2056:58;;;:60;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::0;::::1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;2014:102;2142:21;::::0;;::::1;2122:17;2142:21:::0;;;:6:::1;:21;::::0;;;;;;;;;;2169:37;;::::1;::::0;;::::1;::::0;::::1;::::0;;;2218:49;;2142:21;::::1;1603:34:128::0;;;1653:18;;;1646:43;;;;1705:18;;;1698:43;;;;2142:21:69;2218:49:::1;::::0;1530:2:128;1515:18;2218:49:69::1;1340:407:128::0;976:347:69;1092:35;:21;;;1067:13;1092:21;;;:6;:21;;;;;;1067:13;;1092:21;1088:77;;1136:29;;;;;;;;;;;;;;1088:77;1204:21;;;;1171:18;1204:21;;;:6;:21;;;;;;;;1241:23;;;;;;;;1304:25:128;;;1204:21:69;;;;;1241:14;;1277:18:128;;1241:23:69;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1232:32;;1274:6;1284:1;1274:11;1270:48;;1294:24;;;;;;;;;;;;;;1270:48;1082:241;976:347;;;;:::o;2081:198:10:-;1094:13;:11;:13::i;:::-;2169:22:::1;::::0;::::1;2161:73;;;::::0;::::1;::::0;;2663:2:128;2161:73:10::1;::::0;::::1;2645:21:128::0;2702:2;2682:18;;;2675:30;2741:34;2721:18;;;2714:62;2812:8;2792:18;;;2785:36;2838:19;;2161:73:10::1;;;;;;;;;2244:28;2263:8;2244:18;:28::i;:::-;2081:198:::0;:::o;1359:130::-;1247:7;1273:6;1422:23;1273:6;719:10:22;1422:23:10;1414:68;;;;;;;3070:2:128;1414:68:10;;;3052:21:128;;;3089:18;;;3082:30;3148:34;3128:18;;;3121:62;3200:18;;1414:68:10;2868:356:128;2433:187:10;2506:16;2525:6;;;2541:17;;;;;;;;;;2573:40;;2525:6;;;;;;;2573:40;;2506:16;2573:40;2496:124;2433:187;:::o;14:196:128:-;82:20;;142:42;131:54;;121:65;;111:93;;200:1;197;190:12;111:93;14:196;;;:::o;215:186::-;274:6;327:2;315:9;306:7;302:23;298:32;295:52;;;343:1;340;333:12;295:52;366:29;385:9;366:29;:::i;:::-;356:39;215:186;-1:-1:-1;;;215:186:128:o;637:260::-;705:6;713;766:2;754:9;745:7;741:23;737:32;734:52;;;782:1;779;772:12;734:52;805:29;824:9;805:29;:::i;:::-;795:39;;853:38;887:2;876:9;872:18;853:38;:::i;:::-;843:48;;637:260;;;;;:::o;902:253::-;969:6;977;1030:2;1018:9;1009:7;1005:23;1001:32;998:52;;;1046:1;1043;1036:12;998:52;1069:29;1088:9;1069:29;:::i;:::-;1059:39;1145:2;1130:18;;;;1117:32;;-1:-1:-1;;;902:253:128:o;2084:184::-;2154:6;2207:2;2195:9;2186:7;2182:23;2178:32;2175:52;;;2223:1;2220;2213:12;2175:52;-1:-1:-1;2246:16:128;;2084:184;-1:-1:-1;2084:184:128:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "curves(address)": "2cc3dc6e",
+    "forceSetCurve(address,address)": "911b1678",
+    "getValueAt(address,int256)": "d15e1ba9",
+    "owner()": "8da5cb5b",
+    "renounceOwnership()": "715018a6",
+    "setCurve(address,address)": "ca594e6c",
+    "setVaultController(address)": "99747f15",
+    "transferOwnership(address)": "f2fde38b",
+    "vaultControllerAddress()": "d661d8ad"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CurveMaster_TokenNotEnabled\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CurveMaster_ZeroResult\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldCurveAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newCurveAddress\",\"type\":\"address\"}],\"name\":\"CurveForceSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldCurveAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newCurveAddress\",\"type\":\"address\"}],\"name\":\"CurveSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldVaultControllerAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newVaultControllerAddress\",\"type\":\"address\"}],\"name\":\"VaultControllerSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"curves\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_curveAddress\",\"type\":\"address\"}],\"name\":\"forceSetCurve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"int256\",\"name\":\"_xValue\",\"type\":\"int256\"}],\"name\":\"getValueAt\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"_value\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_curveAddress\",\"type\":\"address\"}],\"name\":\"setCurve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vaultMasterAddress\",\"type\":\"address\"}],\"name\":\"setVaultController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultControllerAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"All numbers should be scaled to 1e18. for instance, number 5e17 represents 50%\",\"kind\":\"dev\",\"methods\":{\"forceSetCurve(address,address)\":{\"params\":{\"_curveAddress\":\"The address of the curve for the contract\",\"_tokenAddress\":\"The address of the token\"}},\"getValueAt(address,int256)\":{\"params\":{\"_tokenAddress\":\"The key to lookup the curve with in the mapping\",\"_xValue\":\"The x value to pass to the slave\"},\"returns\":{\"_value\":\"The y value of the curve\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"setCurve(address,address)\":{\"params\":{\"_curveAddress\":\"The address of the curve for the contract\",\"_tokenAddress\":\"The address of the token\"}},\"setVaultController(address)\":{\"params\":{\"_vaultMasterAddress\":\"The address of vault master\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"curves\":{\"details\":\"Mapping of token to address\"},\"vaultControllerAddress\":{\"details\":\"The vault controller address\"}},\"version\":1},\"userdoc\":{\"errors\":{\"CurveMaster_TokenNotEnabled()\":[{\"notice\":\"Thrown when the token is not enabled\"}],\"CurveMaster_ZeroResult()\":[{\"notice\":\"Thrown when result is zero\"}]},\"events\":{\"CurveForceSet(address,address,address)\":{\"notice\":\"Emited when the owner changes the curve address skipping the checks\"},\"CurveSet(address,address,address)\":{\"notice\":\"Emited when the owner changes the curve address\"},\"VaultControllerSet(address,address)\":{\"notice\":\"Emited when the owner changes the vault controller address\"}},\"kind\":\"user\",\"methods\":{\"forceSetCurve(address,address)\":{\"notice\":\"Special function that does not calculate interest, used for deployment\"},\"getValueAt(address,int256)\":{\"notice\":\"Returns the value of curve labled _tokenAddress at _xValue\"},\"setCurve(address,address)\":{\"notice\":\"Setting a new curve should pay interest\"},\"setVaultController(address)\":{\"notice\":\"Set the VaultController addr in order to pay interest on curve setting\"}},\"notice\":\"Curve master keeps a record of CurveSlave contracts and links it with an address\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/contracts/periphery/CurveMaster.sol\":\"CurveMaster\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"node_modules/@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2\",\"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"node_modules/@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92\",\"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3\"]},\"solidity/contracts/periphery/CurveMaster.sol\":{\"keccak256\":\"0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db\",\"dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A\"]},\"solidity/interfaces/core/IAMPHClaimer.sol\":{\"keccak256\":\"0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993\",\"dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ\"]},\"solidity/interfaces/core/IUSDA.sol\":{\"keccak256\":\"0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527\",\"dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19\"]},\"solidity/interfaces/core/IVault.sol\":{\"keccak256\":\"0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812\",\"dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW\"]},\"solidity/interfaces/core/IVaultController.sol\":{\"keccak256\":\"0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b\",\"dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L\"]},\"solidity/interfaces/core/IVaultDeployer.sol\":{\"keccak256\":\"0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1\",\"license\":\"AGPL-3.0-only\",\"urls\":[\"bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616\",\"dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ\"]},\"solidity/interfaces/periphery/ICurveMaster.sol\":{\"keccak256\":\"0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833\",\"dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]},\"solidity/interfaces/utils/IBaseRewardPool.sol\":{\"keccak256\":\"0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40\",\"dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ\"]},\"solidity/interfaces/utils/IBooster.sol\":{\"keccak256\":\"0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5\",\"dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn\"]},\"solidity/interfaces/utils/ICVX.sol\":{\"keccak256\":\"0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486\",\"dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy\"]},\"solidity/interfaces/utils/ICurveSlave.sol\":{\"keccak256\":\"0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51\",\"dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ\"]},\"solidity/interfaces/utils/IRoles.sol\":{\"keccak256\":\"0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073\",\"dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6\"]},\"solidity/interfaces/utils/IVirtualBalanceRewardPool.sol\":{\"keccak256\":\"0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048\",\"dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CurveMaster_TokenNotEnabled"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CurveMaster_ZeroResult"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldCurveAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newCurveAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "CurveForceSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldCurveAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newCurveAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "CurveSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "OwnershipTransferred",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldVaultControllerAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newVaultControllerAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "curves",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_curveAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "forceSetCurve"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "int256",
+              "name": "_xValue",
+              "type": "int256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getValueAt",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "_value",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "renounceOwnership"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_curveAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setCurve"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultMasterAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setVaultController"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultControllerAddress",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "forceSetCurve(address,address)": {
+            "params": {
+              "_curveAddress": "The address of the curve for the contract",
+              "_tokenAddress": "The address of the token"
+            }
+          },
+          "getValueAt(address,int256)": {
+            "params": {
+              "_tokenAddress": "The key to lookup the curve with in the mapping",
+              "_xValue": "The x value to pass to the slave"
+            },
+            "returns": {
+              "_value": "The y value of the curve"
+            }
+          },
+          "owner()": {
+            "details": "Returns the address of the current owner."
+          },
+          "renounceOwnership()": {
+            "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+          },
+          "setCurve(address,address)": {
+            "params": {
+              "_curveAddress": "The address of the curve for the contract",
+              "_tokenAddress": "The address of the token"
+            }
+          },
+          "setVaultController(address)": {
+            "params": {
+              "_vaultMasterAddress": "The address of vault master"
+            }
+          },
+          "transferOwnership(address)": {
+            "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "forceSetCurve(address,address)": {
+            "notice": "Special function that does not calculate interest, used for deployment"
+          },
+          "getValueAt(address,int256)": {
+            "notice": "Returns the value of curve labled _tokenAddress at _xValue"
+          },
+          "setCurve(address,address)": {
+            "notice": "Setting a new curve should pay interest"
+          },
+          "setVaultController(address)": {
+            "notice": "Set the VaultController addr in order to pay interest on curve setting"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/contracts/periphery/CurveMaster.sol": "CurveMaster"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+        "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+        "urls": [
+          "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+          "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+        "keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+        "urls": [
+          "bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+          "dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/utils/Context.sol": {
+        "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+        "urls": [
+          "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+          "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+        ],
+        "license": "MIT"
+      },
+      "solidity/contracts/periphery/CurveMaster.sol": {
+        "keccak256": "0x3d47bdcc5de5fc28570a43129d4c99ff8c238375236a899a55a9845dd72cfa9a",
+        "urls": [
+          "bzz-raw://2ae9d99e91d1471d52c04bff16dd3cd9a1b017e6a4daf67f13f2beb859f882db",
+          "dweb:/ipfs/QmaBJBca1G9KERvyQjE5pQhqD7bcrBtizhvTUPYs7AJ12A"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IAMPHClaimer.sol": {
+        "keccak256": "0xc6500694b25c54a2e9c26f344b1af41b662d15aeba2efbb056f895e9dd0324a7",
+        "urls": [
+          "bzz-raw://60d2dabd9dfdb356ebe4a6f179a7a2fba51abb20128a7f9ba4b1fbaf8af43993",
+          "dweb:/ipfs/QmXAteL84Wz4iwiiZPveECixaTkYv3xtgRvRHZq7xWywjJ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IUSDA.sol": {
+        "keccak256": "0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0",
+        "urls": [
+          "bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527",
+          "dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVault.sol": {
+        "keccak256": "0x640f401d5f28ccf3ba75b52241d59d12198a1310d7b97f452d93e02cd1816d25",
+        "urls": [
+          "bzz-raw://4fbf394f73908746c7b81ed721bb82138d2b927647c352ef711cf9ffcaea9812",
+          "dweb:/ipfs/QmbGjVHaX4kcm3yyy4CRApP4yyAyAnFqrwC3epj3TQqvJW"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultController.sol": {
+        "keccak256": "0x3c6cc2291802cdcc755ee94aa4d19ff36111a5a3975ca3c2fb2cf6c48092caf7",
+        "urls": [
+          "bzz-raw://23e9720b198229edfb4583f3bf33c368b70fe2cafa8e18808ca2ead5522a2a6b",
+          "dweb:/ipfs/QmRgAN6S8HhXpTy9DTJ7hTTuH7UbkoWdT1kWiprdiqrq6L"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IVaultDeployer.sol": {
+        "keccak256": "0xac017cf28319daaa5b3356b91a0cfdc1880fe1fcadb83be0f4ec0e03913469c1",
+        "urls": [
+          "bzz-raw://d2256398b8cedb8f4d50ac1be025ea17902aaeaca8b2c6fa276b4a653d23d616",
+          "dweb:/ipfs/QmQbAnPHmsb3Ni5NY1tbckCoCUKESsPfdLKqPkoVHywMiJ"
+        ],
+        "license": "AGPL-3.0-only"
+      },
+      "solidity/interfaces/periphery/ICurveMaster.sol": {
+        "keccak256": "0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463",
+        "urls": [
+          "bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833",
+          "dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBaseRewardPool.sol": {
+        "keccak256": "0xa67efe01211cde3862419d967d9760b87ceb9b98eec803b9724e08715cde2da0",
+        "urls": [
+          "bzz-raw://efe7b8ce3b799c4e4e5d8d7fafe8e27ed7c4cc4e2d7c41f50c659896b4da9e40",
+          "dweb:/ipfs/QmXZkx8kupyimxouBhpnk9Fj3VrXaFM6zezbQcVDjxRgsQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IBooster.sol": {
+        "keccak256": "0xb1299bd9cf6eed940bfdce8b37453e8b6883683d2c2d043e0e1c4fe6453e3cac",
+        "urls": [
+          "bzz-raw://13631016dcb40a2ff9741a2689b0e1b49986da4e5ecc498daf5ef222094354d5",
+          "dweb:/ipfs/QmbPi8MtfKkeMUfaC3izUQ49W5DZpUyKYVptW5FhXkZXzn"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICVX.sol": {
+        "keccak256": "0xe1226e6cb6bde22e203eba4fba663847c69ca9e3dae0d7c648fa763ea0fcfd9a",
+        "urls": [
+          "bzz-raw://b908a8f927aee0c6de10a1bf17a46363daacb9ec262ccebdd37781eab2eab486",
+          "dweb:/ipfs/QmVRrLb8kunmjdfHcZT4pk26k1Kbc8itgoEpQK3ZxPQosy"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/ICurveSlave.sol": {
+        "keccak256": "0x50e40f1ee878cc66a2c248c7bf2d04f72335b4892600b1ab247dcd45cc70d68e",
+        "urls": [
+          "bzz-raw://cd00685fb0d3589639a96eec534d275d3ae0db9cbb9ae0ef3b34156f61a77c51",
+          "dweb:/ipfs/QmcfxEm4n8HPTX9zUcZbMXykLxoW9yipge5wdZ7pQLHBGQ"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IRoles.sol": {
+        "keccak256": "0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123",
+        "urls": [
+          "bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073",
+          "dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IVirtualBalanceRewardPool.sol": {
+        "keccak256": "0x147c524001af1fa4cecca5f844b8750fa18ca428ebf48d993447bc1551507eba",
+        "urls": [
+          "bzz-raw://8ed7e622b5d2ad98bf992b9e886ccb9b51a4cc83224f7dd72ea34816b1d32048",
+          "dweb:/ipfs/QmSzXaWUzNeLH7ho3eZj5KvS1iby7sgybqLFLk8D98SMb1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/contracts/periphery/CurveMaster.sol",
+    "id": 47780,
+    "exportedSymbols": {
+      "CurveMaster": [
+        47779
+      ],
+      "ICurveMaster": [
+        53892
+      ],
+      "ICurveSlave": [
+        54219
+      ],
+      "IVaultController": [
+        52822
+      ],
+      "Ownable": [
+        1875
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2711:69",
+    "nodes": [
+      {
+        "id": 47614,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:69",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 47616,
+        "nodeType": "ImportDirective",
+        "src": "57:68:69",
+        "absolutePath": "solidity/interfaces/periphery/ICurveMaster.sol",
+        "file": "@interfaces/periphery/ICurveMaster.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47780,
+        "sourceUnit": 53893,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47615,
+              "name": "ICurveMaster",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53892,
+              "src": "65:12:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47618,
+        "nodeType": "ImportDirective",
+        "src": "126:62:69",
+        "absolutePath": "solidity/interfaces/utils/ICurveSlave.sol",
+        "file": "@interfaces/utils/ICurveSlave.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47780,
+        "sourceUnit": 54220,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47617,
+              "name": "ICurveSlave",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54219,
+              "src": "134:11:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47620,
+        "nodeType": "ImportDirective",
+        "src": "189:71:69",
+        "absolutePath": "solidity/interfaces/core/IVaultController.sol",
+        "file": "@interfaces/core/IVaultController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47780,
+        "sourceUnit": 52823,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47619,
+              "name": "IVaultController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 52822,
+              "src": "197:16:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47622,
+        "nodeType": "ImportDirective",
+        "src": "261:67:69",
+        "absolutePath": "node_modules/@openzeppelin/contracts/access/Ownable.sol",
+        "file": "@openzeppelin/contracts/access/Ownable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47780,
+        "sourceUnit": 1876,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47621,
+              "name": "Ownable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 1875,
+              "src": "269:7:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47779,
+        "nodeType": "ContractDefinition",
+        "src": "511:2231:69",
+        "nodes": [
+          {
+            "id": 47632,
+            "nodeType": "VariableDeclaration",
+            "src": "600:41:69",
+            "baseFunctions": [
+              53869
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 47628,
+              "nodeType": "StructuredDocumentation",
+              "src": "561:36:69",
+              "text": "@dev Mapping of token to address"
+            },
+            "functionSelector": "2cc3dc6e",
+            "mutability": "mutable",
+            "name": "curves",
+            "nameLocation": "635:6:69",
+            "scope": 47779,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+              "typeString": "mapping(address => address)"
+            },
+            "typeName": {
+              "id": 47631,
+              "keyType": {
+                "id": 47629,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "608:7:69",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "600:27:69",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                "typeString": "mapping(address => address)"
+              },
+              "valueType": {
+                "id": 47630,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "619:7:69",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 47635,
+            "nodeType": "VariableDeclaration",
+            "src": "686:37:69",
+            "baseFunctions": [
+              53851
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 47633,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:37:69",
+              "text": "@dev The vault controller address"
+            },
+            "functionSelector": "d661d8ad",
+            "mutability": "mutable",
+            "name": "vaultControllerAddress",
+            "nameLocation": "701:22:69",
+            "scope": 47779,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 47634,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "686:7:69",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 47682,
+            "nodeType": "FunctionDefinition",
+            "src": "976:347:69",
+            "body": {
+              "id": 47681,
+              "nodeType": "Block",
+              "src": "1082:241:69",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 47653,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "baseExpression": {
+                        "id": 47646,
+                        "name": "curves",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47632,
+                        "src": "1092:6:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                          "typeString": "mapping(address => address)"
+                        }
+                      },
+                      "id": 47648,
+                      "indexExpression": {
+                        "id": 47647,
+                        "name": "_tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47638,
+                        "src": "1099:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1092:21:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "hexValue": "30",
+                          "id": 47651,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1125:1:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 47650,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1117:7:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 47649,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1117:7:69",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 47652,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1117:10:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1092:35:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 47657,
+                  "nodeType": "IfStatement",
+                  "src": "1088:77:69",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 47654,
+                        "name": "CurveMaster_TokenNotEnabled",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 53842,
+                        "src": "1136:27:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 47655,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1136:29:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 47656,
+                    "nodeType": "RevertStatement",
+                    "src": "1129:36:69"
+                  }
+                },
+                {
+                  "assignments": [
+                    47660
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 47660,
+                      "mutability": "mutable",
+                      "name": "_curve",
+                      "nameLocation": "1183:6:69",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 47681,
+                      "src": "1171:18:69",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_ICurveSlave_$54219",
+                        "typeString": "contract ICurveSlave"
+                      },
+                      "typeName": {
+                        "id": 47659,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 47658,
+                          "name": "ICurveSlave",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 54219,
+                          "src": "1171:11:69"
+                        },
+                        "referencedDeclaration": 54219,
+                        "src": "1171:11:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ICurveSlave_$54219",
+                          "typeString": "contract ICurveSlave"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 47666,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "baseExpression": {
+                          "id": 47662,
+                          "name": "curves",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 47632,
+                          "src": "1204:6:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                            "typeString": "mapping(address => address)"
+                          }
+                        },
+                        "id": 47664,
+                        "indexExpression": {
+                          "id": 47663,
+                          "name": "_tokenAddress",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 47638,
+                          "src": "1211:13:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1204:21:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 47661,
+                      "name": "ICurveSlave",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 54219,
+                      "src": "1192:11:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_ICurveSlave_$54219_$",
+                        "typeString": "type(contract ICurveSlave)"
+                      }
+                    },
+                    "id": 47665,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1192:34:69",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ICurveSlave_$54219",
+                      "typeString": "contract ICurveSlave"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1171:55:69"
+                },
+                {
+                  "expression": {
+                    "id": 47672,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 47667,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47644,
+                      "src": "1232:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 47670,
+                          "name": "_xValue",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 47640,
+                          "src": "1256:7:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        ],
+                        "expression": {
+                          "id": 47668,
+                          "name": "_curve",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 47660,
+                          "src": "1241:6:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_ICurveSlave_$54219",
+                            "typeString": "contract ICurveSlave"
+                          }
+                        },
+                        "id": 47669,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "valueAt",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 54218,
+                        "src": "1241:14:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_view$_t_int256_$returns$_t_int256_$",
+                          "typeString": "function (int256) view external returns (int256)"
+                        }
+                      },
+                      "id": 47671,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1241:23:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "1232:32:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 47673,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1232:32:69"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 47676,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 47674,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47644,
+                      "src": "1274:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 47675,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1284:1:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1274:11:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 47680,
+                  "nodeType": "IfStatement",
+                  "src": "1270:48:69",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 47677,
+                        "name": "CurveMaster_ZeroResult",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 53845,
+                        "src": "1294:22:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 47678,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1294:24:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 47679,
+                    "nodeType": "RevertStatement",
+                    "src": "1287:31:69"
+                  }
+                }
+              ]
+            },
+            "baseFunctions": [
+              53861
+            ],
+            "documentation": {
+              "id": 47636,
+              "nodeType": "StructuredDocumentation",
+              "src": "728:245:69",
+              "text": "@notice Returns the value of curve labled _tokenAddress at _xValue\n @param _tokenAddress The key to lookup the curve with in the mapping\n @param _xValue The x value to pass to the slave\n @return _value The y value of the curve"
+            },
+            "functionSelector": "d15e1ba9",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValueAt",
+            "nameLocation": "985:10:69",
+            "overrides": {
+              "id": 47642,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1049:8:69"
+            },
+            "parameters": {
+              "id": 47641,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47638,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "1004:13:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47682,
+                  "src": "996:21:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47637,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "996:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 47640,
+                  "mutability": "mutable",
+                  "name": "_xValue",
+                  "nameLocation": "1026:7:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47682,
+                  "src": "1019:14:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 47639,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1019:6:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "995:39:69"
+            },
+            "returnParameters": {
+              "id": 47645,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47644,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1074:6:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47682,
+                  "src": "1067:13:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 47643,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1067:6:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1066:15:69"
+            },
+            "scope": 47779,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 47705,
+            "nodeType": "FunctionDefinition",
+            "src": "1473:264:69",
+            "body": {
+              "id": 47704,
+              "nodeType": "Block",
+              "src": "1558:179:69",
+              "statements": [
+                {
+                  "assignments": [
+                    47692
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 47692,
+                      "mutability": "mutable",
+                      "name": "_oldCurveAddress",
+                      "nameLocation": "1572:16:69",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 47704,
+                      "src": "1564:24:69",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 47691,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1564:7:69",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 47694,
+                  "initialValue": {
+                    "id": 47693,
+                    "name": "vaultControllerAddress",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 47635,
+                    "src": "1591:22:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1564:49:69"
+                },
+                {
+                  "expression": {
+                    "id": 47697,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 47695,
+                      "name": "vaultControllerAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47635,
+                      "src": "1619:22:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 47696,
+                      "name": "_vaultMasterAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47685,
+                      "src": "1644:19:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1619:44:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 47698,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1619:44:69"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 47700,
+                        "name": "_oldCurveAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47692,
+                        "src": "1694:16:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47701,
+                        "name": "_vaultMasterAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47685,
+                        "src": "1712:19:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 47699,
+                      "name": "VaultControllerSet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53821,
+                      "src": "1675:18:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 47702,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1675:57:69",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47703,
+                  "nodeType": "EmitStatement",
+                  "src": "1670:62:69"
+                }
+              ]
+            },
+            "baseFunctions": [
+              53875
+            ],
+            "documentation": {
+              "id": 47683,
+              "nodeType": "StructuredDocumentation",
+              "src": "1327:143:69",
+              "text": "@notice Set the VaultController addr in order to pay interest on curve setting\n @param _vaultMasterAddress The address of vault master"
+            },
+            "functionSelector": "99747f15",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 47689,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 47688,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1794,
+                  "src": "1548:9:69"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1548:9:69"
+              }
+            ],
+            "name": "setVaultController",
+            "nameLocation": "1482:18:69",
+            "overrides": {
+              "id": 47687,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1539:8:69"
+            },
+            "parameters": {
+              "id": 47686,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47685,
+                  "mutability": "mutable",
+                  "name": "_vaultMasterAddress",
+                  "nameLocation": "1509:19:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47705,
+                  "src": "1501:27:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47684,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1501:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1500:29:69"
+            },
+            "returnParameters": {
+              "id": 47690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1558:0:69"
+            },
+            "scope": 47779,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 47748,
+            "nodeType": "FunctionDefinition",
+            "src": "1916:356:69",
+            "body": {
+              "id": 47747,
+              "nodeType": "Block",
+              "src": "2008:264:69",
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 47721,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 47716,
+                      "name": "vaultControllerAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47635,
+                      "src": "2018:22:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "hexValue": "30",
+                          "id": 47719,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2052:1:69",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 47718,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "2044:7:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 47717,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "2044:7:69",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 47720,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2044:10:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2018:36:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 47728,
+                  "nodeType": "IfStatement",
+                  "src": "2014:102:69",
+                  "trueBody": {
+                    "expression": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 47723,
+                              "name": "vaultControllerAddress",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 47635,
+                              "src": "2073:22:69",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 47722,
+                            "name": "IVaultController",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 52822,
+                            "src": "2056:16:69",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_IVaultController_$52822_$",
+                              "typeString": "type(contract IVaultController)"
+                            }
+                          },
+                          "id": 47724,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2056:40:69",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_IVaultController_$52822",
+                            "typeString": "contract IVaultController"
+                          }
+                        },
+                        "id": 47725,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "calculateInterest",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 52658,
+                        "src": "2056:58:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_nonpayable$__$returns$_t_uint256_$",
+                          "typeString": "function () external returns (uint256)"
+                        }
+                      },
+                      "id": 47726,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2056:60:69",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 47727,
+                    "nodeType": "ExpressionStatement",
+                    "src": "2056:60:69"
+                  }
+                },
+                {
+                  "assignments": [
+                    47730
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 47730,
+                      "mutability": "mutable",
+                      "name": "_oldCurve",
+                      "nameLocation": "2130:9:69",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 47747,
+                      "src": "2122:17:69",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 47729,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2122:7:69",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 47734,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 47731,
+                      "name": "curves",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47632,
+                      "src": "2142:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                        "typeString": "mapping(address => address)"
+                      }
+                    },
+                    "id": 47733,
+                    "indexExpression": {
+                      "id": 47732,
+                      "name": "_tokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47708,
+                      "src": "2149:13:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2142:21:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2122:41:69"
+                },
+                {
+                  "expression": {
+                    "id": 47739,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 47735,
+                        "name": "curves",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47632,
+                        "src": "2169:6:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                          "typeString": "mapping(address => address)"
+                        }
+                      },
+                      "id": 47737,
+                      "indexExpression": {
+                        "id": 47736,
+                        "name": "_tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47708,
+                        "src": "2176:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2169:21:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 47738,
+                      "name": "_curveAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47710,
+                      "src": "2193:13:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2169:37:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 47740,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2169:37:69"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 47742,
+                        "name": "_oldCurve",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47730,
+                        "src": "2227:9:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47743,
+                        "name": "_tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47708,
+                        "src": "2238:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47744,
+                        "name": "_curveAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47710,
+                        "src": "2253:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 47741,
+                      "name": "CurveSet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53830,
+                      "src": "2218:8:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address,address)"
+                      }
+                    },
+                    "id": 47745,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2218:49:69",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47746,
+                  "nodeType": "EmitStatement",
+                  "src": "2213:54:69"
+                }
+              ]
+            },
+            "baseFunctions": [
+              53883
+            ],
+            "documentation": {
+              "id": 47706,
+              "nodeType": "StructuredDocumentation",
+              "src": "1741:172:69",
+              "text": "@notice Setting a new curve should pay interest\n @param _tokenAddress The address of the token\n @param _curveAddress The address of the curve for the contract"
+            },
+            "functionSelector": "ca594e6c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 47714,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 47713,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1794,
+                  "src": "1998:9:69"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1998:9:69"
+              }
+            ],
+            "name": "setCurve",
+            "nameLocation": "1925:8:69",
+            "overrides": {
+              "id": 47712,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1989:8:69"
+            },
+            "parameters": {
+              "id": 47711,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47708,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "1942:13:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47748,
+                  "src": "1934:21:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47707,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1934:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 47710,
+                  "mutability": "mutable",
+                  "name": "_curveAddress",
+                  "nameLocation": "1965:13:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47748,
+                  "src": "1957:21:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47709,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1957:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1933:46:69"
+            },
+            "returnParameters": {
+              "id": 47715,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2008:0:69"
+            },
+            "scope": 47779,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 47778,
+            "nodeType": "FunctionDefinition",
+            "src": "2482:258:69",
+            "body": {
+              "id": 47777,
+              "nodeType": "Block",
+              "src": "2579:161:69",
+              "statements": [
+                {
+                  "assignments": [
+                    47760
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 47760,
+                      "mutability": "mutable",
+                      "name": "_oldCurve",
+                      "nameLocation": "2593:9:69",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 47777,
+                      "src": "2585:17:69",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 47759,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "2585:7:69",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 47764,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 47761,
+                      "name": "curves",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47632,
+                      "src": "2605:6:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                        "typeString": "mapping(address => address)"
+                      }
+                    },
+                    "id": 47763,
+                    "indexExpression": {
+                      "id": 47762,
+                      "name": "_tokenAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47751,
+                      "src": "2612:13:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2605:21:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "2585:41:69"
+                },
+                {
+                  "expression": {
+                    "id": 47769,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 47765,
+                        "name": "curves",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47632,
+                        "src": "2632:6:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_address_$",
+                          "typeString": "mapping(address => address)"
+                        }
+                      },
+                      "id": 47767,
+                      "indexExpression": {
+                        "id": 47766,
+                        "name": "_tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47751,
+                        "src": "2639:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "2632:21:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 47768,
+                      "name": "_curveAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47753,
+                      "src": "2656:13:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "2632:37:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 47770,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2632:37:69"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 47772,
+                        "name": "_oldCurve",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47760,
+                        "src": "2695:9:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47773,
+                        "name": "_tokenAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47751,
+                        "src": "2706:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47774,
+                        "name": "_curveAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47753,
+                        "src": "2721:13:69",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 47771,
+                      "name": "CurveForceSet",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53839,
+                      "src": "2681:13:69",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address,address)"
+                      }
+                    },
+                    "id": 47775,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2681:54:69",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47776,
+                  "nodeType": "EmitStatement",
+                  "src": "2676:59:69"
+                }
+              ]
+            },
+            "baseFunctions": [
+              53891
+            ],
+            "documentation": {
+              "id": 47749,
+              "nodeType": "StructuredDocumentation",
+              "src": "2276:203:69",
+              "text": "@notice Special function that does not calculate interest, used for deployment\n @param _tokenAddress The address of the token\n @param _curveAddress The address of the curve for the contract"
+            },
+            "functionSelector": "911b1678",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 47757,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 47756,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1794,
+                  "src": "2569:9:69"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2569:9:69"
+              }
+            ],
+            "name": "forceSetCurve",
+            "nameLocation": "2491:13:69",
+            "overrides": {
+              "id": 47755,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "2560:8:69"
+            },
+            "parameters": {
+              "id": 47754,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47751,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "2513:13:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47778,
+                  "src": "2505:21:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47750,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2505:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 47753,
+                  "mutability": "mutable",
+                  "name": "_curveAddress",
+                  "nameLocation": "2536:13:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47778,
+                  "src": "2528:21:69",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 47752,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2528:7:69",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2504:46:69"
+            },
+            "returnParameters": {
+              "id": 47758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2579:0:69"
+            },
+            "scope": 47779,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 47624,
+              "name": "ICurveMaster",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 53892,
+              "src": "535:12:69"
+            },
+            "id": 47625,
+            "nodeType": "InheritanceSpecifier",
+            "src": "535:12:69"
+          },
+          {
+            "baseName": {
+              "id": 47626,
+              "name": "Ownable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1875,
+              "src": "549:7:69"
+            },
+            "id": 47627,
+            "nodeType": "InheritanceSpecifier",
+            "src": "549:7:69"
+          }
+        ],
+        "canonicalName": "CurveMaster",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 47623,
+          "nodeType": "StructuredDocumentation",
+          "src": "330:181:69",
+          "text": "@notice Curve master keeps a record of CurveSlave contracts and links it with an address\n @dev All numbers should be scaled to 1e18. for instance, number 5e17 represents 50%"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          47779,
+          1875,
+          4346,
+          53892
+        ],
+        "name": "CurveMaster",
+        "nameLocation": "520:11:69",
+        "scope": 47780,
+        "usedErrors": [
+          53842,
+          53845
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 69
+}

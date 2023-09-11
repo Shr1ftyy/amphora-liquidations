@@ -1,0 +1,708 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CBETH_ETH_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_3CRV_META_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_USDC_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "STE_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_FRAX_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "THREE_CRV_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TRI_CRYPTO_2_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506101c4806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806381d2d3191161005b57806381d2d31914610122578063ac573f941461013d578063c26f6ccd14610158578063ca48d0471461017357600080fd5b8063160f1ae91461008d5780635a84d57b146100d15780636e3a8af2146100ec5780637b0358ee14610107575b600080fd5b6100a873a5407eae9ba41422680e2e00537571bcc53efbfd81565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b6100a873d632f22692fac7611d2aa1c0d552930d43caed3b81565b6100a873bebc44782c7db0a1a60cb6fe97d0b483032ff1c781565b6100a873d51a44d3fae010294c616388b506acda1bfaae4681565b6100a8735fae7e604fc3e24fd43a72867cebac94c65b404a81565b6100a873dc24316b9ae028f1497c275eb9192a3ea0f6702281565b6100a873dcef968d416a41cdac0ed8702fac8128a64241a281565b6100a873e3c190c57b5959ae62efe3b6797058b76ba2f5ef8156fea2646970667358221220c4f569b91521c24d2e0c20185d2ece52b3654d3cd46fb2db3945c2e25e8e749464736f6c634300080e0033",
+    "sourceMap": "58:814:124:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c806381d2d3191161005b57806381d2d31914610122578063ac573f941461013d578063c26f6ccd14610158578063ca48d0471461017357600080fd5b8063160f1ae91461008d5780635a84d57b146100d15780636e3a8af2146100ec5780637b0358ee14610107575b600080fd5b6100a873a5407eae9ba41422680e2e00537571bcc53efbfd81565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b6100a873d632f22692fac7611d2aa1c0d552930d43caed3b81565b6100a873bebc44782c7db0a1a60cb6fe97d0b483032ff1c781565b6100a873d51a44d3fae010294c616388b506acda1bfaae4681565b6100a8735fae7e604fc3e24fd43a72867cebac94c65b404a81565b6100a873dc24316b9ae028f1497c275eb9192a3ea0f6702281565b6100a873dcef968d416a41cdac0ed8702fac8128a64241a281565b6100a873e3c190c57b5959ae62efe3b6797058b76ba2f5ef8156fea2646970667358221220c4f569b91521c24d2e0c20185d2ece52b3654d3cd46fb2db3945c2e25e8e749464736f6c634300080e0033",
+    "sourceMap": "58:814:124:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;666:104;;728:42;666:104;;;;;190:42:128;178:55;;;160:74;;148:2;133:18;666:104:124;;;;;;;274:96;;328:42;274:96;;374:91;;423:42;374:91;;469:94;;521:42;469:94;;567:95;;620:42;567:95;;82:89;;129:42;82:89;;175:95;;228:42;175:95;;774;;827:42;774:95;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "CBETH_ETH_CRV_POOL_ADDRESS()": "81d2d319",
+    "FRAX_3CRV_META_POOL_ADDRESS()": "5a84d57b",
+    "FRAX_USDC_CRV_POOL_ADDRESS()": "c26f6ccd",
+    "STE_CRV_POOL_ADDRESS()": "ac573f94",
+    "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS()": "160f1ae9",
+    "SUSD_FRAX_CRV_POOL_ADDRESS()": "ca48d047",
+    "THREE_CRV_POOL_ADDRESS()": "6e3a8af2",
+    "TRI_CRYPTO_2_POOL_ADDRESS()": "7b0358ee"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CBETH_ETH_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_3CRV_META_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_USDC_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"STE_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_FRAX_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"THREE_CRV_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TRI_CRYPTO_2_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/test/utils/CurvePools.sol\":\"CurvePools\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/test/utils/CurvePools.sol\":{\"keccak256\":\"0xe14c72c76e053ebee42affae9803ab6e66d2dc72928b291b8dd8ea1eb8786177\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a1d075229cc80c00e27022d5aecf0f3b1756808303a60ce64c1898c7faad9fdb\",\"dweb:/ipfs/QmPzxHHEvY7XGme6kSJbTBSEQE5tzTeQKDhhYNEhWw43uv\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CBETH_ETH_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_3CRV_META_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_USDC_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "STE_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_FRAX_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "THREE_CRV_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "TRI_CRYPTO_2_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/test/utils/CurvePools.sol": "CurvePools"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/test/utils/CurvePools.sol": {
+        "keccak256": "0xe14c72c76e053ebee42affae9803ab6e66d2dc72928b291b8dd8ea1eb8786177",
+        "urls": [
+          "bzz-raw://a1d075229cc80c00e27022d5aecf0f3b1756808303a60ce64c1898c7faad9fdb",
+          "dweb:/ipfs/QmPzxHHEvY7XGme6kSJbTBSEQE5tzTeQKDhhYNEhWw43uv"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/test/utils/CurvePools.sol",
+    "id": 58833,
+    "exportedSymbols": {
+      "CurvePools": [
+        58832
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:841:124",
+    "nodes": [
+      {
+        "id": 58807,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:124",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 58832,
+        "nodeType": "ContractDefinition",
+        "src": "58:814:124",
+        "nodes": [
+          {
+            "id": 58810,
+            "nodeType": "VariableDeclaration",
+            "src": "82:89:124",
+            "constant": true,
+            "functionSelector": "ac573f94",
+            "mutability": "constant",
+            "name": "STE_CRV_POOL_ADDRESS",
+            "nameLocation": "106:20:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58808,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "82:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844433234333136623941453032384631343937633237354542393139326133456130663637303232",
+              "id": 58809,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "129:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xDC24316b9AE028F1497c275EB9192a3Ea0f67022"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58813,
+            "nodeType": "VariableDeclaration",
+            "src": "175:95:124",
+            "constant": true,
+            "functionSelector": "c26f6ccd",
+            "mutability": "constant",
+            "name": "FRAX_USDC_CRV_POOL_ADDRESS",
+            "nameLocation": "199:26:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58811,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "175:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844634546393638643431366134314364616330454438373032664143383132384136343234314132",
+              "id": 58812,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "228:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xDcEF968d416a41Cdac0ED8702fAC8128A64241A2"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58816,
+            "nodeType": "VariableDeclaration",
+            "src": "274:96:124",
+            "constant": true,
+            "functionSelector": "5a84d57b",
+            "mutability": "constant",
+            "name": "FRAX_3CRV_META_POOL_ADDRESS",
+            "nameLocation": "298:27:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58814,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "274:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307864363332663232363932466143373631316432414131433044353532393330443433434145643342",
+              "id": 58815,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "328:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xd632f22692FaC7611d2AA1C0D552930D43CAEd3B"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58819,
+            "nodeType": "VariableDeclaration",
+            "src": "374:91:124",
+            "constant": true,
+            "functionSelector": "6e3a8af2",
+            "mutability": "constant",
+            "name": "THREE_CRV_POOL_ADDRESS",
+            "nameLocation": "398:22:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58817,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "374:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307862456263343437383243376442306131413630436236666539376430623438333033324646314337",
+              "id": 58818,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "423:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58822,
+            "nodeType": "VariableDeclaration",
+            "src": "469:94:124",
+            "constant": true,
+            "functionSelector": "7b0358ee",
+            "mutability": "constant",
+            "name": "TRI_CRYPTO_2_POOL_ADDRESS",
+            "nameLocation": "493:25:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58820,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "469:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844353161343464334661453031303239344336313633383862353036416364413162664141453436",
+              "id": 58821,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "521:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xD51a44d3FaE010294C616388b506AcdA1bfAAE46"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58825,
+            "nodeType": "VariableDeclaration",
+            "src": "567:95:124",
+            "constant": true,
+            "functionSelector": "81d2d319",
+            "mutability": "constant",
+            "name": "CBETH_ETH_CRV_POOL_ADDRESS",
+            "nameLocation": "591:26:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58823,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "567:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835464145374536303446433365323466643433413732383637636542614339346336356234303441",
+              "id": 58824,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "620:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x5FAE7E604FC3e24fd43A72867ceBaC94c65b404A"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58828,
+            "nodeType": "VariableDeclaration",
+            "src": "666:104:124",
+            "constant": true,
+            "functionSelector": "160f1ae9",
+            "mutability": "constant",
+            "name": "SUSD_DAI_USDT_USDC_CRV_POOL_ADDRESS",
+            "nameLocation": "690:35:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58826,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "666:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307841353430376541453942613431343232363830653265303035333735373162634335336566426644",
+              "id": 58827,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "728:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xA5407eAE9Ba41422680e2e00537571bcC53efBfD"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58831,
+            "nodeType": "VariableDeclaration",
+            "src": "774:95:124",
+            "constant": true,
+            "functionSelector": "ca48d047",
+            "mutability": "constant",
+            "name": "SUSD_FRAX_CRV_POOL_ADDRESS",
+            "nameLocation": "798:26:124",
+            "scope": 58832,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58829,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "774:7:124",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307865336331393063353762353935394165363245664533423637393730353842373662413266356546",
+              "id": 58830,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "827:42:124",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xe3c190c57b5959Ae62EfE3B6797058B76bA2f5eF"
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "CurvePools",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          58832
+        ],
+        "name": "CurvePools",
+        "nameLocation": "67:10:124",
+        "scope": 58833,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 124
+}

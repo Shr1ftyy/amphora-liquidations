@@ -1,0 +1,1140 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CHAINLINK_AAVE_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_BTC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_CBETH_ETH_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_DAI_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_DYDX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_ETH_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_FRAX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_SNX_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_STETH_USD_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_SUSD_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_UNI_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_USDC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_USDT_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CHAINLINK_WBTC_BTC_FEED_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506102c8806100206000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c806379d0c09c1161008c5780639c8380d8116100665780639c8380d814610226578063a956f47114610241578063ae2ac6131461025c578063dcaa8cd71461027757600080fd5b806379d0c09c146101d55780638ec12c0c146101f057806396b58a421461020b57600080fd5b80634cc99d4a116100c85780634cc99d4a146101695780635b8d959b1461018457806362b854b31461019f5780636a851253146101ba57600080fd5b8063125aec3e146100ef57806316c190a8146101335780633aaa452f1461014e575b600080fd5b61010a735f4ec3df9cbd43714fe2740f5e3616155c5b841981565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61010a73553303d460ee0afb37edff9be42922d8ff63220e81565b61010a73cfe54b5cd566ab89272946f602d76ea879cab4a881565b61010a733e7d1eab13ad0104d2750b8863b489d65364e32d81565b61010a73f4030086522a5beea4988f8ca5b36dbc97bee88c81565b61010a73aed0c38402a5d19df6e4c03f4e2dced6e29c1ee981565b61010a73478909d4d798f3a1f11ffb25e4920c959b4ade0b81565b61010a73547a514d5e3769680ce22b2361c10ea13619e8a981565b61010a73dc3ea94cd0ac27d9a86c180091e7f78c683d369981565b61010a73fdfd9c85ad200c506cf9e21f1fd8dd01932fbb2381565b61010a73f017fcb346a1885194689ba23eff2fe6fa5c483b81565b61010a73b9e1e3a9feff48998e45fa90847ed4d467e8bcfd81565b61010a738fffffd4afb6115b954bd326cbe7b4ba576818f681565b61010a73ad35bd71b9afe6e4bdc266b345c198eadef9ad948156fea2646970667358221220007712d70f96b414815cd21bb9142677cd9296698ed55b8ab0c5552680e4fddf64736f6c634300080e0033",
+    "sourceMap": "58:1461:123:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c806379d0c09c1161008c5780639c8380d8116100665780639c8380d814610226578063a956f47114610241578063ae2ac6131461025c578063dcaa8cd71461027757600080fd5b806379d0c09c146101d55780638ec12c0c146101f057806396b58a421461020b57600080fd5b80634cc99d4a116100c85780634cc99d4a146101695780635b8d959b1461018457806362b854b31461019f5780636a851253146101ba57600080fd5b8063125aec3e146100ef57806316c190a8146101335780633aaa452f1461014e575b600080fd5b61010a735f4ec3df9cbd43714fe2740f5e3616155c5b841981565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61010a73553303d460ee0afb37edff9be42922d8ff63220e81565b61010a73cfe54b5cd566ab89272946f602d76ea879cab4a881565b61010a733e7d1eab13ad0104d2750b8863b489d65364e32d81565b61010a73f4030086522a5beea4988f8ca5b36dbc97bee88c81565b61010a73aed0c38402a5d19df6e4c03f4e2dced6e29c1ee981565b61010a73478909d4d798f3a1f11ffb25e4920c959b4ade0b81565b61010a73547a514d5e3769680ce22b2361c10ea13619e8a981565b61010a73dc3ea94cd0ac27d9a86c180091e7f78c683d369981565b61010a73fdfd9c85ad200c506cf9e21f1fd8dd01932fbb2381565b61010a73f017fcb346a1885194689ba23eff2fe6fa5c483b81565b61010a73b9e1e3a9feff48998e45fa90847ed4d467e8bcfd81565b61010a738fffffd4afb6115b954bd326cbe7b4ba576818f681565b61010a73ad35bd71b9afe6e4bdc266b345c198eadef9ad948156fea2646970667358221220007712d70f96b414815cd21bb9142677cd9296698ed55b8ab0c5552680e4fddf64736f6c634300080e0033",
+    "sourceMap": "58:1461:123:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;111:95;;164:42;111:95;;;;;190:42:128;178:55;;;160:74;;148:2;133:18;111:95:123;;;;;;;210;;263:42;210:95;;1011:101;;1070:42;1011:101;;712:96;;766:42;712:96;;409:95;;462:42;409:95;;912;;965:42;912:95;;612:96;;666:42;612:96;;309;;363:42;309:96;;1216:95;;1269:42;1216:95;;508:100;;566:42;508:100;;1415:101;;1474:42;1415:101;;1116:96;;1170:42;1116:96;;812;;866:42;812:96;;1315;;1369:42;1315:96;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "CHAINLINK_AAVE_FEED_ADDRESS()": "79d0c09c",
+    "CHAINLINK_BTC_FEED_ADDRESS()": "5b8d959b",
+    "CHAINLINK_CBETH_ETH_FEED_ADDRESS()": "9c8380d8",
+    "CHAINLINK_DAI_FEED_ADDRESS()": "62b854b3",
+    "CHAINLINK_DYDX_FEED_ADDRESS()": "6a851253",
+    "CHAINLINK_ETH_FEED_ADDRESS()": "125aec3e",
+    "CHAINLINK_FRAX_FEED_ADDRESS()": "a956f471",
+    "CHAINLINK_SNX_FEED_ADDRESS()": "8ec12c0c",
+    "CHAINLINK_STETH_USD_FEED_ADDRESS()": "3aaa452f",
+    "CHAINLINK_SUSD_FEED_ADDRESS()": "dcaa8cd7",
+    "CHAINLINK_UNI_FEED_ADDRESS()": "16c190a8",
+    "CHAINLINK_USDC_FEED_ADDRESS()": "ae2ac613",
+    "CHAINLINK_USDT_FEED_ADDRESS()": "4cc99d4a",
+    "CHAINLINK_WBTC_BTC_FEED_ADDRESS()": "96b58a42"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CHAINLINK_AAVE_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_BTC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_CBETH_ETH_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_DAI_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_DYDX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_ETH_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_FRAX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_SNX_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_STETH_USD_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_SUSD_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_UNI_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_USDC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_USDT_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CHAINLINK_WBTC_BTC_FEED_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/test/utils/ChainlinkFeeds.sol\":\"ChainlinkFeeds\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/test/utils/ChainlinkFeeds.sol\":{\"keccak256\":\"0x235faba3feacd9184705f84cdf1e5060f22b00f9d93cd62bdce7dac8ea4476e4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://09ff2fe2bc7e11ac1ac1d8d2ddb309ae1977b0e13ed5a82d0efa8a624fb8dbad\",\"dweb:/ipfs/QmW7SEsGSHXY4iPeMor1yjnpixV1vU2JojSXMwdAH6Cgfw\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_AAVE_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_BTC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_CBETH_ETH_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_DAI_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_DYDX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_ETH_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_FRAX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_SNX_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_STETH_USD_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_SUSD_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_UNI_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_USDC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_USDT_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CHAINLINK_WBTC_BTC_FEED_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/test/utils/ChainlinkFeeds.sol": "ChainlinkFeeds"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/test/utils/ChainlinkFeeds.sol": {
+        "keccak256": "0x235faba3feacd9184705f84cdf1e5060f22b00f9d93cd62bdce7dac8ea4476e4",
+        "urls": [
+          "bzz-raw://09ff2fe2bc7e11ac1ac1d8d2ddb309ae1977b0e13ed5a82d0efa8a624fb8dbad",
+          "dweb:/ipfs/QmW7SEsGSHXY4iPeMor1yjnpixV1vU2JojSXMwdAH6Cgfw"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/test/utils/ChainlinkFeeds.sol",
+    "id": 58806,
+    "exportedSymbols": {
+      "ChainlinkFeeds": [
+        58805
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1488:123",
+    "nodes": [
+      {
+        "id": 58762,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:123",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 58805,
+        "nodeType": "ContractDefinition",
+        "src": "58:1461:123",
+        "nodes": [
+          {
+            "id": 58765,
+            "nodeType": "VariableDeclaration",
+            "src": "111:95:123",
+            "constant": true,
+            "functionSelector": "125aec3e",
+            "mutability": "constant",
+            "name": "CHAINLINK_ETH_FEED_ADDRESS",
+            "nameLocation": "135:26:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58763,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "111:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835663465433344663963626434333731344645323734306635453336313631353563356238343139",
+              "id": 58764,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "164:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58768,
+            "nodeType": "VariableDeclaration",
+            "src": "210:95:123",
+            "constant": true,
+            "functionSelector": "16c190a8",
+            "mutability": "constant",
+            "name": "CHAINLINK_UNI_FEED_ADDRESS",
+            "nameLocation": "234:26:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58766,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "210:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835353333303364343630454530616642333745644666396245343239323244384646363332323065",
+              "id": 58767,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "263:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x553303d460EE0afB37EdFf9bE42922D8FF63220e"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58771,
+            "nodeType": "VariableDeclaration",
+            "src": "309:96:123",
+            "constant": true,
+            "functionSelector": "79d0c09c",
+            "mutability": "constant",
+            "name": "CHAINLINK_AAVE_FEED_ADDRESS",
+            "nameLocation": "333:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58769,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "309:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835343761353134643565333736393638304365323242323336316331304561313336313965386139",
+              "id": 58770,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "363:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x547a514d5e3769680Ce22B2361c10Ea13619e8a9"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58774,
+            "nodeType": "VariableDeclaration",
+            "src": "409:95:123",
+            "constant": true,
+            "functionSelector": "5b8d959b",
+            "mutability": "constant",
+            "name": "CHAINLINK_BTC_FEED_ADDRESS",
+            "nameLocation": "433:26:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58772,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "409:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307846343033303038363532326135624545613439383846386341354233366462433937426545383863",
+              "id": 58773,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "462:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58777,
+            "nodeType": "VariableDeclaration",
+            "src": "508:100:123",
+            "constant": true,
+            "functionSelector": "96b58a42",
+            "mutability": "constant",
+            "name": "CHAINLINK_WBTC_BTC_FEED_ADDRESS",
+            "nameLocation": "532:31:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58775,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "508:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307866644644394338356144323030633530364366396532314631464438646430313933324642423233",
+              "id": 58776,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "566:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xfdFD9C85aD200c506Cf9e21F1FD8dd01932FBB23"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58780,
+            "nodeType": "VariableDeclaration",
+            "src": "612:96:123",
+            "constant": true,
+            "functionSelector": "6a851253",
+            "mutability": "constant",
+            "name": "CHAINLINK_DYDX_FEED_ADDRESS",
+            "nameLocation": "636:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58778,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "612:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307834373839303944344437393866336131463131664642323545343932304339353942346144653062",
+              "id": 58779,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "666:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x478909D4D798f3a1F11fFB25E4920C959B4aDe0b"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58783,
+            "nodeType": "VariableDeclaration",
+            "src": "712:96:123",
+            "constant": true,
+            "functionSelector": "4cc99d4a",
+            "mutability": "constant",
+            "name": "CHAINLINK_USDT_FEED_ADDRESS",
+            "nameLocation": "736:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58781,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "712:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307833453764316541423133616430313034643237353042383836336234383944363533363465333244",
+              "id": 58782,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "766:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x3E7d1eAB13ad0104d2750B8863b489D65364e32D"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58786,
+            "nodeType": "VariableDeclaration",
+            "src": "812:96:123",
+            "constant": true,
+            "functionSelector": "ae2ac613",
+            "mutability": "constant",
+            "name": "CHAINLINK_USDC_FEED_ADDRESS",
+            "nameLocation": "836:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58784,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "812:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307838664666466664344166423631313562393534426433323663626537423442413537363831386636",
+              "id": 58785,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "866:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58789,
+            "nodeType": "VariableDeclaration",
+            "src": "912:95:123",
+            "constant": true,
+            "functionSelector": "62b854b3",
+            "mutability": "constant",
+            "name": "CHAINLINK_DAI_FEED_ADDRESS",
+            "nameLocation": "936:26:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58787,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "912:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307841656430633338343032613564313964663645346330334634453244636544366532396331656539",
+              "id": 58788,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "965:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xAed0c38402a5d19df6E4c03F4E2DceD6e29c1ee9"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58792,
+            "nodeType": "VariableDeclaration",
+            "src": "1011:101:123",
+            "constant": true,
+            "functionSelector": "3aaa452f",
+            "mutability": "constant",
+            "name": "CHAINLINK_STETH_USD_FEED_ADDRESS",
+            "nameLocation": "1035:32:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58790,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1011:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307843664535344235634435363661423839323732393436463630324437364561383739434162346138",
+              "id": 58791,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1070:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xCfE54B5cD566aB89272946F602D76Ea879CAb4a8"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58795,
+            "nodeType": "VariableDeclaration",
+            "src": "1116:96:123",
+            "constant": true,
+            "functionSelector": "a956f471",
+            "mutability": "constant",
+            "name": "CHAINLINK_FRAX_FEED_ADDRESS",
+            "nameLocation": "1140:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58793,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1116:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307842394531453341396665466634383939384534354661393038343765643444343637453842636644",
+              "id": 58794,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1170:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xB9E1E3A9feFf48998E45Fa90847ed4D467E8BcfD"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58798,
+            "nodeType": "VariableDeclaration",
+            "src": "1216:95:123",
+            "constant": true,
+            "functionSelector": "8ec12c0c",
+            "mutability": "constant",
+            "name": "CHAINLINK_SNX_FEED_ADDRESS",
+            "nameLocation": "1240:26:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58796,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1216:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844433345413934434430414332376439413836433138303039316537663738433638336433363939",
+              "id": 58797,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1269:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xDC3EA94CD0AC27d9A86C180091e7f78C683d3699"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58801,
+            "nodeType": "VariableDeclaration",
+            "src": "1315:96:123",
+            "constant": true,
+            "functionSelector": "dcaa8cd7",
+            "mutability": "constant",
+            "name": "CHAINLINK_SUSD_FEED_ADDRESS",
+            "nameLocation": "1339:27:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58799,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1315:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307861643335426437316239614645366534624463323636423334356331393865614445663941643934",
+              "id": 58800,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1369:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xad35Bd71b9aFE6e4bDc266B345c198eaDEf9Ad94"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58804,
+            "nodeType": "VariableDeclaration",
+            "src": "1415:101:123",
+            "constant": true,
+            "functionSelector": "9c8380d8",
+            "mutability": "constant",
+            "name": "CHAINLINK_CBETH_ETH_FEED_ADDRESS",
+            "nameLocation": "1439:32:123",
+            "scope": 58805,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58802,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1415:7:123",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307846303137666342333436413138383531393436383962413233456666326645366641354334383362",
+              "id": 58803,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1474:42:123",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xF017fcB346A1885194689bA23Eff2fE6fA5C483b"
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ChainlinkFeeds",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          58805
+        ],
+        "name": "ChainlinkFeeds",
+        "nameLocation": "67:14:123",
+        "scope": 58806,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 123
+}

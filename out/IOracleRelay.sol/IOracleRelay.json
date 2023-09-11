@@ -1,0 +1,596 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "OracleRelay_DifferentUnderlyings",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "currentValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_currentValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleType",
+      "outputs": [
+        {
+          "internalType": "enum IOracleRelay.OracleType",
+          "name": "_type",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "peekValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_underlying",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "currentValue()": "698996f8",
+    "oracleType()": "0d623e10",
+    "peekValue()": "97eacf09",
+    "underlying()": "6f307dc3"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"OracleRelay_DifferentUnderlyings\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"currentValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_currentValue\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleType\",\"outputs\":[{\"internalType\":\"enum IOracleRelay.OracleType\",\"name\":\"_type\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"peekValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_underlying\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"currentValue()\":{\"returns\":{\"_currentValue\":\"the current price\"}},\"oracleType()\":{\"returns\":{\"_type\":\"the type (Chainlink/Uniswap/Price)\"}},\"peekValue()\":{\"details\":\"some oracles require a state change to get the exact current price.      This is updated when calling other state changing functions that query the price\",\"returns\":{\"_price\":\"the current price\"}},\"underlying()\":{\"returns\":{\"_underlying\":\"the address of the underlying asset\"}}},\"title\":\"OracleRelay Interface\",\"version\":1},\"userdoc\":{\"errors\":{\"OracleRelay_DifferentUnderlyings()\":[{\"notice\":\"Emited when the underlyings are different in the anchored view\"}]},\"kind\":\"user\",\"methods\":{\"currentValue()\":{\"notice\":\"returns the price with 18 decimals\"},\"oracleType()\":{\"notice\":\"returns the type of the oracle\"},\"peekValue()\":{\"notice\":\"returns the price with 18 decimals without any state changes\"},\"underlying()\":{\"notice\":\"returns the underlying asset the oracle is pricing\"}},\"notice\":\"Interface for interacting with OracleRelay\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/periphery/IOracleRelay.sol\":\"IOracleRelay\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "OracleRelay_DifferentUnderlyings"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "currentValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_currentValue",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "oracleType",
+          "outputs": [
+            {
+              "internalType": "enum IOracleRelay.OracleType",
+              "name": "_type",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "peekValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_underlying",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "currentValue()": {
+            "returns": {
+              "_currentValue": "the current price"
+            }
+          },
+          "oracleType()": {
+            "returns": {
+              "_type": "the type (Chainlink/Uniswap/Price)"
+            }
+          },
+          "peekValue()": {
+            "details": "some oracles require a state change to get the exact current price.      This is updated when calling other state changing functions that query the price",
+            "returns": {
+              "_price": "the current price"
+            }
+          },
+          "underlying()": {
+            "returns": {
+              "_underlying": "the address of the underlying asset"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "currentValue()": {
+            "notice": "returns the price with 18 decimals"
+          },
+          "oracleType()": {
+            "notice": "returns the type of the oracle"
+          },
+          "peekValue()": {
+            "notice": "returns the price with 18 decimals without any state changes"
+          },
+          "underlying()": {
+            "notice": "returns the underlying asset the oracle is pricing"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/periphery/IOracleRelay.sol": "IOracleRelay"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/periphery/IOracleRelay.sol",
+    "id": 53929,
+    "exportedSymbols": {
+      "IOracleRelay": [
+        53928
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1201:104",
+    "nodes": [
+      {
+        "id": 53894,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:104",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53928,
+        "nodeType": "ContractDefinition",
+        "src": "145:1087:104",
+        "nodes": [
+          {
+            "id": 53898,
+            "nodeType": "ErrorDefinition",
+            "src": "249:41:104",
+            "documentation": {
+              "id": 53896,
+              "nodeType": "StructuredDocumentation",
+              "src": "172:74:104",
+              "text": "@notice Emited when the underlyings are different in the anchored view"
+            },
+            "errorSelector": "3e04145a",
+            "name": "OracleRelay_DifferentUnderlyings",
+            "nameLocation": "255:32:104",
+            "parameters": {
+              "id": 53897,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:2:104"
+            }
+          },
+          {
+            "id": 53902,
+            "nodeType": "EnumDefinition",
+            "src": "294:59:104",
+            "canonicalName": "IOracleRelay.OracleType",
+            "members": [
+              {
+                "id": 53899,
+                "name": "Chainlink",
+                "nameLocation": "316:9:104",
+                "nodeType": "EnumValue",
+                "src": "316:9:104"
+              },
+              {
+                "id": 53900,
+                "name": "Uniswap",
+                "nameLocation": "331:7:104",
+                "nodeType": "EnumValue",
+                "src": "331:7:104"
+              },
+              {
+                "id": 53901,
+                "name": "Price",
+                "nameLocation": "344:5:104",
+                "nodeType": "EnumValue",
+                "src": "344:5:104"
+              }
+            ],
+            "name": "OracleType",
+            "nameLocation": "299:10:104"
+          },
+          {
+            "id": 53908,
+            "nodeType": "FunctionDefinition",
+            "src": "452:65:104",
+            "documentation": {
+              "id": 53903,
+              "nodeType": "StructuredDocumentation",
+              "src": "357:92:104",
+              "text": "@notice returns the price with 18 decimals\n @return _currentValue the current price"
+            },
+            "functionSelector": "698996f8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentValue",
+            "nameLocation": "461:12:104",
+            "parameters": {
+              "id": 53904,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "473:2:104"
+            },
+            "returnParameters": {
+              "id": 53907,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53906,
+                  "mutability": "mutable",
+                  "name": "_currentValue",
+                  "nameLocation": "502:13:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53908,
+                  "src": "494:21:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53905,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "493:23:104"
+            },
+            "scope": 53928,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53914,
+            "nodeType": "FunctionDefinition",
+            "src": "806:60:104",
+            "documentation": {
+              "id": 53909,
+              "nodeType": "StructuredDocumentation",
+              "src": "521:282:104",
+              "text": "@notice returns the price with 18 decimals without any state changes\n @dev some oracles require a state change to get the exact current price.\n      This is updated when calling other state changing functions that query the price\n @return _price the current price"
+            },
+            "functionSelector": "97eacf09",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peekValue",
+            "nameLocation": "815:9:104",
+            "parameters": {
+              "id": 53910,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "824:2:104"
+            },
+            "returnParameters": {
+              "id": 53913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53912,
+                  "mutability": "mutable",
+                  "name": "_price",
+                  "nameLocation": "858:6:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53914,
+                  "src": "850:14:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "850:7:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "849:16:104"
+            },
+            "scope": 53928,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53921,
+            "nodeType": "FunctionDefinition",
+            "src": "970:63:104",
+            "documentation": {
+              "id": 53915,
+              "nodeType": "StructuredDocumentation",
+              "src": "870:97:104",
+              "text": "@notice returns the type of the oracle\n @return _type the type (Chainlink/Uniswap/Price)"
+            },
+            "functionSelector": "0d623e10",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleType",
+            "nameLocation": "979:10:104",
+            "parameters": {
+              "id": 53916,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "989:2:104"
+            },
+            "returnParameters": {
+              "id": 53920,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53919,
+                  "mutability": "mutable",
+                  "name": "_type",
+                  "nameLocation": "1026:5:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53921,
+                  "src": "1015:16:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_OracleType_$53902",
+                    "typeString": "enum IOracleRelay.OracleType"
+                  },
+                  "typeName": {
+                    "id": 53918,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 53917,
+                      "name": "OracleType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 53902,
+                      "src": "1015:10:104"
+                    },
+                    "referencedDeclaration": 53902,
+                    "src": "1015:10:104",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_OracleType_$53902",
+                      "typeString": "enum IOracleRelay.OracleType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1014:18:104"
+            },
+            "scope": 53928,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53927,
+            "nodeType": "FunctionDefinition",
+            "src": "1164:66:104",
+            "documentation": {
+              "id": 53922,
+              "nodeType": "StructuredDocumentation",
+              "src": "1037:124:104",
+              "text": "@notice returns the underlying asset the oracle is pricing\n @return _underlying the address of the underlying asset"
+            },
+            "functionSelector": "6f307dc3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlying",
+            "nameLocation": "1173:10:104",
+            "parameters": {
+              "id": 53923,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1183:2:104"
+            },
+            "returnParameters": {
+              "id": 53926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53925,
+                  "mutability": "mutable",
+                  "name": "_underlying",
+                  "nameLocation": "1217:11:104",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53927,
+                  "src": "1209:19:104",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53924,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1209:7:104",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1208:21:104"
+            },
+            "scope": 53928,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IOracleRelay",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 53895,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:88:104",
+          "text": "@title OracleRelay Interface\n @notice Interface for interacting with OracleRelay"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53928
+        ],
+        "name": "IOracleRelay",
+        "nameLocation": "155:12:104",
+        "scope": 53929,
+        "usedErrors": [
+          53898
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 104
+}

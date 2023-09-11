@@ -1,0 +1,909 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "OracleRelay_DifferentUnderlyings",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "currentValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_currentValue",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleType",
+      "outputs": [
+        {
+          "internalType": "enum IOracleRelay.OracleType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "peekValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wETH_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "currentValue()": "698996f8",
+    "oracleType()": "0d623e10",
+    "peekValue()": "97eacf09",
+    "underlying()": "6f307dc3",
+    "wETH_ADDRESS()": "15e303e4"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"OracleRelay_DifferentUnderlyings\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"currentValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_currentValue\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleType\",\"outputs\":[{\"internalType\":\"enum IOracleRelay.OracleType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"peekValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_price\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"wETH_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"currentValue()\":{\"details\":\"Most oracles don't require a state change for pricing, for those who do, override this function\"},\"peekValue()\":{\"details\":\"Implementation in _get()\",\"returns\":{\"_price\":\"The current value\"}}},\"version\":1},\"userdoc\":{\"errors\":{\"OracleRelay_DifferentUnderlyings()\":[{\"notice\":\"Emited when the underlyings are different in the anchored view\"}]},\"kind\":\"user\",\"methods\":{\"oracleType()\":{\"notice\":\"The type of oracle\"},\"peekValue()\":{\"notice\":\"The current reported value of the oracle\"},\"underlying()\":{\"notice\":\"The underlying asset\"},\"wETH_ADDRESS()\":{\"notice\":\"The WETH address\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/contracts/periphery/oracles/OracleRelay.sol\":\"OracleRelay\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/contracts/periphery/oracles/OracleRelay.sol\":{\"keccak256\":\"0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5\",\"dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t\"]},\"solidity/interfaces/periphery/IOracleRelay.sol\":{\"keccak256\":\"0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909\",\"dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "OracleRelay_DifferentUnderlyings"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "currentValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_currentValue",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "oracleType",
+          "outputs": [
+            {
+              "internalType": "enum IOracleRelay.OracleType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "peekValue",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_price",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "wETH_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "currentValue()": {
+            "details": "Most oracles don't require a state change for pricing, for those who do, override this function"
+          },
+          "peekValue()": {
+            "details": "Implementation in _get()",
+            "returns": {
+              "_price": "The current value"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "oracleType()": {
+            "notice": "The type of oracle"
+          },
+          "peekValue()": {
+            "notice": "The current reported value of the oracle"
+          },
+          "underlying()": {
+            "notice": "The underlying asset"
+          },
+          "wETH_ADDRESS()": {
+            "notice": "The WETH address"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/contracts/periphery/oracles/OracleRelay.sol": "OracleRelay"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/contracts/periphery/oracles/OracleRelay.sol": {
+        "keccak256": "0x51bcdd4359668a3a35586b7b0ff92a5c86b4eac84bda87904d6880460708d845",
+        "urls": [
+          "bzz-raw://a407a37492cf914cdfe4382ff75372e890be9cbb03be49cc0db5e3c0667b2ce5",
+          "dweb:/ipfs/QmYBpGefsZTH1JmYEesdknTGLmUJXPkrtMMRR44aDpJG6t"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/periphery/IOracleRelay.sol": {
+        "keccak256": "0xe77d3aeb1853624cacd6f360de5d8a38102997a3e1bbb7aca4f8bb197a9f1993",
+        "urls": [
+          "bzz-raw://4cb823a37c05019121eeabb519561a1aa635506d14fe0fd92655ca7ac80e0909",
+          "dweb:/ipfs/QmaseVphce1Am6v2wRf9dfjQV6oMNXcaHKwJRDH6uCrLN6"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/contracts/periphery/oracles/OracleRelay.sol",
+    "id": 48816,
+    "exportedSymbols": {
+      "IOracleRelay": [
+        53928
+      ],
+      "OracleRelay": [
+        48815
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1030:78",
+    "nodes": [
+      {
+        "id": 48758,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:78",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 48760,
+        "nodeType": "ImportDirective",
+        "src": "57:68:78",
+        "absolutePath": "solidity/interfaces/periphery/IOracleRelay.sol",
+        "file": "@interfaces/periphery/IOracleRelay.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48816,
+        "sourceUnit": 53929,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48759,
+              "name": "IOracleRelay",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 53928,
+              "src": "65:12:78",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48815,
+        "nodeType": "ContractDefinition",
+        "src": "127:934:78",
+        "nodes": [
+          {
+            "id": 48766,
+            "nodeType": "VariableDeclaration",
+            "src": "208:81:78",
+            "constant": true,
+            "documentation": {
+              "id": 48763,
+              "nodeType": "StructuredDocumentation",
+              "src": "177:28:78",
+              "text": "@notice The WETH address"
+            },
+            "functionSelector": "15e303e4",
+            "mutability": "constant",
+            "name": "wETH_ADDRESS",
+            "nameLocation": "232:12:78",
+            "scope": 48815,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 48764,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "208:7:78",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307843303261614133396232323346453844304130653543344632376541443930383343373536436332",
+              "id": 48765,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "247:42:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48770,
+            "nodeType": "VariableDeclaration",
+            "src": "326:28:78",
+            "baseFunctions": [
+              53921
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 48767,
+              "nodeType": "StructuredDocumentation",
+              "src": "293:30:78",
+              "text": "@notice The type of oracle"
+            },
+            "functionSelector": "0d623e10",
+            "mutability": "mutable",
+            "name": "oracleType",
+            "nameLocation": "344:10:78",
+            "scope": 48815,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_OracleType_$53902",
+              "typeString": "enum IOracleRelay.OracleType"
+            },
+            "typeName": {
+              "id": 48769,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 48768,
+                "name": "OracleType",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 53902,
+                "src": "326:10:78"
+              },
+              "referencedDeclaration": 53902,
+              "src": "326:10:78",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_OracleType_$53902",
+                "typeString": "enum IOracleRelay.OracleType"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48773,
+            "nodeType": "VariableDeclaration",
+            "src": "393:25:78",
+            "baseFunctions": [
+              53927
+            ],
+            "constant": false,
+            "documentation": {
+              "id": 48771,
+              "nodeType": "StructuredDocumentation",
+              "src": "358:32:78",
+              "text": "@notice The underlying asset"
+            },
+            "functionSelector": "6f307dc3",
+            "mutability": "mutable",
+            "name": "underlying",
+            "nameLocation": "408:10:78",
+            "scope": 48815,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 48772,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "393:7:78",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 48784,
+            "nodeType": "FunctionDefinition",
+            "src": "423:71:78",
+            "body": {
+              "id": 48783,
+              "nodeType": "Block",
+              "src": "459:35:78",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48781,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48779,
+                      "name": "oracleType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48770,
+                      "src": "465:10:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_OracleType_$53902",
+                        "typeString": "enum IOracleRelay.OracleType"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 48780,
+                      "name": "_oracleType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48776,
+                      "src": "478:11:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_OracleType_$53902",
+                        "typeString": "enum IOracleRelay.OracleType"
+                      }
+                    },
+                    "src": "465:24:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_OracleType_$53902",
+                      "typeString": "enum IOracleRelay.OracleType"
+                    }
+                  },
+                  "id": 48782,
+                  "nodeType": "ExpressionStatement",
+                  "src": "465:24:78"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 48777,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48776,
+                  "mutability": "mutable",
+                  "name": "_oracleType",
+                  "nameLocation": "446:11:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48784,
+                  "src": "435:22:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_OracleType_$53902",
+                    "typeString": "enum IOracleRelay.OracleType"
+                  },
+                  "typeName": {
+                    "id": 48775,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48774,
+                      "name": "OracleType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 53902,
+                      "src": "435:10:78"
+                    },
+                    "referencedDeclaration": 53902,
+                    "src": "435:10:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_OracleType_$53902",
+                      "typeString": "enum IOracleRelay.OracleType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:24:78"
+            },
+            "returnParameters": {
+              "id": 48778,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "459:0:78"
+            },
+            "scope": 48815,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 48795,
+            "nodeType": "FunctionDefinition",
+            "src": "539:89:78",
+            "body": {
+              "id": 48794,
+              "nodeType": "Block",
+              "src": "593:35:78",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48792,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48790,
+                      "name": "underlying",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48773,
+                      "src": "599:10:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 48791,
+                      "name": "_underlying",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48787,
+                      "src": "612:11:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "599:24:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 48793,
+                  "nodeType": "ExpressionStatement",
+                  "src": "599:24:78"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48785,
+              "nodeType": "StructuredDocumentation",
+              "src": "498:38:78",
+              "text": "@notice set the underlying address"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_setUnderlying",
+            "nameLocation": "548:14:78",
+            "parameters": {
+              "id": 48788,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48787,
+                  "mutability": "mutable",
+                  "name": "_underlying",
+                  "nameLocation": "571:11:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48795,
+                  "src": "563:19:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48786,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "563:7:78",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "562:21:78"
+            },
+            "returnParameters": {
+              "id": 48789,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "593:0:78"
+            },
+            "scope": 48815,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 48807,
+            "nodeType": "FunctionDefinition",
+            "src": "739:111:78",
+            "body": {
+              "id": 48806,
+              "nodeType": "Block",
+              "src": "812:38:78",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 48804,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 48801,
+                      "name": "_currentValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48799,
+                      "src": "818:13:78",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 48802,
+                        "name": "peekValue",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48814,
+                        "src": "834:9:78",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                          "typeString": "function () view returns (uint256)"
+                        }
+                      },
+                      "id": 48803,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "834:11:78",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "818:27:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 48805,
+                  "nodeType": "ExpressionStatement",
+                  "src": "818:27:78"
+                }
+              ]
+            },
+            "baseFunctions": [
+              53908
+            ],
+            "documentation": {
+              "id": 48796,
+              "nodeType": "StructuredDocumentation",
+              "src": "632:104:78",
+              "text": "@dev Most oracles don't require a state change for pricing, for those who do, override this function"
+            },
+            "functionSelector": "698996f8",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "currentValue",
+            "nameLocation": "748:12:78",
+            "parameters": {
+              "id": 48797,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "760:2:78"
+            },
+            "returnParameters": {
+              "id": 48800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48799,
+                  "mutability": "mutable",
+                  "name": "_currentValue",
+                  "nameLocation": "797:13:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48807,
+                  "src": "789:21:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48798,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "789:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "788:23:78"
+            },
+            "scope": 48815,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 48814,
+            "nodeType": "FunctionDefinition",
+            "src": "984:75:78",
+            "baseFunctions": [
+              53914
+            ],
+            "documentation": {
+              "id": 48808,
+              "nodeType": "StructuredDocumentation",
+              "src": "854:127:78",
+              "text": "@notice The current reported value of the oracle\n @dev Implementation in _get()\n @return _price The current value"
+            },
+            "functionSelector": "97eacf09",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "peekValue",
+            "nameLocation": "993:9:78",
+            "overrides": {
+              "id": 48810,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1025:8:78"
+            },
+            "parameters": {
+              "id": 48809,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1002:2:78"
+            },
+            "returnParameters": {
+              "id": 48813,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48812,
+                  "mutability": "mutable",
+                  "name": "_price",
+                  "nameLocation": "1051:6:78",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48814,
+                  "src": "1043:14:78",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48811,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:7:78",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1042:16:78"
+            },
+            "scope": 48815,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 48761,
+              "name": "IOracleRelay",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 53928,
+              "src": "160:12:78"
+            },
+            "id": 48762,
+            "nodeType": "InheritanceSpecifier",
+            "src": "160:12:78"
+          }
+        ],
+        "canonicalName": "OracleRelay",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          48815,
+          53928
+        ],
+        "name": "OracleRelay",
+        "nameLocation": "145:11:78",
+        "scope": 48816,
+        "usedErrors": [
+          53898
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 78
+}

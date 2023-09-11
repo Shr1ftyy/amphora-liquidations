@@ -1,0 +1,4932 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "Roles_Unauthorized",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_EmptyReserve",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_InsufficientFunds",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_NotEnoughBalance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_OnlyPauser",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "USDA_ZeroAmount",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_totalSupply",
+          "type": "uint256"
+        }
+      ],
+      "name": "Donation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_pauser",
+          "type": "address"
+        }
+      ],
+      "name": "PauserSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RecoveredDust",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "VaultControllerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "VaultControllerRemoved",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "VaultControllerRemovedFromList",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "VaultControllerTransfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "addVaultController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        }
+      ],
+      "name": "depositTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "donate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getRoleAdmin",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "grantRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "hasRole",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pauser",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_pauser",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "recoverDust",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "removeVaultController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "name": "removeVaultControllerFromList",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "renounceRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reserveAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_reserveAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reserveRatio",
+      "outputs": [
+        {
+          "internalType": "uint192",
+          "name": "_reserveRatio",
+          "type": "uint192"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "revokeRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "sUSD",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_sUSD",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pauser",
+          "type": "address"
+        }
+      ],
+      "name": "setPauser",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "vaultControllerBurn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "vaultControllerDonate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "vaultControllerMint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "vaultControllerTransfer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawAll",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdWithdrawn",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawAllTo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdWithdrawn",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_susdAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_target",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "addVaultController(address)": "c6582ab6",
+    "allowance(address,address)": "dd62ed3e",
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "burn(uint256)": "42966c68",
+    "decimals()": "313ce567",
+    "deposit(uint256)": "b6b55f25",
+    "depositTo(uint256,address)": "70aff70f",
+    "donate(uint256)": "f14faf6f",
+    "getRoleAdmin(bytes32)": "248a9ca3",
+    "grantRole(bytes32,address)": "2f2ff15d",
+    "hasRole(bytes32,address)": "91d14854",
+    "mint(uint256)": "a0712d68",
+    "name()": "06fdde03",
+    "pause()": "8456cb59",
+    "pauser()": "9fd0506d",
+    "recoverDust(address)": "a0c06175",
+    "removeVaultController(address)": "4ce82325",
+    "removeVaultControllerFromList(address)": "a666e8d8",
+    "renounceRole(bytes32,address)": "36568abe",
+    "reserveAmount()": "4b09b72a",
+    "reserveRatio()": "0c7d5cd8",
+    "revokeRole(bytes32,address)": "d547741f",
+    "sUSD()": "9324cac7",
+    "setPauser(address)": "2d88af4a",
+    "symbol()": "95d89b41",
+    "totalSupply()": "18160ddd",
+    "transfer(address,uint256)": "a9059cbb",
+    "transferFrom(address,address,uint256)": "23b872dd",
+    "unpause()": "3f4ba83a",
+    "vaultControllerBurn(address,uint256)": "178a6670",
+    "vaultControllerDonate(uint256)": "c99d6f01",
+    "vaultControllerMint(address,uint256)": "0522658d",
+    "vaultControllerTransfer(address,uint256)": "da5b9a19",
+    "withdraw(uint256)": "2e1a7d4d",
+    "withdrawAll()": "853828b6",
+    "withdrawAllTo(address)": "ca9add8f",
+    "withdrawTo(uint256,address)": "c86283c8"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_role\",\"type\":\"bytes32\"}],\"name\":\"Roles_Unauthorized\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"USDA_EmptyReserve\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"USDA_InsufficientFunds\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"USDA_NotEnoughBalance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"USDA_OnlyPauser\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"USDA_ZeroAmount\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Burn\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_totalSupply\",\"type\":\"uint256\"}],\"name\":\"Donation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Mint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_pauser\",\"type\":\"address\"}],\"name\":\"PauserSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"RecoveredDust\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"previousAdminRole\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"newAdminRole\",\"type\":\"bytes32\"}],\"name\":\"RoleAdminChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleGranted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"}],\"name\":\"RoleRevoked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"VaultControllerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"VaultControllerRemoved\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"VaultControllerRemovedFromList\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"VaultControllerTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"addVaultController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"}],\"name\":\"depositTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"donate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"}],\"name\":\"getRoleAdmin\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"grantRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"hasRole\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pauser\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_pauser\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"recoverDust\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"removeVaultController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"name\":\"removeVaultControllerFromList\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"renounceRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"reserveAmount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_reserveAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"reserveRatio\",\"outputs\":[{\"internalType\":\"uint192\",\"name\":\"_reserveRatio\",\"type\":\"uint192\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"role\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"revokeRole\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"sUSD\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_sUSD\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pauser\",\"type\":\"address\"}],\"name\":\"setPauser\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"vaultControllerBurn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"vaultControllerDonate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"vaultControllerMint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"vaultControllerTransfer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawAll\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdWithdrawn\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"}],\"name\":\"withdrawAllTo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdWithdrawn\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_susdAmount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_target\",\"type\":\"address\"}],\"name\":\"withdrawTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Burn(address,uint256)\":{\"params\":{\"_from\":\"The address which made the burn\",\"_value\":\"The value burned\"}},\"Deposit(address,uint256)\":{\"params\":{\"_from\":\"The address which made the deposit\",\"_value\":\"The value deposited\"}},\"Donation(address,uint256,uint256)\":{\"params\":{\"_from\":\"The address which made the donation\",\"_totalSupply\":\"The new total supply\",\"_value\":\"The value of the donation\"}},\"Mint(address,uint256)\":{\"params\":{\"_to\":\"The address which made the mint\",\"_value\":\"The value minted\"}},\"PauserSet(address)\":{\"params\":{\"_pauser\":\"The new pauser address\"}},\"RecoveredDust(address,uint256)\":{\"params\":{\"_amount\":\"The value recovered\",\"_receiver\":\"The address which made the recover\"}},\"VaultControllerAdded(address)\":{\"params\":{\"_vaultController\":\"The address of the vault controller\"}},\"VaultControllerRemoved(address)\":{\"params\":{\"_vaultController\":\"The address of the vault controller\"}},\"VaultControllerRemovedFromList(address)\":{\"params\":{\"_vaultController\":\"The address of the vault controller\"}},\"VaultControllerTransfer(address,uint256)\":{\"params\":{\"_susdAmount\":\"The amount sent\",\"_target\":\"The receiver of the transfer\"}},\"Withdraw(address,uint256)\":{\"params\":{\"_from\":\"The address which made the withdraw\",\"_value\":\"The value withdrawn\"}}},\"kind\":\"dev\",\"methods\":{\"addVaultController(address)\":{\"params\":{\"_vaultController\":\"The new vault controller to add\"}},\"allowance(address,address)\":{\"details\":\"Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called.\"},\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the amount of tokens owned by `account`.\"},\"burn(uint256)\":{\"params\":{\"_susdAmount\":\"The amount of USDA to burn, denominated in sUSD\"}},\"decimals()\":{\"details\":\"Returns the decimals places of the token.\"},\"deposit(uint256)\":{\"details\":\"Caller should obtain 1 USDA for each sUSD the calculations for deposit mimic the calculations done by mint in the ampleforth contract, simply with the susd transfer 'fragments' are the units that we see, so 1000 fragments == 1000 USDA 'gons' are the internal accounting unit, used to keep scale. We use the variable _gonsPerFragment in order to convert between the two try dimensional analysis when doing the math in order to verify units are correct\",\"params\":{\"_susdAmount\":\"The amount of sUSD to deposit\"}},\"depositTo(uint256,address)\":{\"params\":{\"_susdAmount\":\"The amount of sUSD to deposit\",\"_target\":\"The address to receive the USDA tokens\"}},\"donate(uint256)\":{\"params\":{\"_susdAmount\":\"The amount of sUSD to donate\"}},\"getRoleAdmin(bytes32)\":{\"details\":\"Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {AccessControl-_setRoleAdmin}.\"},\"grantRole(bytes32,address)\":{\"details\":\"Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role.\"},\"hasRole(bytes32,address)\":{\"details\":\"Returns `true` if `account` has been granted `role`.\"},\"mint(uint256)\":{\"params\":{\"_susdAmount\":\"The amount of USDA to mint, denominated in sUSD\"}},\"name()\":{\"details\":\"Returns the name of the token.\"},\"pause()\":{\"details\":\"Can only be called by the pauser\"},\"recoverDust(address)\":{\"params\":{\"_to\":\"The receiver of the dust\"}},\"removeVaultController(address)\":{\"params\":{\"_vaultController\":\"The vault controller to remove\"}},\"removeVaultControllerFromList(address)\":{\"params\":{\"_vaultController\":\"The vault controller to remove\"}},\"renounceRole(bytes32,address)\":{\"details\":\"Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`.\"},\"reserveAmount()\":{\"returns\":{\"_reserveAmount\":\"The reserve amount\"}},\"reserveRatio()\":{\"returns\":{\"_reserveRatio\":\"The reserve ratio\"}},\"revokeRole(bytes32,address)\":{\"details\":\"Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role.\"},\"sUSD()\":{\"returns\":{\"_sUSD\":\"The sUSD contract\"}},\"setPauser(address)\":{\"details\":\"The pauser is a separate role from the owner\"},\"symbol()\":{\"details\":\"Returns the symbol of the token.\"},\"totalSupply()\":{\"details\":\"Returns the amount of tokens in existence.\"},\"transfer(address,uint256)\":{\"details\":\"Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"unpause()\":{\"details\":\"Can only be called by the pauser\"},\"vaultControllerBurn(address,uint256)\":{\"params\":{\"_amount\":\"The amount of USDA to burn\",\"_target\":\"The address to burn the USDA from\"}},\"vaultControllerDonate(uint256)\":{\"params\":{\"_amount\":\"The amount of USDA (e18) to donate\"}},\"vaultControllerMint(address,uint256)\":{\"params\":{\"_amount\":\"The amount of USDA to mint\",\"_target\":\"The address to mint the USDA to\"}},\"vaultControllerTransfer(address,uint256)\":{\"params\":{\"_susdAmount\":\"The amount of sUSD to send\",\"_target\":\"The address to receive the sUSD from reserve\"}},\"withdraw(uint256)\":{\"details\":\"The caller should obtain 1 sUSD for every 1 USDA\",\"params\":{\"_susdAmount\":\"The amount of sUSD to withdraw\"}},\"withdrawAll()\":{\"details\":\"The caller should obtain 1 sUSD for every 1 USDAThis function is effectively just withdraw, but we calculate the amount for the sender\",\"params\":{\"_susdWithdrawn\":\"The amount os sUSD withdrawn\"}},\"withdrawAllTo(address)\":{\"details\":\"This function is effectively just withdraw, but we calculate the amount for the _target\",\"params\":{\"_susdWithdrawn\":\"The amount os sUSD withdrawn\",\"_target\":\"should obtain 1 sUSD for every 1 USDA burned from caller\"}},\"withdrawTo(uint256,address)\":{\"details\":\"The _target address should obtain 1 sUSD for every 1 USDA burned from the caller\",\"params\":{\"_susdAmount\":\"amount of sUSD to withdraw\",\"_target\":\"address to receive the sUSD\"}}},\"title\":\"USDA Interface\",\"version\":1},\"userdoc\":{\"errors\":{\"Roles_Unauthorized(address,bytes32)\":[{\"notice\":\"Thrown when the caller of the function is not an authorized role\"}],\"USDA_EmptyReserve()\":[{\"notice\":\"Thrown when trying to withdraw all but the reserve amount is 0\"}],\"USDA_InsufficientFunds()\":[{\"notice\":\"Thrown when trying to withdraw more than the balance\"}],\"USDA_NotEnoughBalance()\":[{\"notice\":\"Thrown when vault controller is trying to burn more than the balance\"}],\"USDA_OnlyPauser()\":[{\"notice\":\"Thrown when _msgSender is not the pauser of the contract\"}],\"USDA_ZeroAmount()\":[{\"notice\":\"Thrown when trying to deposit zero amount\"}]},\"events\":{\"Burn(address,uint256)\":{\"notice\":\"Emitted when a burn is made\"},\"Deposit(address,uint256)\":{\"notice\":\"Emitted when a deposit is made\"},\"Donation(address,uint256,uint256)\":{\"notice\":\"Emitted when a donation is made\"},\"Mint(address,uint256)\":{\"notice\":\"Emitted when a mint is made\"},\"PauserSet(address)\":{\"notice\":\"Emitted when the owner sets a pauser\"},\"RecoveredDust(address,uint256)\":{\"notice\":\"Emitted when the owner recovers dust\"},\"VaultControllerAdded(address)\":{\"notice\":\"Emitted when the owner adds a new vaultController giving special roles\"},\"VaultControllerRemoved(address)\":{\"notice\":\"Emitted when the owner removes a vaultController removing special roles\"},\"VaultControllerRemovedFromList(address)\":{\"notice\":\"Emitted when the owner removes a vaultController from the list\"},\"VaultControllerTransfer(address,uint256)\":{\"notice\":\"Emitted when a sUSD transfer is made from the vaultController\"},\"Withdraw(address,uint256)\":{\"notice\":\"Emitted when a withdraw is made\"}},\"kind\":\"user\",\"methods\":{\"addVaultController(address)\":{\"notice\":\"Adds a new vault controller\"},\"burn(uint256)\":{\"notice\":\"Admin function to burn USDA\"},\"deposit(uint256)\":{\"notice\":\"Deposit sUSD to mint USDA\"},\"depositTo(uint256,address)\":{\"notice\":\"Deposits sUSD to mint USDA and transfer to a different address\"},\"donate(uint256)\":{\"notice\":\"Donates susd to the protocol reserve\"},\"mint(uint256)\":{\"notice\":\"Admin function to mint USDA\"},\"pause()\":{\"notice\":\"Pause contract\"},\"pauser()\":{\"notice\":\"The address of the pauser\"},\"recoverDust(address)\":{\"notice\":\"Recovers accidentally sent sUSD to this contract\"},\"removeVaultController(address)\":{\"notice\":\"Removes a vault controller\"},\"removeVaultControllerFromList(address)\":{\"notice\":\"Removes a vault controller from the loop list\"},\"reserveAmount()\":{\"notice\":\"Returns the reserve amount\"},\"reserveRatio()\":{\"notice\":\"Returns the reserve ratio\"},\"sUSD()\":{\"notice\":\"Returns sUSD contract (reserve)\"},\"setPauser(address)\":{\"notice\":\"Sets the pauser for both USDA and VaultController\"},\"unpause()\":{\"notice\":\"Unpause contract, pauser only\"},\"vaultControllerBurn(address,uint256)\":{\"notice\":\"Function for the vaultController to burn\"},\"vaultControllerDonate(uint256)\":{\"notice\":\"Function for the vaultController to scale all USDA balances\"},\"vaultControllerMint(address,uint256)\":{\"notice\":\"Function for the vaultController to mint\"},\"vaultControllerTransfer(address,uint256)\":{\"notice\":\"Allows VaultController to send sUSD from the reserve\"},\"withdraw(uint256)\":{\"notice\":\"Withdraw sUSD by burning USDA\"},\"withdrawAll()\":{\"notice\":\"Withdraw sUSD by burning USDA\"},\"withdrawAllTo(address)\":{\"notice\":\"Withdraw sUSD by burning USDA\"},\"withdrawTo(uint256,address)\":{\"notice\":\"Withdraw sUSD to a specific address by burning USDA from the caller\"}},\"notice\":\"extends IERC20Metadata\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/core/IUSDA.sol\":\"IUSDA\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/access/IAccessControl.sol\":{\"keccak256\":\"0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a\",\"dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol\":{\"keccak256\":\"0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd\",\"dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8\"]},\"solidity/interfaces/core/IUSDA.sol\":{\"keccak256\":\"0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527\",\"dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19\"]},\"solidity/interfaces/utils/IRoles.sol\":{\"keccak256\":\"0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073\",\"dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_account",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_role",
+              "type": "bytes32"
+            }
+          ],
+          "type": "error",
+          "name": "Roles_Unauthorized"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "USDA_EmptyReserve"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "USDA_InsufficientFunds"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "USDA_NotEnoughBalance"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "USDA_OnlyPauser"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "USDA_ZeroAmount"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Approval",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Burn",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Deposit",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_totalSupply",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Donation",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Mint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_pauser",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "PauserSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_receiver",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "RecoveredDust",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "previousAdminRole",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "bytes32",
+              "name": "newAdminRole",
+              "type": "bytes32",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "RoleAdminChanged",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "RoleGranted",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "RoleRevoked",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Transfer",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerAdded",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerRemoved",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address",
+              "indexed": true
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerRemovedFromList",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerTransfer",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Withdraw",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "addVaultController"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burn"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "decimals",
+          "outputs": [
+            {
+              "internalType": "uint8",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deposit"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "depositTo"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "donate"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getRoleAdmin",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "grantRole"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "hasRole",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "name",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "pause"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "pauser",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_pauser",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "recoverDust"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeVaultController"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeVaultControllerFromList"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "renounceRole"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "reserveAmount",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_reserveAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "reserveRatio",
+          "outputs": [
+            {
+              "internalType": "uint192",
+              "name": "_reserveRatio",
+              "type": "uint192"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes32",
+              "name": "role",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "revokeRole"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "sUSD",
+          "outputs": [
+            {
+              "internalType": "contract IERC20",
+              "name": "_sUSD",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_pauser",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setPauser"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "symbol",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "unpause"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "vaultControllerBurn"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "vaultControllerDonate"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "vaultControllerMint"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "vaultControllerTransfer"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdraw"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawAll",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdWithdrawn",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawAllTo",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdWithdrawn",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_susdAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "_target",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawTo"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "addVaultController(address)": {
+            "params": {
+              "_vaultController": "The new vault controller to add"
+            }
+          },
+          "allowance(address,address)": {
+            "details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+          },
+          "approve(address,uint256)": {
+            "details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+          },
+          "balanceOf(address)": {
+            "details": "Returns the amount of tokens owned by `account`."
+          },
+          "burn(uint256)": {
+            "params": {
+              "_susdAmount": "The amount of USDA to burn, denominated in sUSD"
+            }
+          },
+          "decimals()": {
+            "details": "Returns the decimals places of the token."
+          },
+          "deposit(uint256)": {
+            "details": "Caller should obtain 1 USDA for each sUSD the calculations for deposit mimic the calculations done by mint in the ampleforth contract, simply with the susd transfer 'fragments' are the units that we see, so 1000 fragments == 1000 USDA 'gons' are the internal accounting unit, used to keep scale. We use the variable _gonsPerFragment in order to convert between the two try dimensional analysis when doing the math in order to verify units are correct",
+            "params": {
+              "_susdAmount": "The amount of sUSD to deposit"
+            }
+          },
+          "depositTo(uint256,address)": {
+            "params": {
+              "_susdAmount": "The amount of sUSD to deposit",
+              "_target": "The address to receive the USDA tokens"
+            }
+          },
+          "donate(uint256)": {
+            "params": {
+              "_susdAmount": "The amount of sUSD to donate"
+            }
+          },
+          "getRoleAdmin(bytes32)": {
+            "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {AccessControl-_setRoleAdmin}."
+          },
+          "grantRole(bytes32,address)": {
+            "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+          },
+          "hasRole(bytes32,address)": {
+            "details": "Returns `true` if `account` has been granted `role`."
+          },
+          "mint(uint256)": {
+            "params": {
+              "_susdAmount": "The amount of USDA to mint, denominated in sUSD"
+            }
+          },
+          "name()": {
+            "details": "Returns the name of the token."
+          },
+          "pause()": {
+            "details": "Can only be called by the pauser"
+          },
+          "recoverDust(address)": {
+            "params": {
+              "_to": "The receiver of the dust"
+            }
+          },
+          "removeVaultController(address)": {
+            "params": {
+              "_vaultController": "The vault controller to remove"
+            }
+          },
+          "removeVaultControllerFromList(address)": {
+            "params": {
+              "_vaultController": "The vault controller to remove"
+            }
+          },
+          "renounceRole(bytes32,address)": {
+            "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+          },
+          "reserveAmount()": {
+            "returns": {
+              "_reserveAmount": "The reserve amount"
+            }
+          },
+          "reserveRatio()": {
+            "returns": {
+              "_reserveRatio": "The reserve ratio"
+            }
+          },
+          "revokeRole(bytes32,address)": {
+            "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+          },
+          "sUSD()": {
+            "returns": {
+              "_sUSD": "The sUSD contract"
+            }
+          },
+          "setPauser(address)": {
+            "details": "The pauser is a separate role from the owner"
+          },
+          "symbol()": {
+            "details": "Returns the symbol of the token."
+          },
+          "totalSupply()": {
+            "details": "Returns the amount of tokens in existence."
+          },
+          "transfer(address,uint256)": {
+            "details": "Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+          },
+          "transferFrom(address,address,uint256)": {
+            "details": "Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+          },
+          "unpause()": {
+            "details": "Can only be called by the pauser"
+          },
+          "vaultControllerBurn(address,uint256)": {
+            "params": {
+              "_amount": "The amount of USDA to burn",
+              "_target": "The address to burn the USDA from"
+            }
+          },
+          "vaultControllerDonate(uint256)": {
+            "params": {
+              "_amount": "The amount of USDA (e18) to donate"
+            }
+          },
+          "vaultControllerMint(address,uint256)": {
+            "params": {
+              "_amount": "The amount of USDA to mint",
+              "_target": "The address to mint the USDA to"
+            }
+          },
+          "vaultControllerTransfer(address,uint256)": {
+            "params": {
+              "_susdAmount": "The amount of sUSD to send",
+              "_target": "The address to receive the sUSD from reserve"
+            }
+          },
+          "withdraw(uint256)": {
+            "details": "The caller should obtain 1 sUSD for every 1 USDA",
+            "params": {
+              "_susdAmount": "The amount of sUSD to withdraw"
+            }
+          },
+          "withdrawAll()": {
+            "details": "The caller should obtain 1 sUSD for every 1 USDAThis function is effectively just withdraw, but we calculate the amount for the sender",
+            "params": {
+              "_susdWithdrawn": "The amount os sUSD withdrawn"
+            }
+          },
+          "withdrawAllTo(address)": {
+            "details": "This function is effectively just withdraw, but we calculate the amount for the _target",
+            "params": {
+              "_susdWithdrawn": "The amount os sUSD withdrawn",
+              "_target": "should obtain 1 sUSD for every 1 USDA burned from caller"
+            }
+          },
+          "withdrawTo(uint256,address)": {
+            "details": "The _target address should obtain 1 sUSD for every 1 USDA burned from the caller",
+            "params": {
+              "_susdAmount": "amount of sUSD to withdraw",
+              "_target": "address to receive the sUSD"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "addVaultController(address)": {
+            "notice": "Adds a new vault controller"
+          },
+          "burn(uint256)": {
+            "notice": "Admin function to burn USDA"
+          },
+          "deposit(uint256)": {
+            "notice": "Deposit sUSD to mint USDA"
+          },
+          "depositTo(uint256,address)": {
+            "notice": "Deposits sUSD to mint USDA and transfer to a different address"
+          },
+          "donate(uint256)": {
+            "notice": "Donates susd to the protocol reserve"
+          },
+          "mint(uint256)": {
+            "notice": "Admin function to mint USDA"
+          },
+          "pause()": {
+            "notice": "Pause contract"
+          },
+          "pauser()": {
+            "notice": "The address of the pauser"
+          },
+          "recoverDust(address)": {
+            "notice": "Recovers accidentally sent sUSD to this contract"
+          },
+          "removeVaultController(address)": {
+            "notice": "Removes a vault controller"
+          },
+          "removeVaultControllerFromList(address)": {
+            "notice": "Removes a vault controller from the loop list"
+          },
+          "reserveAmount()": {
+            "notice": "Returns the reserve amount"
+          },
+          "reserveRatio()": {
+            "notice": "Returns the reserve ratio"
+          },
+          "sUSD()": {
+            "notice": "Returns sUSD contract (reserve)"
+          },
+          "setPauser(address)": {
+            "notice": "Sets the pauser for both USDA and VaultController"
+          },
+          "unpause()": {
+            "notice": "Unpause contract, pauser only"
+          },
+          "vaultControllerBurn(address,uint256)": {
+            "notice": "Function for the vaultController to burn"
+          },
+          "vaultControllerDonate(uint256)": {
+            "notice": "Function for the vaultController to scale all USDA balances"
+          },
+          "vaultControllerMint(address,uint256)": {
+            "notice": "Function for the vaultController to mint"
+          },
+          "vaultControllerTransfer(address,uint256)": {
+            "notice": "Allows VaultController to send sUSD from the reserve"
+          },
+          "withdraw(uint256)": {
+            "notice": "Withdraw sUSD by burning USDA"
+          },
+          "withdrawAll()": {
+            "notice": "Withdraw sUSD by burning USDA"
+          },
+          "withdrawAllTo(address)": {
+            "notice": "Withdraw sUSD by burning USDA"
+          },
+          "withdrawTo(uint256,address)": {
+            "notice": "Withdraw sUSD to a specific address by burning USDA from the caller"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/core/IUSDA.sol": "IUSDA"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+        "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+        "urls": [
+          "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+          "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+        "keccak256": "0x8de418a5503946cabe331f35fe242d3201a73f67f77aaeb7110acb1f30423aca",
+        "urls": [
+          "bzz-raw://5a376d3dda2cb70536c0a45c208b29b34ac560c4cb4f513a42079f96ba47d2dd",
+          "dweb:/ipfs/QmZQg6gn1sUpM8wHzwNvSnihumUCAhxD119MpXeKp8B9s8"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IUSDA.sol": {
+        "keccak256": "0x03559ddd88cc0c3c1bd4f324c37e22adfe17c05599c426068860559ea907baa0",
+        "urls": [
+          "bzz-raw://960bbfca799f0fcb768bcb7f448364e0965de232fb04df5d9e1859d5fc998527",
+          "dweb:/ipfs/QmZF5KyL6q273ic4mZKD7Ta4e4ej6knt6fhBLSK2Wg1d19"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/utils/IRoles.sol": {
+        "keccak256": "0x9913e117d34f9bebf05bb72df625823b1b1678b2ec4af304a3e18ae019ac0123",
+        "urls": [
+          "bzz-raw://ce92c219afd5650ee337faa4ce270f884d5168f083012b9977f63584a1799073",
+          "dweb:/ipfs/QmSLYiUxdJjtxAcHn2CgEnQpKzYScRBDu37apgHovgNYF6"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/core/IUSDA.sol",
+    "id": 51858,
+    "exportedSymbols": {
+      "IERC20": [
+        2726
+      ],
+      "IERC20Metadata": [
+        3505
+      ],
+      "IRoles": [
+        54234
+      ],
+      "IUSDA": [
+        51857
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:9143:90",
+    "nodes": [
+      {
+        "id": 51606,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:90",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 51608,
+        "nodeType": "ImportDirective",
+        "src": "57:52:90",
+        "absolutePath": "solidity/interfaces/utils/IRoles.sol",
+        "file": "@interfaces/utils/IRoles.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 51858,
+        "sourceUnit": 54235,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51607,
+              "name": "IRoles",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 54234,
+              "src": "65:6:90",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51610,
+        "nodeType": "ImportDirective",
+        "src": "111:97:90",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 51858,
+        "sourceUnit": 3506,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51609,
+              "name": "IERC20Metadata",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 3505,
+              "src": "119:14:90",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51612,
+        "nodeType": "ImportDirective",
+        "src": "209:70:90",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 51858,
+        "sourceUnit": 2727,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 51611,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2726,
+              "src": "217:6:90",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 51857,
+        "nodeType": "ContractDefinition",
+        "src": "342:8832:90",
+        "nodes": [
+          {
+            "id": 51624,
+            "nodeType": "EventDefinition",
+            "src": "710:53:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51618,
+              "nodeType": "StructuredDocumentation",
+              "src": "562:145:90",
+              "text": " @notice Emitted when a deposit is made\n @param _from The address which made the deposit\n @param _value The value deposited"
+            },
+            "eventSelector": "e1fffcc4923d04b559f4d29a8bfc6cda04eb5b0d3c460751c2402c5c5cc9109c",
+            "name": "Deposit",
+            "nameLocation": "716:7:90",
+            "parameters": {
+              "id": 51623,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51620,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "740:5:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51624,
+                  "src": "724:21:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51619,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "724:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51622,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "755:6:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51624,
+                  "src": "747:14:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51621,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "723:39:90"
+            }
+          },
+          {
+            "id": 51631,
+            "nodeType": "EventDefinition",
+            "src": "917:54:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51625,
+              "nodeType": "StructuredDocumentation",
+              "src": "767:147:90",
+              "text": " @notice Emitted when a withdraw is made\n @param _from The address which made the withdraw\n @param _value The value withdrawn"
+            },
+            "eventSelector": "884edad9ce6fa2440d8a54cc123490eb96d2768479d49ff9c7366125a9424364",
+            "name": "Withdraw",
+            "nameLocation": "923:8:90",
+            "parameters": {
+              "id": 51630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51627,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "948:5:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51631,
+                  "src": "932:21:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51626,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "932:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51629,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "963:6:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51631,
+                  "src": "955:14:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:39:90"
+            }
+          },
+          {
+            "id": 51638,
+            "nodeType": "EventDefinition",
+            "src": "1112:40:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51632,
+              "nodeType": "StructuredDocumentation",
+              "src": "975:134:90",
+              "text": " @notice Emitted when a mint is made\n @param _to The address which made the mint\n @param _value The value minted"
+            },
+            "eventSelector": "0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885",
+            "name": "Mint",
+            "nameLocation": "1118:4:90",
+            "parameters": {
+              "id": 51637,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51634,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "1131:3:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51638,
+                  "src": "1123:11:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51633,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1123:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51636,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1144:6:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51638,
+                  "src": "1136:14:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51635,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1136:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1122:29:90"
+            }
+          },
+          {
+            "id": 51645,
+            "nodeType": "EventDefinition",
+            "src": "1295:42:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51639,
+              "nodeType": "StructuredDocumentation",
+              "src": "1156:136:90",
+              "text": " @notice Emitted when a burn is made\n @param _from The address which made the burn\n @param _value The value burned"
+            },
+            "eventSelector": "cc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5",
+            "name": "Burn",
+            "nameLocation": "1301:4:90",
+            "parameters": {
+              "id": 51644,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51641,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "1314:5:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51645,
+                  "src": "1306:13:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51640,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1306:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51643,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1329:6:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51645,
+                  "src": "1321:14:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51642,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1321:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1305:31:90"
+            }
+          },
+          {
+            "id": 51654,
+            "nodeType": "EventDefinition",
+            "src": "1543:76:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51646,
+              "nodeType": "StructuredDocumentation",
+              "src": "1341:199:90",
+              "text": " @notice Emitted when a donation is made\n @param _from The address which made the donation\n @param _value The value of the donation\n @param _totalSupply The new total supply"
+            },
+            "eventSelector": "106aac375bbcf013d1e52338bbf9e740009a1a3a6869f8daa1b72aa1620f5fec",
+            "name": "Donation",
+            "nameLocation": "1549:8:90",
+            "parameters": {
+              "id": 51653,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51648,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "1574:5:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51654,
+                  "src": "1558:21:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51647,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1558:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51650,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1589:6:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51654,
+                  "src": "1581:14:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51649,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1581:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51652,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_totalSupply",
+                  "nameLocation": "1605:12:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51654,
+                  "src": "1597:20:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51651,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1597:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1557:61:90"
+            }
+          },
+          {
+            "id": 51661,
+            "nodeType": "EventDefinition",
+            "src": "1782:64:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51655,
+              "nodeType": "StructuredDocumentation",
+              "src": "1623:156:90",
+              "text": " @notice Emitted when the owner recovers dust\n @param _receiver The address which made the recover\n @param _amount The value recovered"
+            },
+            "eventSelector": "642fca929ef22fbfc51bde157f3abf422d5d6809d15a5200235c455550d59aa2",
+            "name": "RecoveredDust",
+            "nameLocation": "1788:13:90",
+            "parameters": {
+              "id": 51660,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51657,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_receiver",
+                  "nameLocation": "1818:9:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51661,
+                  "src": "1802:25:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51656,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1802:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51659,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "1837:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51661,
+                  "src": "1829:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51658,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1829:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1801:44:90"
+            }
+          },
+          {
+            "id": 51666,
+            "nodeType": "EventDefinition",
+            "src": "1955:41:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51662,
+              "nodeType": "StructuredDocumentation",
+              "src": "1850:102:90",
+              "text": " @notice Emitted when the owner sets a pauser\n @param _pauser The new pauser address"
+            },
+            "eventSelector": "d11d57c2c7468878b1035df11c670bcd0091aa840bf8aa166365397622237bea",
+            "name": "PauserSet",
+            "nameLocation": "1961:9:90",
+            "parameters": {
+              "id": 51665,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51664,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_pauser",
+                  "nameLocation": "1987:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51666,
+                  "src": "1971:23:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51663,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1971:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1970:25:90"
+            }
+          },
+          {
+            "id": 51673,
+            "nodeType": "EventDefinition",
+            "src": "2176:68:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51667,
+              "nodeType": "StructuredDocumentation",
+              "src": "2000:173:90",
+              "text": " @notice Emitted when a sUSD transfer is made from the vaultController\n @param _target The receiver of the transfer\n @param _susdAmount The amount sent"
+            },
+            "eventSelector": "5586f03d36676dd81738ed81d8211aeca3715d9e4c286c14a92c495a6a2997fb",
+            "name": "VaultControllerTransfer",
+            "nameLocation": "2182:23:90",
+            "parameters": {
+              "id": 51672,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51669,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "2214:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51673,
+                  "src": "2206:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51668,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2206:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51671,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "2231:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51673,
+                  "src": "2223:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51670,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2223:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2205:38:90"
+            }
+          },
+          {
+            "id": 51678,
+            "nodeType": "EventDefinition",
+            "src": "2409:61:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51674,
+              "nodeType": "StructuredDocumentation",
+              "src": "2248:158:90",
+              "text": " @notice Emitted when the owner adds a new vaultController giving special roles\n @param _vaultController The address of the vault controller"
+            },
+            "eventSelector": "03be5bd03bd43a3a8973fd80cc60937c0c0fe1148528c1011e7f6ee5232d0f3b",
+            "name": "VaultControllerAdded",
+            "nameLocation": "2415:20:90",
+            "parameters": {
+              "id": 51677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51676,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "2452:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51678,
+                  "src": "2436:32:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2436:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2435:34:90"
+            }
+          },
+          {
+            "id": 51683,
+            "nodeType": "EventDefinition",
+            "src": "2636:63:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51679,
+              "nodeType": "StructuredDocumentation",
+              "src": "2474:159:90",
+              "text": " @notice Emitted when the owner removes a vaultController removing special roles\n @param _vaultController The address of the vault controller"
+            },
+            "eventSelector": "a427665fe140cd3507bd92a431a5a0fd132120b45cb4907679be682dc2ce6dc0",
+            "name": "VaultControllerRemoved",
+            "nameLocation": "2642:22:90",
+            "parameters": {
+              "id": 51682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51681,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "2681:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51683,
+                  "src": "2665:32:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51680,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2665:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2664:34:90"
+            }
+          },
+          {
+            "id": 51688,
+            "nodeType": "EventDefinition",
+            "src": "2856:71:90",
+            "anonymous": false,
+            "documentation": {
+              "id": 51684,
+              "nodeType": "StructuredDocumentation",
+              "src": "2703:150:90",
+              "text": " @notice Emitted when the owner removes a vaultController from the list\n @param _vaultController The address of the vault controller"
+            },
+            "eventSelector": "0d92cca2b29a1d6729665f37c505673c1815c21bbe634987b51be97651ef50e5",
+            "name": "VaultControllerRemovedFromList",
+            "nameLocation": "2862:30:90",
+            "parameters": {
+              "id": 51687,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51686,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "2909:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51688,
+                  "src": "2893:32:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51685,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2893:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2892:34:90"
+            }
+          },
+          {
+            "id": 51691,
+            "nodeType": "ErrorDefinition",
+            "src": "3162:24:90",
+            "documentation": {
+              "id": 51689,
+              "nodeType": "StructuredDocumentation",
+              "src": "3106:53:90",
+              "text": "@notice Thrown when trying to deposit zero amount"
+            },
+            "errorSelector": "97adf106",
+            "name": "USDA_ZeroAmount",
+            "nameLocation": "3168:15:90",
+            "parameters": {
+              "id": 51690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3183:2:90"
+            }
+          },
+          {
+            "id": 51694,
+            "nodeType": "ErrorDefinition",
+            "src": "3257:31:90",
+            "documentation": {
+              "id": 51692,
+              "nodeType": "StructuredDocumentation",
+              "src": "3190:64:90",
+              "text": "@notice Thrown when trying to withdraw more than the balance"
+            },
+            "errorSelector": "a8dc2e7c",
+            "name": "USDA_InsufficientFunds",
+            "nameLocation": "3263:22:90",
+            "parameters": {
+              "id": 51693,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3285:2:90"
+            }
+          },
+          {
+            "id": 51697,
+            "nodeType": "ErrorDefinition",
+            "src": "3369:26:90",
+            "documentation": {
+              "id": 51695,
+              "nodeType": "StructuredDocumentation",
+              "src": "3292:74:90",
+              "text": "@notice Thrown when trying to withdraw all but the reserve amount is 0"
+            },
+            "errorSelector": "dbcec22a",
+            "name": "USDA_EmptyReserve",
+            "nameLocation": "3375:17:90",
+            "parameters": {
+              "id": 51696,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3392:2:90"
+            }
+          },
+          {
+            "id": 51700,
+            "nodeType": "ErrorDefinition",
+            "src": "3470:24:90",
+            "documentation": {
+              "id": 51698,
+              "nodeType": "StructuredDocumentation",
+              "src": "3399:68:90",
+              "text": "@notice Thrown when _msgSender is not the pauser of the contract"
+            },
+            "errorSelector": "1de95369",
+            "name": "USDA_OnlyPauser",
+            "nameLocation": "3476:15:90",
+            "parameters": {
+              "id": 51699,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3491:2:90"
+            }
+          },
+          {
+            "id": 51703,
+            "nodeType": "ErrorDefinition",
+            "src": "3581:30:90",
+            "documentation": {
+              "id": 51701,
+              "nodeType": "StructuredDocumentation",
+              "src": "3498:80:90",
+              "text": "@notice Thrown when vault controller is trying to burn more than the balance"
+            },
+            "errorSelector": "25a19f9d",
+            "name": "USDA_NotEnoughBalance",
+            "nameLocation": "3587:21:90",
+            "parameters": {
+              "id": 51702,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3608:2:90"
+            }
+          },
+          {
+            "id": 51710,
+            "nodeType": "FunctionDefinition",
+            "src": "3875:53:90",
+            "documentation": {
+              "id": 51704,
+              "nodeType": "StructuredDocumentation",
+              "src": "3791:81:90",
+              "text": "@notice Returns sUSD contract (reserve)\n @return _sUSD The sUSD contract"
+            },
+            "functionSelector": "9324cac7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sUSD",
+            "nameLocation": "3884:4:90",
+            "parameters": {
+              "id": 51705,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3888:2:90"
+            },
+            "returnParameters": {
+              "id": 51709,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51708,
+                  "mutability": "mutable",
+                  "name": "_sUSD",
+                  "nameLocation": "3921:5:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51710,
+                  "src": "3914:12:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$2726",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "id": 51707,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 51706,
+                      "name": "IERC20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2726,
+                      "src": "3914:6:90"
+                    },
+                    "referencedDeclaration": 2726,
+                    "src": "3914:6:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$2726",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3913:14:90"
+            },
+            "scope": 51857,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51716,
+            "nodeType": "FunctionDefinition",
+            "src": "4018:70:90",
+            "documentation": {
+              "id": 51711,
+              "nodeType": "StructuredDocumentation",
+              "src": "3932:83:90",
+              "text": "@notice Returns the reserve ratio\n @return _reserveRatio The reserve ratio"
+            },
+            "functionSelector": "0c7d5cd8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reserveRatio",
+            "nameLocation": "4027:12:90",
+            "parameters": {
+              "id": 51712,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4039:2:90"
+            },
+            "returnParameters": {
+              "id": 51715,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51714,
+                  "mutability": "mutable",
+                  "name": "_reserveRatio",
+                  "nameLocation": "4073:13:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51716,
+                  "src": "4065:21:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint192",
+                    "typeString": "uint192"
+                  },
+                  "typeName": {
+                    "id": 51713,
+                    "name": "uint192",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4065:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint192",
+                      "typeString": "uint192"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4064:23:90"
+            },
+            "scope": 51857,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51722,
+            "nodeType": "FunctionDefinition",
+            "src": "4181:72:90",
+            "documentation": {
+              "id": 51717,
+              "nodeType": "StructuredDocumentation",
+              "src": "4092:86:90",
+              "text": "@notice Returns the reserve amount\n @return _reserveAmount The reserve amount"
+            },
+            "functionSelector": "4b09b72a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reserveAmount",
+            "nameLocation": "4190:13:90",
+            "parameters": {
+              "id": 51718,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4203:2:90"
+            },
+            "returnParameters": {
+              "id": 51721,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51720,
+                  "mutability": "mutable",
+                  "name": "_reserveAmount",
+                  "nameLocation": "4237:14:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51722,
+                  "src": "4229:22:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51719,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4229:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4228:24:90"
+            },
+            "scope": 51857,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51728,
+            "nodeType": "FunctionDefinition",
+            "src": "4297:58:90",
+            "documentation": {
+              "id": 51723,
+              "nodeType": "StructuredDocumentation",
+              "src": "4257:37:90",
+              "text": "@notice The address of the pauser"
+            },
+            "functionSelector": "9fd0506d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pauser",
+            "nameLocation": "4306:6:90",
+            "parameters": {
+              "id": 51724,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4312:2:90"
+            },
+            "returnParameters": {
+              "id": 51727,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51726,
+                  "mutability": "mutable",
+                  "name": "_pauser",
+                  "nameLocation": "4346:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51728,
+                  "src": "4338:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51725,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4338:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4337:17:90"
+            },
+            "scope": 51857,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51734,
+            "nodeType": "FunctionDefinition",
+            "src": "5120:47:90",
+            "documentation": {
+              "id": 51729,
+              "nodeType": "StructuredDocumentation",
+              "src": "4533:584:90",
+              "text": "@notice Deposit sUSD to mint USDA\n @dev Caller should obtain 1 USDA for each sUSD\n the calculations for deposit mimic the calculations done by mint in the ampleforth contract, simply with the susd transfer\n 'fragments' are the units that we see, so 1000 fragments == 1000 USDA\n 'gons' are the internal accounting unit, used to keep scale.\n We use the variable _gonsPerFragment in order to convert between the two\n try dimensional analysis when doing the math in order to verify units are correct\n @param _susdAmount The amount of sUSD to deposit"
+            },
+            "functionSelector": "b6b55f25",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "5129:7:90",
+            "parameters": {
+              "id": 51732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51731,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "5145:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51734,
+                  "src": "5137:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51730,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5137:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5136:21:90"
+            },
+            "returnParameters": {
+              "id": 51733,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5166:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51742,
+            "nodeType": "FunctionDefinition",
+            "src": "5363:66:90",
+            "documentation": {
+              "id": 51735,
+              "nodeType": "StructuredDocumentation",
+              "src": "5171:189:90",
+              "text": "@notice Deposits sUSD to mint USDA and transfer to a different address\n @param _susdAmount The amount of sUSD to deposit\n @param _target The address to receive the USDA tokens"
+            },
+            "functionSelector": "70aff70f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositTo",
+            "nameLocation": "5372:9:90",
+            "parameters": {
+              "id": 51740,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51737,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "5390:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51742,
+                  "src": "5382:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51736,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5382:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51739,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "5411:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51742,
+                  "src": "5403:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51738,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5403:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5381:38:90"
+            },
+            "returnParameters": {
+              "id": 51741,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5428:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51748,
+            "nodeType": "FunctionDefinition",
+            "src": "5593:48:90",
+            "documentation": {
+              "id": 51743,
+              "nodeType": "StructuredDocumentation",
+              "src": "5433:157:90",
+              "text": "@notice Withdraw sUSD by burning USDA\n @dev The caller should obtain 1 sUSD for every 1 USDA\n @param _susdAmount The amount of sUSD to withdraw"
+            },
+            "functionSelector": "2e1a7d4d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "5602:8:90",
+            "parameters": {
+              "id": 51746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51745,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "5619:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51748,
+                  "src": "5611:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51744,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5611:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5610:21:90"
+            },
+            "returnParameters": {
+              "id": 51747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5640:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51756,
+            "nodeType": "FunctionDefinition",
+            "src": "5920:67:90",
+            "documentation": {
+              "id": 51749,
+              "nodeType": "StructuredDocumentation",
+              "src": "5645:272:90",
+              "text": "@notice Withdraw sUSD to a specific address by burning USDA from the caller\n @dev The _target address should obtain 1 sUSD for every 1 USDA burned from the caller\n @param _susdAmount amount of sUSD to withdraw\n @param _target address to receive the sUSD"
+            },
+            "functionSelector": "c86283c8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawTo",
+            "nameLocation": "5929:10:90",
+            "parameters": {
+              "id": 51754,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51751,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "5948:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51756,
+                  "src": "5940:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51750,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5940:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51753,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "5969:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51756,
+                  "src": "5961:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51752,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5961:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5939:38:90"
+            },
+            "returnParameters": {
+              "id": 51755,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5986:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51762,
+            "nodeType": "FunctionDefinition",
+            "src": "6250:65:90",
+            "documentation": {
+              "id": 51757,
+              "nodeType": "StructuredDocumentation",
+              "src": "5991:256:90",
+              "text": "@notice Withdraw sUSD by burning USDA\n @dev The caller should obtain 1 sUSD for every 1 USDA\n @dev This function is effectively just withdraw, but we calculate the amount for the sender\n @param _susdWithdrawn The amount os sUSD withdrawn"
+            },
+            "functionSelector": "853828b6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nameLocation": "6259:11:90",
+            "parameters": {
+              "id": 51758,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6270:2:90"
+            },
+            "returnParameters": {
+              "id": 51761,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51760,
+                  "mutability": "mutable",
+                  "name": "_susdWithdrawn",
+                  "nameLocation": "6299:14:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51762,
+                  "src": "6291:22:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51759,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6291:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6290:24:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51770,
+            "nodeType": "FunctionDefinition",
+            "src": "6597:82:90",
+            "documentation": {
+              "id": 51763,
+              "nodeType": "StructuredDocumentation",
+              "src": "6319:275:90",
+              "text": "@notice Withdraw sUSD by burning USDA\n @dev This function is effectively just withdraw, but we calculate the amount for the _target\n @param _target should obtain 1 sUSD for every 1 USDA burned from caller\n @param _susdWithdrawn The amount os sUSD withdrawn"
+            },
+            "functionSelector": "ca9add8f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAllTo",
+            "nameLocation": "6606:13:90",
+            "parameters": {
+              "id": 51766,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51765,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "6628:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51770,
+                  "src": "6620:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51764,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6620:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6619:17:90"
+            },
+            "returnParameters": {
+              "id": 51769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51768,
+                  "mutability": "mutable",
+                  "name": "_susdWithdrawn",
+                  "nameLocation": "6663:14:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51770,
+                  "src": "6655:22:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51767,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6655:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6654:24:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51776,
+            "nodeType": "FunctionDefinition",
+            "src": "6788:46:90",
+            "documentation": {
+              "id": 51771,
+              "nodeType": "StructuredDocumentation",
+              "src": "6683:102:90",
+              "text": "@notice Donates susd to the protocol reserve\n @param _susdAmount The amount of sUSD to donate"
+            },
+            "functionSelector": "f14faf6f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "donate",
+            "nameLocation": "6797:6:90",
+            "parameters": {
+              "id": 51774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51773,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "6812:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51776,
+                  "src": "6804:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51772,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6804:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6803:21:90"
+            },
+            "returnParameters": {
+              "id": 51775,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6833:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51782,
+            "nodeType": "FunctionDefinition",
+            "src": "6943:43:90",
+            "documentation": {
+              "id": 51777,
+              "nodeType": "StructuredDocumentation",
+              "src": "6838:102:90",
+              "text": "@notice Recovers accidentally sent sUSD to this contract\n @param _to The receiver of the dust"
+            },
+            "functionSelector": "a0c06175",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "recoverDust",
+            "nameLocation": "6952:11:90",
+            "parameters": {
+              "id": 51780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51779,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "6972:3:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51782,
+                  "src": "6964:11:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51778,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6964:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6963:13:90"
+            },
+            "returnParameters": {
+              "id": 51781,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6985:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51788,
+            "nodeType": "FunctionDefinition",
+            "src": "7110:45:90",
+            "documentation": {
+              "id": 51783,
+              "nodeType": "StructuredDocumentation",
+              "src": "6990:117:90",
+              "text": "@notice Sets the pauser for both USDA and VaultController\n @dev The pauser is a separate role from the owner"
+            },
+            "functionSelector": "2d88af4a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPauser",
+            "nameLocation": "7119:9:90",
+            "parameters": {
+              "id": 51786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51785,
+                  "mutability": "mutable",
+                  "name": "_pauser",
+                  "nameLocation": "7137:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51788,
+                  "src": "7129:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51784,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7129:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7128:17:90"
+            },
+            "returnParameters": {
+              "id": 51787,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7154:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51792,
+            "nodeType": "FunctionDefinition",
+            "src": "7232:26:90",
+            "documentation": {
+              "id": 51789,
+              "nodeType": "StructuredDocumentation",
+              "src": "7159:70:90",
+              "text": "@notice Pause contract\n @dev Can only be called by the pauser"
+            },
+            "functionSelector": "8456cb59",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pause",
+            "nameLocation": "7241:5:90",
+            "parameters": {
+              "id": 51790,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7246:2:90"
+            },
+            "returnParameters": {
+              "id": 51791,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7257:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51796,
+            "nodeType": "FunctionDefinition",
+            "src": "7350:28:90",
+            "documentation": {
+              "id": 51793,
+              "nodeType": "StructuredDocumentation",
+              "src": "7262:85:90",
+              "text": "@notice Unpause contract, pauser only\n @dev Can only be called by the pauser"
+            },
+            "functionSelector": "3f4ba83a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unpause",
+            "nameLocation": "7359:7:90",
+            "parameters": {
+              "id": 51794,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7366:2:90"
+            },
+            "returnParameters": {
+              "id": 51795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7377:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51802,
+            "nodeType": "FunctionDefinition",
+            "src": "7497:44:90",
+            "documentation": {
+              "id": 51797,
+              "nodeType": "StructuredDocumentation",
+              "src": "7382:112:90",
+              "text": "@notice Admin function to mint USDA\n @param _susdAmount The amount of USDA to mint, denominated in sUSD"
+            },
+            "functionSelector": "a0712d68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "7506:4:90",
+            "parameters": {
+              "id": 51800,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51799,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "7519:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51802,
+                  "src": "7511:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51798,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7511:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7510:21:90"
+            },
+            "returnParameters": {
+              "id": 51801,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7540:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51808,
+            "nodeType": "FunctionDefinition",
+            "src": "7660:44:90",
+            "documentation": {
+              "id": 51803,
+              "nodeType": "StructuredDocumentation",
+              "src": "7545:112:90",
+              "text": "@notice Admin function to burn USDA\n @param _susdAmount The amount of USDA to burn, denominated in sUSD"
+            },
+            "functionSelector": "42966c68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "7669:4:90",
+            "parameters": {
+              "id": 51806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51805,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "7682:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51808,
+                  "src": "7674:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51804,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7674:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7673:21:90"
+            },
+            "returnParameters": {
+              "id": 51807,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7703:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51816,
+            "nodeType": "FunctionDefinition",
+            "src": "7866:72:90",
+            "documentation": {
+              "id": 51809,
+              "nodeType": "StructuredDocumentation",
+              "src": "7708:155:90",
+              "text": "@notice Function for the vaultController to burn\n @param _target The address to burn the USDA from\n @param _amount The amount of USDA to burn"
+            },
+            "functionSelector": "178a6670",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultControllerBurn",
+            "nameLocation": "7875:19:90",
+            "parameters": {
+              "id": 51814,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51811,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "7903:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51816,
+                  "src": "7895:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7895:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51813,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "7920:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51816,
+                  "src": "7912:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51812,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7912:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7894:34:90"
+            },
+            "returnParameters": {
+              "id": 51815,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7937:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51824,
+            "nodeType": "FunctionDefinition",
+            "src": "8098:72:90",
+            "documentation": {
+              "id": 51817,
+              "nodeType": "StructuredDocumentation",
+              "src": "7942:153:90",
+              "text": "@notice Function for the vaultController to mint\n @param _target The address to mint the USDA to\n @param _amount The amount of USDA to mint"
+            },
+            "functionSelector": "0522658d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultControllerMint",
+            "nameLocation": "8107:19:90",
+            "parameters": {
+              "id": 51822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51819,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "8135:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51824,
+                  "src": "8127:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51818,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8127:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51821,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "8152:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51824,
+                  "src": "8144:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51820,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8144:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8126:34:90"
+            },
+            "returnParameters": {
+              "id": 51823,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8169:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51832,
+            "nodeType": "FunctionDefinition",
+            "src": "8359:80:90",
+            "documentation": {
+              "id": 51825,
+              "nodeType": "StructuredDocumentation",
+              "src": "8174:182:90",
+              "text": "@notice Allows VaultController to send sUSD from the reserve\n @param _target The address to receive the sUSD from reserve\n @param _susdAmount The amount of sUSD to send"
+            },
+            "functionSelector": "da5b9a19",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultControllerTransfer",
+            "nameLocation": "8368:23:90",
+            "parameters": {
+              "id": 51830,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51827,
+                  "mutability": "mutable",
+                  "name": "_target",
+                  "nameLocation": "8400:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51832,
+                  "src": "8392:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51826,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8392:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 51829,
+                  "mutability": "mutable",
+                  "name": "_susdAmount",
+                  "nameLocation": "8417:11:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51832,
+                  "src": "8409:19:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51828,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8409:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8391:38:90"
+            },
+            "returnParameters": {
+              "id": 51831,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8438:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51838,
+            "nodeType": "FunctionDefinition",
+            "src": "8573:57:90",
+            "documentation": {
+              "id": 51833,
+              "nodeType": "StructuredDocumentation",
+              "src": "8443:127:90",
+              "text": "@notice Function for the vaultController to scale all USDA balances\n @param _amount The amount of USDA (e18) to donate"
+            },
+            "functionSelector": "c99d6f01",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultControllerDonate",
+            "nameLocation": "8582:21:90",
+            "parameters": {
+              "id": 51836,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51835,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "8612:7:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51838,
+                  "src": "8604:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51834,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8604:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8603:17:90"
+            },
+            "returnParameters": {
+              "id": 51837,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8629:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51844,
+            "nodeType": "FunctionDefinition",
+            "src": "8738:63:90",
+            "documentation": {
+              "id": 51839,
+              "nodeType": "StructuredDocumentation",
+              "src": "8634:101:90",
+              "text": "@notice Adds a new vault controller\n @param _vaultController The new vault controller to add"
+            },
+            "functionSelector": "c6582ab6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addVaultController",
+            "nameLocation": "8747:18:90",
+            "parameters": {
+              "id": 51842,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51841,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "8774:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51844,
+                  "src": "8766:24:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51840,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8766:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8765:26:90"
+            },
+            "returnParameters": {
+              "id": 51843,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8800:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51850,
+            "nodeType": "FunctionDefinition",
+            "src": "8907:66:90",
+            "documentation": {
+              "id": 51845,
+              "nodeType": "StructuredDocumentation",
+              "src": "8805:99:90",
+              "text": "@notice Removes a vault controller\n @param _vaultController The vault controller to remove"
+            },
+            "functionSelector": "4ce82325",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeVaultController",
+            "nameLocation": "8916:21:90",
+            "parameters": {
+              "id": 51848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51847,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "8946:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51850,
+                  "src": "8938:24:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51846,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8938:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8937:26:90"
+            },
+            "returnParameters": {
+              "id": 51849,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "8972:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 51856,
+            "nodeType": "FunctionDefinition",
+            "src": "9098:74:90",
+            "documentation": {
+              "id": 51851,
+              "nodeType": "StructuredDocumentation",
+              "src": "8977:118:90",
+              "text": "@notice Removes a vault controller from the loop list\n @param _vaultController The vault controller to remove"
+            },
+            "functionSelector": "a666e8d8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeVaultControllerFromList",
+            "nameLocation": "9107:29:90",
+            "parameters": {
+              "id": 51854,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 51853,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "9145:16:90",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 51856,
+                  "src": "9137:24:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 51852,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9137:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9136:26:90"
+            },
+            "returnParameters": {
+              "id": 51855,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "9171:0:90"
+            },
+            "scope": 51857,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 51614,
+              "name": "IERC20Metadata",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 3505,
+              "src": "361:14:90"
+            },
+            "id": 51615,
+            "nodeType": "InheritanceSpecifier",
+            "src": "361:14:90"
+          },
+          {
+            "baseName": {
+              "id": 51616,
+              "name": "IRoles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 54234,
+              "src": "377:6:90"
+            },
+            "id": 51617,
+            "nodeType": "InheritanceSpecifier",
+            "src": "377:6:90"
+          }
+        ],
+        "canonicalName": "IUSDA",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 51613,
+          "nodeType": "StructuredDocumentation",
+          "src": "281:61:90",
+          "text": "@title USDA Interface\n @notice extends IERC20Metadata"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          51857,
+          54234,
+          1762,
+          3505,
+          2726
+        ],
+        "name": "IUSDA",
+        "nameLocation": "352:5:90",
+        "scope": 51858,
+        "usedErrors": [
+          51691,
+          51694,
+          51697,
+          51700,
+          51703,
+          54233
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 90
+}

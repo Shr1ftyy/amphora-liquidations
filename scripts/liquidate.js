@@ -26,7 +26,7 @@ exports.handler = async function (credentials) {
             // if the vault is undercollateralized, attemt to liquidate it
             if (!peekCheckVault) {
                 // get vault info
-                var vaultSummary = await vaultController.vaultSummary(vaultId, vaultId);
+                var vaultSummary = await vaultController.vaultSummaries(vaultId, vaultId);
                 for(tokenAddr in vaultSummary.tokenAddresses){
                     const amountToLiquidate = vaultController.tokensToLiquidate(vaultId, tokenAddr);
                     // log token address, and amount to liquidate

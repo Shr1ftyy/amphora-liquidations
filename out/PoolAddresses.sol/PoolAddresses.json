@@ -1,0 +1,1140 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AAVE_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "CBETH_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DAI_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "DYDX_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "FRAX_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SNX_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "SUSD_FRAX_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_UNI_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_USDT_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_WBTC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDC_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "USDT_USDC_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WBTC_ETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "WSTETH_WETH_POOL_ADDRESS",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b506102ad806100206000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c80636a0b3bc51161008c578063ba4a1b5011610066578063ba4a1b5014610226578063c1c6d84114610241578063dabad4b414610226578063eaf9a7b51461025c57600080fd5b80636a0b3bc5146101d5578063a89d948b146101f0578063b2118a131461020b57600080fd5b806331ae6ec5116100c857806331ae6ec5146101695780634423aa3b14610184578063545c12911461019f57806364e6efb4146101ba57600080fd5b806321b3fa24146100ef5780632b4e2b63146101335780632d76d63c1461014e575b600080fd5b61010a735777d92f208679db4b9778590fa3cab3ac9e216881565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61010a73c63b0708e2f7e69cb8a1df0e1389a98c35a76d5281565b61010a73ede8dd046586d22625ae7ff2708f879ef7bdb8cf81565b61010a73d0fc8ba7e267f2bc56044a7715a489d851dc6d7881565b61010a738ad599c3a0ff1de082011efddc58f1908eb6e6d881565b61010a73e0cfa17aa9b8f930fd936633c0252d5cb745c2c381565b61010a73cbcdf9626bc03e24f779434178a73a0b4bad62ed81565b61010a7334ff465ee92516e9855eb60f520df0384f410b4581565b61010a73840deeef2f115cf50da625f7368c24af6fe7441081565b61010a73d340b57aacdd10f96fc1cf10e15921936f41e29c81565b61010a733416cf6c708da44db2624d63ea0aaef7113527c681565b61010a735ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb81565b61010a7399ac8ca7087fa4a2a1fb6357269965a2014abc358156fea2646970667358221220e1584eb2c8773b8599cd2f2755da86d1e886909ec1dd5d1f7d0f715f925c18b564736f6c634300080e0033",
+    "sourceMap": "58:1373:125:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c80636a0b3bc51161008c578063ba4a1b5011610066578063ba4a1b5014610226578063c1c6d84114610241578063dabad4b414610226578063eaf9a7b51461025c57600080fd5b80636a0b3bc5146101d5578063a89d948b146101f0578063b2118a131461020b57600080fd5b806331ae6ec5116100c857806331ae6ec5146101695780634423aa3b14610184578063545c12911461019f57806364e6efb4146101ba57600080fd5b806321b3fa24146100ef5780632b4e2b63146101335780632d76d63c1461014e575b600080fd5b61010a735777d92f208679db4b9778590fa3cab3ac9e216881565b60405173ffffffffffffffffffffffffffffffffffffffff909116815260200160405180910390f35b61010a73c63b0708e2f7e69cb8a1df0e1389a98c35a76d5281565b61010a73ede8dd046586d22625ae7ff2708f879ef7bdb8cf81565b61010a73d0fc8ba7e267f2bc56044a7715a489d851dc6d7881565b61010a738ad599c3a0ff1de082011efddc58f1908eb6e6d881565b61010a73e0cfa17aa9b8f930fd936633c0252d5cb745c2c381565b61010a73cbcdf9626bc03e24f779434178a73a0b4bad62ed81565b61010a7334ff465ee92516e9855eb60f520df0384f410b4581565b61010a73840deeef2f115cf50da625f7368c24af6fe7441081565b61010a73d340b57aacdd10f96fc1cf10e15921936f41e29c81565b61010a733416cf6c708da44db2624d63ea0aaef7113527c681565b61010a735ab53ee1d50eef2c1dd3d5402789cd27bb52c1bb81565b61010a7399ac8ca7087fa4a2a1fb6357269965a2014abc358156fea2646970667358221220e1584eb2c8773b8599cd2f2755da86d1e886909ec1dd5d1f7d0f715f925c18b564736f6c634300080e0033",
+    "sourceMap": "58:1373:125:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;769:90;;817:42;769:90;;;;;190:42:128;178:55;;;160:74;;148:2;133:18;769:90:125;;;;;;;960:91;;1009:42;960:91;;1149:89;;1196:42;1149:89;;200:90;;248:42;200:90;;105:91;;154:42;105:91;;389;;438:42;389:91;;1055:90;;1103:42;1055:90;;1242:91;;1291:42;1242:91;;1337;;1386:42;1337:91;;863:93;;914:42;863:93;;579:91;;628:42;579:91;;294;;343:42;294:91;;484;;533:42;484:91;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "AAVE_WETH_POOL_ADDRESS()": "c1c6d841",
+    "CBETH_ETH_POOL_ADDRESS()": "a89d948b",
+    "DAI_USDC_POOL_ADDRESS()": "21b3fa24",
+    "DYDX_WETH_POOL_ADDRESS()": "545c1291",
+    "FRAX_USDC_POOL_ADDRESS()": "2b4e2b63",
+    "SNX_ETH_POOL_ADDRESS()": "2d76d63c",
+    "SUSD_FRAX_POOL_ADDRESS()": "6a0b3bc5",
+    "USDC_UNI_POOL_ADDRESS()": "31ae6ec5",
+    "USDC_USDT_POOL_ADDRESS()": "dabad4b4",
+    "USDC_WBTC_POOL_ADDRESS()": "eaf9a7b5",
+    "USDC_WETH_POOL_ADDRESS()": "4423aa3b",
+    "USDT_USDC_POOL_ADDRESS()": "ba4a1b50",
+    "WBTC_ETH_POOL_ADDRESS()": "64e6efb4",
+    "WSTETH_WETH_POOL_ADDRESS()": "b2118a13"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"AAVE_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"CBETH_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DAI_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"DYDX_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"FRAX_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SNX_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"SUSD_FRAX_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_UNI_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_USDT_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_WBTC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDC_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"USDT_USDC_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WBTC_ETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"WSTETH_WETH_POOL_ADDRESS\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/test/utils/PoolAddresses.sol\":\"PoolAddresses\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/test/utils/PoolAddresses.sol\":{\"keccak256\":\"0x4736559e2b1772e2f926ce79874d7f7e56269d7fb79f754c5beaa2f1955022a6\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://188923fbbc6050830be474f3ca85b74f00c9d04d3d8d528e48adf3440daf926a\",\"dweb:/ipfs/QmP6uPCZ6ReoRpJspKzU6QGgTonb6xdeeK8YK1p9AbtPZC\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "AAVE_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "CBETH_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DAI_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DYDX_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "FRAX_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SNX_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "SUSD_FRAX_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_UNI_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_USDT_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_WBTC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDC_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDT_USDC_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WBTC_ETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "WSTETH_WETH_POOL_ADDRESS",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/test/utils/PoolAddresses.sol": "PoolAddresses"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/test/utils/PoolAddresses.sol": {
+        "keccak256": "0x4736559e2b1772e2f926ce79874d7f7e56269d7fb79f754c5beaa2f1955022a6",
+        "urls": [
+          "bzz-raw://188923fbbc6050830be474f3ca85b74f00c9d04d3d8d528e48adf3440daf926a",
+          "dweb:/ipfs/QmP6uPCZ6ReoRpJspKzU6QGgTonb6xdeeK8YK1p9AbtPZC"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/test/utils/PoolAddresses.sol",
+    "id": 58878,
+    "exportedSymbols": {
+      "PoolAddresses": [
+        58877
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1400:125",
+    "nodes": [
+      {
+        "id": 58834,
+        "nodeType": "PragmaDirective",
+        "src": "32:24:125",
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 58877,
+        "nodeType": "ContractDefinition",
+        "src": "58:1373:125",
+        "nodes": [
+          {
+            "id": 58837,
+            "nodeType": "VariableDeclaration",
+            "src": "105:91:125",
+            "constant": true,
+            "functionSelector": "4423aa3b",
+            "mutability": "constant",
+            "name": "USDC_WETH_POOL_ADDRESS",
+            "nameLocation": "129:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58835,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "105:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307838616435393963334130666631446530383230313145464444633538663139303865623665364438",
+              "id": 58836,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "154:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58840,
+            "nodeType": "VariableDeclaration",
+            "src": "200:90:125",
+            "constant": true,
+            "functionSelector": "31ae6ec5",
+            "mutability": "constant",
+            "name": "USDC_UNI_POOL_ADDRESS",
+            "nameLocation": "224:21:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58838,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "200:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844306643386241374532363766326263353630343441373731354134383964383531644336443738",
+              "id": 58839,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "248:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xD0fC8bA7E267f2bc56044A7715A489d851dC6D78"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58843,
+            "nodeType": "VariableDeclaration",
+            "src": "294:91:125",
+            "constant": true,
+            "functionSelector": "c1c6d841",
+            "mutability": "constant",
+            "name": "AAVE_WETH_POOL_ADDRESS",
+            "nameLocation": "318:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58841,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "294:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835614235334545316435306565463243314444336435343032373839636432376242353263316242",
+              "id": 58842,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "343:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x5aB53EE1d50eeF2C1DD3d5402789cd27bB52c1bB"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58846,
+            "nodeType": "VariableDeclaration",
+            "src": "389:91:125",
+            "constant": true,
+            "functionSelector": "545c1291",
+            "mutability": "constant",
+            "name": "DYDX_WETH_POOL_ADDRESS",
+            "nameLocation": "413:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58844,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "389:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307865304366413137616139423866393330466439333636333363303235326435634237343543324333",
+              "id": 58845,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "438:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xe0CfA17aa9B8f930Fd936633c0252d5cB745C2C3"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58849,
+            "nodeType": "VariableDeclaration",
+            "src": "484:91:125",
+            "constant": true,
+            "functionSelector": "eaf9a7b5",
+            "mutability": "constant",
+            "name": "USDC_WBTC_POOL_ADDRESS",
+            "nameLocation": "508:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58847,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "484:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307839396163386341373038376641344132413146423633353732363939363541323031344142633335",
+              "id": 58848,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "533:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x99ac8cA7087fA4A2A1FB6357269965A2014ABc35"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58852,
+            "nodeType": "VariableDeclaration",
+            "src": "579:91:125",
+            "constant": true,
+            "functionSelector": "ba4a1b50",
+            "mutability": "constant",
+            "name": "USDT_USDC_POOL_ADDRESS",
+            "nameLocation": "603:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58850,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "579:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307833343136634636433730384461343444423236323444363365613041416566373131333532374336",
+              "id": 58851,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "628:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x3416cF6C708Da44DB2624D63ea0AAef7113527C6"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58855,
+            "nodeType": "VariableDeclaration",
+            "src": "674:91:125",
+            "constant": true,
+            "functionSelector": "dabad4b4",
+            "mutability": "constant",
+            "name": "USDC_USDT_POOL_ADDRESS",
+            "nameLocation": "698:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58853,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "674:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307833343136634636433730384461343444423236323444363365613041416566373131333532374336",
+              "id": 58854,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "723:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x3416cF6C708Da44DB2624D63ea0AAef7113527C6"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58858,
+            "nodeType": "VariableDeclaration",
+            "src": "769:90:125",
+            "constant": true,
+            "functionSelector": "21b3fa24",
+            "mutability": "constant",
+            "name": "DAI_USDC_POOL_ADDRESS",
+            "nameLocation": "793:21:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58856,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "769:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307835373737643932663230383637394442346239373738353930466133434142336143396532313638",
+              "id": 58857,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "817:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x5777d92f208679DB4b9778590Fa3CAB3aC9e2168"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58861,
+            "nodeType": "VariableDeclaration",
+            "src": "863:93:125",
+            "constant": true,
+            "functionSelector": "b2118a13",
+            "mutability": "constant",
+            "name": "WSTETH_WETH_POOL_ADDRESS",
+            "nameLocation": "887:24:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58859,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "863:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307844333430423537414163444431304639364643314346313065313539323139333646343145323963",
+              "id": 58860,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "914:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xD340B57AAcDD10F96FC1CF10e15921936F41E29c"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58864,
+            "nodeType": "VariableDeclaration",
+            "src": "960:91:125",
+            "constant": true,
+            "functionSelector": "2b4e2b63",
+            "mutability": "constant",
+            "name": "FRAX_USDC_POOL_ADDRESS",
+            "nameLocation": "984:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58862,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "960:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307863363342303730384532463765363943423841316466306531333839413938433335413736443532",
+              "id": 58863,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1009:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xc63B0708E2F7e69CB8A1df0e1389A98C35A76D52"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58867,
+            "nodeType": "VariableDeclaration",
+            "src": "1055:90:125",
+            "constant": true,
+            "functionSelector": "64e6efb4",
+            "mutability": "constant",
+            "name": "WBTC_ETH_POOL_ADDRESS",
+            "nameLocation": "1079:21:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58865,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1055:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307843424364463936323662433033453234663737393433343137384137336130423462616436326544",
+              "id": 58866,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1103:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xCBCdF9626bC03E24f779434178A73a0B4bad62eD"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58870,
+            "nodeType": "VariableDeclaration",
+            "src": "1149:89:125",
+            "constant": true,
+            "functionSelector": "2d76d63c",
+            "mutability": "constant",
+            "name": "SNX_ETH_POOL_ADDRESS",
+            "nameLocation": "1173:20:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58868,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1149:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307845446538646430343635383664323236323541653766463237303846383739654637626462384346",
+              "id": 58869,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1196:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0xEDe8dd046586d22625Ae7fF2708F879eF7bdb8CF"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58873,
+            "nodeType": "VariableDeclaration",
+            "src": "1242:91:125",
+            "constant": true,
+            "functionSelector": "6a0b3bc5",
+            "mutability": "constant",
+            "name": "SUSD_FRAX_POOL_ADDRESS",
+            "nameLocation": "1266:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58871,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1242:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307833344666343635656539323531366539383535454236306635323064463033383466343130423435",
+              "id": 58872,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1291:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x34Ff465ee92516e9855EB60f520dF0384f410B45"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 58876,
+            "nodeType": "VariableDeclaration",
+            "src": "1337:91:125",
+            "constant": true,
+            "functionSelector": "a89d948b",
+            "mutability": "constant",
+            "name": "CBETH_ETH_POOL_ADDRESS",
+            "nameLocation": "1361:22:125",
+            "scope": 58877,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 58874,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "1337:7:125",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307838343044454565663266313135436635304441363235463733363843323461663666453734343130",
+              "id": 58875,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1386:42:125",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x840DEEef2f115Cf50DA625F7368C24af6fE74410"
+            },
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "PoolAddresses",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          58877
+        ],
+        "name": "PoolAddresses",
+        "nameLocation": "67:13:125",
+        "scope": 58878,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 125
+}

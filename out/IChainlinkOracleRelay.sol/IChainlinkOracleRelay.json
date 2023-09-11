@@ -1,0 +1,224 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isStale",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "_stale",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isStale()": "1a26f447"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"isStale\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"_stale\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isStale()\":{\"notice\":\"Returns True if the oracle is stale\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/periphery/IChainlinkOracleRelay.sol\":\"IChainlinkOracleRelay\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/periphery/IChainlinkOracleRelay.sol\":{\"keccak256\":\"0x313ae2560c45e8434e40770bf766151dcd3d81c17bbfb04c7359be4cb22143e9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://926d7f7630f964895ae21c9acbe3aaf305105fd3bc37a086caf61b4e18407e4e\",\"dweb:/ipfs/QmUgvtyu5Md7ZTYrhVUftbsJfxuaJZaxC6oSSKJ2DJtrvx\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isStale",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "_stale",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "isStale()": {
+            "notice": "Returns True if the oracle is stale"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/periphery/IChainlinkOracleRelay.sol": "IChainlinkOracleRelay"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/periphery/IChainlinkOracleRelay.sol": {
+        "keccak256": "0x313ae2560c45e8434e40770bf766151dcd3d81c17bbfb04c7359be4cb22143e9",
+        "urls": [
+          "bzz-raw://926d7f7630f964895ae21c9acbe3aaf305105fd3bc37a086caf61b4e18407e4e",
+          "dweb:/ipfs/QmUgvtyu5Md7ZTYrhVUftbsJfxuaJZaxC6oSSKJ2DJtrvx"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/periphery/IChainlinkOracleRelay.sol",
+    "id": 53792,
+    "exportedSymbols": {
+      "IChainlinkOracleRelay": [
+        53791
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:169:101",
+    "nodes": [
+      {
+        "id": 53784,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:101",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53791,
+        "nodeType": "ContractDefinition",
+        "src": "57:143:101",
+        "nodes": [
+          {
+            "id": 53790,
+            "nodeType": "FunctionDefinition",
+            "src": "143:55:101",
+            "documentation": {
+              "id": 53785,
+              "nodeType": "StructuredDocumentation",
+              "src": "93:47:101",
+              "text": "@notice Returns True if the oracle is stale"
+            },
+            "functionSelector": "1a26f447",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isStale",
+            "nameLocation": "152:7:101",
+            "parameters": {
+              "id": 53786,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "159:2:101"
+            },
+            "returnParameters": {
+              "id": 53789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53788,
+                  "mutability": "mutable",
+                  "name": "_stale",
+                  "nameLocation": "190:6:101",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53790,
+                  "src": "185:11:101",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 53787,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "185:4:101",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "184:13:101"
+            },
+            "scope": 53791,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IChainlinkOracleRelay",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53791
+        ],
+        "name": "IChainlinkOracleRelay",
+        "nameLocation": "67:21:101",
+        "scope": 53792,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 101
+}

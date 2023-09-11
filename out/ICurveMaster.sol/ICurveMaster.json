@@ -1,0 +1,1408 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "CurveMaster_TokenNotEnabled",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CurveMaster_ZeroResult",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldCurveAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newCurveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "CurveForceSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldCurveAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newCurveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "CurveSet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_oldVaultControllerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newVaultControllerAddress",
+          "type": "address"
+        }
+      ],
+      "name": "VaultControllerSet",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        }
+      ],
+      "name": "curves",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_curve",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_curveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "forceSetCurve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "int256",
+          "name": "_xValue",
+          "type": "int256"
+        }
+      ],
+      "name": "getValueAt",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "_value",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_curveAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setCurve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultMasterAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setVaultController",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultControllerAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_vaultController",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "curves(address)": "2cc3dc6e",
+    "forceSetCurve(address,address)": "911b1678",
+    "getValueAt(address,int256)": "d15e1ba9",
+    "setCurve(address,address)": "ca594e6c",
+    "setVaultController(address)": "99747f15",
+    "vaultControllerAddress()": "d661d8ad"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"CurveMaster_TokenNotEnabled\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CurveMaster_ZeroResult\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldCurveAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newCurveAddress\",\"type\":\"address\"}],\"name\":\"CurveForceSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldCurveAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newCurveAddress\",\"type\":\"address\"}],\"name\":\"CurveSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_oldVaultControllerAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newVaultControllerAddress\",\"type\":\"address\"}],\"name\":\"VaultControllerSet\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"}],\"name\":\"curves\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_curve\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_curveAddress\",\"type\":\"address\"}],\"name\":\"forceSetCurve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"int256\",\"name\":\"_xValue\",\"type\":\"int256\"}],\"name\":\"getValueAt\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"_value\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_curveAddress\",\"type\":\"address\"}],\"name\":\"setCurve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_vaultMasterAddress\",\"type\":\"address\"}],\"name\":\"setVaultController\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"vaultControllerAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_vaultController\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"CurveForceSet(address,address,address)\":{\"params\":{\"_newCurveAddress\":\"The new address of the curve\",\"_oldCurveAddress\":\"The old address of the curve\",\"_token\":\"The token to set\"}},\"CurveSet(address,address,address)\":{\"params\":{\"_newCurveAddress\":\"The new address of the curve\",\"_oldCurveAddress\":\"The old address of the curve\",\"_token\":\"The token to set\"}},\"VaultControllerSet(address,address)\":{\"params\":{\"_newVaultControllerAddress\":\"The new address of the vault controller\",\"_oldVaultControllerAddress\":\"The old address of the vault controller\"}}},\"kind\":\"dev\",\"methods\":{\"forceSetCurve(address,address)\":{\"params\":{\"_curveAddress\":\"The address of the curve for the contract\",\"_tokenAddress\":\"The address of the token\"}},\"getValueAt(address,int256)\":{\"params\":{\"_tokenAddress\":\"The key to lookup the curve with in the mapping\",\"_xValue\":\"The x value to pass to the slave\"},\"returns\":{\"_value\":\"The y value of the curve\"}},\"setCurve(address,address)\":{\"params\":{\"_curveAddress\":\"The address of the curve for the contract\",\"_tokenAddress\":\"The address of the token\"}},\"setVaultController(address)\":{\"params\":{\"_vaultMasterAddress\":\"The address of vault master\"}}},\"title\":\"CurveMaster Interface\",\"version\":1},\"userdoc\":{\"errors\":{\"CurveMaster_TokenNotEnabled()\":[{\"notice\":\"Thrown when the token is not enabled\"}],\"CurveMaster_ZeroResult()\":[{\"notice\":\"Thrown when result is zero\"}]},\"events\":{\"CurveForceSet(address,address,address)\":{\"notice\":\"Emited when the owner changes the curve address skipping the checks\"},\"CurveSet(address,address,address)\":{\"notice\":\"Emited when the owner changes the curve address\"},\"VaultControllerSet(address,address)\":{\"notice\":\"Emited when the owner changes the vault controller address\"}},\"kind\":\"user\",\"methods\":{\"curves(address)\":{\"notice\":\"Mapping of token to address\"},\"forceSetCurve(address,address)\":{\"notice\":\"Special function that does not calculate interest, used for deployment\"},\"getValueAt(address,int256)\":{\"notice\":\"Returns the value of curve labled _tokenAddress at _xValue\"},\"setCurve(address,address)\":{\"notice\":\"Setting a new curve should pay interest\"},\"setVaultController(address)\":{\"notice\":\"Set the VaultController addr in order to pay interest on curve setting\"},\"vaultControllerAddress()\":{\"notice\":\"The vault controller address\"}},\"notice\":\"Interface for interacting with CurveMaster\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/periphery/ICurveMaster.sol\":\"ICurveMaster\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"solidity/interfaces/periphery/ICurveMaster.sol\":{\"keccak256\":\"0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833\",\"dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CurveMaster_TokenNotEnabled"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CurveMaster_ZeroResult"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldCurveAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newCurveAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "CurveForceSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldCurveAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_token",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newCurveAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "CurveSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_oldVaultControllerAddress",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "_newVaultControllerAddress",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VaultControllerSet",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "curves",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_curve",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_curveAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "forceSetCurve"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "int256",
+              "name": "_xValue",
+              "type": "int256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getValueAt",
+          "outputs": [
+            {
+              "internalType": "int256",
+              "name": "_value",
+              "type": "int256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_tokenAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_curveAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setCurve"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultMasterAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setVaultController"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "vaultControllerAddress",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_vaultController",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "forceSetCurve(address,address)": {
+            "params": {
+              "_curveAddress": "The address of the curve for the contract",
+              "_tokenAddress": "The address of the token"
+            }
+          },
+          "getValueAt(address,int256)": {
+            "params": {
+              "_tokenAddress": "The key to lookup the curve with in the mapping",
+              "_xValue": "The x value to pass to the slave"
+            },
+            "returns": {
+              "_value": "The y value of the curve"
+            }
+          },
+          "setCurve(address,address)": {
+            "params": {
+              "_curveAddress": "The address of the curve for the contract",
+              "_tokenAddress": "The address of the token"
+            }
+          },
+          "setVaultController(address)": {
+            "params": {
+              "_vaultMasterAddress": "The address of vault master"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "curves(address)": {
+            "notice": "Mapping of token to address"
+          },
+          "forceSetCurve(address,address)": {
+            "notice": "Special function that does not calculate interest, used for deployment"
+          },
+          "getValueAt(address,int256)": {
+            "notice": "Returns the value of curve labled _tokenAddress at _xValue"
+          },
+          "setCurve(address,address)": {
+            "notice": "Setting a new curve should pay interest"
+          },
+          "setVaultController(address)": {
+            "notice": "Set the VaultController addr in order to pay interest on curve setting"
+          },
+          "vaultControllerAddress()": {
+            "notice": "The vault controller address"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/periphery/ICurveMaster.sol": "ICurveMaster"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "solidity/interfaces/periphery/ICurveMaster.sol": {
+        "keccak256": "0x1d92b83ddad65071eb0490dd91f2a7cc1e49ce1a2c9952c01c5f0c0ec3c6f463",
+        "urls": [
+          "bzz-raw://aecec9ac5e1c214cfad9769f81dba299b0101d218032bfb27206d5c6d7324833",
+          "dweb:/ipfs/QmccyiCSxH7ZrgiYGgZtFkyKZdJYwYhMnhH3UoCeRwMzfR"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/periphery/ICurveMaster.sol",
+    "id": 53893,
+    "exportedSymbols": {
+      "ICurveMaster": [
+        53892
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:3351:103",
+    "nodes": [
+      {
+        "id": 53813,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:103",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 53892,
+        "nodeType": "ContractDefinition",
+        "src": "145:3237:103",
+        "nodes": [
+          {
+            "id": 53821,
+            "nodeType": "EventDefinition",
+            "src": "587:97:103",
+            "anonymous": false,
+            "documentation": {
+              "id": 53815,
+              "nodeType": "StructuredDocumentation",
+              "src": "345:239:103",
+              "text": " @notice Emited when the owner changes the vault controller address\n @param _oldVaultControllerAddress The old address of the vault controller\n @param _newVaultControllerAddress The new address of the vault controller"
+            },
+            "eventSelector": "d806ee5159f2f64e826e1f7e2a22d4cb643ab4ebde9e69dcd35769fefeaeb193",
+            "name": "VaultControllerSet",
+            "nameLocation": "593:18:103",
+            "parameters": {
+              "id": 53820,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53817,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_oldVaultControllerAddress",
+                  "nameLocation": "620:26:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53821,
+                  "src": "612:34:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53816,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "612:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53819,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newVaultControllerAddress",
+                  "nameLocation": "656:26:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53821,
+                  "src": "648:34:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53818,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "648:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "611:72:103"
+            }
+          },
+          {
+            "id": 53830,
+            "nodeType": "EventDefinition",
+            "src": "913:83:103",
+            "anonymous": false,
+            "documentation": {
+              "id": 53822,
+              "nodeType": "StructuredDocumentation",
+              "src": "688:222:103",
+              "text": " @notice Emited when the owner changes the curve address\n @param _oldCurveAddress The old address of the curve\n @param _token The token to set\n @param _newCurveAddress The new address of the curve"
+            },
+            "eventSelector": "6ebcce2fe03cf0c487db907a5b2b08137360e9e2591703e425764b9b97ff37f0",
+            "name": "CurveSet",
+            "nameLocation": "919:8:103",
+            "parameters": {
+              "id": 53829,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53824,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_oldCurveAddress",
+                  "nameLocation": "936:16:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53830,
+                  "src": "928:24:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53823,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "928:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53826,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "962:6:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53830,
+                  "src": "954:14:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53825,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "954:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53828,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newCurveAddress",
+                  "nameLocation": "978:16:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53830,
+                  "src": "970:24:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53827,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "970:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "927:68:103"
+            }
+          },
+          {
+            "id": 53839,
+            "nodeType": "EventDefinition",
+            "src": "1245:88:103",
+            "anonymous": false,
+            "documentation": {
+              "id": 53831,
+              "nodeType": "StructuredDocumentation",
+              "src": "1000:242:103",
+              "text": " @notice Emited when the owner changes the curve address skipping the checks\n @param _oldCurveAddress The old address of the curve\n @param _token The token to set\n @param _newCurveAddress The new address of the curve"
+            },
+            "eventSelector": "2dc90dda2fb60ca25e4da58537454469e0345aa97cfe95a5a28f178d6f984bb6",
+            "name": "CurveForceSet",
+            "nameLocation": "1251:13:103",
+            "parameters": {
+              "id": 53838,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53833,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_oldCurveAddress",
+                  "nameLocation": "1273:16:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53839,
+                  "src": "1265:24:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53832,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1265:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53835,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_token",
+                  "nameLocation": "1299:6:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53839,
+                  "src": "1291:14:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53834,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1291:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53837,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newCurveAddress",
+                  "nameLocation": "1315:16:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53839,
+                  "src": "1307:24:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53836,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1307:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1264:68:103"
+            }
+          },
+          {
+            "id": 53842,
+            "nodeType": "ErrorDefinition",
+            "src": "1561:36:103",
+            "documentation": {
+              "id": 53840,
+              "nodeType": "StructuredDocumentation",
+              "src": "1510:48:103",
+              "text": "@notice Thrown when the token is not enabled"
+            },
+            "errorSelector": "a374be08",
+            "name": "CurveMaster_TokenNotEnabled",
+            "nameLocation": "1567:27:103",
+            "parameters": {
+              "id": 53841,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1594:2:103"
+            }
+          },
+          {
+            "id": 53845,
+            "nodeType": "ErrorDefinition",
+            "src": "1642:31:103",
+            "documentation": {
+              "id": 53843,
+              "nodeType": "StructuredDocumentation",
+              "src": "1601:38:103",
+              "text": "@notice Thrown when result is zero"
+            },
+            "errorSelector": "5032c757",
+            "name": "CurveMaster_ZeroResult",
+            "nameLocation": "1648:22:103",
+            "parameters": {
+              "id": 53844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1670:2:103"
+            }
+          },
+          {
+            "id": 53851,
+            "nodeType": "FunctionDefinition",
+            "src": "1896:83:103",
+            "documentation": {
+              "id": 53846,
+              "nodeType": "StructuredDocumentation",
+              "src": "1853:40:103",
+              "text": "@notice The vault controller address"
+            },
+            "functionSelector": "d661d8ad",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultControllerAddress",
+            "nameLocation": "1905:22:103",
+            "parameters": {
+              "id": 53847,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1927:2:103"
+            },
+            "returnParameters": {
+              "id": 53850,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53849,
+                  "mutability": "mutable",
+                  "name": "_vaultController",
+                  "nameLocation": "1961:16:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53851,
+                  "src": "1953:24:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53848,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1953:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1952:26:103"
+            },
+            "scope": 53892,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53861,
+            "nodeType": "FunctionDefinition",
+            "src": "2231:97:103",
+            "documentation": {
+              "id": 53852,
+              "nodeType": "StructuredDocumentation",
+              "src": "1983:245:103",
+              "text": "@notice Returns the value of curve labled _tokenAddress at _xValue\n @param _tokenAddress The key to lookup the curve with in the mapping\n @param _xValue The x value to pass to the slave\n @return _value The y value of the curve"
+            },
+            "functionSelector": "d15e1ba9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getValueAt",
+            "nameLocation": "2240:10:103",
+            "parameters": {
+              "id": 53857,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53854,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "2259:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53861,
+                  "src": "2251:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53853,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2251:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53856,
+                  "mutability": "mutable",
+                  "name": "_xValue",
+                  "nameLocation": "2281:7:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53861,
+                  "src": "2274:14:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 53855,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2274:6:103",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2250:39:103"
+            },
+            "returnParameters": {
+              "id": 53860,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53859,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "2320:6:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53861,
+                  "src": "2313:13:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 53858,
+                    "name": "int256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2313:6:103",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2312:15:103"
+            },
+            "scope": 53892,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53869,
+            "nodeType": "FunctionDefinition",
+            "src": "2374:78:103",
+            "documentation": {
+              "id": 53862,
+              "nodeType": "StructuredDocumentation",
+              "src": "2332:39:103",
+              "text": "@notice Mapping of token to address"
+            },
+            "functionSelector": "2cc3dc6e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "curves",
+            "nameLocation": "2383:6:103",
+            "parameters": {
+              "id": 53865,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53864,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "2398:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53869,
+                  "src": "2390:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53863,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2390:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2389:23:103"
+            },
+            "returnParameters": {
+              "id": 53868,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53867,
+                  "mutability": "mutable",
+                  "name": "_curve",
+                  "nameLocation": "2444:6:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53869,
+                  "src": "2436:14:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2436:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2435:16:103"
+            },
+            "scope": 53892,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53875,
+            "nodeType": "FunctionDefinition",
+            "src": "2774:66:103",
+            "documentation": {
+              "id": 53870,
+              "nodeType": "StructuredDocumentation",
+              "src": "2628:143:103",
+              "text": "@notice Set the VaultController addr in order to pay interest on curve setting\n @param _vaultMasterAddress The address of vault master"
+            },
+            "functionSelector": "99747f15",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setVaultController",
+            "nameLocation": "2783:18:103",
+            "parameters": {
+              "id": 53873,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53872,
+                  "mutability": "mutable",
+                  "name": "_vaultMasterAddress",
+                  "nameLocation": "2810:19:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53875,
+                  "src": "2802:27:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53871,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2802:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2801:29:103"
+            },
+            "returnParameters": {
+              "id": 53874,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2839:0:103"
+            },
+            "scope": 53892,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53883,
+            "nodeType": "FunctionDefinition",
+            "src": "3019:73:103",
+            "documentation": {
+              "id": 53876,
+              "nodeType": "StructuredDocumentation",
+              "src": "2844:172:103",
+              "text": "@notice Setting a new curve should pay interest\n @param _tokenAddress The address of the token\n @param _curveAddress The address of the curve for the contract"
+            },
+            "functionSelector": "ca594e6c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setCurve",
+            "nameLocation": "3028:8:103",
+            "parameters": {
+              "id": 53881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53878,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "3045:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53883,
+                  "src": "3037:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53877,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3037:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53880,
+                  "mutability": "mutable",
+                  "name": "_curveAddress",
+                  "nameLocation": "3068:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53883,
+                  "src": "3060:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53879,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3060:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3036:46:103"
+            },
+            "returnParameters": {
+              "id": 53882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3091:0:103"
+            },
+            "scope": 53892,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53891,
+            "nodeType": "FunctionDefinition",
+            "src": "3302:78:103",
+            "documentation": {
+              "id": 53884,
+              "nodeType": "StructuredDocumentation",
+              "src": "3096:203:103",
+              "text": "@notice Special function that does not calculate interest, used for deployment\n @param _tokenAddress The address of the token\n @param _curveAddress The address of the curve for the contract"
+            },
+            "functionSelector": "911b1678",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "forceSetCurve",
+            "nameLocation": "3311:13:103",
+            "parameters": {
+              "id": 53889,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53886,
+                  "mutability": "mutable",
+                  "name": "_tokenAddress",
+                  "nameLocation": "3333:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53891,
+                  "src": "3325:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53885,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3325:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53888,
+                  "mutability": "mutable",
+                  "name": "_curveAddress",
+                  "nameLocation": "3356:13:103",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53891,
+                  "src": "3348:21:103",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53887,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3348:7:103",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3324:46:103"
+            },
+            "returnParameters": {
+              "id": 53890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3379:0:103"
+            },
+            "scope": 53892,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ICurveMaster",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 53814,
+          "nodeType": "StructuredDocumentation",
+          "src": "57:88:103",
+          "text": "@title CurveMaster Interface\n @notice Interface for interacting with CurveMaster"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53892
+        ],
+        "name": "ICurveMaster",
+        "nameLocation": "155:12:103",
+        "scope": 53893,
+        "usedErrors": [
+          53842,
+          53845
+        ]
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 103
+}

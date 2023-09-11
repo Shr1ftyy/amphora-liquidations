@@ -1,0 +1,3404 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdraw",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "USDA",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_usda",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOfUnderlying",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_redeemableUSDA",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "burnAll",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "burnAllTo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "burnTo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositFor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mintFor",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalUnderlying",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "underlying",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_usdaAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "underlyingToWrapper",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawAll",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "withdrawAllTo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawTo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_wusdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "wrapperToUnderlying",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_usdaAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "USDA()": "84fd5db2",
+    "allowance(address,address)": "dd62ed3e",
+    "approve(address,uint256)": "095ea7b3",
+    "balanceOf(address)": "70a08231",
+    "balanceOfUnderlying(address)": "3af9e669",
+    "burn(uint256)": "42966c68",
+    "burnAll()": "9975038c",
+    "burnAllTo(address)": "a4fa9568",
+    "burnTo(address,uint256)": "ea785a5e",
+    "deposit(uint256)": "b6b55f25",
+    "depositFor(address,uint256)": "2f4f21e2",
+    "mint(uint256)": "a0712d68",
+    "mintFor(address,uint256)": "da1919b3",
+    "totalSupply()": "18160ddd",
+    "totalUnderlying()": "c70920bc",
+    "transfer(address,uint256)": "a9059cbb",
+    "transferFrom(address,address,uint256)": "23b872dd",
+    "underlying()": "6f307dc3",
+    "underlyingToWrapper(uint256)": "ed0287c0",
+    "withdraw(uint256)": "2e1a7d4d",
+    "withdrawAll()": "853828b6",
+    "withdrawAllTo(address)": "ca9add8f",
+    "withdrawTo(address,uint256)": "205c2878",
+    "wrapperToUnderlying(uint256)": "aab3b7db"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.14+commit.80d49f37\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"Withdraw\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"USDA\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_usda\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOfUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_redeemableUSDA\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"burnAll\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"burnAllTo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"burnTo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"name\":\"depositFor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"mintFor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"underlying\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_usdaAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"name\":\"underlyingToWrapper\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawAll\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"withdrawAllTo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"name\":\"withdrawTo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_wusdaAmount\",\"type\":\"uint256\"}],\"name\":\"wrapperToUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_usdaAmount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Deposit(address,address,uint256,uint256)\":{\"params\":{\"_from\":\"The address which made the deposit\",\"_to\":\"The address which received the deposit\",\"_usdaAmount\":\"The amount sent, denominated in the underlying\",\"_wusdaAmount\":\"The amount sent, denominated in the wrapped\"}},\"Withdraw(address,address,uint256,uint256)\":{\"params\":{\"_from\":\"The address which made the withdraw\",\"_to\":\"The address which received the withdraw\",\"_usdaAmount\":\"The amount sent, denominated in the underlying\",\"_wusdaAmount\":\"The amount sent, denominated in the wrapped\"}}},\"kind\":\"dev\",\"methods\":{\"allowance(address,address)\":{\"details\":\"Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called.\"},\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the amount of tokens owned by `account`.\"},\"balanceOfUnderlying(address)\":{\"params\":{\"_owner\":\"The account address.\"},\"returns\":{\"_redeemableUSDA\":\"The usda balance redeemable by the owner.\"}},\"burn(uint256)\":{\"params\":{\"_wusdaAmount\":\"The amount of _wusdaAmount to burn.\"},\"returns\":{\"_usdaAmount\":\"The amount of usda withdrawn.\"}},\"burnAll()\":{\"returns\":{\"_usdaAmount\":\"The amount of usda withdrawn.\"}},\"burnAllTo(address)\":{\"params\":{\"_to\":\"The beneficiary wallet.\"},\"returns\":{\"_usdaAmount\":\"The amount of _usdaAmount withdrawn.\"}},\"burnTo(address,uint256)\":{\"params\":{\"_to\":\"The beneficiary wallet.\",\"_wusdaAmount\":\"The amount of _wusdaAmount to burn.\"},\"returns\":{\"_usdaAmount\":\"The amount of _usdaAmount withdrawn.\"}},\"deposit(uint256)\":{\"params\":{\"_usdaAmount\":\"The amount of _usdaAmount to deposit.\"},\"returns\":{\"_wusdaAmount\":\"The amount of _wusdaAmount minted.\"}},\"depositFor(address,uint256)\":{\"params\":{\"_to\":\"The beneficiary wallet.\",\"_usdaAmount\":\"The amount of _usdaAmount to deposit.\"},\"returns\":{\"_wusdaAmount\":\"The amount of _wusdaAmount minted.\"}},\"mint(uint256)\":{\"params\":{\"_wusdaAmount\":\"The amount of wusda to mint.\"},\"returns\":{\"_usdaAmount\":\"The amount of usda deposited.\"}},\"mintFor(address,uint256)\":{\"params\":{\"_to\":\"The beneficiary wallet.\",\"_wusdaAmount\":\"The amount of wusda to mint.\"},\"returns\":{\"_usdaAmount\":\"The amount of usda deposited.\"}},\"totalSupply()\":{\"details\":\"Returns the amount of tokens in existence.\"},\"totalUnderlying()\":{\"returns\":{\"_usdaAmount\":\"The total _usdaAmount held by this contract.\"}},\"transfer(address,uint256)\":{\"details\":\"Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"underlying()\":{\"returns\":{\"_usdaAddress\":\"The address of the underlying 'wrapped' token ie) usda.\"}},\"underlyingToWrapper(uint256)\":{\"params\":{\"_usdaAmount\":\"The amount of usda tokens.\"},\"returns\":{\"_wusdaAmount\":\"The amount of wUSDA tokens exchangeable.\"}},\"withdraw(uint256)\":{\"params\":{\"_usdaAmount\":\"The amount of _usdaAmount to withdraw.\"},\"returns\":{\"_wusdaAmount\":\"The amount of burnt _wusdaAmount.\"}},\"withdrawAll()\":{\"returns\":{\"_wusdaAmount\":\"The amount of burnt.\"}},\"withdrawAllTo(address)\":{\"params\":{\"_to\":\"The beneficiary wallet.\"},\"returns\":{\"_wusdaAmount\":\"The amount of burnt.\"}},\"withdrawTo(address,uint256)\":{\"params\":{\"_to\":\"The beneficiary wallet.\",\"_usdaAmount\":\"The amount of _usdaAmount to withdraw.\"},\"returns\":{\"_wusdaAmount\":\"The amount of burnt _wusdaAmount.\"}},\"wrapperToUnderlying(uint256)\":{\"params\":{\"_wusdaAmount\":\"The amount of wUSDA tokens.\"},\"returns\":{\"_usdaAmount\":\"The amount of usda tokens exchangeable.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"Deposit(address,address,uint256,uint256)\":{\"notice\":\"Emitted when a deposit is made\"},\"Withdraw(address,address,uint256,uint256)\":{\"notice\":\"Emitted when a withdraw is made\"}},\"kind\":\"user\",\"methods\":{\"USDA()\":{\"notice\":\"The reference to the usda token.\"},\"burn(uint256)\":{\"notice\":\"Burns wusda from {msg.sender} and transfers usda amount back.\"},\"burnAll()\":{\"notice\":\"Burns all wusda from {msg.sender} and transfers usda back.\"},\"burnAllTo(address)\":{\"notice\":\"Burns all wusda from {msg.sender} and transfers usda back,         to the specified beneficiary.\"},\"burnTo(address,uint256)\":{\"notice\":\"Burns wusda amount from {msg.sender} and transfers usda amount back,         to the specified beneficiary.\"},\"deposit(uint256)\":{\"notice\":\"Transfers usda amount from {msg.sender} and mints wusda amount.\"},\"depositFor(address,uint256)\":{\"notice\":\"Transfers usda amount from {msg.sender} and mints wusda amount,         to the specified beneficiary.\"},\"mint(uint256)\":{\"notice\":\"Transfers usda amount from {msg.sender} and mints wusda amount.\"},\"mintFor(address,uint256)\":{\"notice\":\"Transfers usda amount from {msg.sender} and mints wusda amount,         to the specified beneficiary.\"},\"totalUnderlying()\":{\"notice\":\"The total amount of underlying held by this contract.\"},\"underlying()\":{\"notice\":\"The reference to the wrapped token.\"},\"withdraw(uint256)\":{\"notice\":\"Burns wusda amount from {msg.sender} and transfers usda amount back.\"},\"withdrawAll()\":{\"notice\":\"Burns all wusda from {msg.sender} and transfers usda amount back.\"},\"withdrawAllTo(address)\":{\"notice\":\"Burns all wusda from {msg.sender} and transfers usda amount back,         to the specified beneficiary.\"},\"withdrawTo(address,uint256)\":{\"notice\":\"Burns wusda amount from {msg.sender} and transfers usda amount back,         to the specified beneficiary.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"solidity/interfaces/core/IWUSDA.sol\":\"IWUSDA\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":20000},\"remappings\":[\":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/\",\":@contracts/=solidity/contracts/\",\":@defi-wonderland/=node_modules/@defi-wonderland/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@interfaces/=solidity/interfaces/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/\",\":@scripts/=solidity/scripts/\",\":@test/=solidity/test/\",\":@uniswap/=node_modules/@uniswap/\",\":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/\",\":@uniswap/v3-core/=node_modules/@uniswap/v3-core/\",\":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/\",\":base64-sol/=node_modules/base64-sol/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\",\":isolmate/=node_modules/@defi-wonderland/isolmate/src/\",\":solady/=node_modules/solady/src/\",\":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/\",\":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/\",\":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/\",\":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34\",\"dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr\"]},\"solidity/interfaces/core/IWUSDA.sol\":{\"keccak256\":\"0xc80ffcfdab84b8cdee9e89242c4c7f167eb40d86ec8d74e462f22eaea9608f9e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://74448e2d2c5925e5675b36641f4b6bca30acb2b0aaf4dc4b4eda6fed0044983d\",\"dweb:/ipfs/QmQGEXwA3ZaTH6CgJpsRPpB5FA9qMXpSSmqAuThPsog9ox\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.14+commit.80d49f37"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Approval",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Deposit",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Transfer",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Withdraw",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "USDA",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_usda",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "allowance",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "approve",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_owner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "balanceOfUnderlying",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_redeemableUSDA",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burn",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burnAll",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burnAllTo",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burnTo",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "deposit",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "depositFor",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mintFor",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalSupply",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalUnderlying",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transfer",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferFrom",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlying",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "_usdaAddress",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "underlyingToWrapper",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdraw",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawAll",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawAllTo",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "withdrawTo",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "_wusdaAmount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "wrapperToUnderlying",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "_usdaAmount",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "allowance(address,address)": {
+            "details": "Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."
+          },
+          "approve(address,uint256)": {
+            "details": "Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."
+          },
+          "balanceOf(address)": {
+            "details": "Returns the amount of tokens owned by `account`."
+          },
+          "balanceOfUnderlying(address)": {
+            "params": {
+              "_owner": "The account address."
+            },
+            "returns": {
+              "_redeemableUSDA": "The usda balance redeemable by the owner."
+            }
+          },
+          "burn(uint256)": {
+            "params": {
+              "_wusdaAmount": "The amount of _wusdaAmount to burn."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of usda withdrawn."
+            }
+          },
+          "burnAll()": {
+            "returns": {
+              "_usdaAmount": "The amount of usda withdrawn."
+            }
+          },
+          "burnAllTo(address)": {
+            "params": {
+              "_to": "The beneficiary wallet."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of _usdaAmount withdrawn."
+            }
+          },
+          "burnTo(address,uint256)": {
+            "params": {
+              "_to": "The beneficiary wallet.",
+              "_wusdaAmount": "The amount of _wusdaAmount to burn."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of _usdaAmount withdrawn."
+            }
+          },
+          "deposit(uint256)": {
+            "params": {
+              "_usdaAmount": "The amount of _usdaAmount to deposit."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of _wusdaAmount minted."
+            }
+          },
+          "depositFor(address,uint256)": {
+            "params": {
+              "_to": "The beneficiary wallet.",
+              "_usdaAmount": "The amount of _usdaAmount to deposit."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of _wusdaAmount minted."
+            }
+          },
+          "mint(uint256)": {
+            "params": {
+              "_wusdaAmount": "The amount of wusda to mint."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of usda deposited."
+            }
+          },
+          "mintFor(address,uint256)": {
+            "params": {
+              "_to": "The beneficiary wallet.",
+              "_wusdaAmount": "The amount of wusda to mint."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of usda deposited."
+            }
+          },
+          "totalSupply()": {
+            "details": "Returns the amount of tokens in existence."
+          },
+          "totalUnderlying()": {
+            "returns": {
+              "_usdaAmount": "The total _usdaAmount held by this contract."
+            }
+          },
+          "transfer(address,uint256)": {
+            "details": "Moves `amount` tokens from the caller's account to `to`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+          },
+          "transferFrom(address,address,uint256)": {
+            "details": "Moves `amount` tokens from `from` to `to` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."
+          },
+          "underlying()": {
+            "returns": {
+              "_usdaAddress": "The address of the underlying 'wrapped' token ie) usda."
+            }
+          },
+          "underlyingToWrapper(uint256)": {
+            "params": {
+              "_usdaAmount": "The amount of usda tokens."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of wUSDA tokens exchangeable."
+            }
+          },
+          "withdraw(uint256)": {
+            "params": {
+              "_usdaAmount": "The amount of _usdaAmount to withdraw."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of burnt _wusdaAmount."
+            }
+          },
+          "withdrawAll()": {
+            "returns": {
+              "_wusdaAmount": "The amount of burnt."
+            }
+          },
+          "withdrawAllTo(address)": {
+            "params": {
+              "_to": "The beneficiary wallet."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of burnt."
+            }
+          },
+          "withdrawTo(address,uint256)": {
+            "params": {
+              "_to": "The beneficiary wallet.",
+              "_usdaAmount": "The amount of _usdaAmount to withdraw."
+            },
+            "returns": {
+              "_wusdaAmount": "The amount of burnt _wusdaAmount."
+            }
+          },
+          "wrapperToUnderlying(uint256)": {
+            "params": {
+              "_wusdaAmount": "The amount of wUSDA tokens."
+            },
+            "returns": {
+              "_usdaAmount": "The amount of usda tokens exchangeable."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "USDA()": {
+            "notice": "The reference to the usda token."
+          },
+          "burn(uint256)": {
+            "notice": "Burns wusda from {msg.sender} and transfers usda amount back."
+          },
+          "burnAll()": {
+            "notice": "Burns all wusda from {msg.sender} and transfers usda back."
+          },
+          "burnAllTo(address)": {
+            "notice": "Burns all wusda from {msg.sender} and transfers usda back,         to the specified beneficiary."
+          },
+          "burnTo(address,uint256)": {
+            "notice": "Burns wusda amount from {msg.sender} and transfers usda amount back,         to the specified beneficiary."
+          },
+          "deposit(uint256)": {
+            "notice": "Transfers usda amount from {msg.sender} and mints wusda amount."
+          },
+          "depositFor(address,uint256)": {
+            "notice": "Transfers usda amount from {msg.sender} and mints wusda amount,         to the specified beneficiary."
+          },
+          "mint(uint256)": {
+            "notice": "Transfers usda amount from {msg.sender} and mints wusda amount."
+          },
+          "mintFor(address,uint256)": {
+            "notice": "Transfers usda amount from {msg.sender} and mints wusda amount,         to the specified beneficiary."
+          },
+          "totalUnderlying()": {
+            "notice": "The total amount of underlying held by this contract."
+          },
+          "underlying()": {
+            "notice": "The reference to the wrapped token."
+          },
+          "withdraw(uint256)": {
+            "notice": "Burns wusda amount from {msg.sender} and transfers usda amount back."
+          },
+          "withdrawAll()": {
+            "notice": "Burns all wusda from {msg.sender} and transfers usda amount back."
+          },
+          "withdrawAllTo(address)": {
+            "notice": "Burns all wusda from {msg.sender} and transfers usda amount back,         to the specified beneficiary."
+          },
+          "withdrawTo(address,uint256)": {
+            "notice": "Burns wusda amount from {msg.sender} and transfers usda amount back,         to the specified beneficiary."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@chainlink/=node_modules/@chainlink/contracts/src/v0.8/",
+        ":@contracts/=solidity/contracts/",
+        ":@defi-wonderland/=node_modules/@defi-wonderland/",
+        ":@eth-optimism/=node_modules/@eth-optimism/",
+        ":@interfaces/=solidity/interfaces/",
+        ":@openzeppelin/=node_modules/@openzeppelin/",
+        ":@openzeppelin/contracts-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/",
+        ":@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+        ":@scripts/=solidity/scripts/",
+        ":@test/=solidity/test/",
+        ":@uniswap/=node_modules/@uniswap/",
+        ":@uniswap/v2-periphery/=node_modules/@uniswap/v2-periphery/",
+        ":@uniswap/v3-core/=node_modules/@uniswap/v3-core/",
+        ":@uniswap/v3-periphery/=node_modules/@uniswap/v3-periphery/",
+        ":base64-sol/=node_modules/base64-sol/",
+        ":ds-test/=node_modules/ds-test/src/",
+        ":forge-std/=node_modules/forge-std/src/",
+        ":isolmate/=node_modules/@defi-wonderland/isolmate/src/",
+        ":solady/=node_modules/solady/src/",
+        ":solidity-utils/=node_modules/@defi-wonderland/solidity-utils/solidity/",
+        ":uni-v3-core/=node_modules/@uniswap/v3-core/contracts/",
+        ":uni-v3-periphery/=node_modules/@uniswap/v3-periphery/contracts/",
+        ":unit-v2-periphery/=node_modules/@uniswap/v2-periphery/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 20000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "solidity/interfaces/core/IWUSDA.sol": "IWUSDA"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+        "urls": [
+          "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+          "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+        ],
+        "license": "MIT"
+      },
+      "solidity/interfaces/core/IWUSDA.sol": {
+        "keccak256": "0xc80ffcfdab84b8cdee9e89242c4c7f167eb40d86ec8d74e462f22eaea9608f9e",
+        "urls": [
+          "bzz-raw://74448e2d2c5925e5675b36641f4b6bca30acb2b0aaf4dc4b4eda6fed0044983d",
+          "dweb:/ipfs/QmQGEXwA3ZaTH6CgJpsRPpB5FA9qMXpSSmqAuThPsog9ox"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "solidity/interfaces/core/IWUSDA.sol",
+    "id": 53032,
+    "exportedSymbols": {
+      "IERC20": [
+        2726
+      ],
+      "IWUSDA": [
+        53031
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:6340:94",
+    "nodes": [
+      {
+        "id": 52862,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:94",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 52864,
+        "nodeType": "ImportDirective",
+        "src": "57:70:94",
+        "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 53032,
+        "sourceUnit": 2727,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 52863,
+              "name": "IERC20",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 2726,
+              "src": "65:6:94",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 53031,
+        "nodeType": "ContractDefinition",
+        "src": "129:6242:94",
+        "nodes": [
+          {
+            "id": 52877,
+            "nodeType": "EventDefinition",
+            "src": "639:101:94",
+            "anonymous": false,
+            "documentation": {
+              "id": 52867,
+              "nodeType": "StructuredDocumentation",
+              "src": "335:301:94",
+              "text": " @notice Emitted when a deposit is made\n @param _from The address which made the deposit\n @param _to The address which received the deposit\n @param _usdaAmount The amount sent, denominated in the underlying\n @param _wusdaAmount The amount sent, denominated in the wrapped"
+            },
+            "eventSelector": "dcbc1c05240f31ff3ad067ef1ee35ce4997762752e3a095284754544f4c709d7",
+            "name": "Deposit",
+            "nameLocation": "645:7:94",
+            "parameters": {
+              "id": 52876,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52869,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "669:5:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52877,
+                  "src": "653:21:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52868,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52871,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "692:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52877,
+                  "src": "676:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52870,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52873,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "705:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52877,
+                  "src": "697:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52875,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "726:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52877,
+                  "src": "718:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52874,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "718:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "652:87:94"
+            }
+          },
+          {
+            "id": 52888,
+            "nodeType": "EventDefinition",
+            "src": "1051:102:94",
+            "anonymous": false,
+            "documentation": {
+              "id": 52878,
+              "nodeType": "StructuredDocumentation",
+              "src": "744:304:94",
+              "text": " @notice Emitted when a withdraw is made\n @param _from The address which made the withdraw\n @param _to The address which received the withdraw\n @param _usdaAmount The amount sent, denominated in the underlying\n @param _wusdaAmount The amount sent, denominated in the wrapped"
+            },
+            "eventSelector": "f341246adaac6f497bc2a656f546ab9e182111d630394f0c57c710a59a2cb567",
+            "name": "Withdraw",
+            "nameLocation": "1057:8:94",
+            "parameters": {
+              "id": 52887,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52880,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_from",
+                  "nameLocation": "1082:5:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52888,
+                  "src": "1066:21:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52879,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52882,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "1105:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52888,
+                  "src": "1089:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52881,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1089:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52884,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "1118:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52888,
+                  "src": "1110:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52883,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1110:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52886,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "1139:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52888,
+                  "src": "1131:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52885,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1131:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:87:94"
+            }
+          },
+          {
+            "id": 52894,
+            "nodeType": "FunctionDefinition",
+            "src": "1380:54:94",
+            "documentation": {
+              "id": 52889,
+              "nodeType": "StructuredDocumentation",
+              "src": "1333:44:94",
+              "text": "@notice The reference to the usda token."
+            },
+            "functionSelector": "84fd5db2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "USDA",
+            "nameLocation": "1389:4:94",
+            "parameters": {
+              "id": 52890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1393:2:94"
+            },
+            "returnParameters": {
+              "id": 52893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52892,
+                  "mutability": "mutable",
+                  "name": "_usda",
+                  "nameLocation": "1427:5:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52894,
+                  "src": "1419:13:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1419:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1418:15:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52900,
+            "nodeType": "FunctionDefinition",
+            "src": "1571:67:94",
+            "documentation": {
+              "id": 52895,
+              "nodeType": "StructuredDocumentation",
+              "src": "1438:130:94",
+              "text": "@notice The reference to the wrapped token.\n @return _usdaAddress The address of the underlying 'wrapped' token ie) usda."
+            },
+            "functionSelector": "6f307dc3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlying",
+            "nameLocation": "1580:10:94",
+            "parameters": {
+              "id": 52896,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1590:2:94"
+            },
+            "returnParameters": {
+              "id": 52899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52898,
+                  "mutability": "mutable",
+                  "name": "_usdaAddress",
+                  "nameLocation": "1624:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52900,
+                  "src": "1616:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1616:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1615:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52906,
+            "nodeType": "FunctionDefinition",
+            "src": "1781:71:94",
+            "documentation": {
+              "id": 52901,
+              "nodeType": "StructuredDocumentation",
+              "src": "1642:136:94",
+              "text": "@notice The total amount of underlying held by this contract.\n @return _usdaAmount The total _usdaAmount held by this contract."
+            },
+            "functionSelector": "c70920bc",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalUnderlying",
+            "nameLocation": "1790:15:94",
+            "parameters": {
+              "id": 52902,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1805:2:94"
+            },
+            "returnParameters": {
+              "id": 52905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52904,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "1839:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52906,
+                  "src": "1831:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52903,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1831:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1830:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52914,
+            "nodeType": "FunctionDefinition",
+            "src": "1969:93:94",
+            "documentation": {
+              "id": 52907,
+              "nodeType": "StructuredDocumentation",
+              "src": "1856:110:94",
+              "text": "@param _owner The account address.\n @return _redeemableUSDA The usda balance redeemable by the owner."
+            },
+            "functionSelector": "3af9e669",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOfUnderlying",
+            "nameLocation": "1978:19:94",
+            "parameters": {
+              "id": 52910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52909,
+                  "mutability": "mutable",
+                  "name": "_owner",
+                  "nameLocation": "2006:6:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52914,
+                  "src": "1998:14:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52908,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1998:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1997:16:94"
+            },
+            "returnParameters": {
+              "id": 52913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52912,
+                  "mutability": "mutable",
+                  "name": "_redeemableUSDA",
+                  "nameLocation": "2045:15:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52914,
+                  "src": "2037:23:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2037:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2036:25:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52922,
+            "nodeType": "FunctionDefinition",
+            "src": "2186:95:94",
+            "documentation": {
+              "id": 52915,
+              "nodeType": "StructuredDocumentation",
+              "src": "2066:117:94",
+              "text": "@param _usdaAmount The amount of usda tokens.\n @return _wusdaAmount The amount of wUSDA tokens exchangeable."
+            },
+            "functionSelector": "ed0287c0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "underlyingToWrapper",
+            "nameLocation": "2195:19:94",
+            "parameters": {
+              "id": 52918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52917,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "2223:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52922,
+                  "src": "2215:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52916,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2215:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2214:21:94"
+            },
+            "returnParameters": {
+              "id": 52921,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52920,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "2267:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52922,
+                  "src": "2259:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52919,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2259:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2258:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52930,
+            "nodeType": "FunctionDefinition",
+            "src": "2405:95:94",
+            "documentation": {
+              "id": 52923,
+              "nodeType": "StructuredDocumentation",
+              "src": "2285:117:94",
+              "text": "@param _wusdaAmount The amount of wUSDA tokens.\n @return _usdaAmount The amount of usda tokens exchangeable."
+            },
+            "functionSelector": "aab3b7db",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "wrapperToUnderlying",
+            "nameLocation": "2414:19:94",
+            "parameters": {
+              "id": 52926,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52925,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "2442:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52930,
+                  "src": "2434:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52924,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2434:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2433:22:94"
+            },
+            "returnParameters": {
+              "id": 52929,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52928,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "2487:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52930,
+                  "src": "2479:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52927,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2479:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2478:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52938,
+            "nodeType": "FunctionDefinition",
+            "src": "2871:75:94",
+            "documentation": {
+              "id": 52931,
+              "nodeType": "StructuredDocumentation",
+              "src": "2676:192:94",
+              "text": "@notice Transfers usda amount from {msg.sender} and mints wusda amount.\n @param _wusdaAmount The amount of wusda to mint.\n @return _usdaAmount The amount of usda deposited."
+            },
+            "functionSelector": "a0712d68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "2880:4:94",
+            "parameters": {
+              "id": 52934,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52933,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "2893:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52938,
+                  "src": "2885:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52932,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2885:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2884:22:94"
+            },
+            "returnParameters": {
+              "id": 52937,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52936,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "2933:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52938,
+                  "src": "2925:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52935,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2925:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2924:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52948,
+            "nodeType": "FunctionDefinition",
+            "src": "3230:91:94",
+            "documentation": {
+              "id": 52939,
+              "nodeType": "StructuredDocumentation",
+              "src": "2950:277:94",
+              "text": "@notice Transfers usda amount from {msg.sender} and mints wusda amount,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @param _wusdaAmount The amount of wusda to mint.\n @return _usdaAmount The amount of usda deposited."
+            },
+            "functionSelector": "da1919b3",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintFor",
+            "nameLocation": "3239:7:94",
+            "parameters": {
+              "id": 52944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52941,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "3255:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52948,
+                  "src": "3247:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52940,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3247:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52943,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "3268:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52948,
+                  "src": "3260:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52942,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3260:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3246:35:94"
+            },
+            "returnParameters": {
+              "id": 52947,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52946,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "3308:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52948,
+                  "src": "3300:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52945,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3300:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3299:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52956,
+            "nodeType": "FunctionDefinition",
+            "src": "3525:75:94",
+            "documentation": {
+              "id": 52949,
+              "nodeType": "StructuredDocumentation",
+              "src": "3325:197:94",
+              "text": "@notice Burns wusda from {msg.sender} and transfers usda amount back.\n @param _wusdaAmount The amount of _wusdaAmount to burn.\n @return _usdaAmount The amount of usda withdrawn."
+            },
+            "functionSelector": "42966c68",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "3534:4:94",
+            "parameters": {
+              "id": 52952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52951,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "3547:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52956,
+                  "src": "3539:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52950,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3539:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3538:22:94"
+            },
+            "returnParameters": {
+              "id": 52955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52954,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "3587:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52956,
+                  "src": "3579:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52953,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3579:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3578:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52966,
+            "nodeType": "FunctionDefinition",
+            "src": "3903:90:94",
+            "documentation": {
+              "id": 52957,
+              "nodeType": "StructuredDocumentation",
+              "src": "3604:296:94",
+              "text": "@notice Burns wusda amount from {msg.sender} and transfers usda amount back,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @param _wusdaAmount The amount of _wusdaAmount to burn.\n @return _usdaAmount The amount of _usdaAmount withdrawn."
+            },
+            "functionSelector": "ea785a5e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burnTo",
+            "nameLocation": "3912:6:94",
+            "parameters": {
+              "id": 52962,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52959,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "3927:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52966,
+                  "src": "3919:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52958,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3919:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52961,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "3940:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52966,
+                  "src": "3932:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52960,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3932:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3918:35:94"
+            },
+            "returnParameters": {
+              "id": 52965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52964,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "3980:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52966,
+                  "src": "3972:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52963,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3972:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3971:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52972,
+            "nodeType": "FunctionDefinition",
+            "src": "4132:58:94",
+            "documentation": {
+              "id": 52967,
+              "nodeType": "StructuredDocumentation",
+              "src": "3997:132:94",
+              "text": "@notice Burns all wusda from {msg.sender} and transfers usda back.\n @return _usdaAmount The amount of usda withdrawn."
+            },
+            "functionSelector": "9975038c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burnAll",
+            "nameLocation": "4141:7:94",
+            "parameters": {
+              "id": 52968,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4148:2:94"
+            },
+            "returnParameters": {
+              "id": 52971,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52970,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "4177:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52972,
+                  "src": "4169:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52969,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4169:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4168:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52980,
+            "nodeType": "FunctionDefinition",
+            "src": "4421:71:94",
+            "documentation": {
+              "id": 52973,
+              "nodeType": "StructuredDocumentation",
+              "src": "4194:224:94",
+              "text": "@notice Burns all wusda from {msg.sender} and transfers usda back,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @return _usdaAmount The amount of _usdaAmount withdrawn."
+            },
+            "functionSelector": "a4fa9568",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burnAllTo",
+            "nameLocation": "4430:9:94",
+            "parameters": {
+              "id": 52976,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52975,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "4448:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52980,
+                  "src": "4440:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52974,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4440:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4439:13:94"
+            },
+            "returnParameters": {
+              "id": 52979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52978,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "4479:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52980,
+                  "src": "4471:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52977,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4471:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4470:21:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52988,
+            "nodeType": "FunctionDefinition",
+            "src": "4705:78:94",
+            "documentation": {
+              "id": 52981,
+              "nodeType": "StructuredDocumentation",
+              "src": "4496:206:94",
+              "text": "@notice Transfers usda amount from {msg.sender} and mints wusda amount.\n @param _usdaAmount The amount of _usdaAmount to deposit.\n @return _wusdaAmount The amount of _wusdaAmount minted."
+            },
+            "functionSelector": "b6b55f25",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nameLocation": "4714:7:94",
+            "parameters": {
+              "id": 52984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52983,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "4730:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52988,
+                  "src": "4722:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52982,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4722:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4721:21:94"
+            },
+            "returnParameters": {
+              "id": 52987,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52986,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "4769:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52988,
+                  "src": "4761:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52985,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4761:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4760:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 52998,
+            "nodeType": "FunctionDefinition",
+            "src": "5081:94:94",
+            "documentation": {
+              "id": 52989,
+              "nodeType": "StructuredDocumentation",
+              "src": "4787:291:94",
+              "text": "@notice Transfers usda amount from {msg.sender} and mints wusda amount,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @param _usdaAmount The amount of _usdaAmount to deposit.\n @return _wusdaAmount The amount of _wusdaAmount minted."
+            },
+            "functionSelector": "2f4f21e2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositFor",
+            "nameLocation": "5090:10:94",
+            "parameters": {
+              "id": 52994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52991,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "5109:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52998,
+                  "src": "5101:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 52990,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5101:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52993,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "5122:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52998,
+                  "src": "5114:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52992,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5114:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5100:34:94"
+            },
+            "returnParameters": {
+              "id": 52997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52996,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "5161:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 52998,
+                  "src": "5153:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 52995,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5153:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5152:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53006,
+            "nodeType": "FunctionDefinition",
+            "src": "5393:79:94",
+            "documentation": {
+              "id": 52999,
+              "nodeType": "StructuredDocumentation",
+              "src": "5179:211:94",
+              "text": "@notice Burns wusda amount from {msg.sender} and transfers usda amount back.\n @param _usdaAmount The amount of _usdaAmount to withdraw.\n @return _wusdaAmount The amount of burnt _wusdaAmount."
+            },
+            "functionSelector": "2e1a7d4d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nameLocation": "5402:8:94",
+            "parameters": {
+              "id": 53002,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53001,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "5419:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53006,
+                  "src": "5411:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53000,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5411:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5410:21:94"
+            },
+            "returnParameters": {
+              "id": 53005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53004,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "5458:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53006,
+                  "src": "5450:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53003,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5450:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5449:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53016,
+            "nodeType": "FunctionDefinition",
+            "src": "5775:94:94",
+            "documentation": {
+              "id": 53007,
+              "nodeType": "StructuredDocumentation",
+              "src": "5476:296:94",
+              "text": "@notice Burns wusda amount from {msg.sender} and transfers usda amount back,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @param _usdaAmount The amount of _usdaAmount to withdraw.\n @return _wusdaAmount The amount of burnt _wusdaAmount."
+            },
+            "functionSelector": "205c2878",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawTo",
+            "nameLocation": "5784:10:94",
+            "parameters": {
+              "id": 53012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53009,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "5803:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53016,
+                  "src": "5795:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53008,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5795:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 53011,
+                  "mutability": "mutable",
+                  "name": "_usdaAmount",
+                  "nameLocation": "5816:11:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53016,
+                  "src": "5808:19:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5808:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5794:34:94"
+            },
+            "returnParameters": {
+              "id": 53015,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53014,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "5855:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53016,
+                  "src": "5847:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53013,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5847:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5846:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53022,
+            "nodeType": "FunctionDefinition",
+            "src": "6007:63:94",
+            "documentation": {
+              "id": 53017,
+              "nodeType": "StructuredDocumentation",
+              "src": "5873:131:94",
+              "text": "@notice Burns all wusda from {msg.sender} and transfers usda amount back.\n @return _wusdaAmount The amount of burnt."
+            },
+            "functionSelector": "853828b6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nameLocation": "6016:11:94",
+            "parameters": {
+              "id": 53018,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "6027:2:94"
+            },
+            "returnParameters": {
+              "id": 53021,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53020,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "6056:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53022,
+                  "src": "6048:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53019,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6048:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6047:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 53030,
+            "nodeType": "FunctionDefinition",
+            "src": "6293:76:94",
+            "documentation": {
+              "id": 53023,
+              "nodeType": "StructuredDocumentation",
+              "src": "6074:216:94",
+              "text": "@notice Burns all wusda from {msg.sender} and transfers usda amount back,\n         to the specified beneficiary.\n @param _to The beneficiary wallet.\n @return _wusdaAmount The amount of burnt."
+            },
+            "functionSelector": "ca9add8f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAllTo",
+            "nameLocation": "6302:13:94",
+            "parameters": {
+              "id": 53026,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53025,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "6324:3:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53030,
+                  "src": "6316:11:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 53024,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6316:7:94",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6315:13:94"
+            },
+            "returnParameters": {
+              "id": 53029,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53028,
+                  "mutability": "mutable",
+                  "name": "_wusdaAmount",
+                  "nameLocation": "6355:12:94",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 53030,
+                  "src": "6347:20:94",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53027,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6347:7:94",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6346:22:94"
+            },
+            "scope": 53031,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 52865,
+              "name": "IERC20",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2726,
+              "src": "149:6:94"
+            },
+            "id": 52866,
+            "nodeType": "InheritanceSpecifier",
+            "src": "149:6:94"
+          }
+        ],
+        "canonicalName": "IWUSDA",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          53031,
+          2726
+        ],
+        "name": "IWUSDA",
+        "nameLocation": "139:6:94",
+        "scope": 53032,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 94
+}
